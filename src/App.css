@@ -60,7 +60,7 @@ a, a:hover {
 .btn-vol-app {
   height: 50px;
   border-radius: 30px;
-  font-size: 18px; }
+  font-size: 16px; }
 
 .ft-input {
   border: 4px double #f9f8fc; }
@@ -222,18 +222,31 @@ dd {
   height: 40px;
   font-size: 18px;
   color: #a994c8;
-  background: #e5ddf1; }
+  background: #e5ddf1; 
+}
 
 .form-control::-webkit-input-placeholder {
   color: #a994c8; }
 
 .custom-control-label::before {
   background: #e5ddf1;
-  border: 1px double #593196; }
+  border: 1px double #593196 !important; }
 
-option:hover {
+
+.label-agree::before {
+  -webkit-border-radius: 0px ;
+  -moz-border-radius: 0px ;
+  border-radius: 0px !important; 
+  border: 1px double #593196 !important;
+}
+.contact-input> option {
+  background: #e5ddf1;
+}
+
+  
+/* option:hover {
   background: #593196;
-  color: #c5c4c4; }
+  color: #c5c4c4; } */
 
 /* Carousel - add border around & half transparent bg to the captions */
 .carousel {
