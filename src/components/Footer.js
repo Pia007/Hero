@@ -46,7 +46,7 @@ function Footer() {
                             Sign up to receive news and updates.
                         </p>
                         <div className="form-group row">
-                            <label for="email" className="col-8 col-form-label mx-auto invisible" >Email</label>
+                            <label htmlFor="email" className="col-8 col-form-label mx-auto invisible" >Email</label>
                             <div className="col-8 mx-auto mb-0  d-flex justify-content-center">
                                 <input type="email" className="form-control ft-input" id="email" name="email" placeholder="Email Address" /> 
                             </div>
