@@ -94,9 +94,9 @@ class Contact extends Component {
                 {/* Breadcrumb */}
                 <div className="row">
                     <div className="col">
-                        <Breadcrumb>
-                            <BreadcrumbItem className="bc-prev"><Link to="/">Home</Link></BreadcrumbItem>
-                            <BreadcrumbItem active className="text-danger bc-now">Contact</BreadcrumbItem>
+                        <Breadcrumb className="text-secondary">
+                            <BreadcrumbItem className="bc-prev text-secondary"><Link to="/" className="text-secondary">Home</Link></BreadcrumbItem>
+                            <BreadcrumbItem active className="bc-now text-success">Contact</BreadcrumbItem>
                         </Breadcrumb>
                         <h1 className="text-center text-primary">Contact Us</h1>
                         <hr className="col-sm-8 my-0" />
@@ -122,27 +122,27 @@ class Contact extends Component {
 
                 <div className="row row-content pt-0">
                     <div className="col-sm-6">
-                        <h5 className="mb-0 mission-text"><u>Address:</u></h5>
+                        <h5 className="mb-0 mission-text"><u className="text-primary">Address:</u></h5>
                         <address className="text-primary address-info">
                             2124 W Heroes LN, Suite 99<br />
                             Fictitious City, NJ 01007<br />
                         </address>
-                        <h5 className="mb-0 mission-text"><u>Hours:</u></h5>
+                        <h5 className="mb-0 mission-text"><u className="text-primary">Hours:</u></h5>
                         <address className="text-primary address-info">
                             Monday - Friday<br />
                             9AM - 3PM<br />
                             Or call us.
                         </address>
 
-                        <h5 className="mb-0 mission-text"><u>Phone & Email</u></h5>
-                        <a role="button" className="btn btn-link p-0 address-info" href="tel:+19737774321"><i className="fa fa-phone" ></i> 1-973-777-4321</a><br />
-                        <a role="button" className="btn btn-link p-0 address-info" href="mailto:info@healthcareheroes.org"><i className="fa fa-envelope-o" ></i> info@healthcareheroes.org</a>
+                        <h5 className="mb-0 mission-text"><u className="text-primary">Phone & Email</u></h5>
+                        <a role="button" className="btn btn-link text-primary p-0 address-info" href="tel:+19737774321"><i className="fa fa-phone" ></i> 1-973-777-4321</a><br />
+                        <a role="button" className="btn btn-link text-primary p-0 address-info" href="mailto:info@healthcareheroes.org"><i className="fa fa-envelope-o" ></i> info@healthcareheroes.org</a>
                     </div>
                 </div>
                 
                 <div className="row row-content">
                     <div className="col-12">
-                        <h2>We want to hear from you!</h2>
+                        <h2 className="text-primary">We want to hear from you!</h2>
                     </div>
                     {/* Form */}
                     <div className="col">
@@ -150,7 +150,7 @@ class Contact extends Component {
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="text" htmlFor="firstName" name="firstName" id="firstName" 
-                                        className="contact-input"
+                                        className="contact-input "
                                         placeholder="First Name" 
                                         value={this.state.firstName} 
                                         invalid={errors.firstName}
@@ -204,7 +204,7 @@ class Contact extends Component {
                             <FormGroup row>
                                 <Col md={5} className="d-flex d-inline-flex">
                                     <FormGroup check className="pl-0 ">
-                                        <div className="custom-control custom-checkbox d-flex d-inline-flex pl-0">
+                                        <div className=" d-flex d-inline-flex pl-0">
                                             <div className="d-flex text-primary mb-2 mb-md-0">
                                                 May we contact you?
                                                 <div className="custom-control custom-checkbox ml-2">
@@ -216,7 +216,7 @@ class Contact extends Component {
                                                         value={this.state.agree} 
                                                         onChange={this.handleInputChange}  
                                                     />
-                                                    <Label check className="custom-control-label label-agree  mt-1" htmlFor="agree" />
+                                                    <Label check className="custom-control-label label-agree mt-1" htmlFor="agree" />
                                                 </div>
                                             </div>
                                         </div> 

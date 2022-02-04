@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.css';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
-import 'bootswatch/dist/pulse/bootstrap.min.css';
+import 'bootswatch/dist/spacelab/bootstrap.min.css';
 import App from './App';
 
 ReactDOM.render(
