@@ -30,7 +30,6 @@ class Volunteer extends Component {
                 fName: false,
                 lName: false,
                 address1: false,
-                address2: false,
                 city: false,
                 userState: false,
                 zip: false,
@@ -70,7 +69,7 @@ class Volunteer extends Component {
             }
         }
 
-        const regAddress = /\d+[ ](?:[A-Za-z0-9.-]+[ ]?)+(?:Avenue|Lane|Road|Boulevard|Drive|Street|Ave|Dr|Rd|Blvd|Ln|St)\.?/
+        const regAddress = /\d+[ ](?:[A-Za-z0-9.-]+[ ]?)+(?:Avenue|Lane|Road|Boulevard|Drive|Street|Way|Ave|Dr|Rd|Blvd|Ln|St|Wy)\.?/
         if(this.state.touched.address1 && !regAddress.test(address1)) {
             errors.address1 = 'Invalid address';
         }
@@ -97,8 +96,8 @@ class Volunteer extends Component {
         }
 
 
-        const reg = /^\d+$/;
-        if (this.state.touched.phone && !reg.test(phone)) {
+        const regPhone = /^\d+$/;
+        if (this.state.touched.phone && !regPhone.test(phone)) {
             errors.phone = 'The phone number should contain only numbers';
         }
 
@@ -140,7 +139,7 @@ class Volunteer extends Component {
                 <div className="row">
                     <div className="col">
                         <Breadcrumb>
-                            <BreadcrumbItem className="bc-prev text-secondary"><Link to="/">Home</Link></BreadcrumbItem>
+                            <BreadcrumbItem className="bc-prev text-secondary"><Link to="/">home</Link></BreadcrumbItem>
                             <BreadcrumbItem active className="text-success bc-now">Volunteer</BreadcrumbItem>
                         </Breadcrumb>
                         <h1 className="text-center text-primary">Volunteer</h1>
@@ -196,7 +195,7 @@ class Volunteer extends Component {
                                     <FormFeedback>{errors.address1}</FormFeedback>
                                 </Col>
                             </FormGroup>
-                            <FormGroup row>
+                            {/* <FormGroup row>
                                 <Col md={12}>
                                     <Input type="text" htmlFor="address2"name="address2" id="address2" 
                                         className="contact-input"
@@ -205,7 +204,7 @@ class Volunteer extends Component {
                                         onChange={this.handleInputChange} 
                                     />
                                 </Col>
-                            </FormGroup>
+                            </FormGroup> */}
                             <FormGroup row>
                                 <Col md={4} className="mb-3 mb-md-0">
                                     <Input type="text" htmlFor="city" name="city" id="city" 
@@ -382,7 +381,7 @@ class Volunteer extends Component {
                             <FormGroup row>
                                 <Col md={3}>
                                     <Button type="submit" color="primary" className="btn-feedback"> 
-                                        Send Feedback
+                                        Volunteer
                                     </Button>
                                 </Col>
                             </FormGroup>

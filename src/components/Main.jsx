@@ -6,10 +6,25 @@ import Contact from './Contact';
 import Involved from './Involved';
 import Volunteer from './Volunteer';
 import Footer from './Footer';
-import { Switch, Route, Redirect } from 'react-router-dom';
+// WK4 deleting imports CAMPSITE, COMMENT, PARTNERS AND PROMOTIONS
+// no longing storing the application state in the Main Component;
+// transferring it to the redux store
+// WK4 importing withRouter and connect
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+// const mapStateToProps = state => {
+//     return {
+//         campsites: state.campsites,
+//         comments: state.comments,
+//         partners: state.partners,
+//         promotions: state.promotions
+//     };
+// };
 
 class Main extends Component {
     render() {
+        
         return (
             <div>
                 <Header />

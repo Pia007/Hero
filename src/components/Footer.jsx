@@ -52,7 +52,7 @@ function Footer() {
                             </div>
                         </div>
                         <div className="form-group row mb-0 px-3">
-                            <button className="btn btn-outline-light col-4 mx-auto ft-signup" type="submit">Sign up</button>
+                            <button className="btn btn-outline-light col-4 col-md-5 mx-auto ft-signup" type="submit">Sign up</button>
                         </div>
                     </div>
                 </div>
