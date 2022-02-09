@@ -1,6 +1,7 @@
 :root {
   --input-bg: #e4eefa;
   --input-font: #446e9b;
+  --table-bg: #f6c0c0;
 }
 body {
   font-family: "Heebo", sans-serif;
@@ -125,10 +126,12 @@ h2 {
 h2,
 h3,
 h5 {
-  color: #593196; }
+  color: #446e9b; }
 
 hr {
-  border: 1px solid #446e9b; }
+  border: 3px double #446e9b; 
+  opacity: 50%; 
+}
 
 .page-holder {
   width: 100%;
@@ -202,13 +205,15 @@ hr {
 
 .mission-text {
   font-size: 20px; }
-
+/* About */
 .about-card-holder {
   background: transparent; }
 
 .about-card {
-  border: 1px solid #a994c8;
-  background: #d5c4f0; }
+  border: 1px solid #cd0200;
+  
+  background: var(--table-bg); 
+}
 
 dt,
 dd {

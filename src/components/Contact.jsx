@@ -4,6 +4,7 @@ import { Breadcrumb, BreadcrumbItem,
     Button, Col, Row } from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Link } from 'react-router-dom';
+import ContactInfo from './ContactInfo';
 
 const required = (val) => val && val.length; 
 const maxLength = len => (val) => !(val) || (val.length <= len); 
@@ -46,18 +47,9 @@ class Contact extends Component {
 
         return (
             <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <Breadcrumb className="text-secondary">
-                            <BreadcrumbItem className="bc-prev text-secondary"><Link to="/" className="text-secondary">Home</Link></BreadcrumbItem>
-                            <BreadcrumbItem active className="bc-now text-success">Contact</BreadcrumbItem>
-                        </Breadcrumb>
-                        <h1 className="text-center text-primary">Contact Us</h1>
-                        <hr className="col-sm-8 my-0" />
-                    </div>
-                </div>
+                <ContactInfo />
                 {/* Contact Info */}
-                <div className="row row-content pb-0 mb-4">
+                {/* <div className="row row-content pb-0 mb-4">
                     <div className="col-12 col-md-7 text-primary">
                         <p className="mission-text"><strong>Host A Healthcare Hero</strong> relies heavily on the strength of community partners and
                             volunteers to provide healthcare heroes with appreciative care.
@@ -72,9 +64,9 @@ class Contact extends Component {
                             Lorem ipsum, Executive Director
                         </p>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="row row-content pt-0">
+                {/* <div className="row row-content pt-0">
                     <div className="col-sm-6">
                         <h5 className="mb-0 mission-text"><u className="text-primary">Address:</u></h5>
                         <address className="text-primary address-info">
@@ -92,7 +84,7 @@ class Contact extends Component {
                         <a role="button" className="btn btn-link text-primary p-0 address-info" href="tel:+19737774321"><i className="fa fa-phone" ></i> 1-973-777-4321</a><br />
                         <a role="button" className="btn btn-link text-primary p-0 address-info" href="mailto:info@healthcareheroes.org"><i className="fa fa-envelope-o" ></i> info@healthcareheroes.org</a>
                     </div>
-                </div>
+                </div> */}
                 
                 <div className="row row-content">
                     <div className="col-12">
@@ -197,6 +189,12 @@ class Contact extends Component {
                                     />
                                 </Col>
                             </Row>
+                            {/* <Row className="form-group">
+                                <div class="custom-control custom-checkbox ">
+                                    <input type="checkbox" id="prep" name="prep" class="custom-control-input" />
+                                    <label class="custom-control-label" for="prep">Preparation</label>
+                                </div>
+                            </Row> */}
                             <Row className="form-group">
                                 <Col md={5}>
                                     <Control.select model=".contactType" name="contactType" 
