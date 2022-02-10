@@ -44,12 +44,12 @@ class ContactForm extends Component {
         return (
             <div className="container ">
                 <div className="row row-content">
-                    <div className="col-12">
+                    <div className="col-12 px-0">
                         <h2 className="text-primary">We want to hear from you!</h2>
                     </div>
                     {/* Form */}
-                    <div className="col bg-danger pt-3">
-                        <LocalForm onSubmit={values => this.handleSubmit(values)} className="mission-text">
+                    <div className="col bg-danger pt-3 contact-form">
+                        <LocalForm onSubmit={values => this.handleSubmit(values)} className="mission-text ">
                             <Row className="form-group">
                                 <Col md={12}>
                                     <Control.text model=".firstName" name="firstName" id="firstName" 

@@ -228,8 +228,13 @@ dd {
   border: 2px outset #593196; }
 
 .address-info {
-  font-size: 16px; }
-
+  font-size: 16px; 
+}
+.contact-form,
+.volunteer-form {
+  border: 3px double white;
+  border-radius: 5px;
+}
 .contact-input {
   border: 3px double #446e9b;
   height: 40px;
