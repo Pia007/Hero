@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
-import Involved from './Involved';
-import Volunteer from './Volunteer';
+import Home from '../pages/Home';
+import About from '../pages/About';
+import Contact from '../pages/Contact';
+import Involved from '../pages/Involved';
+import Volunteer from '../pages/Volunteer';
 import Footer from './Footer';
 // WK4 deleting imports CAMPSITE, COMMENT, PARTNERS AND PROMOTIONS
 // no longing storing the application state in the Main Component;

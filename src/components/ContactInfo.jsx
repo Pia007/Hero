@@ -1,21 +1,12 @@
 import React from 'react';
-import SiteCrumbs from './SiteCrumbs';
-import PageTitle from './PageTitle';
-import SectionBreak from './SectionBreak';
+import { Row, Col } from 'reactstrap';
 
 const ContactInfo = (props) =>{
     return (
         <div >
-            <div className="row">
-                <div className="col">
-                    <SiteCrumbs siteLocation="Contact" />
-                    <PageTitle pageTitle="Contact Us" />
-                    <SectionBreak />
-                </div>
-            </div>
             {/* Contact Info */}
-            <div className="row row-content pb-0 mb-4">
-                <div className="col-12 col-md-7 text-primary">
+            <Row className="row-content pb-0 mb-4">
+                <Col md={7} className="text-primary">
                     <p className="mission-text"><strong>Host A Healthcare Hero</strong> relies heavily on the strength of community partners and
                         volunteers to provide healthcare heroes with appreciative care.
                     </p>
@@ -28,11 +19,11 @@ const ContactInfo = (props) =>{
                     <p className="mission-text">
                         Lorem ipsum, Executive Director
                     </p>
-                </div>
-            </div>
+                </Col>
+            </Row>
 
-            <div className="row row-content p-0">
-                <div className="col-sm-6">
+            <Row className=" p-0">
+                <Col sm={6} >
                     <h5 className="mb-0 mission-text"><u className="text-primary">Address:</u></h5>
                     <address className="text-primary address-info">
                         2124 W Heroes LN, Suite 99<br />
@@ -48,8 +39,8 @@ const ContactInfo = (props) =>{
                     <h5 className="mb-0 mission-text"><u className="text-primary">Phone & Email</u></h5>
                     <a role="button" className="btn btn-link text-primary p-0 address-info" href="tel:+19737774321"><i className="fa fa-phone" ></i> 1-973-777-4321</a><br />
                     <a role="button" className="btn btn-link text-primary p-0 address-info" href="mailto:info@healthcareheroes.org"><i className="fa fa-envelope-o" ></i> info@healthcareheroes.org</a>
-                </div>
-            </div>
+                </Col>
+            </Row>
         </div>
     
     );

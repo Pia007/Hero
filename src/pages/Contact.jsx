@@ -1,10 +1,12 @@
 /* eslint-disable react/jsx-pascal-case */
-import ContactInfo from './ContactInfo';
-import ContactForm from './ContactForm';
+import PageHeader from '../components/PageHeader';
+import ContactInfo from '../components/ContactInfo';
+import ContactForm from '../components/ContactForm';
 
 function Contact() {
         return (
             <div className="container ">
+                <PageHeader siteLocation={"Contact"} pageTitle={"Contact Us"} />
                 <ContactInfo />
                 <ContactForm />
             </div>

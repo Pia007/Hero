@@ -1,14 +1,10 @@
 import React from 'react';
-import InvolvedInfo from './InvolvedInfo';
 import InvolvedCard from './InvolvedCard';
 import SectionBreak from './SectionBreak';
-//import { Link } from 'react-router-dom';
 
-
-const Involved = (props) => {
+const InvolvedBody = (props) => {
     return (
-        <div className="container">
-            <InvolvedInfo />
+        <div>
             <InvolvedCard className={"row row-content"} 
                 title={"Volunteer"}
                 contentOne={"We provide thousands of services to healthcare workers and it could not be done without you. We are always looking for volunteers to help us out. If you are interested in volunteering, please contact us."}
@@ -40,9 +36,9 @@ const Involved = (props) => {
                 imageName={"donations image"}
                 modalHeaderText={"Donate"}
                 modalBodyText={"This is a test"}
-            />
+            /> 
         </div>
     );
 }
 
-export default Involved;
+export default InvolvedBody;

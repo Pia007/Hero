@@ -43,12 +43,12 @@ class ContactForm extends Component {
     render() {
         return (
             <div className="container ">
-                <div className="row row-content">
-                    <div className="col-12 px-0">
+                <Row className="row-content">
+                    <Col sm={12} className="px-0">
                         <h2 className="text-primary">We want to hear from you!</h2>
-                    </div>
+                    </Col>
                     {/* Form */}
-                    <div className="col bg-danger pt-3 contact-form">
+                    <Col sm={12} className="bg-danger pt-3 contact-form">
                         <LocalForm onSubmit={values => this.handleSubmit(values)} className="mission-text ">
                             <Row className="form-group">
                                 <Col md={12}>
@@ -195,8 +195,8 @@ class ContactForm extends Component {
                                 </Col>
                             </Row>
                         </LocalForm>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </div>
         );
     }

@@ -1,21 +1,16 @@
 import React from 'react';
-import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { SiteCrumbs } from '../components/PageHeader';
+import { PageTitle} from '../components/PageHeader';
+import SectionBreak from '../components/SectionBreak';
+import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function About(props) {
+const About = (props) => {
     return (
         <div className="container">
-            <div className="row">
-                <div className="col">
-                    <Breadcrumb className="text-secondary">
-                        <BreadcrumbItem className="bc-prev text-success"><Link to="/" className="text-success">Home</Link></BreadcrumbItem>
-                        <BreadcrumbItem active className="bc-now text-secondary">About</BreadcrumbItem>
-                    </Breadcrumb>
-                    {/* <h1 className="text-center text-primary">About Us</h1>
-                    <hr className="col-sm-8 my-0" /> */}
-                </div>
-            </div>
-            <h1 className="text-center text-primary mt-0">Our Mission</h1>
+            <SiteCrumbs siteLocation={"About"}  />
+            <PageTitle pageTitle={"Our Mission"} />
+            
             <div className="row row-content pt-0">
                 <div className="col px-sm-0">
                     <p className="text-center text-primary mission-text">
@@ -25,7 +20,7 @@ function About(props) {
                     </p>
                 </div>
             </div>
-            <hr className="col-sm-8 my-0" />
+            <SectionBreak />
 
             <div className="row row-content">
                 <div className="col px-sm-0">
