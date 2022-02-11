@@ -28,7 +28,7 @@ const InvolvedCard =({
                     />
                 </Col>
                 <Col lg={6}>
-                    <img className="col d-flex my-4 my-lg-0 mr-3 img-fluid p-0 pt-lg-4" src={imageSrc} alt={imageName} />
+                    <img className="col d-flex my-4 my-lg-0 mr-3 img-fluid p-0  img-thumbnail" src={imageSrc} alt={imageName} />
                 </Col> 
             </Row>
         </div>

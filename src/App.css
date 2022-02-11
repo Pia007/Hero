@@ -1,7 +1,8 @@
 :root {
   --input-bg: #e4eefa;
   --input-font: #446e9b;
-  --table-bg: #f6c0c0;
+  --table-bg: #c9def5;
+  --table-bg-alt: #aecbeb;
 }
 body {
   font-family: "Heebo", sans-serif;
@@ -114,7 +115,7 @@ a.nav-volunteer:active {
   opacity: 50%; }
 
 .row-content {
-  padding: 30px 0;
+  padding: 40px 0;
   min-height: 100px; }
 
 h1,
@@ -133,6 +134,9 @@ h5 {
 hr {
   border: 3px double #446e9b; 
   opacity: 50%; 
+}
+img {
+  border: 3px double #446e9b; 
 }
 
 .page-holder {
@@ -211,20 +215,13 @@ hr {
 .about-card-holder {
   background: transparent; }
 
-.about-card {
-  border: 1px solid #cd0200;
-  
+.about-card-odd {
+  /* border: 1px solid #cd0200; */
   background: var(--table-bg); 
 }
-
-dt,
-dd {
-  border-bottom: 1px solid #a994c8;
-  font-size: 16px; }
-
-.last-dt,
-.last-dd {
-  border-bottom: none; }
+.about-card-even {
+  background: var(--table-bg-alt);
+}
 
 .partners {
   border: 2px outset #593196; }

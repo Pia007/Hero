@@ -5,7 +5,7 @@ import SectionBreak from './SectionBreak';
 
 export const SiteCrumbs = ({ siteLocation }) => {
     return (
-        <Breadcrumb className="breadcrumb">
+        <Breadcrumb className="breadcrumb mb-0">
             <BreadcrumbItem className="bc-prev text-success pl-0"><Link to="/" className="site-link">Home</Link></BreadcrumbItem>
             <BreadcrumbItem active className="text-secondary bc-now">{siteLocation}</BreadcrumbItem>
         </Breadcrumb>
