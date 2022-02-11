@@ -1,11 +1,11 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 
-function Buttons({ clickHandler, btnText, className }) {
+function Buttons({ color,clickHandler, btnText, className }) {
     return (
         <div>
             <Button 
-                color="primary"
+                color={color}
                 onClick={clickHandler}
                 className={className}
                 >{btnText}

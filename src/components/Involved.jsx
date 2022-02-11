@@ -14,6 +14,8 @@ function Involved(props) {
                 contentTwo={"To learn more about the volunteer process, please click the button below."}
                 imageSrc={"assets/images/vol-barber.jpg"}
                 imageName={"volunteer image"}
+                modalHeaderText={"Volunteer"}
+                modalBodyText={"This is a test"}
             />
             <hr className="col-sm-8 my-0" />
 
@@ -23,6 +25,8 @@ function Involved(props) {
                 contentTwo={"If your organization would like to become a Mission Sponsor, just click the button below. contact us"}
                 imageSrc={"assets/images/sponsor.jpeg"}
                 imageName={"sponsor image"}
+                modalHeaderText={"Sponsor Us"}
+                modalBodyText={"This is a test"}
             />
             <hr className="col-sm-8 my-0" />
 
@@ -33,6 +37,8 @@ function Involved(props) {
                 contentThree={"Or you can donate directly to the local food pantry."}
                 imageSrc={"assets/images/food-donate.jpg"}
                 imageName={"donations image"}
+                modalHeaderText={"Donate"}
+                modalBodyText={"This is a test"}
             />
         </div>
     );

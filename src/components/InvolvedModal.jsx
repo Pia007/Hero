@@ -8,7 +8,7 @@ const InvolvedModal = ({modalHeaderText, modalBodyText}) => {
     
     return (
         <div>
-            <Buttons clickHandler={toggleModal} btnText={"Learn More"} className="col-6 col-sm-6 col-md-4 mx-auto btn-learn"/>
+            <Buttons color={"primary"} clickHandler={toggleModal} btnText={"Learn More"} className="col-6 col-sm-6 col-md-4 mx-auto btn-learn"/>
             <Modal isOpen={modal} toggle={toggleModal}>
                 <ModalHeader toggle={toggleModal}>{modalHeaderText}</ModalHeader>
                 <ModalBody>
