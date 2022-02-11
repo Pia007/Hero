@@ -1,10 +1,11 @@
 import React from 'react';
 import InvolvedInfo from './InvolvedInfo';
 import InvolvedCard from './InvolvedCard';
+import SectionBreak from './SectionBreak';
 //import { Link } from 'react-router-dom';
 
 
-function Involved(props) {
+const Involved = (props) => {
     return (
         <div className="container">
             <InvolvedInfo />
@@ -17,7 +18,7 @@ function Involved(props) {
                 modalHeaderText={"Volunteer"}
                 modalBodyText={"This is a test"}
             />
-            <hr className="col-sm-8 my-0" />
+            <SectionBreak />
 
             <InvolvedCard className={"row row-content flex-lg-row-reverse"}
                 title={"Sponsor Us"}
@@ -28,7 +29,7 @@ function Involved(props) {
                 modalHeaderText={"Sponsor Us"}
                 modalBodyText={"This is a test"}
             />
-            <hr className="col-sm-8 my-0" />
+            <SectionBreak />
 
             <InvolvedCard className={"row row-content "}
                 title={"Donations"}

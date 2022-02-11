@@ -1,6 +1,9 @@
 import React from 'react';
+import SiteCrumbs from './SiteCrumbs';
+import PageTitle from './PageTitle';
+import SectionBreak from './SectionBreak';
 
-function Home(props) {
+const Home = (props) => {
     return (
         <h1>
             Home

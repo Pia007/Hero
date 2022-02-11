@@ -97,13 +97,14 @@ a.nav-volunteer:active {
   color: #ebf9ff; }
 
 .breadcrumb {
-  font-size: 16px;
-  background: transparent;
-  }
+    background: transparent;
+    padding-left: 0;
+    padding-top: 4px;
+}
 
 .bc-prev {
-  font-weight: 600;
-   }
+    font-weight: 600;
+}
 
 .bc-now {
   opacity: 50%;}
