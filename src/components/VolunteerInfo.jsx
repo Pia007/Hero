@@ -6,8 +6,8 @@ function VolunteerInfo() {
         <div className="row">
             <div className="col">
                 <Breadcrumb>
-                    <BreadcrumbItem className="bc-prev text-secondary"><Link to="/">Home</Link></BreadcrumbItem>
-                    <BreadcrumbItem active className="text-success bc-now">Volunteer</BreadcrumbItem>
+                    <BreadcrumbItem className="bc-prev text-success"><Link to="/">Home</Link></BreadcrumbItem>
+                    <BreadcrumbItem active className="text-secondary bc-now">Volunteer</BreadcrumbItem>
                 </Breadcrumb>
                 <h1 className="text-center text-primary">Volunteer</h1>
                 <hr className="col-sm-8 my-0" />

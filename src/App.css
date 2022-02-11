@@ -99,13 +99,14 @@ a.nav-volunteer:active {
 .breadcrumb {
   font-size: 16px;
   background: transparent;
-  color: #cd0200; }
+  }
 
 .bc-prev {
-  opacity: 50%; }
+  font-weight: 600;
+   }
 
 .bc-now {
-  font-weight: 600; }
+  opacity: 50%;}
 
 .breadcrumb .breadcrumb-item::before {
  

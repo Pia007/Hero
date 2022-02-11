@@ -7,17 +7,15 @@ import { BrowserRouter } from 'react-router-dom';
   import { ConfigureStore } from './redux/configureStore';
   import './App.css';
 
-  // In configuresStore.js: the function returns the redux store 
+// In configuresStore.js: the function returns the redux store 
 // we capture that return value in a constant called store
 // const store = ConfigureStore();
 class App extends Component {
   render() {
     return (
-      // WK 4 Wrap BrowserRouter in Provider tags with store as an attribute
-            // makes the redux store available to all connected components that are children of app
       // <Provider store={store}>
         <BrowserRouter >
-          <div className="App">
+          <div className="App container-fluid">
             <Main />
           </div>
         </BrowserRouter>

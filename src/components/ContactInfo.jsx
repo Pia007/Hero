@@ -8,8 +8,8 @@ function ContactInfo(props) {
             <div className="row">
                 <div className="col">
                     <Breadcrumb className="text-secondary">
-                        <BreadcrumbItem className="bc-prev text-secondary"><Link to="/" className="text-secondary">Home</Link></BreadcrumbItem>
-                        <BreadcrumbItem active className="bc-now text-success">Contact</BreadcrumbItem>
+                        <BreadcrumbItem className="bc-prev text-success"><Link to="/" className="text-success">Home</Link></BreadcrumbItem>
+                        <BreadcrumbItem active className="bc-now text-secondary">Contact</BreadcrumbItem>
                     </Breadcrumb>
                     <h1 className="text-center text-primary">Contact Us</h1>
                     <hr className="col-sm-8 my-0" />
