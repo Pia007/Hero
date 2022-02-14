@@ -1,10 +1,10 @@
 import React from 'react';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
+import{ MissionSponsors }from '../components/MissionSponsors';
 import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
 import { Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
 
 const About = (props) => {
     return (
@@ -76,8 +76,10 @@ const About = (props) => {
             </Row>
             <hr className="col-sm-8  my-0"/>
 
-            {/* MISSION SPONSORS  */}
-            <div className="row row-content">
+            <MissionSponsors />
+            
+           
+            {/* <div className="row row-content">
                 <div className="col px-sm-0">
                     <h2 className="">Mission Sponsors</h2>
                     <ul className="nav nav-pills mb-2 text-primary mission-text">
@@ -101,9 +103,9 @@ const About = (props) => {
                                 Jersey
                             </a>
                         </li>
-                    </ul>
+                    </ul> */}
 
-                    <div className="tab-content text-primary mission-text">
+                    {/* <div className="tab-content text-primary mission-text">
                         <div role="tab-panel" className="tab-pane fade show active " id="alpha">
                             <h4>Alpha Food Services, Inc.</h4>
                             <p className="">Alpha Food Services is a family business that has proudly served northern
@@ -113,7 +115,7 @@ const About = (props) => {
                                 Host A Healthcare Hero to provide health meals to healthcare workers.
                             </p>
                         </div>
-                        <div role="tabpanel" className="tab-pane fade" id="chopra">
+                        <div role="tab-panel" className="tab-pane fade" id="chopra">
                             <h4>Choprah Health & Wellness, LLC.</h4>
                             <p className="">Chopra Health & Wellness is a non-profit health and wellness center that
                                 provides free mental health and holistic services to the community. They have 
@@ -121,7 +123,7 @@ const About = (props) => {
                                 free mental health and holistic services to healthcare workers.
                             </p>
                         </div>
-                        <div role="tabpanel" className="tab-pane fade" id="sophie">
+                        <div role="tab-panel" className="tab-pane fade" id="sophie">
                             <h4>Cutz 4 All, LLC.</h4>
                             <p className="">Cutz 4 All has proudly served northern New Jersey for over 25 years. Over the years, with 5 locations,
                                 they have worked with several foundations to provide grooming services for cancer patients, disabled Americans
@@ -129,7 +131,7 @@ const About = (props) => {
                                 services to healthcare workers.
                             </p>
                         </div>
-                        <div role="tabpanel" className="tab-pane fade" id="jersey">
+                        <div role="tab-panel" className="tab-pane fade" id="jersey">
                             <h4>Jersey Strength & Fitness, LLC.</h4>
                             <p className="">Jersey Strength & Fitness originated on the boardwalk of Atlantic City. After retiring with 7 locations in John Fitness
                                 wanted to give back and began working with several organizations to provide functional training 
@@ -140,7 +142,7 @@ const About = (props) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <hr className="col-sm-8 my-0"/>
             {/* END MISSION SPONSORS  */}
 

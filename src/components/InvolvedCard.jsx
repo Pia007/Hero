@@ -15,7 +15,7 @@ const InvolvedCard =({
     }) => {
 
     return (
-        <div>
+        <div >
             <Row className={className}>
                 <Col lg={6} className="my-auto" >
                     <h2>{title}</h2>

@@ -222,6 +222,26 @@ img {
 .about-card-even {
   background: var(--table-bg-alt);
 }
+.accordion-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  color: white;
+}
+
+/* .accordion-title:hover {
+  background-color: #3ab4cc;
+} */
+
+.accordion-title,
+.accordion-content {
+  padding: 1rem;
+}
+
+.accordion-content {
+  background-color: var(--table-bg);
+}
 
 .partners {
   border: 2px outset #593196; }
