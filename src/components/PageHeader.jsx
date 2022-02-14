@@ -20,13 +20,15 @@ export const PageTitle = ({ pageTitle }) => {
 
 const PageHeader = ({ siteLocation, pageTitle }) => {
     return (
-        <Row>
-            <Col>
-                <SiteCrumbs siteLocation={siteLocation} />
-                <PageTitle pageTitle={pageTitle} />
-                <SectionBreak />
-            </Col>
-        </Row>
+        <div className='container'>
+            <Row>
+                <Col>
+                    <SiteCrumbs siteLocation={siteLocation} />
+                    <PageTitle pageTitle={pageTitle} />
+                    <SectionBreak />
+                </Col>
+            </Row>
+        </div>
     );
 }
 
