@@ -17,7 +17,7 @@ function Footer() {
                             <i className="fa fa-phone" /> 
                             {' '}1-973-777-4321
                         </a><br />
-                        <a role="button" className="btn btn-link p-0 text-light ft-info" href="mailto:info@hostahealthcareheroes.org" >
+                        <a role="button" className="btn btn-link p-0 text-light ft-info" href="mailto:notARealEmail@NotReal.org" >
                             <i className="fa fa-envelope-o" /> 
                             {' '}info@healthcareheroes.org
                         </a>
@@ -58,7 +58,7 @@ function Footer() {
                 </div>
             </div>
             <p className="copyright text-center text-light">
-                &copy; 2021 HOST A HEALTHCARE HERO 
+                &copy; 2022 HOST A HEALTHCARE HERO 
             </p>
         </footer>
     );
