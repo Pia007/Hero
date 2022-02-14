@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <footer className="site-footer  text-light bg-primary" >
+        <footer className="site-footer text-light bg-primary" >
             <div className="container">
                 <div className="row row-content ">
                     <div className="col-md-4 mb-4 text-center p-0">
@@ -17,7 +17,7 @@ function Footer() {
                             <i className="fa fa-phone" /> 
                             {' '}1-973-777-4321
                         </a><br />
-                        <a role="button" className="btn btn-link p-0 text-light ft-info" href="mailto:notARealEmail@NotReal.org" >
+                        <a role="button" className="btn btn-link p-0 text-light ft-info" href="mailto:notARealEmail@hostahealthcareheroes.org" >
                             <i className="fa fa-envelope-o" /> 
                             {' '}info@healthcareheroes.org
                         </a>
