@@ -4,12 +4,12 @@ export const MissionAccordion = ({ name, description  }) => {
     const [isActive, setIsActive] = useState(false);
 
     return (
-        <div className="mission-text accordion-item">
-            <div className="bg-primary mb-2 accordion-title" onClick={() => setIsActive(!isActive)}>
-                <div className=''>{name}</div>
+        <div className="mission-text accordion-item px-3 px-sm-0">
+            <div className="bg-primary accordion-title" onClick={() => setIsActive(!isActive)}>
+                <h4 className="text-light mb-0">{name}</h4>
                 <div className="">{isActive ? '-' : '+'}</div>
             </div>
-            {isActive && <div className="text-primary p-1 accordion-content">{description}</div>}
+            {isActive && <div className="text-primary p-1 accordion-description mb-1 px-3">{description}</div>}
         </div>
 
     );
