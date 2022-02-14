@@ -74,76 +74,11 @@ const About = (props) => {
                     <AboutTable />
                 </Row>
             </Row>
-            <hr className="col-sm-8  my-0"/>
+            <SectionBreak />
 
+            {/* MISSION SPONSORS */}
             <MissionSponsors />
-            
-           
-            {/* <div className="row row-content">
-                <div className="col px-sm-0">
-                    <h2 className="">Mission Sponsors</h2>
-                    <ul className="nav nav-pills mb-2 text-primary mission-text">
-                        <li className="nav-item ">
-                            <a className="nav-link rounded-pill active" href="#alpha" role="tab" data-toggle="pill">
-                                Alpha
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link rounded-pill" href="#chopra" role="tab" data-toggle="pill">
-                                Chopra
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link rounded-pill" href="#sophie" role="tab" data-toggle="pill">
-                                Cutz
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link rounded-pill " href="#jersey" role="tab" data-toggle="pill">
-                                Jersey
-                            </a>
-                        </li>
-                    </ul> */}
-
-                    {/* <div className="tab-content text-primary mission-text">
-                        <div role="tab-panel" className="tab-pane fade show active " id="alpha">
-                            <h4>Alpha Food Services, Inc.</h4>
-                            <p className="">Alpha Food Services is a family business that has proudly served northern
-                                New Jersey for over 75 years. Over the years the business has grown to include 8 restaurants, 4 food 
-                                trucks, 2 food distribution warehouses and a food pantry. When the pandemic hit, Alpha Food Services was able to
-                                assist in mediating the food crisis. They have partnered with 
-                                Host A Healthcare Hero to provide health meals to healthcare workers.
-                            </p>
-                        </div>
-                        <div role="tab-panel" className="tab-pane fade" id="chopra">
-                            <h4>Choprah Health & Wellness, LLC.</h4>
-                            <p className="">Chopra Health & Wellness is a non-profit health and wellness center that
-                                provides free mental health and holistic services to the community. They have 
-                                been in service for 30 years and have partnered with Host A Healthcare Hero to provide 
-                                free mental health and holistic services to healthcare workers.
-                            </p>
-                        </div>
-                        <div role="tab-panel" className="tab-pane fade" id="sophie">
-                            <h4>Cutz 4 All, LLC.</h4>
-                            <p className="">Cutz 4 All has proudly served northern New Jersey for over 25 years. Over the years, with 5 locations,
-                                they have worked with several foundations to provide grooming services for cancer patients, disabled Americans
-                                and victims of domestic violence. They are dedicated to working with Host A Healthcare Hero to extend free
-                                services to healthcare workers.
-                            </p>
-                        </div>
-                        <div role="tab-panel" className="tab-pane fade" id="jersey">
-                            <h4>Jersey Strength & Fitness, LLC.</h4>
-                            <p className="">Jersey Strength & Fitness originated on the boardwalk of Atlantic City. After retiring with 7 locations in John Fitness
-                                wanted to give back and began working with several organizations to provide functional training 
-                                to individuals with Parkinson's disease. That was 15 years ago. Since then, Jersey S&F has open 4 new locations
-                                throughout northern New Jersey soley dedicated to the community. Jersey Strength & Fitness has partnered
-                                with Host A Healthcare Worker to extend free fitness services to healthcare workers.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-            <hr className="col-sm-8 my-0"/>
+            <SectionBreak />
             {/* END MISSION SPONSORS  */}
 
             <div className="row row-content"> 
