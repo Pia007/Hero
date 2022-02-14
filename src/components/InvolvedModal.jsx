@@ -1,25 +1,26 @@
 import { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import Buttons from './Buttons';
+import { Link } from 'react-router-dom';
 
-const InvolvedModal = ({modalHeaderText, modalBodyText}) => {
+const InvolvedModal = ({modalHeaderText, modalBodyText, to, value, text}) => {
     const [modal, setModal] = useState(false);
     const toggleModal = () => setModal(!modal);
     
     return (
         <div>
             <Buttons color={"primary"} clickHandler={toggleModal} btnText={"Learn More"} className="col-6 col-sm-6 col-md-4 mx-auto btn-learn"/>
-            <Modal isOpen={modal} toggle={toggleModal}>
-                <ModalHeader toggle={toggleModal}>{modalHeaderText}</ModalHeader>
+            <Modal centered scrollable lg isOpen={modal} toggle={toggleModal} className=" ">
+                <ModalHeader toggle={toggleModal} className="bg-primary text-white">{modalHeaderText}</ModalHeader>
                 <ModalBody>
                     <p>{modalBodyText}</p>
                 </ModalBody>
                 <ModalFooter>
-                    {/* Update this button */}
-                    <Button 
-                        type="submit" value="submit" color="primary">
-                        Test
-                    </Button>
+                    <Link 
+                        className="btn btn-success mission text"
+                        value={value} color="success" to={to}>
+                        {text}
+                    </Link>
                 </ModalFooter>
             </Modal>
         </div>

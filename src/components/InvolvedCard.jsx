@@ -9,6 +9,8 @@ const InvolvedCard =({
     contentThree, 
     modalHeaderText, 
     modalBodyText, 
+    value,
+    to,
     imageSrc, 
     imageName 
 
@@ -25,6 +27,9 @@ const InvolvedCard =({
                     <InvolvedModal 
                         modalHeaderText={modalHeaderText}
                         modalBodyText={modalBodyText}
+                        value={value}
+                        to={to}
+                        text={title}
                     />
                 </Col>
                 <Col lg={6}>
