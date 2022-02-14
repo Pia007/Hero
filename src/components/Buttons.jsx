@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 
-function Buttons({ color,clickHandler, btnText, className }) {
+function Buttons({ color, clickHandler, btnText, className }) {
     return (
         <div>
             <Button 
