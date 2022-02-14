@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-pascal-case */
 import React, { Component } from 'react';
-import { Button, Col, Row } from 'reactstrap';
+import Buttons from './Buttons';
+import { Col, Row } from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
 const required = (val) => val && val.length; 
@@ -48,7 +49,7 @@ class ContactForm extends Component {
                         <h2 className="text-primary">We want to hear from you!</h2>
                     </Col>
                     {/* Form */}
-                    <Col sm={12} className="bg-danger pt-3 contact-form">
+                    <Col sm={12} className=" pt-3 contact-form">
                         <LocalForm onSubmit={values => this.handleSubmit(values)} className="mission-text ">
                             <Row className="form-group">
                                 <Col md={12}>
@@ -189,9 +190,12 @@ class ContactForm extends Component {
                             </Row>
                             <Row className="form-group">
                                 <Col md={3}>
-                                    <Button type="submit" color="primary" className="btn-feedback"> 
-                                        Send Feedback
-                                    </Button>
+                                    <Buttons 
+                                        type="submit" 
+                                        color="primary"
+                                        className="btn-feedback"
+                                        btnText={"Send Feedback"}
+                                    />
                                 </Col>
                             </Row>
                         </LocalForm>

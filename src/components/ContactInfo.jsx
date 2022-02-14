@@ -38,7 +38,7 @@ const ContactInfo = (props) =>{
 
                     <h5 className="mb-0 mission-text"><u className="text-primary">Phone & Email</u></h5>
                     <a role="button" className="btn btn-link text-primary p-0 address-info" href="tel:+19737774321"><i className="fa fa-phone" ></i> 1-973-777-4321</a><br />
-                    <a role="button" className="btn btn-link text-primary p-0 address-info" href="mailto:info@healthcareheroes.org"><i className="fa fa-envelope-o" ></i> info@healthcareheroes.org</a>
+                    <a role="button" className="btn btn-link text-primary p-0 address-info" href="mailto:notARealEmail@NotReal.org"><i className="fa fa-envelope-o" ></i> info@healthcareheroes.org</a>
                 </Col>
             </Row>
         </div>
