@@ -80,7 +80,7 @@ class Header extends Component {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink onClick={this.closeNav} className="btn btn-outline-light my-2 my-sm-0  nav-text nav-volunteer" to="/volunteer"> 
+                                    <NavLink onClick={this.closeNav} className="btn btn-outline-light my-2 my-sm-0 nav-text nav-volunteer" id="vol-link" to="/volunteer"> 
                                         Volunteer
                                     </NavLink>
                                 </NavItem>
