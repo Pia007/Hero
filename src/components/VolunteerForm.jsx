@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Button, FormGroup, Form, Label, Input, Col, FormFeedback } from 'reactstrap';
+import { FormGroup, Form, Label, Input, Col, FormFeedback } from 'reactstrap';
+import Buttons from './Buttons';
 
 class VolunteerForm extends Component {
     constructor(props) {
@@ -139,7 +140,7 @@ class VolunteerForm extends Component {
                     </div>
                     {/* Form */}
                     <div className="col">
-                        <Form onSubmit={this.handleSubmit} className="mission-text bg-success p-3 volunteer-form">
+                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 volunteer-form">
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="text" htmlFor="fName" name="fName" id="fName" 
@@ -151,7 +152,7 @@ class VolunteerForm extends Component {
                                         onChange={this.handleInputChange} 
                                         required 
                                     />
-                                    <FormFeedback>{errors.fName}</FormFeedback>
+                                    <FormFeedback className="errors pl-2">{errors.fName}</FormFeedback>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -165,7 +166,7 @@ class VolunteerForm extends Component {
                                         onChange={this.handleInputChange} 
                                         required 
                                     />
-                                    <FormFeedback>{errors.lName}</FormFeedback>
+                                    <FormFeedback className="errors pl-2">{errors.lName}</FormFeedback>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -179,7 +180,7 @@ class VolunteerForm extends Component {
                                         onChange={this.handleInputChange} 
                                         required 
                                     />
-                                    <FormFeedback>{errors.address1}</FormFeedback>
+                                    <FormFeedback className="errors pl-2">{errors.address1}</FormFeedback>
                                 </Col>
                             </FormGroup>
                             
@@ -194,7 +195,7 @@ class VolunteerForm extends Component {
                                         onChange={this.handleInputChange} 
                                         required 
                                     />
-                                    <FormFeedback>{errors.city}</FormFeedback>
+                                    <FormFeedback className="errors pl-2">{errors.city}</FormFeedback>
                                 </Col>
                             
                                 <Col md={4} className="mb-3 mb-md-0">
@@ -207,7 +208,7 @@ class VolunteerForm extends Component {
                                         onChange={this.handleInputChange} 
                                         required 
                                     />
-                                    <FormFeedback>{errors.userState}</FormFeedback>
+                                    <FormFeedback className="errors pl-2">{errors.userState}</FormFeedback>
                                 </Col>
                                 <Col md={4} >
                                     <Input type="text" htmlFor="zip" name="zip" id="zip" 
@@ -219,7 +220,7 @@ class VolunteerForm extends Component {
                                         onChange={this.handleInputChange} 
                                         required 
                                     />
-                                    <FormFeedback>{errors.zip}</FormFeedback>
+                                    <FormFeedback className="errors pl-2">{errors.zip}</FormFeedback>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
@@ -232,7 +233,7 @@ class VolunteerForm extends Component {
                                         onBlur={this.handleBlur("phone")} 
                                         onChange={this.handleInputChange} 
                                     />
-                                    <FormFeedback>{errors.phone}</FormFeedback>
+                                    <FormFeedback className="errors pl-2">{errors.phone}</FormFeedback>
                                 </Col>
                                 <Col md={6}>
                                     <Input type="email" htmlFor="email"name="email" id="email" 
@@ -243,13 +244,13 @@ class VolunteerForm extends Component {
                                         onBlur={this.handleBlur("email")} 
                                         onChange={this.handleInputChange} 
                                     />
-                                    <FormFeedback>{errors.email}</FormFeedback>
+                                    <FormFeedback className="errors pl-2">{errors.email}</FormFeedback>
                                 </Col>
                             </FormGroup>
                             
                             <FormGroup row >
-                                <div className="col text-white mt-2">
-                                    <strong className="mission-text text-light"> Interests </strong>
+                                <div className="col text-primary mt-2">
+                                    <strong className="mission-text "> Interests </strong>
                                     <FormGroup row>
                                         <Col xs={6} lg={3}>
                                             <FormGroup check className="custom-control custom-checkbox ">
@@ -257,7 +258,7 @@ class VolunteerForm extends Component {
                                                     type="checkbox" 
                                                     id="food" 
                                                     name="food" 
-                                                    className="custom-control-input"
+                                                    className="custom-control-input "
                                                     checked={this.state.food}
                                                     value={this.state.food} 
                                                     onChange={this.handleInputChange}   
@@ -354,9 +355,12 @@ class VolunteerForm extends Component {
             
                             <FormGroup row>
                                 <Col md={3}>
-                                    <Button type="submit" color="primary" className="btn-feedback"> 
-                                        Volunteer
-                                    </Button>
+                                <Buttons 
+                                        type="submit" 
+                                        color="success"
+                                        className="btn-feedback"
+                                        btnText={"Volunteer"}
+                                    />
                                 </Col>
                             </FormGroup>
                         </Form>
