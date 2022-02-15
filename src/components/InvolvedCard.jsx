@@ -20,12 +20,12 @@ const InvolvedCard =({
     return (
         <div >
             <Row className={className}>
-                <Col lg={6} className="my-auto" >
+                <Col lg={6} className="my-auto text-success" >
                     <Fade bottom>
                     <h2>{title}</h2>
-                    <p className="text-primary mission-text">{contentOne}</p>
-                    <p className="text-primary mission-text">{contentTwo}</p>
-                    <p className="text-primary mission-text">{contentThree}</p>
+                    <p className=" mission-text">{contentOne}</p>
+                    <p className=" mission-text">{contentTwo}</p>
+                    <p className=" mission-text">{contentThree}</p>
                     </Fade>
                     <InvolvedModal 
                         modalHeaderText={modalHeaderText}

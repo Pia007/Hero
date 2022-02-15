@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 const InvolvedBody = (props) => {
     return (
-        <div className='container'>
+        <div className='container '>
             <Fade left>
                 <InvolvedCard className={"row row-content"} 
                     title={"Volunteer"}

@@ -2,13 +2,16 @@
 import PageHeader from '../components/PageHeader';
 import ContactInfo from '../components/ContactInfo';
 import ContactForm from '../components/ContactForm';
+import Fade from 'react-reveal/Fade';
 
 function Contact() {
         return (
             <div className="home-bg">
                 <PageHeader siteLocation={"Contact"} pageTitle={"Contact Us"} />
-                <ContactInfo />
-                <ContactForm />
+                <Fade bottom >
+                    <ContactInfo />
+                    <ContactForm />
+                </Fade>
             </div>
         );
     
