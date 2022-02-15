@@ -2,7 +2,7 @@ import React from 'react';
 
 const SectionBreak = (props) => {
     return (
-        <hr className="col-sm-8 my-0" />
+        <hr className="col-8 my-0" />
     );
 }
 
