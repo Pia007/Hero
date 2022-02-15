@@ -6,7 +6,7 @@ import AboutTable from '../components/AboutTable';
 import { Row, Col } from 'reactstrap';
 import Fade from 'react-reveal/Fade';
 
-
+// Accodion for each sponsor
 const RenderAccordionItem = ({ sponsor }) => {
     const [isActive, setIsActive] = useState(false);
 
@@ -21,6 +21,7 @@ const RenderAccordionItem = ({ sponsor }) => {
     );
 };
 
+// render each team member
 const RenderTeamMember = ({ member}) => {
     return (
         <Col className=" text-primary mission-text px-0">
@@ -31,21 +32,24 @@ const RenderTeamMember = ({ member}) => {
 
 
 const About = (props) => {
-    const memberList = props.members.map(member => {
-        return (
-            <div key={member.id} className="col p-0">
-                <RenderTeamMember
-                    member={member}
-                />
-            </div>
-        )
-    });
 
+    // define & map over sponsors and pass each to RenderAccordionItem
     const sponsor = props.sponsors.map(sponsor => {
         return (
             <div key={sponsor.id} className="col p-0">
                 <RenderAccordionItem
                     sponsor={sponsor}
+                />
+            </div>
+        )
+    });
+
+    // define & map over team members and pass each to RenderTeamMember
+    const memberList = props.members.map(member => {
+        return (
+            <div key={member.id} className="col p-0">
+                <RenderTeamMember
+                    member={member}
                 />
             </div>
         )
@@ -122,6 +126,7 @@ const About = (props) => {
                     <SectionBreak />
 
                     {/* MISSION SPONSORS */}
+                    {/* Each sponsor is rendered in this row as an accordion item */}
                     <Row className="row-content ">
                         <Col xs={12} className="px-sm-0">
                             <h2 className="text-primary my-3 ">Mission Sponsors</h2></Col>
@@ -133,6 +138,7 @@ const About = (props) => {
                     {/* END MISSION SPONSORS  */}
 
                     {/* FOUNDATION */}
+                    {/* Member list is rendered in theis row */}
                     <Row className="row-content">
                         <Col className="p-0">
                             <h2>Host A Hero Foundation</h2>
