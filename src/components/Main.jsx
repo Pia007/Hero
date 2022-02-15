@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { SPONSORS } from '../shared/sponsors';
+import { MEMBERS } from '../shared/members';
 import Header from './Header';
 import Home from '../pages/Home';
 import About from '../pages/About';
@@ -16,6 +18,15 @@ import { connect } from 'react-redux';
 // };
 
 class Main extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            sponsors: SPONSORS,
+            members: MEMBERS
+            // active: '',
+            // redirect: false
+        };
+    }
     
     render() {
         
@@ -24,7 +35,7 @@ class Main extends Component {
                 <Header />
                 <Switch>
                     <Route path="/home" component={Home} />
-                    <Route exact path="/about" component={About} />
+                    <Route exact path="/about" render={() => <About sponsors={this.state.sponsors} members={this.state.members} /> } />
                     <Route exact path="/contact" component={Contact} />
                     <Route exact path="/involved" component={Involved} />
                     <Route exact path="/volunteer" component={Volunteer} />

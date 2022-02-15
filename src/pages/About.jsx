@@ -1,21 +1,62 @@
-import React from 'react';
-import SectionBreak from '../components/SectionBreak';
-import AboutTable from '../components/AboutTable';
-import { MissionSponsors } from '../components/MissionSponsors';
-import { TeamMembers } from '../components/TeamMembers';
+import React, { useState } from 'react';
 import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
+import SectionBreak from '../components/SectionBreak';
+import AboutTable from '../components/AboutTable';
 import { Row, Col } from 'reactstrap';
 import Fade from 'react-reveal/Fade';
 
+
+const RenderAccordionItem = ({ sponsor }) => {
+    const [isActive, setIsActive] = useState(false);
+
+    return (
+        <div className="mission-text accordion-item px-3 px-sm-0">
+            <div className="bg-primary accordion-title" onClick={() => setIsActive(!isActive)}>
+                <h4 className="text-light mb-0"><strong>{sponsor.name}</strong></h4>
+                <div className="">{isActive ? '-' : '+'}</div>
+            </div>
+            {isActive && <div className="text-primary p-1 accordion-description mb-1 px-3"><strong>{sponsor.name}</strong>, {sponsor.description}</div>}
+        </div>
+    );
+};
+
+const RenderTeamMember = ({ member}) => {
+    return (
+        <Col className=" text-primary mission-text px-0">
+            <p>{member.name}, {member.title}</p>
+        </Col>
+    );
+};
+
+
 const About = (props) => {
+    const memberList = props.members.map(member => {
+        return (
+            <div key={member.id} className="col p-0">
+                <RenderTeamMember
+                    member={member}
+                />
+            </div>
+        )
+    });
+
+    const sponsor = props.sponsors.map(sponsor => {
+        return (
+            <div key={sponsor.id} className="col p-0">
+                <RenderAccordionItem
+                    sponsor={sponsor}
+                />
+            </div>
+        )
+    });
+
     return (
         <div className="home-bg">
             <div className="container">
             <SiteCrumbs siteLocation={"About"}  />
                 <Fade bottom cascade>  
                     <PageTitle pageTitle={"Our Mission"} />
-                
                     <Row className="row-content pt-0">
                         <Col className="px-sm-0">
                             <p className="text-center text-primary mission-text">
@@ -78,16 +119,27 @@ const About = (props) => {
                             <AboutTable />
                         </Row>
                     </Row>
-                    
                     <SectionBreak />
 
                     {/* MISSION SPONSORS */}
-                    <MissionSponsors />
+                    <Row className="row-content ">
+                        <Col xs={12} className="px-sm-0">
+                            <h2 className="text-primary my-3 ">Mission Sponsors</h2></Col>
+                        <Col xs={12} className="p-0">
+                            {sponsor}
+                        </Col>
+                    </Row>
                     <SectionBreak />
                     {/* END MISSION SPONSORS  */}
 
-                    {/* TEAM MEMBERS */}
-                    <TeamMembers />
+                    {/* FOUNDATION */}
+                    <Row className="row-content">
+                        <Col className="p-0">
+                            <h2>Host A Hero Foundation</h2>
+                            {memberList}
+                        </Col>
+                    </Row> 
+                    {/* END FOUNDATION */}
                     
                 </Fade>
             </div>
