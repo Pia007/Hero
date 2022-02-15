@@ -37,10 +37,10 @@ function Footer() {
                     
                     <div className="col-md-4 p-0">
                         <div className="mb-3  text-center ">
-                            <a className="btn btn-social-icon pt-md-0 pl-0" href="http://instagram.com/"><i className="fa fa-instagram text-light"></i></a>
-                            <a className="btn btn-social-icon pt-md-0" href="http://facebook.com/"><i className="fa fa-facebook text-light"></i></a>
-                            <a className="btn btn-social-icon pt-md-0" href="http://twitter.com/"><i className="fa fa-twitter text-light"></i></a>
-                            <a className="btn btn-social-icon pt-md-0" href="http://youtube.com/"><i className="fa fa-youtube text-light"></i></a>
+                            <a className="btn btn-social-icon pt-md-0 pl-0" href="http://instagram.com/" aria-label="Instagram"><i className="fa fa-instagram text-light"></i></a>
+                            <a className="btn btn-social-icon pt-md-0" href="http://facebook.com/" aria-label="Facebook"><i className="fa fa-facebook text-light"></i></a>
+                            <a className="btn btn-social-icon pt-md-0" href="http://twitter.com/" aria-label="Twitter"><i className="fa fa-twitter text-light"></i></a>
+                            <a className="btn btn-social-icon pt-md-0" href="http://youtube.com/" aria-label="YouTube"><i className="fa fa-youtube text-light"></i></a>
                         </div>
                         <p className="update-text mb-1 text-center footer-heading">
                             Sign up to receive news and updates.
@@ -48,7 +48,7 @@ function Footer() {
                         <div className="form-group row">
                             <label htmlFor="email" className="col-8 col-form-label mx-auto invisible" >Email</label>
                             <div className="col-8 mx-auto mb-0  d-flex justify-content-center">
-                                <input type="email" className="form-control ft-input" id="email" name="email" placeholder="Email Address" /> 
+                                <input type="email" className="form-control ft-input" id="emailAddress" name="emailAddress" placeholder="Email Address" /> 
                             </div>
                         </div>
                         <div className="form-group row mb-0 px-3">
