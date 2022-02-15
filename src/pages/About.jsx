@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
-import{ MissionSponsors }from '../components/MissionSponsors';
+import { MissionSponsors } from '../components/MissionSponsors';
 import { TeamMembers } from '../components/TeamMembers';
 import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
@@ -88,19 +88,7 @@ const About = (props) => {
 
                     {/* TEAM MEMBERS */}
                     <TeamMembers />
-                    {/* <div className="row row-content"> 
-                        
-                        <div className="col-md-6 px-sm-0 pl-md-3 pr-0">
-                            <h2>Board of Directors</h2>
-                            <p className="text-primary mission-text">Lorem, ipsum, Chairperson</p>
-                            <p className="text-primary mission-text">Lorem, ipsum</p>
-                            <p className="text-primary mission-text">Lorem, ipsum</p>
-                            <p className="text-primary mission-text">Lorem, ipsum</p>
-                            <p className="text-primary mission-text">Lorem, ipsum</p>
-                            <p className="text-primary mission-text">Lorem, ipsum</p>
-                            <p className="text-primary mission-text">Lorem, ipsum</p>
-                        </div>
-                    </div> */}
+                    
                 </Fade>
             </div>
         </div>
