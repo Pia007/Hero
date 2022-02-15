@@ -24,12 +24,12 @@ const AboutTable = (props) => {
                         <Col className="mb-0 py-2">27</Col>
                     </Row>
                     <Row className="mb-0 border border-primary border-top-0 border-bottom-0 about-card-even">
-                        <Col className="mb-0 py-2 last-dt">Sponsors</Col>
-                        <Col className="mb-0 py-2 last-dt">4</Col>
+                        <Col className="mb-0 py-2 ">Sponsors</Col>
+                        <Col className="mb-0 py-2 ">4</Col>
                     </Row>
-                    <Row className="mb-0 border border-primary border-top-0 about-card-odd ">
-                        <Col className="mb-0 py-2 last-dt">Volunteers</Col>
-                        <Col className="mb-0 py-2 last-dt">551</Col>
+                    <Row className="mb-0 border border-primary border-top-0 about-card-odd last-dt">
+                        <Col className="mb-0 py-2 ">Volunteers</Col>
+                        <Col className="mb-0 py-2 ">551</Col>
                     </Row>
                 </CardBody>
             </Card>
