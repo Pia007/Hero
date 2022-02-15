@@ -17,7 +17,7 @@ const AboutTable = (props) => {
                     </Row>
                     <Row className="mb-0 border border-primary border-top-0 border-bottom-0 about-card-even">
                         <Col className="mb-0 py-2">Headquarters</Col>
-                        <Col className="mb-0 py-2">Summit, NJ</Col>
+                        <Col className="mb-0 py-2">Fictitious City, NJ</Col>
                     </Row>
                     <Row className="mb-0 border border-primary border-top-0 border-bottom-0 about-card-odd">
                         <Col className="mb-0 py-2">Employees</Col>
