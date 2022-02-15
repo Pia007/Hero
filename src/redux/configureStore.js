@@ -1,4 +1,3 @@
-// WK4 - Implementing Redux:
 // import statements for createStore, Reducer and initialState 
 import { createStore } from 'redux';
 import { Reducer, initialState } from './reducer';

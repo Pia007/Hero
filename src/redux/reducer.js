@@ -1,16 +1,11 @@
-//WK 4 implementing redux- adding our first redux related code
-// This moves responsiblity of state from main component to redux
-import { CAMPSITES } from '../shared/campsites';
-import { COMMENTS } from '../shared/comments';
-import { PARTNERS } from '../shared/partners';
-import { PROMOTIONS } from '../shared/promotions';
+// Implementing Redux reducer
+import { SPONSORS } from '../shared/sponsors';
+import { MEMBERS } from '../shared/members';
 
 // Object initial state of application from the source data files
 export const initialState = {
-    campsites: CAMPSITES,
-    comments: COMMENTS,
-    partners: PARTNERS,
-    promotions: PROMOTIONS
+    sponsors: SPONSORS,
+    members: MEMBERS
 };
 
 // Reducer function
