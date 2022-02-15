@@ -1,5 +1,6 @@
 import { Row, Col} from 'reactstrap';
 import InvolvedModal from './InvolvedModal';
+import Fade from 'react-reveal/Fade';
 
 const InvolvedCard =({ 
     className, 
@@ -20,10 +21,12 @@ const InvolvedCard =({
         <div >
             <Row className={className}>
                 <Col lg={6} className="my-auto" >
+                    <Fade bottom>
                     <h2>{title}</h2>
                     <p className="text-primary mission-text">{contentOne}</p>
                     <p className="text-primary mission-text">{contentTwo}</p>
                     <p className="text-primary mission-text">{contentThree}</p>
+                    </Fade>
                     <InvolvedModal 
                         modalHeaderText={modalHeaderText}
                         modalBodyText={modalBodyText}

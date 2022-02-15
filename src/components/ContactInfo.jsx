@@ -1,12 +1,14 @@
 import React from 'react';
 import { Row, Col } from 'reactstrap';
+import Fade from 'react-reveal/Fade';
 
 const ContactInfo = (props) =>{
     return (
-        <div >
+        <div className="container">
             {/* Contact Info */}
+            <Fade bottom cascade>
             <Row className="row-content pb-0 mb-4">
-                <Col md={7} className="text-primary">
+                <Col md={7} className="text-success">
                     <p className="mission-text"><strong>Host A Healthcare Hero</strong> relies heavily on the strength of community partners and
                         volunteers to provide healthcare heroes with appreciative care.
                     </p>
@@ -22,25 +24,26 @@ const ContactInfo = (props) =>{
                 </Col>
             </Row>
 
-            <Row className=" p-0">
-                <Col sm={6} >
-                    <h5 className="mb-0 mission-text"><u className="text-primary">Address:</u></h5>
-                    <address className="text-primary address-info">
+            <Row className=" p-0 text-success">
+                <Col sm={6} className="text-success">
+                    <h5 className="mb-0 mission-text text-success"><u className="">Address:</u></h5>
+                    <address className="address-info">
                         2124 W Heroes LN, Suite 99<br />
                         Fictitious City, NJ 01007<br />
                     </address>
-                    <h5 className="mb-0 mission-text"><u className="text-primary">Hours:</u></h5>
-                    <address className="text-primary address-info">
+                    <h5 className="mb-0 mission-text text-success"><u className="">Hours:</u></h5>
+                    <address className=" address-info">
                         Monday - Friday<br />
                         9AM - 3PM<br />
                         Or call us.
                     </address>
 
-                    <h5 className="mb-0 mission-text"><u className="text-primary">Phone & Email</u></h5>
-                    <a role="button" className="btn btn-link text-primary p-0 address-info" href="tel:+19737774321"><i className="fa fa-phone" ></i> 1-973-777-4321</a><br />
-                    <a role="button" className="btn btn-link text-primary p-0 address-info" href="mailto:notARealEmail@NotReal.org"><i className="fa fa-envelope-o" ></i> info@healthcareheroes.org</a>
+                    <h5 className="mb-0 text-success mission-text"><u className="">Phone & Email</u></h5>
+                    <a role="button" className="btn btn-link p-0 text-success address-info" href="tel:+19737774321"><i className="fa fa-phone" ></i> 1-973-777-4321</a><br />
+                    <a role="button" className="btn btn-link p-0 text-success address-info" href="mailto:notARealEmail@NotReal.org"><i className="fa fa-envelope-o" ></i> info@healthcareheroes.org</a>
                 </Col>
             </Row>
+            </Fade>
         </div>
     
     );
