@@ -357,7 +357,7 @@ class VolunteerForm extends Component {
                                 <Col md={3}>
                                 <Buttons 
                                         type="submit" 
-                                        color="success"
+                                        color="primary"
                                         className="btn-feedback"
                                         btnText={"Volunteer"}
                                     />
