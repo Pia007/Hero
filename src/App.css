@@ -1,9 +1,11 @@
 :root {
     --input-bg: #e4eefa;
     --input-font: #446e9b;
+    --primary: #446e9b;
     --table-bg: #c9def5;
     --table-bg-alt: #aecbeb;
     --color-danger: #FF0000;
+    --color-success: #3cb521;
 }
 body {
     font-family: "Heebo", sans-serif;
@@ -52,6 +54,12 @@ a, a:hover {
 #vol-link:active {
     color: #3cb521; 
 }
+#vol-link:hover,
+#vol-link:focus,
+#vol-link:active {
+    color: #3cb521;
+    background: #446e9b; 
+}
 
 .ft-input,
 .ft-signup {
@@ -95,7 +103,7 @@ a, a:hover {
 }
 
 .bc-now {
-    opacity: 50%;
+    opacity: 65%;
 }
 
 .breadcrumb .breadcrumb-item::before {
@@ -106,7 +114,9 @@ a, a:hover {
     padding: 40px 0;
     min-height: 100px; 
 }
-
+/* h1 {
+    color: #04203f;
+} */
 h1,
 h2 {
     font-weight: 600;
@@ -124,7 +134,7 @@ h5 {
 }
 
 hr {
-    border: 3px double #446e9b; 
+    border: 3px double var(--color-success); 
     opacity: 50%; 
 }
 img {
@@ -137,16 +147,16 @@ img {
     margin: auto; 
 }
 
-#landing-caption {
+.landing-caption {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -70%);
     background: transparent; 
+    word-spacing: 1px;
 }
 
 .sub-text {
-    color: #593196;
-    font-size: 50px; 
+    font-size: 15px; 
 }
 
 .sub-thanks {
@@ -239,11 +249,11 @@ img {
     cursor: pointer;
     color: white;
     border-radius: 3px 3px 0 0;
-    border-bottom: 3px double white;
+    border-bottom: 3px double var(--color-success);
 }
 
 .accordion-title:hover {
-    background-color: #3ab4cc;
+    background: #3ab4cc;
 }
 
 .accordion-title,
@@ -254,6 +264,9 @@ img {
 .accordion-description {
     border-radius: 0 0 3px 3px;
     background-color: var(--table-bg);
+}
+.last-dt {
+    border-radius: 0 0 3px 3px;
 }
 
 .partners {
@@ -268,9 +281,6 @@ img {
     background: #04203f;
     border: 3px double white;
     border-radius: 5px;
-}
-.volunteer-form {
-    background: var(--table-bg-alt);
 }
 .contact-input {
     border: 3px double #446e9b;
@@ -409,7 +419,7 @@ img {
         font-size: 46px; 
     }
     .sub-text {
-        font-size: 42px; 
+        font-size: 38px; 
     }
     .sub-thanks {
         line-height: 1.8; 

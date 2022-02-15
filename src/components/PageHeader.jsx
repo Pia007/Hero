@@ -7,7 +7,7 @@ export const SiteCrumbs = ({ siteLocation }) => {
     return (
         <Breadcrumb className="breadcrumb mb-0">
             <BreadcrumbItem className="bc-prev text-success pl-0"><Link to="/" className="site-link">Home</Link></BreadcrumbItem>
-            <BreadcrumbItem active className="text-secondary bc-now">{siteLocation}</BreadcrumbItem>
+            <BreadcrumbItem active className="text-primary bc-now">{siteLocation}</BreadcrumbItem>
         </Breadcrumb>
     );
 }
@@ -20,7 +20,7 @@ export const PageTitle = ({ pageTitle }) => {
 
 const PageHeader = ({ siteLocation, pageTitle }) => {
     return (
-        <div className='container'>
+        <div className="container">
             <Row>
                 <Col>
                     <SiteCrumbs siteLocation={siteLocation} />
