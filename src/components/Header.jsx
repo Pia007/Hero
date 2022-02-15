@@ -32,19 +32,9 @@ class Header extends Component {
             <React.Fragment>
                 <Jumbotron fluid className='bg-primary'>
                     <div className="container container-fluid">
-                        <div className="row justify-content-center">
+                        <div className="row justify-content-center ">
                             <div className="col-sm-10 px-2 py-3 d-flex justify-content-around  align-items-center hd-text-hdlr">
-                                {/* <span className="text-center header-text">
-                                    <Link className="text-center text-light" to="/" >
-                                        <i className="fa fa-heartbeat hdr-icon-link text-success"></i>
-                                    </Link>
-                                </span> */}
-                                <h1 className="mb-0 text-center text-success header-text">Host a Healthcare Hero</h1>
-                                {/* <span className="text-center header-text">
-                                    <Link className="text-center text-light" to="/" >
-                                        <i className="fa fa-heartbeat hdr-icon-link text-success"></i>
-                                    </Link>
-                                </span> */}
+                                <h1 className="mb-0 text-success header-text">Host a Healthcare Hero</h1>
                             </div>
                         </div>
                     </div>
