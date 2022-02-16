@@ -42,7 +42,7 @@ class Header extends Component {
                 <Navbar className="navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light bg-primary">
                     <div className="container justify-content-between">
                         <NavbarBrand>
-                            <i className="fa fa-heartbeat text-success text-lg nav-logo" />
+                            <NavLink to="/home"><i className="fa fa-heartbeat text-success text-lg nav-logo" /></NavLink>
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} className="justify-content-end">
                             <i className="fa fa-bars fa-lg text-success nv-icon "/> 
