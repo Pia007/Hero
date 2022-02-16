@@ -20,7 +20,7 @@ const InvolvedCard =({
     return (
         <div >
             <Row className={className}>
-                <Col lg={6} className="my-auto text-success" >
+                <Col lg={6} className="my-auto text-primary" >
                     <Fade bottom>
                     <h2>{title}</h2>
                     <p className=" mission-text">{contentOne}</p>
