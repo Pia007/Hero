@@ -149,7 +149,7 @@ class VolunteerForm extends Component {
                                             className="contact-input "
                                             placeholder="First Name" 
                                             value={this.state.fName} 
-                                            invalid={errors.fName}
+                                            invalid={!!errors.fName}
                                             onBlur={this.handleBlur("fName")} 
                                             onChange={this.handleInputChange} 
                                             required 
@@ -163,7 +163,7 @@ class VolunteerForm extends Component {
                                             className="contact-input"
                                             placeholder="Last Name" 
                                             value={this.state.lName} 
-                                            invalid={errors.lName}
+                                            invalid={!!errors.lName}
                                             onBlur={this.handleBlur("lName")} 
                                             onChange={this.handleInputChange} 
                                             required 
@@ -177,7 +177,7 @@ class VolunteerForm extends Component {
                                             className="contact-input"
                                             placeholder="Steet Address" 
                                             value={this.state.address1} 
-                                            invalid={errors.address1}
+                                            invalid={!!errors.address1}
                                             onBlur={this.handleBlur("address1")} 
                                             onChange={this.handleInputChange} 
                                             required 
@@ -192,7 +192,7 @@ class VolunteerForm extends Component {
                                             className="contact-input"
                                             placeholder="City" 
                                             value={this.state.city} 
-                                            invalid={errors.city}
+                                            invalid={!!errors.city}
                                             onBlur={this.handleBlur("city")} 
                                             onChange={this.handleInputChange} 
                                             required 
@@ -205,7 +205,7 @@ class VolunteerForm extends Component {
                                             className="contact-input"
                                             placeholder="State" 
                                             value={this.state.userState}
-                                            invalid={errors.userState}
+                                            invalid={!!errors.userState}
                                             onBlur={this.handleBlur("userState")}
                                             onChange={this.handleInputChange} 
                                             required 
@@ -217,7 +217,7 @@ class VolunteerForm extends Component {
                                             className="contact-input"
                                             placeholder="Postal Code" 
                                             value={this.state.zip} 
-                                            invalid={errors.zip}
+                                            invalid={!!errors.zip}
                                             onBlur={this.handleBlur("zip")} 
                                             onChange={this.handleInputChange} 
                                             required 
@@ -231,7 +231,7 @@ class VolunteerForm extends Component {
                                             className="contact-input" 
                                             placeholder="Phone Number" 
                                             value={this.state.phone}
-                                            invalid={errors.phone} 
+                                            invalid={!!errors.phone} 
                                             onBlur={this.handleBlur("phone")} 
                                             onChange={this.handleInputChange} 
                                         />
@@ -242,7 +242,7 @@ class VolunteerForm extends Component {
                                             className="contact-input"
                                             placeholder="Email" 
                                             value={this.state.email}
-                                            invalid={errors.email}
+                                            invalid={!!errors.email}
                                             onBlur={this.handleBlur("email")} 
                                             onChange={this.handleInputChange} 
                                         />
