@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FooterForm  from './FooterForm';
 
 function Footer() {
     return (
@@ -45,7 +46,8 @@ function Footer() {
                         <p className="update-text mb-1 text-center footer-heading">
                             Sign up to receive news and updates.
                         </p>
-                        <div className="form-group row">
+                        <FooterForm />
+                        {/* <div className="form-group row">
                             <label htmlFor="email" className="col-8 col-form-label mx-auto invisible" >Email</label>
                             <div className="col-8 mx-auto mb-0  d-flex justify-content-center">
                                 <input type="email" className="form-control ft-input" id="emailAddress" name="emailAddress" placeholder="Email Address" /> 
@@ -53,7 +55,7 @@ function Footer() {
                         </div>
                         <div className="form-group row mb-0 px-3">
                             <button className="btn btn-outline-light col-4 col-md-5 mx-auto ft-signup" type="submit">Sign up</button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
