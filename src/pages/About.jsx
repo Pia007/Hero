@@ -22,7 +22,7 @@ const RenderAccordionItem = ({ sponsor }) => {
 };
 
 // render each team member
-const RenderTeamMember = ({ member}) => {
+const RenderTeamMember = ({ member }) => {
     return (
         <Col className=" text-primary mission-text px-0">
             <p>{member.name}, {member.title}</p>
@@ -39,6 +39,7 @@ const About = (props) => {
             <div key={sponsor.id} className="col p-0">
                 <RenderAccordionItem
                     sponsor={sponsor}
+                    fetchSponsors={props.fetchSponsors}
                 />
             </div>
         )

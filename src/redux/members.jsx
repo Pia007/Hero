@@ -1,8 +1,18 @@
 // Create Members reducer - splitting reducer.js, note where the file path is
-import { MEMBERS } from "../shared/members";
+import * as ActionTypes from './ActionTypes';
 
-export const Members = (state = MEMBERS, actions) => {
-    switch (actions.type) {
+export const Members = (state = {
+    isLoading: true,
+    errMess: null,
+    sponsors: []
+    }, action) => {
+    switch (action.type) {
+        case ActionTypes.ADD_MEMBERS:
+            return {...state, isLoading: false, errMess: null, members: action.payload};
+        case ActionTypes.MEMBERS_LOADING:
+            return {...state, isLoading: true, errMess: null, members: []};
+        case ActionTypes.MEMBERS_FAILED:
+            return {...state, isLoading: false, errMess: action.payload};
         default:
             return state;
     }
