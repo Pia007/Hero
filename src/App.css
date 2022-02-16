@@ -382,7 +382,7 @@ img {
         font-size: 50px; 
     }
     .sub-text {
-        font-size: 18px; 
+        font-size: 16px; 
     } 
 }
 
@@ -394,7 +394,7 @@ img {
         font-size: 55px; 
     }
     .sub-text {
-        font-size: 22px; 
+        font-size: 30px; 
     } 
 }
 
@@ -407,7 +407,7 @@ img {
     }
     .sub-text,
     .thanks {
-        font-size: 36px; 
+        font-size: 42px; 
     }
     .sub-thanks {
         font-size: 20px; 
@@ -419,7 +419,7 @@ img {
         font-size: 46px; 
     }
     .sub-text {
-        font-size: 38px; 
+        font-size: 50px; 
     }
     .sub-thanks {
         line-height: 1.8; 
