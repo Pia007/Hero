@@ -10,6 +10,7 @@ import Volunteer from '../pages/Volunteer';
 import Footer from './Footer';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 //import { fetchSponsors, fetchMembers } from '../redux/ActionCreator';
 
 // Setting up mapStateToProps to get the state from the store - state is the argument
@@ -44,15 +45,19 @@ class Main extends Component {
         return (
             <div >
                 <Header />
-                <Switch>
-                    <Route path="/home" component={Home} />
-                    {/* transferring state to redux store - use "props" instead of "state" did not work yet */}
-                    <Route exact path="/about" render={() => <About sponsors={this.state.sponsors} members={this.state.members} /> } />
-                    <Route exact path="/contact" component={Contact} />
-                    <Route exact path="/involved" component={Involved} />
-                    <Route exact path="/volunteer" component={Volunteer} />
-                    <Redirect to="/home" />
-                </Switch>
+                <TransitionGroup>
+                    <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
+                        <Switch>
+                            <Route path="/home" component={Home} />
+                            {/* transferring state to redux store - use "props" instead of "state" did not work yet */}
+                            <Route exact path="/about" render={() => <About sponsors={this.state.sponsors} members={this.state.members} /> } />
+                            <Route exact path="/contact" component={Contact} />
+                            <Route exact path="/involved" component={Involved} />
+                            <Route exact path="/volunteer" component={Volunteer} />
+                            <Redirect to="/home" />
+                        </Switch>
+                    </CSSTransition>
+                </TransitionGroup>
                 <Footer />
             </div>
         );
