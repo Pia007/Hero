@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-pascal-case */
 import React, { Component } from 'react';
-import Buttons from './Buttons';
-import { Col, Row } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
+import Buttons from './Buttons';
 import Fade from 'react-reveal/Fade';
 
 // const required = (val) => val && val.length; 
@@ -149,13 +149,8 @@ class ContactForm extends Component {
                                         />
                                     </Col>
                                 </Row>
-                                {/* <Row className="form-group">
-                                    <div class="custom-control custom-checkbox ">
-                                        <input type="checkbox" id="prep" name="prep" class="custom-control-input" />
-                                        <label class="custom-control-label" for="prep">Preparation</label>
-                                    </div>
-                                </Row> */}
                                 <Row className="form-group">
+                                    
                                     <Col md={5}>
                                         <Control.select model=".contactType" name="contactType" 
                                             className="contact-input form-control"
