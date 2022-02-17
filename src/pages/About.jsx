@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
+import { Row, Col } from 'reactstrap';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
-import { Row, Col } from 'reactstrap';
 import Fade from 'react-reveal/Fade';
 
 // Accordion for each sponsor
@@ -13,10 +13,14 @@ const RenderAccordionItem = ({ sponsor }) => {
     return (
         <div className="mission-text accordion-item px-3 px-sm-0">
             <div className="bg-primary accordion-title" onClick={() => setIsActive(!isActive)}>
-                <h4 className="text-light mb-0"><strong>{sponsor.name}</strong></h4>
+                <h4 className="text-light mb-0"><strong className="sponsor-name">{sponsor.name}</strong></h4>
                 <div className="">{isActive ? '-' : '+'}</div>
             </div>
-            {isActive && <div className="text-primary p-1 accordion-description mb-1 px-3"><strong>{sponsor.name}</strong>, {sponsor.description}</div>}
+                {isActive && 
+                    <div className="text-primary p-1 accordion-description mb-1 px-3">
+                        <span className="sponsor-name-description" >{sponsor.name}</span>, {sponsor.description}
+                    </div>
+                }
         </div>
     );
 };
@@ -40,7 +44,7 @@ const About = (props) => {
             <div key={sponsor.id} className="col p-0">
                 <RenderAccordionItem
                     sponsor={sponsor}
-                    fetchSponsors={props.fetchSponsors}
+                    // fetchSponsors={props.fetchSponsors}
                 />
             </div>
         )
@@ -85,7 +89,7 @@ const About = (props) => {
 
                     <Row className="pt-4"> 
                         <Col className="px-0">
-                            <h2 className="px-3 px-sm-0">Our History</h2>
+                            <h2 className="px-3 px-sm-0 text-primary">Our History</h2>
                             <Col className="text-primary mission-text mb-3 px-sm-0 ">
                                 It all began in 2010. Sofia Dawson was fresh out of nursing school and headed to her 
                                 first job as a nurse. Like many nurses, she was excited to provide care for her patients.
@@ -131,7 +135,8 @@ const About = (props) => {
                     {/* Each sponsor is rendered in this row as an accordion item */}
                     <Row className="row-content ">
                         <Col xs={12} className="px-sm-0">
-                            <h2 className="text-primary my-3 ">Mission Sponsors</h2></Col>
+                            <h2 className="text-primary my-3">Mission Sponsors</h2>
+                        </Col>
                         <Col xs={12} className="p-0">
                             {sponsor}
                         </Col>
@@ -142,8 +147,8 @@ const About = (props) => {
                     {/* FOUNDATION */}
                     {/* Member list is rendered in theis row */}
                     <Row className="row-content">
-                        <Col className="p-0">
-                            <h2>Host A Hero Foundation</h2>
+                        <Col className="px-sm-0 ">
+                            <h2 className="text-primary">Host A Hero Foundation</h2>
                             {memberList}
                         </Col>
                     </Row> 

@@ -114,24 +114,20 @@ a, a:hover {
     padding: 40px 0;
     min-height: 100px; 
 }
-/* h1 {
-    color: #04203f;
-} */
+h1 {
+    font-size: 32px;
+}
 h1,
 h2 {
     font-weight: 600;
-    font-size: 40px; 
+    
 }
 
 h2 {
     margin: 20px 0; 
+    font-size: 26px; 
 }
 
-h2,
-h3,
-h5 {
-    color: #446e9b; 
-}
 
 hr {
     border: 3px double var(--color-success); 
@@ -228,11 +224,16 @@ img {
 }
 
 .mission-text {
-    font-size: 20px; 
+    font-size: 16px; 
 }
 /* About */
+
 .about-card-holder {
     background: transparent; 
+}
+.about-table-header{
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .about-card-odd {
@@ -242,6 +243,7 @@ img {
 .about-card-even {
     background: var(--table-bg-alt);
 }
+
 .accordion-title {
     display: flex;
     flex-direction: row;
@@ -250,6 +252,7 @@ img {
     color: white;
     border-radius: 3px 3px 0 0;
     border-bottom: 3px double var(--color-success);
+    font-size: 22px;
 }
 
 .accordion-title:hover {
@@ -260,10 +263,17 @@ img {
 .accordion-description {
     padding: 1rem;
 }
-
+.sponsor-name {
+    font-size: 22px;
+    font-weight: 600;
+}
+.sponsor-name-description {
+    font-weight: 600;
+}
 .accordion-description {
     border-radius: 0 0 3px 3px;
     background-color: var(--table-bg);
+    font-size: 16px;
 }
 .last-dt {
     border-radius: 0 0 3px 3px;
@@ -375,6 +385,12 @@ img {
 }
 
 @media screen and (min-width: 475px) {
+    h1 {
+        font-size: 34px;
+    }
+    .mission-text {
+        font-size: 18px; 
+    }
     .header-text {
         font-size: 40px; 
     }
@@ -387,6 +403,15 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 30px; 
+    }
+    .mission-text {
+        font-size: 20px; 
+    }
     .header-text {
         font-size: 42px; 
     }
@@ -395,10 +420,25 @@ img {
     }
     .sub-text {
         font-size: 30px; 
-    } 
+    }
+    .about-table-header 
+    .sponsor-name {
+        font-size: 24px;
+    }
+    
+    .table-text,
+    .accordion-description {
+        font-size: 18px; 
+    }
 }
 
 @media screen and (min-width: 992px) {
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 36px; 
+    }
     .header-text {
         font-size: 44px; 
     }
@@ -411,10 +451,26 @@ img {
     }
     .sub-thanks {
         font-size: 20px; 
+    }
+    .table-icon {
+        font-size: 30px; 
     } 
+    .about-table-header,
+    .sponsor-name {
+        font-size: 26px;
+    }
+    .accordion-description {
+        font-size: 20px; 
+    }
 }
 
 @media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 46px;
+    }
+    h2 {
+        font-size: 40px; 
+    }
     .header-text {
         font-size: 46px; 
     }
