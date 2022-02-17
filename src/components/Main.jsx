@@ -43,10 +43,7 @@ class Main extends Component {
                         <Switch>
                             <Route path="/home" component={Home} />
                             {/* transferring state to redux store - use "props" instead of "state", keeping the structure of the data in mind */}
-                            <Route exact path="/about" render={() => <About sponsors={this.props.sponsors.sponsors} 
-                                members={this.props.members.members} /> 
-                                } 
-                            />
+                            <Route exact path="/about" render={() => <About sponsors={this.props.sponsors.sponsors} members={this.props.members.members} /> } />
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/involved" component={Involved} />
                             <Route exact path="/volunteer" component={Volunteer} />
