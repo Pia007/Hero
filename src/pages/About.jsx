@@ -34,18 +34,20 @@ const RenderTeamMember = ({ member }) => {
 const About = (props) => {
 
     // define & map over sponsors and pass each to RenderAccordionItem
-    const sponsor = props.sponsors.map(sponsor => {
+    // fixed about page refresh issue by using?
+    const sponsor = props.sponsors?.map(sponsor => {
         return (
             <div key={sponsor.id} className="col p-0">
                 <RenderAccordionItem
                     sponsor={sponsor}
+                    fetchSponsors={props.fetchSponsors}
                 />
             </div>
         )
     });
 
     // define & map over team members and pass each to RenderTeamMember
-    const memberList = props.members.map(member => {
+    const memberList = props.members?.map(member => {
         return (
             <div key={member.id} className="col p-0">
                 <RenderTeamMember
