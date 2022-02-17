@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import SectionBreak from './SectionBreak';
+import Fade from 'react-reveal/Fade';
 
 export const SiteCrumbs = ({ siteLocation }) => {
     return (
@@ -14,7 +14,9 @@ export const SiteCrumbs = ({ siteLocation }) => {
 
 export const PageTitle = ({ pageTitle }) => {
     return (
-        <h1 className="text-center text-primary">{pageTitle}</h1>
+        <Fade bottom cascade>
+            <h1 className="text-center text-primary">{pageTitle}</h1>
+        </Fade>
     );
 }
 
@@ -25,7 +27,7 @@ const PageHeader = ({ siteLocation, pageTitle }) => {
                 <Col>
                     <SiteCrumbs siteLocation={siteLocation} />
                     <PageTitle pageTitle={pageTitle} />
-                    <SectionBreak />
+                    {/* <SectionBreak /> */}
                 </Col>
             </Row>
         </div>
