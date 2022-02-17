@@ -33,7 +33,7 @@ class FooterForm extends Component {
                     <Col xs={8}  >
                         <Label htmlFor="email" className="col-8 col-form-label mx-auto invisible" />
                         <Control.text model=".email" name="email" id="email" 
-                            className="contact-input form-control ft-signup"
+                            className="contact-input form-control ft-signup col-10 col-md-12 mx-auto"
                             placeholder="Email" 
                             validators={{
                                 validEmail
