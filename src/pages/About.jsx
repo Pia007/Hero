@@ -6,7 +6,7 @@ import AboutTable from '../components/AboutTable';
 import { Row, Col } from 'reactstrap';
 import Fade from 'react-reveal/Fade';
 
-// Accodion for each sponsor
+// Accordion for each sponsor
 const RenderAccordionItem = ({ sponsor }) => {
     const [isActive, setIsActive] = useState(false);
 
@@ -39,7 +39,6 @@ const About = (props) => {
             <div key={sponsor.id} className="col p-0">
                 <RenderAccordionItem
                     sponsor={sponsor}
-                    fetchSponsors={props.fetchSponsors}
                 />
             </div>
         )
