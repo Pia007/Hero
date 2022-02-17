@@ -8,8 +8,10 @@ const InvolvedCard =({
     contentOne, 
     contentTwo, 
     contentThree, 
-    modalHeaderText, 
-    modalBodyText, 
+    modalHeaderText,
+    modalBodyText,
+    modalBodyTextTwo, 
+    modalBodyTextThree, 
     value,
     to,
     imageSrc, 
@@ -21,15 +23,17 @@ const InvolvedCard =({
         <div >
             <Row className={className}>
                 <Col lg={6} className="my-auto text-primary" >
-                    <Fade bottom>
-                    <h2>{title}</h2>
-                    <p className=" mission-text">{contentOne}</p>
-                    <p className=" mission-text">{contentTwo}</p>
-                    <p className=" mission-text">{contentThree}</p>
+                    <Fade bottom cascade>
+                        <h2 className="text-primary">{title}</h2>
+                        <p className=" mission-text">{contentOne}</p>
+                        <p className=" mission-text">{contentTwo}</p>
+                        <p className=" mission-text">{contentThree}</p>
                     </Fade>
                     <InvolvedModal 
                         modalHeaderText={modalHeaderText}
                         modalBodyText={modalBodyText}
+                        modalBodyTextTwo={modalBodyTextTwo}
+                        modalBodyTextThree={modalBodyTextThree}
                         value={value}
                         to={to}
                         text={title}
