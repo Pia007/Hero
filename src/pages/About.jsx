@@ -67,16 +67,19 @@ const About = (props) => {
             <SiteCrumbs siteLocation={"About"}  />
                 <Fade bottom cascade>  
                     <PageTitle pageTitle={"Our Mission"} />
+                </Fade>
                     <Row className="row-content pt-0">
                         <Col className="px-sm-0">
-                            <p className="text-center text-primary mission-text">
-                                <strong >Host A Healthcare Hero </strong> Around the world, healthcare workers have been stretched beyond their limits. Many have succumbed to illness 
-                                and been estranged from their loved ones. Right here in northern New Jersey, like most, our healthcare workers
-                                have gone above and beyond to provide us with quality care. Yet, they have little time for themselves. We are an 
-                                organization committed to showing healthcare heroes that we appreciate them. Their well being is just as important 
-                                as ours. We aim to provide meals, health and wellness, fitness and personal care services free of charge to our 
-                                healthcare heroes.
-                            </p>
+                            <Fade bottom cascade>
+                                <p className="text-center text-primary mission-text">
+                                    <strong >Host A Healthcare Hero </strong> Around the world, healthcare workers have been stretched beyond their limits. Many have succumbed to illness 
+                                    and been estranged from their loved ones. Right here in northern New Jersey, like most, our healthcare workers
+                                    have gone above and beyond to provide us with quality care. Yet, they have little time for themselves. We are an 
+                                    organization committed to showing healthcare heroes that we appreciate them. Their well being is just as important 
+                                    as ours. We aim to provide meals, health and wellness, fitness and personal care services free of charge to our 
+                                    healthcare heroes.
+                                </p>
+                            </Fade>
                         </Col>
                     </Row>
                     <SectionBreak />
@@ -89,42 +92,54 @@ const About = (props) => {
 
                     <Row className="pt-4"> 
                         <Col className="px-0">
-                            <h2 className="px-3 px-sm-0 text-primary">Our History</h2>
+                            <Fade bottom cascade>
+                                <h2 className="px-3 px-sm-0 text-primary">Our History</h2>
+                            </Fade>
+                            
                             <Col className="text-primary mission-text mb-3 px-sm-0 ">
-                                It all began in 2010. Sofia Dawson was fresh out of nursing school and headed to her 
-                                first job as a nurse. Like many nurses, she was excited to provide care for her patients.
-                                But, she soon saw a side of the healthcare profession that is not taught in school. She saw 
-                                that not only were nurses stressed, overworked  and unhealthy, so were workers from every aspect of 
-                                healthcare. 
+                                <Fade bottom cascade>
+                                    It all began in 2010. Sofia Dawson was fresh out of nursing school and headed to her 
+                                    first job as a nurse. Like many nurses, she was excited to provide care for her patients.
+                                    But, she soon saw a side of the healthcare profession that is not taught in school. She saw 
+                                    that not only were nurses stressed, overworked  and unhealthy, so were workers from every aspect of 
+                                    healthcare. 
+                                </Fade>
                             </Col>
                         </Col>
                     </Row>
-                    <Row >
+                    <Row className="pb-lg-4">
                         <Col className="px-0 pr-xl-3">
                             
-                            <Col className="text-primary mission-text px-sm-0 mb-3">
-                                Sofia was determined to not just make a difference for her patients but for her coworkers, too. She 
-                                found that many of her coworkers only ate one meal a day. Usually an unhealthy one. Most, found it hard to 
-                                sleep after their shifts. Although, they were on their feet for 12 to 14hrs a day, many were in poor health. 
-                                Combining all of these, she also learn that they had very little time for basic personal care. Like a simple 
-                                haircut.
-                            </Col>
-                            <Col className="text-primary mission-text px-sm-0 mb-4">
-                                She began researching healthy eating and mindful meditation. Before long, Sofia was sharing this information
-                                with her peers. Eventually, this collective sharing included fitness tips.  The core group consisted of five healthcare
-                                professionals that branched out and spreaded health and wellness tips throughout northern New Jersey. They were
-                                healthcare heroes.
-                            </Col>
-                        </Col> 
-                        <Row className="flex-lg-row-reverse mb-lg-4">
-                            <Col className="">
-                                <Col className="text-primary mission-text mb-4 mb-md-0 px-sm-0 pr-lg-0">
-                                    In 2019, Sofia was given the opportunity to speak at a healthcare symposium. She invited her fellow
-                                    heroes to join her. It was at that event, that they decided to make it official. <strong>Host A Healthcare Hero </strong>
-                                    was born. Six months later, the Covid-19 pandemic hit northern New Jersey. As the healthcare system
-                                    was tested, Host A Healthcare Hero was more determined than ever to provide quality care for patients and 
-                                    healthcare workers. The call went out for help, community heroes answered and the rest is history.
+                                <Col className="text-primary mission-text px-sm-0 mb-3">
+                                <Fade bottom cascade>
+                                    Sofia was determined to not just make a difference for her patients but for her coworkers, too. She 
+                                    found that many of her coworkers only ate one meal a day. Usually an unhealthy one. Most, found it hard to 
+                                    sleep after their shifts. Although, they were on their feet for 12 to 14hrs a day, many were in poor health. 
+                                    Combining all of these, she also learn that they had very little time for basic personal care. Like a simple 
+                                    haircut.
+                                    </Fade>
                                 </Col>
+                            
+                            <Fade bottom cascade>
+                                <Col className="text-primary mission-text px-sm-0 mb-4">
+                                    She began researching healthy eating and mindful meditation. Before long, Sofia was sharing this information
+                                    with her peers. Eventually, this collective sharing included fitness tips.  The core group consisted of five healthcare
+                                    professionals that branched out and spreaded health and wellness tips throughout northern New Jersey. They were
+                                    healthcare heroes.
+                                </Col>
+                            </Fade>
+                        </Col> 
+                        <Row className="flex-lg-row-reverse mb-lg-4 ">
+                            <Col className="">
+                                <Fade bottom cascade>
+                                    <Col className="text-primary mission-text mb-4 mb-md-0 px-sm-0 pr-lg-0">
+                                        In 2019, Sofia was given the opportunity to speak at a healthcare symposium. She invited her fellow
+                                        heroes to join her. It was at that event, that they decided to make it official. <strong>Host A Healthcare Hero </strong>
+                                        was born. Six months later, the Covid-19 pandemic hit northern New Jersey. As the healthcare system
+                                        was tested, Host A Healthcare Hero was more determined than ever to provide quality care for patients and 
+                                        healthcare workers. The call went out for help, community heroes answered and the rest is history.
+                                    </Col>
+                                </Fade>
                             </Col> 
                             <AboutTable />
                         </Row>
@@ -133,28 +148,37 @@ const About = (props) => {
 
                     {/* MISSION SPONSORS */}
                     {/* Each sponsor is rendered in this row as an accordion item */}
-                    <Row className="row-content ">
-                        <Col xs={12} className="px-sm-0">
-                            <h2 className="text-primary my-3">Mission Sponsors</h2>
-                        </Col>
-                        <Col xs={12} className="p-0">
-                            {sponsor}
-                        </Col>
-                    </Row>
+                    
+                    <Fade bottom cascade>
+                        <Row className="row-content ">
+                            <Col xs={12} className="px-sm-0">
+                                <Fade bottom cascade>
+                                <h2 className="text-primary my-3">Mission Sponsors</h2>
+                                </Fade>
+                            </Col>
+                            <Col xs={12} className="p-0">
+                                {sponsor}
+                            </Col>
+                        </Row>
+                    </Fade>
                     <SectionBreak />
                     {/* END MISSION SPONSORS  */}
 
                     {/* FOUNDATION */}
                     {/* Member list is rendered in theis row */}
-                    <Row className="row-content">
-                        <Col className="px-sm-0 ">
-                            <h2 className="text-primary">Host A Hero Foundation</h2>
-                            {memberList}
-                        </Col>
-                    </Row> 
+                    <Fade bottom cascade>
+                        <Row className="row-content">
+                            <Col className="px-sm-0 ">
+                                <Fade bottom cascade>
+                                    <h2 className="text-primary">Host A Hero Foundation</h2>
+                                </Fade>
+                                {memberList}
+                            </Col>
+                        </Row> 
+                    </Fade>
                     {/* END FOUNDATION */}
                     
-                </Fade>
+                {/* </Fade> */}
             </div>
         </div>
     );
