@@ -10,7 +10,7 @@ const ContactInfo = (props) =>{
                 <Row className="row-content pb-0 mb-4">
                     <Col md={7} className="text-primary">
                         <p className="mission-text"><strong>Host A Healthcare Hero</strong> relies heavily on the strength of community partners and
-                            volunteers to provide healthcare heroes with appreciative care.
+                            volunteers to provide healthcare heroes with appreciative care. We'd love to hear your thought, concerns and ideas.
                         </p>
                         <p className="mission-text">
                             Please complete the contact form below and we will get back to you as soon as possible.
@@ -26,12 +26,12 @@ const ContactInfo = (props) =>{
 
                 <Row className=" p-0 text-primary">
                     <Col sm={6} className="text-primary">
-                        <h5 className="mb-0 mission-text "><u className="">Address:</u></h5>
+                        <h5 className="mb-0 mission-text text-primary"><u >Address:</u></h5>
                         <address className="address-info">
                             2124 W Heroes LN, Suite 99<br />
                             Fictitious City, NJ 01007<br />
                         </address>
-                        <h5 className="mb-0 mission-text "><u className="">Hours:</u></h5>
+                        <h5 className="mb-0 mission-text text-primary"><u >Hours:</u></h5>
                         <address className=" address-info">
                             Monday - Friday<br />
                             9AM - 3PM<br />

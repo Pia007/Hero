@@ -8,10 +8,8 @@ function Contact() {
         return (
             <div className="home-bg">
                 <PageHeader siteLocation={"Contact"} pageTitle={"Contact Us"} />
-                <Fade bottom >
-                    <ContactInfo />
-                    <ContactForm />
-                </Fade>
+                <ContactInfo />
+                <ContactForm />
             </div>
         );
     
