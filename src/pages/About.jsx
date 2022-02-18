@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
 import { Row, Col } from 'reactstrap';
+import { Loading } from '../components/Loadingicon';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
 import Fade from 'react-reveal/Fade';
@@ -44,11 +45,34 @@ const About = (props) => {
             <div key={sponsor.id} className="col p-0">
                 <RenderAccordionItem
                     sponsor={sponsor}
-                    // fetchSponsors={props.fetchSponsors}
                 />
             </div>
         )
     });
+
+    // Set up Conditional Rendering
+    if (props.isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+
+    if (props.errMess) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <h4>{props.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
 
     // define & map over team members and pass each to RenderTeamMember
     const memberList = props.members?.map(member => {
@@ -60,6 +84,29 @@ const About = (props) => {
             </div>
         )
     });
+
+    // Set up Conditional Rendering
+    if (props.isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+
+    if (props.errMess) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <h4>{props.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <div className="home-bg">
