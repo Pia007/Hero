@@ -26,6 +26,7 @@ class VolunteerForm extends Component {
             events: false,
             delivery: false,
             other: false,
+            feedback: '',
             touched: {
                 fName: false,
                 lName: false,
@@ -254,7 +255,7 @@ class VolunteerForm extends Component {
                             
                             <FormGroup row >
                                 <div className="col text-primary mt-2">
-                                    <strong className="mission-text "> Interests </strong>
+                                    <strong className="mission-text "> Interests<span className="label-interests"> (check all that apply) </span></strong>
                                     <FormGroup row>
                                         <Col xs={6} lg={3}>
                                             <FormGroup check className="custom-control custom-checkbox ">
@@ -356,7 +357,17 @@ class VolunteerForm extends Component {
                                     </FormGroup>
                                 </div>
                             </FormGroup>
-            
+                            <FormGroup row>
+                                <Col md={12}>
+                                    <Input type="textarea" id="feedback" name="feedback" 
+                                        className="contact-input"
+                                        rows="12"
+                                        placeholder="Is there anything else you'd like to tell us?"
+                                        value={this.state.feedback} 
+                                        onChange={this.handleInputChange}>
+                                    </Input>
+                                </Col>
+                            </FormGroup>
                             <FormGroup row>
                                 <Col md={3}>
                                 <Buttons 
