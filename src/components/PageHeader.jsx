@@ -27,7 +27,6 @@ const PageHeader = ({ siteLocation, pageTitle }) => {
                 <Col>
                     <SiteCrumbs siteLocation={siteLocation} />
                     <PageTitle pageTitle={pageTitle} />
-                    {/* <SectionBreak /> */}
                 </Col>
             </Row>
         </div>
