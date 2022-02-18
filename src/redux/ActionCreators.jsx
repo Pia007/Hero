@@ -6,6 +6,7 @@ import { MEMBERS } from '../shared/members';
 // Fetches sponsors from the store
 export const fetchSponsors = () => dispatch => {
     dispatch(sponsorsLoading());
+    dispatch(sponsorsFailed());
     dispatch(addSponsors(SPONSORS));
 };
 
@@ -24,9 +25,10 @@ export const addSponsors = sponsors => ({
 
 });
 
-
+//added dipatch members failed
 export const fetchMembers = () => dispatch => {
     dispatch(membersLoading());
+    dispatch(membersFailed());
     dispatch(addMembers(MEMBERS));
 }
 
