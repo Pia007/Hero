@@ -1,28 +1,20 @@
-import React, { useState } from 'react';
 import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
 import { Row, Col } from 'reactstrap';
+import AccordionItem from '../components/AccordionItem';
 import { Loading } from '../components/Loadingicon';
+
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
 import Fade from 'react-reveal/Fade';
 
 // Accordion for each sponsor
 const RenderAccordionItem = ({ sponsor }) => {
-    const [isActive, setIsActive] = useState(false);
-
     return (
-        <div className="mission-text accordion-item px-3 px-sm-0">
-            <div className="bg-primary accordion-title" onClick={() => setIsActive(!isActive)}>
-                <h4 className="text-light mb-0"><strong className="sponsor-name">{sponsor.name}</strong></h4>
-                <div className="">{isActive ? '-' : '+'}</div>
-            </div>
-                {isActive && 
-                    <div className="text-primary p-1 accordion-description mb-1 px-3">
-                        <span className="sponsor-name-description" >{sponsor.name}</span>, {sponsor.description}
-                    </div>
-                }
-        </div>
+        <AccordionItem 
+            name={sponsor.name} 
+            description={sponsor.description} 
+        />
     );
 };
 
