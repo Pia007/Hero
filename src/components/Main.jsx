@@ -5,23 +5,26 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Involved from '../pages/Involved';
 import Volunteer from '../pages/Volunteer';
+import Faqs from '../pages/Faqs';
 import Footer from './Footer';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { fetchSponsors, fetchMembers } from '../redux/ActionCreators';
+import { fetchSponsors, fetchMembers, fetchFaqs } from '../redux/ActionCreators';
 
 // Setting up mapStateToProps to get the state from the store - state is the argument
 const mapStateToProps = state => {
     return {
         sponsors: state.sponsors,
-        members: state.members
+        members: state.members,
+        faqs: state.faqs
     };
 };
 // Setting up mapDispatchToProps object to get the dispatch function from the store - dispatch is the argument
 const mapDispatchToProps = {
     fetchSponsors: () => (fetchSponsors()),
-    fetchMembers: () => (fetchMembers())
+    fetchMembers: () => (fetchMembers()),
+    fetchFaqs: () => (fetchFaqs())
 };
 
 class Main extends Component {
@@ -31,6 +34,7 @@ class Main extends Component {
     componentDidMount() {
         this.props.fetchSponsors();
         this.props.fetchMembers();
+        this.props.fetchFaqs();
     }
 
     render() {
@@ -52,6 +56,10 @@ class Main extends Component {
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/involved" component={Involved} />
                             <Route exact path="/volunteer" component={Volunteer} />
+                            <Route exact path="/faqs" render= {() => <Faqs faqs={this.props.faqs.faqs} 
+                                errMess={this.props.faqs.errMess}
+                                isLoading={this.props.faqs.isLoading} 
+                            /> } />
                             <Redirect to="/home" />
                         </Switch>
                     </CSSTransition>
