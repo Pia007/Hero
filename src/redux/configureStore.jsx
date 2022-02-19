@@ -2,6 +2,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Sponsors } from './sponsors';
 import { Members } from './members';
+import { Faqs } from './faqs';
 // import thunk and logger
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
@@ -13,7 +14,8 @@ export const ConfigureStore = () => {
     const store = createStore(
         combineReducers({
             sponsors: Sponsors,
-            members: Members
+            members: Members,
+            faqs: Faqs,
         }),
         applyMiddleware(thunk, logger)  
     );
