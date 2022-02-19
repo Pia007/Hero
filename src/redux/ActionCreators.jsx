@@ -2,6 +2,7 @@
 import * as ActionTypes from './ActionTypes';
 import { SPONSORS } from '../shared/sponsors';
 import { MEMBERS } from '../shared/members';
+import { FAQS } from '../shared/faqsData'; 
 
 // Fetches sponsors from the store
 export const fetchSponsors = () => dispatch => {
@@ -44,6 +45,28 @@ export const membersFailed = errMess => ({
 export const addMembers = members => ({
     type: ActionTypes.ADD_MEMBERS,
     payload: members
+
+});
+
+
+export const fetchFaqs = () => dispatch => {
+    dispatch(faqsLoading());
+    dispatch(faqsFailed());
+    dispatch(addFaqs(FAQS));
+}
+
+export const faqsLoading = () => ({
+    type: ActionTypes.FAQS_LOADING
+});
+
+export const faqsFailed = errMess => ({
+    type: ActionTypes.FAQS_FAILED,
+    payload: errMess
+});
+
+export const addFaqs = faqs => ({
+    type: ActionTypes.ADD_FAQS,
+    payload: faqs
 
 });
 

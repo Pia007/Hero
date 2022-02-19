@@ -7,20 +7,8 @@ export const ADD_MEMBERS = 'ADD_MEMBERS';
 export const MEMBERS_LOADING = 'MEMBERS_LOADING';
 export const MEMBERS_FAILED = 'MEMBERS_FAILED';
 
-export const ADD_VOLFAQS = 'ADD_VOLFAQS';
-export const VOLFAQS_LOADING = 'VOLFAQS_LOADING';
-export const VOLFAQS_FAILED = 'VOLFAQS_FAILED';
-
-export const ADD_SPONFAQS = 'ADD_SPONFAQS';
-export const SPONFAQS_LOADING = 'SPONFAQS_LOADING';
-export const SPONFAQS_FAILED = 'SPONFAQS_FAILED';
-
-export const ADD_DONFAQS = 'ADD_DONFAQS';
-export const DONFAQS_LOADING = 'DONFAQS_LOADING';
-export const DONFAQS_FAILED = 'DONFAQS_FAILED';
-
-export const ADD_GENFAQS = 'ADD_GENFAQS';
-export const GENFAQS_LOADING = 'GENFAQS_LOADING';
-export const GENFAQS_FAILED = 'GENFAQS_FAILED';
+export const ADD_FAQS = 'ADD_FAQS';
+export const FAQS_LOADING = 'FAQS_LOADING';
+export const FAQS_FAILED = 'FAQS_FAILED';
 
 
