@@ -1,9 +1,8 @@
 import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
 import { Row, Col } from 'reactstrap';
-import AccordionItem from '../components/AccordionItem';
 import { Loading } from '../components/Loadingicon';
-
+import AccordionItem from '../components/AccordionItem';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
 import Fade from 'react-reveal/Fade';
@@ -103,7 +102,7 @@ const About = (props) => {
     return (
         <div className="home-bg">
             <div className="container">
-            <SiteCrumbs siteLocation={"About"}  />
+                <SiteCrumbs siteLocation={"About"}  />
                 <PageTitle pageTitle={"Our Mission"} />
                 <Fade bottom cascade>
                     <Row className="row-content pt-0">

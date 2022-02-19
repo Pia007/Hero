@@ -273,7 +273,7 @@ img {
 .accordion-description {
     border-radius: 0 0 3px 3px;
     border: 2px double var(--primary);
-    /* background-color: var(--table-bg); */
+    background-color: var(--table-bg);
 }
 .faq-accordion-description {
     border: 2px double var(--primary);

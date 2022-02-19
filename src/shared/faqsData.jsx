@@ -2,7 +2,7 @@ export const FAQS = [
     {
         id: 0,
         category: "Donate",
-        question: "Lorem ipsum",
+        question: "What is the donation process?",
         answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis excepturi ipsam tempora aliquam. Facilis qui impedit velit fugiat veritatis quia."
     },
     {
@@ -61,7 +61,7 @@ export const FAQS = [
     {
         id: 10,
         category: "Sponsor",
-        question: "Lorem ipsum",
+        question: "I want to sponsor the event. How do I do that?",
         answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis excepturi ipsam tempora aliquam. Facilis qui impedit velit fugiat veritatis quia."
     },
     {
@@ -120,7 +120,7 @@ export const FAQS = [
     {
         id: 20,
         category: "Volunteer",
-        question: "Lorem ipsum",
+        question: "How do I become a volunteer?",
         answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis excepturi ipsam tempora aliquam. Facilis qui impedit velit fugiat veritatis quia."
     },
     {
@@ -179,7 +179,7 @@ export const FAQS = [
     {
         id: 30,
         category: "General",
-        question: "Lorem ipsum",
+        question: "What are the hours of operation?",
         answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis excepturi ipsam tempora aliquam. Facilis qui impedit velit fugiat veritatis quia."
     },
     {
