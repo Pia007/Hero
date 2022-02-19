@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FormGroup, Form, Label, Input, Col, FormFeedback } from 'reactstrap';
+import { Row, Col, FormGroup, Form, Label, Input, FormFeedback } from 'reactstrap';
 import Buttons from './Buttons';
 import Fade from 'react-reveal/Fade';
 
@@ -11,7 +11,6 @@ class VolunteerForm extends Component {
             fName: '',
             lName: '',
             address1: '',
-            address2: '',
             city: '',
             userState: '',
             zip: '',
@@ -136,12 +135,12 @@ class VolunteerForm extends Component {
 
         return (
             <div className="container">
-                <div className="row row-content">
-                    <div className="col-12">
+                <Row className="row-content">
+                    <Col xs={12}>
                         <Fade bottom cascade>
                             <h2 className="text-primary">Join us!</h2>
                         </Fade>
-                    </div>
+                    </Col>
                     
                     {/* Form */}
                     <div className="col">
@@ -380,7 +379,7 @@ class VolunteerForm extends Component {
                             </FormGroup>
                         </Form>
                     </div>
-                </div>
+                </Row>
             </div>
         );
     }
