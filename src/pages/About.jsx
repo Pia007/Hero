@@ -2,7 +2,7 @@ import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
 import { Row, Col } from 'reactstrap';
 import { Loading } from '../components/Loadingicon';
-import AccordionItem from '../components/AccordionItem';
+import { AccordionItem } from '../components/Accordion';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
 import Fade from 'react-reveal/Fade';
