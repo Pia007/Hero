@@ -10,7 +10,7 @@ const AccordionItem = ({ name, description}) => {
                 <div className="">{isActive ? '-' : '+'}</div>
             </div>
                 {isActive && 
-                    <div className="text-light p-1 accordion-description mb-1 px-3">
+                    <div className="text-primary p-1 accordion-description mb-1 px-3">
                         <span className="sponsor-name-description" >{name}</span>, {description}
                     </div>
                 }
