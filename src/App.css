@@ -272,7 +272,13 @@ img {
 }
 .accordion-description {
     border-radius: 0 0 3px 3px;
-    background-color: var(--table-bg);
+    border: 2px double var(--primary);
+    /* background-color: var(--table-bg); */
+}
+.faq-accordion-description {
+    border: 2px double var(--primary);
+    border-radius: 0 0 3px 3px;
+    /* background-color: var(--primary); */
     font-size: 16px;
 }
 .last-dt {
