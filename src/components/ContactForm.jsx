@@ -110,7 +110,7 @@ class ContactForm extends Component {
                                         invalid={errors.firstName}
                                         onBlur={this.handleBlur("firstName")} 
                                         onChange={this.handleInputChange} 
-                                        required 
+                                        // required 
                                     />
                                     <FormFeedback className="errors pl-2">{errors.firstName}</FormFeedback>
                                 </Col>
@@ -124,7 +124,7 @@ class ContactForm extends Component {
                                         invalid={errors.lastName}
                                         onBlur={this.handleBlur("lastName")} 
                                         onChange={this.handleInputChange} 
-                                        required 
+                                        // required 
                                     />
                                     <FormFeedback className="errors pl-2">{errors.lastName}</FormFeedback>
                                 </Col>
@@ -159,9 +159,9 @@ class ContactForm extends Component {
                                 <Col md={5} className="d-flex d-inline-flex">
                                     <FormGroup check className="pl-0 ">
                                         <div className="custom-control custom-checkbox d-flex d-inline-flex pl-0">
-                                            <div className="d-flex text-primary mb-2 mb-md-0">
+                                            <div className="d-flex text-primary mb-2 mb-md-0 p-md-1">
                                                 May we contact you?
-                                                <div className="custom-control custom-checkbox ml-2">
+                                                <div className="custom-control custom-checkbox ml-2 mt-md-1">
                                                     <Input type="checkbox" 
                                                         id="agree" 
                                                         name="agree" 
@@ -170,13 +170,14 @@ class ContactForm extends Component {
                                                         value={this.state.agree} 
                                                         onChange={this.handleInputChange}  
                                                     />
-                                                    <Label check className="custom-control-label label-agree  mt-1" htmlFor="agree" />
+                                                    <Label check className="custom-control-label label-agree" htmlFor="agree" />
                                                 </div>
                                             </div>
                                         </div> 
                                     </FormGroup>
                                 </Col>
                                 <Col md={4}>
+                                    
                                     <Input type="select" name="contactType" 
                                         className="contact-input"
                                         value={this.state.contactType}
@@ -184,6 +185,8 @@ class ContactForm extends Component {
                                     >
                                         <option>By Phone</option>
                                         <option>By Email</option>
+                                        <option>Both</option>
+                                        <option>Neither</option>
                                     </Input>
                                 </Col>
                             </FormGroup>
