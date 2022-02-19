@@ -32,6 +32,7 @@ function Footer() {
                                 <li className="text-center "><Link to="/contact">Contact</Link></li>
                                 <li className="text-center "><Link to="/getInvolved">Get Involved</Link></li>
                                 <li className="text-center "><Link to="/volunteer">Volunteer</Link></li>
+                                <li className="text-center "><Link to="/FAQs">FAQs</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -47,15 +48,7 @@ function Footer() {
                             Sign up to receive news and updates.
                         </p>
                         <FooterForm />
-                        {/* <div className="form-group row">
-                            <label htmlFor="email" className="col-8 col-form-label mx-auto invisible" >Email</label>
-                            <div className="col-8 mx-auto mb-0  d-flex justify-content-center">
-                                <input type="email" className="form-control ft-input" id="emailAddress" name="emailAddress" placeholder="Email Address" /> 
-                            </div>
-                        </div>
-                        <div className="form-group row mb-0 px-3">
-                            <button className="btn btn-outline-light col-4 col-md-5 mx-auto ft-signup" type="submit">Sign up</button>
-                        </div> */}
+                        
                     </div>
                 </div>
             </div>
