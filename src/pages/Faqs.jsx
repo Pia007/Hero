@@ -3,6 +3,8 @@ import AccordionItem from '../components/AccordionItem';
 import SectionBreak from '../components/SectionBreak';
 import Fade from 'react-reveal/Fade';
 import { Row, Col } from 'reactstrap';
+import { Loading } from '../components/Loadingicon';
+
 
 const RenderFaq = ({ faq }) => {
     return (
@@ -10,8 +12,26 @@ const RenderFaq = ({ faq }) => {
     );
 }
 
-const Faqs = (props) => {
+const RenderFaqSection = ({ faqTitle,  factType }) => {
+    return (
+        <Fade bottom cascade>
+            <Row className="row-content " id="genFacts">
+                <Col xs={12} className="px-sm-0">
+                    <Fade bottom cascade>
+                    <h2 className="text-primary my-3">{faqTitle}</h2>
+                    </Fade>
+                </Col>
+                <Col xs={12} className="p-0">
+                    {factType}
+                </Col>
+            </Row>
+        </Fade>
+    );
+}
 
+
+const Faqs = (props) => {
+    
     const generalFaqs = props.faqs?.filter(faq => faq.category === "General").map(filteredFaq => { 
         return (
             <div key={filteredFaq.id} className="col p-0">
@@ -42,6 +62,7 @@ const Faqs = (props) => {
         );
     });
 
+
     const sponsorFaqs = props.faqs?.filter(faq => faq.category === "Sponsor").map(filteredFaq => { 
         return (
             <div key={filteredFaq.id} className="col p-0">
@@ -51,69 +72,58 @@ const Faqs = (props) => {
             </div>
         );
     });
+
+    if (props.isLoading) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <Loading />
+                </div>
+            </div>
+        );
+    }
+
+    if (props.errMess) {
+        return (
+            <div className="container">
+                <div className="row">
+                    <div className="col">
+                        <h4>{props.errMess}</h4>
+                    </div>
+                </div>
+            </div>
+        )
+    }
     
     return (
         <div className="home-bg">
             <div className="container">
                 <PageHeader siteLocation={"FAQs"} pageTitle={"Frequently Asked Questions"} />
-                <Fade bottom cascade>
-                    <Row className="row-content " id="genFacts">
-                        <Col xs={12} className="px-sm-0">
-                            <Fade bottom cascade>
-                            <h2 className="text-primary my-3">General </h2>
-                            </Fade>
-                        </Col>
-                        <Col xs={12} className="p-0">
-                            {generalFaqs}
-                        </Col>
-                    </Row>
-                </Fade>
+                <RenderFaqSection 
+                    faqTitle={"General"}
+                    factType={generalFaqs}
+                />
                 <SectionBreak />
 
-                <Fade bottom cascade>
-                    <Row className="row-content " id="genFacts">
-                        <Col xs={12} className="px-sm-0">
-                            <Fade bottom cascade>
-                            <h2 className="text-primary my-3">Volunteer</h2>
-                            </Fade>
-                        </Col>
-                        <Col xs={12} className="p-0">
-                            {volunteerFaqs}
-                        </Col>
-                    </Row>
-                </Fade>
+                <RenderFaqSection 
+                    faqTitle={"Volunteer"}
+                    factType={volunteerFaqs}
+                />
                 <SectionBreak />
 
-                <Fade bottom cascade>
-                    <Row className="row-content " id="genFacts">
-                        <Col xs={12} className="px-sm-0">
-                            <Fade bottom cascade>
-                            <h2 className="text-primary my-3">Sponsors</h2>
-                            </Fade>
-                        </Col>
-                        <Col xs={12} className="p-0">
-                            {sponsorFaqs}
-                        </Col>
-                    </Row>
-                </Fade>
+                <RenderFaqSection 
+                    faqTitle={"Sponsor"}
+                    factType={sponsorFaqs}
+                />
                 <SectionBreak />
 
-                <Fade bottom cascade>
-                    <Row className="row-content " id="genFacts">
-                        <Col xs={12} className="px-sm-0">
-                            <Fade bottom cascade>
-                            <h2 className="text-primary my-3">Donate</h2>
-                            </Fade>
-                        </Col>
-                        <Col xs={12} className="p-0">
-                            {donateFaqs}
-                        </Col>
-                    </Row>
-                </Fade>
+                <RenderFaqSection 
+                    faqTitle={"Donate"}
+                    factType={donateFaqs}
+                />
             </div>
         </div>
     );
-    
 }
 
 export default Faqs;
