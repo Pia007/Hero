@@ -244,7 +244,8 @@ img {
     background: var(--table-bg-alt);
 }
 
-.accordion-title {
+.accordion-title,
+.faq-accordion-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -254,31 +255,39 @@ img {
     border-bottom: 3px double var(--color-success);
     font-size: 22px;
 }
-
-.accordion-title:hover {
-    background: #3ab4cc;
+.faq-accordion-title {
+    border: 2px double #446e9b;
+    
 }
 
 .accordion-title,
-.accordion-description {
+.accordion-description,
+.faq-accordion-title,
+.faq-accordion-description {
     padding: 1rem;
 }
 .sponsor-name {
     font-size: 22px;
     font-weight: 600;
 }
+.question {
+    font-size: 18px;
+    font-weight: 600;
+}
 .sponsor-name-description {
     font-weight: 600;
 }
-.accordion-description {
+.accordion-description,
+.faq-accordion-description {
     border-radius: 0 0 3px 3px;
     border: 2px double var(--primary);
     background-color: var(--table-bg);
 }
 .faq-accordion-description {
-    border: 2px double var(--primary);
+    border: 2px double #446e9b;
+    border-top: none;
     border-radius: 0 0 3px 3px;
-    /* background-color: var(--primary); */
+    background-color: none;
     font-size: 16px;
 }
 .last-dt {
@@ -428,12 +437,14 @@ img {
         font-size: 30px; 
     }
     .about-table-header 
-    .sponsor-name {
+    .sponsor-name,
+    .question {
         font-size: 24px;
     }
     
     .table-text,
-    .accordion-description {
+    .accordion-description,
+    .faq-accordion-description {
         font-size: 18px; 
     }
 }
@@ -462,10 +473,12 @@ img {
         font-size: 30px; 
     } 
     .about-table-header,
-    .sponsor-name {
+    .sponsor-name,
+    .question {
         font-size: 26px;
     }
-    .accordion-description {
+    .accordion-description,
+    .faq-accordion-description {
         font-size: 20px; 
     }
 }

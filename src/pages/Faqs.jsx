@@ -1,14 +1,14 @@
 import PageHeader from '../components/PageHeader';
-import AccordionItem from '../components/AccordionItem';
 import SectionBreak from '../components/SectionBreak';
 import Fade from 'react-reveal/Fade';
 import { Row, Col } from 'reactstrap';
+import { FaqAccordion } from '../components/Accordion';
 import { Loading } from '../components/Loadingicon';
 
 
 const RenderFaq = ({ faq }) => {
     return (
-        <AccordionItem name={faq.question} description={faq.answer} className="faq-accordion-description"/>
+        <FaqAccordion question={faq.question} answer={faq.answer} className="faq-accordion-description"/>
     );
 }
 
