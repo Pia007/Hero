@@ -20,7 +20,7 @@ export const Header = (props) => {
             </Jumbotron>
             <Navbar className="navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light bg-primary">
                 <div className="container justify-content-between">
-                    <NavLink to="/home"><i className="fa fa-heartbeat text-success text-lg nav-logo" /></NavLink>
+                    <NavLink to="/home"><img src="assets/images/new-logo.svg"  alt="logo" className=" text-lg nav-logo" /></NavLink>
                     <NavbarToggler onClick={toggleNav} className="justify-content-end">
                         <i className="fa fa-bars fa-lg text-success nv-icon "/> 
                     </NavbarToggler>

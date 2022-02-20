@@ -8,7 +8,7 @@ const AboutTable = (props) => {
             <Card className="col my-auto mb-md-0 mt-md-5 mt-lg-0 border-0 px-sm-0 about-card-holder">
                 <CardHeader className="bg-primary border-bottom-0 text-white ">
                     <span className="about-table-header">By the Numbers</span>
-                    <i className="fa fa-heartbeat fa-lg text-success text-lg float-right my-1 my-md-2 table-icon" />
+                    <img src="assets/images/new-logo.svg" className="float-right table-icon"  alt="logo"/>
                 </CardHeader>
                 <CardBody className="py-0 border-0 text-primary ">
                     <Row className="mb-0 border border-primary border-top-0 border-bottom-0 about-card-odd">
