@@ -41,7 +41,7 @@ class Main extends Component {
     render() {
         
         return (
-            <div >
+            <div  className='home-bg'>
                 <Header />
                 <TransitionGroup>
                     <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>

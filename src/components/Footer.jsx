@@ -5,8 +5,8 @@ import FooterForm  from './FooterForm';
 function Footer() {
     return (
         <footer className="site-footer text-light bg-primary" >
-            <div className="container">
-                <div className="row row-content ">
+            <div className="container ">
+                <div className="row p-5">
                     <div className="col-md-4 mb-4 text-center p-0">
                         <h3 className="text-light ft-heading"><u className="u-line">Address</u></h3>
                         <address className="tex-light ft-info">
@@ -48,11 +48,10 @@ function Footer() {
                             Sign up to receive news and updates.
                         </p>
                         <FooterForm />
-                        
                     </div>
                 </div>
             </div>
-            <p className="copyright text-center text-light">
+            <p className="copyright text-center text-light mb-0 pb-2">
                 &copy; 2022 HOST A HEALTHCARE HERO 
             </p>
         </footer>
