@@ -1,6 +1,7 @@
 import { Row, Col} from 'reactstrap';
 import InvolvedModal from './InvolvedModal';
 import Fade from 'react-reveal/Fade';
+import React from 'react';
 
 const InvolvedCard =({ 
     className, 
@@ -20,15 +21,16 @@ const InvolvedCard =({
     }) => {
 
     return (
-        <div >
+        <React.Fragment >
             <Row className={className}>
                 <Col lg={6} className="my-auto text-primary" >
                     <Fade bottom cascade>
                         <h2 className="text-primary">{title}</h2>
+                    </Fade>
                         <p className=" mission-text">{contentOne}</p>
                         <p className=" mission-text">{contentTwo}</p>
                         <p className=" mission-text">{contentThree}</p>
-                    </Fade>
+                    
                     <InvolvedModal 
                         modalHeaderText={modalHeaderText}
                         modalBodyText={modalBodyText}
@@ -43,7 +45,7 @@ const InvolvedCard =({
                     <img className="col d-flex my-4 my-lg-0 mr-3 img-fluid p-0  img-thumbnail" src={imageSrc} alt={imageName} />
                 </Col> 
             </Row>
-        </div>
+        </React.Fragment>
     );
 }
 
