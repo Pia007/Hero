@@ -6,9 +6,23 @@
     --table-bg-alt: #aecbeb;
     --color-danger: #FF0000;
     --color-success: #3cb521;
+    --font-heebo: 'Heebo', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-rubik: 'Rubik', sans-serif;
+    --font-ubuntu: 'Ubuntu', sans-serif;
+    --font-work-sans: 'Work Sans', sans-serif;
+    --font-offside: 'Offside', sans-serif; 
+    --font-ubuntu: 'Ubuntu', sans-serif;
+    /* offside is clean */
 }
+html,
 body {
-    font-family: "Heebo", sans-serif;
+    font-family: var(--font-ubuntu);
+    width: 100%;
+    height: 100vh;
+    /* Removed bc it throws off ScrollToTop component */
+    /* overflow-x: hidden; */
 }
 .header-text {
     font-size: 36px; 
@@ -26,12 +40,17 @@ body {
     padding: 30px;
     background: var(--cl-altBg); 
 }
-  
+/* .faqLinks {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}  */
 a, a:hover {
     color: inherit;
     text-decoration: none; 
 }
-.nav-logo {
+.nav-logo,
+.lp-logo {
     width: 40px;
     height: 40px;
     background: none;
@@ -84,7 +103,7 @@ a, a:hover {
 }
 
 .nav-volunteer:hover,
-.nav-volunteer:active {
+#vol-link > .nav-text > .nav-volunteer:active {
     color: #3cb521;
     border: 1px double #3cb521;
 } 
@@ -143,12 +162,10 @@ img {
     border: 3px double #446e9b; 
 }
 
-.page-holder {
+/* .page-holder {
     width: 100%;
-    height: auto;
-    padding: 25px;
-    margin: 25px auto; 
-}
+    height: 95.5vh;
+} */
 
 .landing-caption {
     top: 50%;
@@ -410,6 +427,27 @@ img {
     font-size: 18px;
 }
 
+/* Animations */
+/* .page-enter {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.page-enter-active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: 700ms ease-out;
+}
+
+.page-exit {
+    opacity: 1;
+}
+
+.page-exit-active {
+    opacity: 0;
+    transition: 700ms ease-in;
+} */
+
 @media screen and (min-width: 475px) {
     h1 {
         font-size: 34px;
@@ -506,7 +544,11 @@ img {
         font-size: 46px; 
     }
     .sub-text {
-        font-size: 50px; 
+        font-size: 120px; 
+    }
+    .lp-logo{
+        width: 90px;
+        height: 90px;
     }
     .sub-thanks {
         line-height: 1.8; 
