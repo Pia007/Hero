@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, NavbarToggler, Collapse, Nav, NavItem, Jumbotron } from 'reactstrap';
+import { Navbar, NavbarToggler, Collapse, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 export const Header = (props) => {
@@ -9,7 +9,7 @@ export const Header = (props) => {
     
     return (
         <React.Fragment>
-            <Jumbotron fluid className='bg-primary'>
+            {/* <Jumbotron fluid className='bg-primary'>
                 <div className="container container-fluid">
                     <div className="row justify-content-center ">
                         <div className="col-sm-10 px-2 py-3 d-flex justify-content-around  align-items-center hd-text-hdlr">
@@ -17,7 +17,7 @@ export const Header = (props) => {
                         </div>
                     </div>
                 </div>
-            </Jumbotron>
+            </Jumbotron> */}
             <Navbar className="navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light bg-primary">
                 <div className="container justify-content-between">
                     <NavLink to="/home"><img src="assets/images/new-logo.svg"  alt="logo" className=" text-lg nav-logo" /></NavLink>
@@ -54,7 +54,10 @@ export const Header = (props) => {
                         </Nav>
                     </Collapse>
                 </div>
+                
             </Navbar>
+        
+            
         </React.Fragment>
     );
 }
