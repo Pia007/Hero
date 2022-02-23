@@ -11405,6 +11405,36 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
+typeface-heebo@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-heebo/-/typeface-heebo-1.1.13.tgz#aba8889a5da653ef1956e49a7d0a09d8e78b45c9"
+  integrity sha512-cVMlg2AXPBz0nVL9SKw/pClexSLkcZBEEv+buoxug1jq5YWT3Fh5QKY1d4KAi8c2zauipRZU6hnduBfs+1/m/g==
+
+typeface-montserrat@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-1.1.13.tgz#2a16729c174dd1a8c3fec05a851b7725412606cc"
+  integrity sha512-Pklkyj0e+K+6I/t0M6JBDBphpfJkF1k+3qd8qDnp9aVtCC7oGBQWTAcL6+5eArfGe7h73uPwyal73hEkf9YCUA==
+
+typeface-offside@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-offside/-/typeface-offside-1.1.13.tgz#d9b2c65f5fc2295c5c2966786613823985b400b6"
+  integrity sha512-H/gUBrG5rYdwraDXimUs3Mi8m0MfX8eH44TUvyxNdWOBUjb/n7PpETwaq+PGf9NGf0S8n0+A0Re+81llXADr4w==
+
+typeface-open-sans@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-1.1.13.tgz#32a09ebd7df59601e01ad81216f98ce641eeafd1"
+  integrity sha512-lVGVHvYl7UJDFB9vN8r7NHw3sVm7Rjeow6b9AeABc/J+2mDaCkmcdVtw3QZnsJW39P+xm5zeggIj9gLHYGn9Iw==
+
+typeface-roboto@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-roboto/-/typeface-roboto-1.1.13.tgz#9c4517cb91e311706c74823e857b4bac9a764ae5"
+  integrity sha512-YXvbd3a1QTREoD+FJoEkl0VQNJoEjewR2H11IjVv4bp6ahuIcw0yyw/3udC4vJkHw3T3cUh85FTg8eWef3pSaw==
+
+typeface-ubuntu@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-ubuntu/-/typeface-ubuntu-1.1.13.tgz#266b8ff251ef60a943ad810b830e225bd8c6eb8b"
+  integrity sha512-Rg1WdJd8fXr2nKF4/UqFw4Y7IKhomEBI7z9ZEyRf0YRV6ue+OipamCNEIEyhXZlhymde0RQrWMmagbyeyOQwSA==
+
 uglify-js@^3.1.4:
   version "3.15.1"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.15.1.tgz#9403dc6fa5695a6172a91bc983ea39f0f7c9086d"
