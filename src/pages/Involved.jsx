@@ -4,7 +4,7 @@ import InvolvedBody from '../components/InvolvedBody';
 
 const Involved = (props) => {
     return (
-        <div className="container">
+        <div className="" style={{overflowX: 'hidden'}}>
             <PageHeader siteLocation={"Get Involved"} pageTitle={"Get Involved"} />
             <InvolvedBody />
         </div>

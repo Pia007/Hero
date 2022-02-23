@@ -91,142 +91,144 @@ class ContactForm extends Component {
         const errors = this.validate(this.state.firstName, this.state.lastName, this.state.phoneNum, this.state.email);
 
         return (
-            <Row className="row-content">
-                <Col sm={12} className="">
-                    <Fade bottom cascade>
-                    <h2 className="text-primary">We want to hear from you!</h2>
-                    </Fade>
-                </Col>
-                {/* Form */}
-                <Col sm={12}>
-                    <Form onSubmit={this.handleSubmit} className="mission-text  p-3 contact-form">
-                        <FormGroup row>
-                            <Col md={12}>
-                                <Input type="text" htmlFor="firstName" name="firstName" id="firstName" 
-                                    className="contact-input"
-                                    placeholder="First Name" 
-                                    value={this.state.firstName} 
-                                    invalid={errors.firstName}
-                                    onBlur={this.handleBlur("firstName")} 
-                                    onChange={this.handleInputChange} 
-                                    // required 
-                                />
-                                <FormFeedback className="errors pl-2">{errors.firstName}</FormFeedback>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Col md={12}>
-                                <Input type="text" htmlFor="lastName"name="lastName" id="lastName" 
-                                    className="contact-input"
-                                    placeholder="Last Name" 
-                                    value={this.state.lastName} 
-                                    invalid={errors.lastName}
-                                    onBlur={this.handleBlur("lastName")} 
-                                    onChange={this.handleInputChange} 
-                                    // required 
-                                />
-                                <FormFeedback className="errors pl-2">{errors.lastName}</FormFeedback>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Col md={12}>
-                                <Input type="tel" htmlFor="phonNum" name="phoneNum" id="phoneNum"
-                                    className="contact-input" 
-                                    placeholder="Phone Number" 
-                                    value={this.state.phoneNum}
-                                    invalid={errors.phoneNum} 
-                                    onBlur={this.handleBlur("phoneNum")} 
-                                    onChange={this.handleInputChange} 
-                                />
-                                <FormFeedback className="errors pl-2">{errors.phoneNum}</FormFeedback>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Col md={12}>
-                                <Input type="email" htmlFor="email"name="email" id="email" 
-                                    className="contact-input"
-                                    placeholder="Email" 
-                                    value={this.state.email}
-                                    invalid={errors.email}
-                                    onBlur={this.handleBlur("email")} 
-                                    onChange={this.handleInputChange} 
-                                />
-                                <FormFeedback className="errors pl-2">{errors.email}</FormFeedback>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Col md={5} className="d-flex d-inline-flex">
-                                <FormGroup check className="pl-0 ">
-                                    <div className="custom-control custom-checkbox d-flex d-inline-flex pl-0">
-                                        <div className="d-flex text-primary mb-2 mb-md-0 p-md-1">
-                                            May we contact you?
-                                            <div className="custom-control custom-checkbox ml-2 mt-md-1">
-                                                <Input type="checkbox" 
-                                                    id="agree" 
-                                                    name="agree" 
-                                                    className="custom-control-input " 
-                                                    checked={this.state.agree}
-                                                    value={this.state.agree} 
-                                                    onChange={this.handleInputChange}  
-                                                />
-                                                <Label check className="custom-control-label label-agree" htmlFor="agree" />
+            <div className="container">
+                <Row className="row-content">
+                    <Col sm={12} className="">
+                        <Fade bottom cascade>
+                        <h2 className="text-primary">We want to hear from you!</h2>
+                        </Fade>
+                    </Col>
+                    {/* Form */}
+                    <Col sm={12}>
+                        <Form onSubmit={this.handleSubmit} className="mission-text  p-3 contact-form">
+                            <FormGroup row>
+                                <Col md={12}>
+                                    <Input type="text" htmlFor="firstName" name="firstName" id="firstName" 
+                                        className="contact-input"
+                                        placeholder="First Name" 
+                                        value={this.state.firstName} 
+                                        invalid={errors.firstName}
+                                        onBlur={this.handleBlur("firstName")} 
+                                        onChange={this.handleInputChange} 
+                                        // required 
+                                    />
+                                    <FormFeedback className="errors pl-2">{errors.firstName}</FormFeedback>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Col md={12}>
+                                    <Input type="text" htmlFor="lastName"name="lastName" id="lastName" 
+                                        className="contact-input"
+                                        placeholder="Last Name" 
+                                        value={this.state.lastName} 
+                                        invalid={errors.lastName}
+                                        onBlur={this.handleBlur("lastName")} 
+                                        onChange={this.handleInputChange} 
+                                        // required 
+                                    />
+                                    <FormFeedback className="errors pl-2">{errors.lastName}</FormFeedback>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Col md={12}>
+                                    <Input type="tel" htmlFor="phonNum" name="phoneNum" id="phoneNum"
+                                        className="contact-input" 
+                                        placeholder="Phone Number" 
+                                        value={this.state.phoneNum}
+                                        invalid={errors.phoneNum} 
+                                        onBlur={this.handleBlur("phoneNum")} 
+                                        onChange={this.handleInputChange} 
+                                    />
+                                    <FormFeedback className="errors pl-2">{errors.phoneNum}</FormFeedback>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Col md={12}>
+                                    <Input type="email" htmlFor="email"name="email" id="email" 
+                                        className="contact-input"
+                                        placeholder="Email" 
+                                        value={this.state.email}
+                                        invalid={errors.email}
+                                        onBlur={this.handleBlur("email")} 
+                                        onChange={this.handleInputChange} 
+                                    />
+                                    <FormFeedback className="errors pl-2">{errors.email}</FormFeedback>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Col md={5} className="d-flex d-inline-flex">
+                                    <FormGroup check className="pl-0 ">
+                                        <div className="custom-control custom-checkbox d-flex d-inline-flex pl-0">
+                                            <div className="d-flex text-primary mb-2 mb-md-0 p-md-1">
+                                                May we contact you?
+                                                <div className="custom-control custom-checkbox ml-2 mt-md-1">
+                                                    <Input type="checkbox" 
+                                                        id="agree" 
+                                                        name="agree" 
+                                                        className="custom-control-input " 
+                                                        checked={this.state.agree}
+                                                        value={this.state.agree} 
+                                                        onChange={this.handleInputChange}  
+                                                    />
+                                                    <Label check className="custom-control-label label-agree" htmlFor="agree" />
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div> 
-                                </FormGroup>
-                            </Col>
-                            <Col md={4}>
-                                
-                                <Input type="select" name="contactType" 
-                                    className="contact-input"
-                                    value={this.state.contactType}
-                                    onChange={this.handleInputChange}
-                                >
-                                    <option>By Phone</option>
-                                    <option>By Email</option>
-                                    <option>Both</option>
-                                    <option>Neither</option>
-                                </Input>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Col md={4}>
-                                <Input type="select" name="subject"
-                                    className="contact-input"
-                                    value={this.state.subject}
-                                    onChange={this.handleInputChange}
-                                >
-                                    <option className="dropdown-item" >Subject...</option>
-                                    <option className="dropdown-item" value="Volunteer">Volunteer</option>
-                                    <option value="Community Partner">Community Partners</option>
-                                    <option value="Sponsor An Event">Sponsor An Event</option>
-                                    <option value="Other">Other</option>
-                                </Input>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Col md={12}>
-                                <Input type="textarea" id="feedback" name="feedback" 
-                                    className="contact-input"
-                                    rows="12"
-                                    value={this.state.feedback} 
-                                    onChange={this.handleInputChange}>
-                                </Input>
-                            </Col>
-                        </FormGroup>
-                        <FormGroup row>
-                            <Col md={3}>
-                            <Buttons 
-                                type="submit" 
-                                color="primary"
-                                className="btn-feedback"
-                                btnText={"Send Feedback"}
-                            />
-                            </Col>
-                        </FormGroup>
-                    </Form>
-                </Col>
-            </Row>
+                                        </div> 
+                                    </FormGroup>
+                                </Col>
+                                <Col md={4}>
+                                    
+                                    <Input type="select" name="contactType" 
+                                        className="contact-input"
+                                        value={this.state.contactType}
+                                        onChange={this.handleInputChange}
+                                    >
+                                        <option>By Phone</option>
+                                        <option>By Email</option>
+                                        <option>Both</option>
+                                        <option>Neither</option>
+                                    </Input>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Col md={4}>
+                                    <Input type="select" name="subject"
+                                        className="contact-input"
+                                        value={this.state.subject}
+                                        onChange={this.handleInputChange}
+                                    >
+                                        <option className="dropdown-item" >Subject...</option>
+                                        <option className="dropdown-item" value="Volunteer">Volunteer</option>
+                                        <option value="Community Partner">Community Partners</option>
+                                        <option value="Sponsor An Event">Sponsor An Event</option>
+                                        <option value="Other">Other</option>
+                                    </Input>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Col md={12}>
+                                    <Input type="textarea" id="feedback" name="feedback" 
+                                        className="contact-input"
+                                        rows="12"
+                                        value={this.state.feedback} 
+                                        onChange={this.handleInputChange}>
+                                    </Input>
+                                </Col>
+                            </FormGroup>
+                            <FormGroup row>
+                                <Col md={3}>
+                                <Buttons 
+                                    type="submit" 
+                                    color="primary"
+                                    className="btn-feedback"
+                                    btnText={"Send Feedback"}
+                                />
+                                </Col>
+                            </FormGroup>
+                        </Form>
+                    </Col>
+                </Row>
+            </div>
         );
     }
 }

@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm';
 
 const Contact = () => {
         return (
-            <div className="container">
+            <div >
                 <PageHeader siteLocation={"Contact"} pageTitle={"Contact Us"} />
                 <ContactInfo />
                 <ContactForm />
