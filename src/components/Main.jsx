@@ -8,7 +8,7 @@ import Volunteer from '../pages/Volunteer';
 import Faqs from '../pages/Faqs';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { useLocation, Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import { fetchSponsors, fetchMembers, fetchFaqs } from '../redux/ActionCreators';
@@ -39,9 +39,14 @@ class Main extends Component {
     }
 
     render() {
+        // hide footer if user is on the home page
+        const RenderFooter = () => {
+            const location = useLocation();
+            return location.pathname === '/home' ? null : <Footer />;
+        }
         
         return (
-            <div  className='home-bg'>
+            <div className='home-bg'>
                 <Header />
                 <TransitionGroup>
                     <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
@@ -67,7 +72,7 @@ class Main extends Component {
                         </ScrollToTop>
                     </CSSTransition>
                 </TransitionGroup>
-                <Footer />
+                <RenderFooter />
             </div>
         );
     }
