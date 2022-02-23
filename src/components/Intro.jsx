@@ -1,28 +1,34 @@
 import React from 'react';
-import { Row } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import Fade from 'react-reveal/Fade';
 
 export const Intro= () => {
     return (
-        <div className="container ">
-            <Row className="page-holder">
-                <div className="col card card-block border-0 px-0">
-                    <img className="d-block border-0 intro-img" src="assets/images/logo.svg"  alt="heart logo" />
-                    
-                    {/* Image Text  */}
-                    <div className="carousel-caption col-8 align-items-center justify-content-center d-flex p-1 mt-lg-2 mx-auto landing-caption">
-                        <div className=" text-center m-0 " > 
+        <div className="container-fluid" style={{overflowX: 'hidden'}}>
+      
+            
+            <Row className=" text-center mx-0 row-content" style={{height: '96vh'}}>
+            
+                <Col xs={12} className="border-0 px-0 text-center align-self-center justify-content-around">
+                    {/* <Fade bottom cascade> */}
+                        <p className="sub-text align-self-center font-weight-bold text-primary ">
+                            {/* <em> */}
                             <Fade bottom cascade>
-                                <p className="sub-text mx-auto mb-0 font-weight-bold text-success ">
-                                    Show a hero that you care!
-                                    {/* Host A Healthcare Hero provides personal care, activities
-                                    & support to healthcare workers in northern New Jersey as they continue
-                                    to provide care to their patients. */}
-                                </p>
+                                <span>H</span><img src="assets/images/new-logo-lp.svg"  alt="logo" className="lp-logo" /><span>st a Healthcare Her</span><img src="assets/images/new-logo-lp.svg"  alt="logo" className="lp-logo" />
+                            {/* </em>  */}
                             </Fade>
+                        </p>
+                        
+                    {/* </Fade> */}
+                </Col>
+                <Col className="col border-0 px-0 text-center ">
+                    <Fade bottom cascade>
+                        <div className="">
+                            <button className='btn btn-outline-success'>Find Out More!</button>
                         </div>
-                    </div> 
-                </div>
+                    </Fade>
+                </Col>
+            
             </Row>
         </div>
     );
