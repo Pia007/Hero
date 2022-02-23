@@ -1,4 +1,4 @@
-import  { PageHeader } from '../components/PageHeader';
+import  PageHeader, { FaqCrumbs }  from '../components/PageHeader';
 import SectionBreak from '../components/SectionBreak';
 import Fade from 'react-reveal/Fade';
 import { Row, Col} from 'reactstrap';
@@ -18,8 +18,9 @@ const RenderFaqSection = ({ faqTitle,  factType }) => {
             <Row className="row-content " >
                 <Col xs={12} className="px-sm-0">
                     <Fade bottom cascade>
-                    <h2 className="text-primary my-3">{faqTitle}</h2>
+                        <h2 className="text-success my-3">{faqTitle}</h2>
                     </Fade>
+                    <FaqCrumbs />
                 </Col>
                 <Col xs={12} className="p-0">
                     {factType}
@@ -96,49 +97,47 @@ const Faqs = (props) => {
     }
     
     return (
-        <div className="home-bg">
-            <div className="container">
+        
+            <div style={{overflow: 'hidden'}}>
+                <div className='container-fluid home-bg ' id='faq'>
+                    <PageHeader siteLocation={"FAQs"} pageTitle={"Frequently Asked Questions"} />
+                    {/* <FaqCrumbs /> */}
+                </div>
                 
-                <PageHeader siteLocation={"FAQs"} pageTitle={"Frequently Asked Questions"} />
-                {/* <div fixed="top" className="d-flex justify-content-center faqLinks" >
-                    <a role="button"className="btn btn-outline-warning mx-2" href="#general" alt="general questions" >General</a>
-                    <a role="button" className="btn btn-outline-warning  mx-2" href="#volunteer" alt="volunteer questions" >Volunteer</a>
-                    <a role="button" className="btn btn-outline-warning  mx-2" href="#sponsor" alt="sponsor questions" >Sponsorship</a>
-                    <a role="button" className="btn btn-outline-warning  mx-2" href="#donate" alt="donate questions" >Donations</a>
-                </div> */}
+                <div className='container mt-3 sticky' style={{ zIndex: 1}}>
+                    <div className="container p-0 mt-3" id="general">
+                        <RenderFaqSection 
+                            faqTitle={"General"}
+                            factType={generalFaqs}
+                        />
+                    </div>
+                    <SectionBreak />
 
-                <div className="container p-0" id="general">
-                    <RenderFaqSection 
-                        faqTitle={"General"}
-                        factType={generalFaqs}
-                    />
-                </div>
-                <SectionBreak />
+                    <div className="container p-0  mt-3" id="volFaq">
+                        <RenderFaqSection 
+                            faqTitle={"Volunteer"}
+                            factType={volunteerFaqs}
+                        />
+                    </div>
+                    <SectionBreak />
 
-                <div className="container p-0" id="volunteer">
-                    <RenderFaqSection 
-                        faqTitle={"Volunteer"}
-                        factType={volunteerFaqs}
-                    />
-                </div>
-                <SectionBreak />
+                    <div className="container p-0" id="sponsor">
+                        <RenderFaqSection 
+                            faqTitle={"Sponsor"}
+                            factType={sponsorFaqs}
+                        />
+                    </div>
+                    <SectionBreak />
 
-                <div className="container p-0" id="sponsor">
-                    <RenderFaqSection 
-                        faqTitle={"Sponsor"}
-                        factType={sponsorFaqs}
-                    />
-                </div>
-                <SectionBreak />
-
-                <div className="container p-0" id="donate">
-                    <RenderFaqSection 
-                        faqTitle={"Donate"}
-                        factType={donateFaqs}
-                    />
+                    <div className="container p-0" id="donate">
+                        <RenderFaqSection 
+                            faqTitle={"Donate"}
+                            factType={donateFaqs}
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
+        
     );
 }
 
