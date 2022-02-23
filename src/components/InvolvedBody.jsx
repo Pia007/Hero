@@ -5,8 +5,8 @@ import Fade from 'react-reveal/Fade';
 
 const InvolvedBody = () => {
     return (
-        <div className='container '>
-            <Fade left>
+        <div className="container">
+            <Fade left >
                 <InvolvedCard className={"row row-content"} 
                     title={"Volunteer"}
                     contentOne={"We provide thousands of services to healthcare workers and it could not be done without you. We are always looking for volunteers to help us out. If you are interested in volunteering, please contact us."}

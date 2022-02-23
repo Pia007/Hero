@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import FooterForm  from './FooterForm';
 
-function Footer() {
+const Footer = (props) => {
     return (
         <footer className="site-footer text-light bg-primary" >
             <div className="container ">
@@ -30,9 +30,9 @@ function Footer() {
                                 <li className="text-center "><Link className="active" to="/home">Home</Link></li>
                                 <li className="text-center "><Link to="/about">About</Link></li>
                                 <li className="text-center "><Link to="/contact">Contact</Link></li>
-                                <li className="text-center "><Link to="/getInvolved">Get Involved</Link></li>
+                                <li className="text-center "><Link to="/involved">Get Involved</Link></li>
                                 <li className="text-center "><Link to="/volunteer">Volunteer</Link></li>
-                                <li className="text-center "><Link to="/FAQs">FAQs</Link></li>
+                                <li className="text-center "><Link to="/faqs">FAQs</Link></li>
                             </ul>
                         </div>
                     </div>
