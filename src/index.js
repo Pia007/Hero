@@ -12,6 +12,8 @@ import 'typeface-montserrat';
 import 'typeface-open-sans';
 import 'typeface-roboto';
 import 'typeface-ubuntu';
+import 'typeface-rubik';
+import 'typeface-pt-sans';
 import App from './App';
 
 ReactDOM.render(

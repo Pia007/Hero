@@ -14,18 +14,20 @@
     --font-work-sans: 'Work Sans', sans-serif;
     --font-offside: 'Offside', sans-serif; 
     --font-ubuntu: 'Ubuntu', sans-serif;
+    --font-ptSans: 'Pt-sans', sans-serif;
+
     /* offside is clean */
 }
 html,
 body {
-    font-family: var(--font-ubuntu);
+    font-family: var(--font-ptSans);
     width: 100%;
     height: 100vh;
     /* Removed bc it throws off ScrollToTop component */
     /* overflow-x: hidden; */
 }
-.header-text {
-    font-size: 36px; 
+.lp-text {
+    font-size: 50px; 
 }
 .intro-img,
 .home-bg {
@@ -45,8 +47,7 @@ a, a:hover {
     color: inherit;
     text-decoration: none; 
 }
-.nav-logo,
-.lp-logo {
+.nav-logo {
     width: 40px;
     height: 40px;
     background: none;
@@ -137,10 +138,12 @@ a, a:hover {
 }
 h1 {
     font-size: 32px;
+    text-shadow: 1px 1px 3px;
 }
 h1,
 h2 {
     font-weight: 600;
+    text-shadow: 1px 1px 3px;
     
 }
 
@@ -172,7 +175,13 @@ img {
 }
 
 .sub-text {
-    font-size: 15px; 
+    font-size: 50px; 
+    text-shadow: 1px 1px 3px;
+}
+.lp-logo {
+    width: 38px;
+    height: 38px;
+    border: none;
 }
 
 .sub-thanks {
@@ -394,7 +403,8 @@ img {
 }
 .close {
     color: #ff1d1b;
-    border-radius: 50%;
+    text-shadow: none;
+    
 }
 
 .ig { color: #E1306C; }
@@ -454,6 +464,13 @@ ul li .faq-link:focus {
     h1 {
         font-size: 34px;
     }
+    .sub-text {
+        font-size: 60px; 
+    }
+    .lp-logo {
+        width: 42px;
+        height: 42px;
+    }
     .mission-text {
         font-size: 18px; 
     }
@@ -463,10 +480,28 @@ ul li .faq-link:focus {
     .hdr-icon-link {
         font-size: 50px; 
     }
-    .sub-text {
+    /* .sub-text {
         font-size: 16px; 
-    } 
+    }  */
 }
+/* @media screen and (min-width: 576px) {
+    .sub-text {
+        font-size: 45px; 
+    }
+    .lp-logo {
+        width: 35px;
+        height: 35px;
+    }
+} */
+/* @media screen and (min-width: 650px) {
+    .sub-text {
+        font-size: 55px; 
+    }
+    .lp-logo {
+        width: 40px;
+        height: 40px;
+    }
+} */
 
 @media screen and (min-width: 768px) {
     h1 {
@@ -474,6 +509,13 @@ ul li .faq-link:focus {
     }
     h2 {
         font-size: 30px; 
+    }
+    .sub-text {
+        font-size: 60px; 
+    }
+    .lp-logo {
+        width: 42px;
+        height: 42px;
     }
     .mission-text {
         font-size: 20px; 
@@ -484,9 +526,9 @@ ul li .faq-link:focus {
     .hdr-icon-link {
         font-size: 55px; 
     }
-    .sub-text {
+    /* .sub-text {
         font-size: 30px; 
-    }
+    } */
     .about-table-header 
     .sponsor-name,
     .question {
@@ -507,13 +549,17 @@ ul li .faq-link:focus {
     h2 {
         font-size: 36px; 
     }
-    .header-text {
-        font-size: 44px; 
+    .sub-text {
+        font-size: 79px; 
+    }
+    .lp-logo {
+        width: 64px;
+        height: 64px;
     }
     .hdr-icon-link {
         font-size: 60px; 
     }
-    .sub-text,
+    
     .thanks {
         font-size: 42px; 
     }
@@ -542,15 +588,15 @@ ul li .faq-link:focus {
     h2 {
         font-size: 40px; 
     }
-    .header-text {
-        font-size: 46px; 
-    }
+    /* .lp-text {
+        font-size: 110px; 
+    } */
     .sub-text {
-        font-size: 120px; 
+        font-size: 98px; 
     }
     .lp-logo{
-        width: 90px;
-        height: 90px;
+        width: 78px;
+        height: 78px;
     }
     .sub-thanks {
         line-height: 1.8; 
