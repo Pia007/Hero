@@ -1,6 +1,7 @@
 import  PageHeader, { FaqCrumbs }  from '../components/PageHeader';
 import SectionBreak from '../components/SectionBreak';
 import Fade from 'react-reveal/Fade';
+import { FadeTransform } from 'react-animation-components';
 import { Row, Col} from 'reactstrap';
 import { FaqAccordion } from '../components/Accordion';
 import { Loading } from '../components/Loadingicon';
@@ -14,7 +15,11 @@ const RenderFaq = ({ faq }) => {
 
 const RenderFaqSection = ({ faqTitle,  factType }) => {
     return (
-        <Fade bottom cascade>
+        <FadeTransform 
+            in
+            transformProps={{
+                exitTransform: 'scale(0.5) translateY(-20%)'
+            }}>
             <Row className="row-content " >
                 <Col xs={12} className="px-sm-0">
                     <Fade bottom cascade>
@@ -23,10 +28,12 @@ const RenderFaqSection = ({ faqTitle,  factType }) => {
                     <FaqCrumbs />
                 </Col>
                 <Col xs={12} className="p-0">
-                    {factType}
+                    <Fade bottom cascade>
+                        {factType}
+                    </Fade>
                 </Col>
             </Row>
-        </Fade>
+        </FadeTransform>
     );
 }
 

@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 export const SiteCrumbs = ({ siteLocation }) => {
     return (
         <Breadcrumb className="breadcrumb mb-0 sticky" id="Top">
-            <BreadcrumbItem className="bc-prev text-success pl-0"><Link href="/" className="site-link">Home</Link></BreadcrumbItem>
+            <BreadcrumbItem className="bc-prev text-success pl-0"><Link to="/" className="site-link">Home</Link></BreadcrumbItem>
             <BreadcrumbItem active className="text-primary bc-now">{siteLocation}</BreadcrumbItem>
         </Breadcrumb>
     );

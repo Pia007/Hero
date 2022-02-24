@@ -14,7 +14,7 @@ export const FAQS = [
     {
         id: 2,
         category: "Donate",
-        question: "We accept donations from individuals, organizations, and businesses.",
+        question: "Do you accept donations from individuals?",
         answer: "Yes, we accept donations form individuals, organizations, and businesses. We are always looking for ways to expand our reach and to help our community. If you are interested in donating to our cause, please contact us."
     },
     {
@@ -26,14 +26,14 @@ export const FAQS = [
     {
         id: 4,
         category: "Donate",
-        question: "",
-        answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis excepturi ipsam tempora aliquam. Facilis qui impedit velit fugiat veritatis quia."
+        question: "Do you accept donations from non-profits?",
+        answer: "Yes we accept donations from non-profits as well as donate to other charities. "
     },
     {
         id: 5,
         category: "Donate",
-        question: "Lorem ipsum",
-        answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis excepturi ipsam tempora aliquam. Facilis qui impedit velit fugiat veritatis quia."
+        question: "Is my donation tax deductible?",
+        answer: "Yes, your non-profit donation is tax deductible. If you are interested in donating to our cause, please contact us."
     },
     {
         id: 6,
