@@ -3,7 +3,7 @@ import { Intro } from '../components/Intro';
 
 const Home = (props) => {
     return (
-        <div >
+        <div style={{overflow: 'hidden'}}>
             <Intro />
         </div>
     );
