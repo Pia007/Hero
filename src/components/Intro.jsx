@@ -1,5 +1,7 @@
 import React from 'react';
 import { Row, Col, Jumbotron } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import Buttons from '../components/Buttons';
 import Fade from 'react-reveal/Fade';
 
 export const Intro= () => {
@@ -37,9 +39,7 @@ export const Intro= () => {
                     </Col>
                     <Col className="col border-0 px-0 text-center ">
                         <Fade bottom cascade>
-                            <div className="">
-                                <button className='btn btn-outline-success btn-lg shadow-lg'>Find Out More!</button>
-                            </div>
+                            <Link to="/about" className=" text-center  btn btn-lg btn-outline-success" > Find Out More </Link> 
                         </Fade>
                     </Col>
                 
