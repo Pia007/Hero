@@ -1,16 +1,24 @@
-/* eslint-disable react/jsx-pascal-case */
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
-import { Control, Form, Errors } from 'react-redux-form';
+import { Row, Col, FormGroup, Form, Input, FormFeedback } from 'reactstrap';
+import Fade from 'react-reveal';
 import Buttons from './Buttons';
-import Fade from 'react-reveal/Fade';
 
-const required = (val) => val && val.length; 
-const maxLength = len => (val) => !(val) || (val.length <= len); 
-const minLength = len => (val) => (val) && (val.length >= len);
-const isNumber = val => !isNaN(Number(+val));
-const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
-
+const newState = {
+    firstName: '',
+    lastName: '',
+    phoneNum: '',
+    email: '',
+    agree: false,
+    contactType: 'By Phone',
+    subject:'',
+    feedback: '',
+    touched: {
+        firstName: false,
+        lastName: false,
+        phoneNum: false,
+        email: false
+    }
+}
 
 class ContactForm extends Component {
     constructor(props) {
@@ -33,189 +41,196 @@ class ContactForm extends Component {
             }
         };
 
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleReset = this.handleReset.bind(this);
-
+        this.handleInputChange = this.handleInputChange.bind(this);
+        //this.handleSubmit = this.handleSubmit.bind(this);
     }
-    
 
-    handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
-        this.handleReset();
-    };
-
-    handleReset(values) {
-        this.setState({
+    validate(firstName, lastName, phoneNum, email) {
+        const errors = {
             firstName: '',
             lastName: '',
             phoneNum: '',
-            email: '',
-            agree: false,
-            contactType: 'By Phone',
-            touched: {
-                firstName: false,
-                lastName: false,
-                phoneNum: false,
-                email: false
+            email: ''
+        };
+        
+        if (this.state.touched.firstName) {
+            if (firstName.length < 2) {
+                errors.firstName = 'First name must be at least 2 characters';
+            } else if (firstName.length > 15) {
+                errors.firstName = 'First name must be 15 or less characters';
             }
+        }
+
+        if (this.state.touched.lastName) {
+            if(lastName.length < 2) {
+                errors.lastName = "Last name must be at least 2 characters";
+            } else if(lastName.length > 15){
+                errors.lastName = 'Last name must be 15 or less characters';
+            }
+        }
+
+        const reg = /^\d+$/;
+        if (this.state.touched.phoneNum && !reg.test(phoneNum)) {
+            errors.phoneNum = 'The phone number should contain only numbers';
+        }
+
+        if (this.state.touched.email && !email.includes('@')) {
+            errors.email = 'The email should contain @';
+        }
+        return errors;
+    }
+
+    handleBlur = (field) => () => {
+        this.setState({
+            touched: { ...this.state.touched, [field]: true }
         });
     }
-    
+
+    handleInputChange = (event) => {
+        const target = event.target;
+        const name = target.name;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+
+        this.setState({
+            [name]: value
+        });
+    }
+
+    handleSubmit = (event) => {
+        // bypass Chrome Violation warning
+        setTimeout(
+            () => this.setState({...newState}), 
+            console.log('Current State is: ' + JSON.stringify(this.state)),
+            console.log('IT WORKED!'),
+            alert('Current State is: ' + JSON.stringify(this.state)), 
+        1000);
+        
+        event.preventDefault();
+    };
+
+
     render() {
+
+        const errors = this.validate(this.state.firstName, this.state.lastName, this.state.phoneNum, this.state.email);
+
         return (
-            <div className="container ">
+            <div className="container">
                 <Row className="row-content">
-                    <Col sm={12} className="">
+                    <Col md={12} >
                         <Fade bottom cascade>
-                        <h2 className="text-primary">We want to hear from you!</h2>
+                            <h2 className="text-primary">We want to hear from you!</h2>
                         </Fade>
                     </Col>
                     {/* Form */}
-                    <Col sm={12} >
-                        <Form model="contactForm" onSubmit={values => this.handleSubmit(values)} className="mission-text p-3 contact-form">
-                            <Row className="form-group">
+                    <Col md={12} >
+                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 contact-form">
+                            <FormGroup row>
                                 <Col md={12}>
-                                    <Control.text model=".firstName" name="firstName" id="firstName" 
-                                        className="contact-input form-control"
+                                    <Input type="text" htmlFor="firstName" name="firstName" id="firstName" 
+                                        className="contact-input "
                                         placeholder="First Name" 
-                                        validators={{
-                                            required,
-                                            minLength: minLength(2),
-                                            maxLength: maxLength(15)
-                                        }}
+                                        value={this.state.firstName} 
+                                        invalid={!!errors.firstName}
+                                        onBlur={this.handleBlur("firstName")} 
+                                        onChange={this.handleInputChange} 
+                                        required 
                                     />
-                                    <Errors 
-                                        className="d-inline-flex justify-content-start pl-2 text-danger errors"
-                                        model=".firstName"
-                                        show="touched"
-                                        component="div"
-                                        messages={{
-                                            required: 'Required',
-                                            minLength: '  Must be at least 2 characters',
-                                            maxLength: ' Must be 15 characters or less'
-                                        }}
-                                    />
+                                    <FormFeedback>{errors.firstName}</FormFeedback>
                                 </Col>
-                            </Row>
-                            <Row className="form-group">
+                            </FormGroup>
+                            <FormGroup row>
                                 <Col md={12}>
-                                    <Control.text model=".lastName" name="lastName" id="lastName" 
-                                        className="contact-input form-control"
+                                    <Input type="text" htmlFor="lastName"name="lastName" id="lastName" 
+                                        className="contact-input"
                                         placeholder="Last Name" 
-                                        validators={{
-                                            required,
-                                            minLength: minLength(2),
-                                            maxLength: maxLength(15)
-                                        }}
+                                        value={this.state.lastName} 
+                                        invalid={!!errors.lastName}
+                                        onBlur={this.handleBlur("lastName")} 
+                                        onChange={this.handleInputChange} 
+                                        required 
                                     />
-                                    <Errors 
-                                        className="d-inline-flex justify-content-start pl-2 text-danger errors"
-                                        model=".lastName"
-                                        show="touched"
-                                        component="div"
-                                        messages={{
-                                            required: 'Required',
-                                            minLength: 'Must be at least 2 characters',
-                                            maxLength: 'Must be 15 characters or less'
-                                        }}
-                                    />
+                                    <FormFeedback>{errors.lastName}</FormFeedback>
                                 </Col>
-                            </Row>
-                            <Row className="form-group">
+                            </FormGroup>
+                            <FormGroup row>
                                 <Col md={12}>
-                                    <Control.text model=".phoneNum" name="phoneNum" id="phoneNum"
-                                        className="contact-input form-control" 
+                                    <Input type="tel" htmlFor="phonNum" name="phoneNum" id="phoneNum"
+                                        className="contact-input" 
                                         placeholder="Phone Number" 
-                                        validators={{
-                                            required,
-                                            minLength: minLength(10),
-                                            maxLength: maxLength(15),
-                                            isNumber
-                                        }}
+                                        value={this.state.phoneNum}
+                                        invalid={!!errors.phoneNum} 
+                                        onBlur={this.handleBlur("phoneNum")} 
+                                        onChange={this.handleInputChange}
+                                        required  
                                     />
-                                    <Errors 
-                                        className="d-inline-flex justify-content-start pl-2 text-danger errors"
-                                        model=".phoneNum"
-                                        show="touched"
-                                        component="div"
-                                        messages={{
-                                            required: 'Required',
-                                            minLength: 'Must be at least 10 characters',
-                                            maxLength: 'Must be 15 characters or less',
-                                            isNumber: 'Must be a number'
-                                        }}
-                                    />
+                                    <FormFeedback>{errors.phoneNum}</FormFeedback>
                                 </Col>
-                            </Row>
-                            <Row className="form-group">
+                            </FormGroup>
+                            <FormGroup row>
                                 <Col md={12}>
-                                    <Control.text model=".email" name="email" id="email" 
-                                        className="contact-input form-control"
+                                    <Input type="email" htmlFor="email"name="email" id="email" 
+                                        className="contact-input"
                                         placeholder="Email" 
-                                        validators={{
-                                            required,
-                                            validEmail
-                                        }}
+                                        value={this.state.email}
+                                        invalid={!!errors.email}
+                                        onBlur={this.handleBlur("email")} 
+                                        onChange={this.handleInputChange} 
+                                        required 
                                     />
-                                    <Errors 
-                                        className="d-inline-flex justify-content-start pl-2 text-danger errors"
-                                        model=".email"
-                                        show="touched"
-                                        component="div"
-                                        messages={{
-                                            required: 'Required',
-                                            validEmail: 'Invalid email address'
-                                        }}
-                                    />
+                                    <FormFeedback>{errors.email}</FormFeedback>
                                 </Col>
-                            </Row>
-                            <Row className="form-group">
-                                
+                            </FormGroup>
+                            <FormGroup row>
                                 <Col md={5}>
-                                    <Control.select model=".contactType" name="contactType" 
-                                        className="contact-input form-control"
+                                    <Input type="select" name="contactType" 
+                                        className="contact-input"
+                                        value={this.state.contactType}
+                                        onChange={this.handleInputChange}
                                     >
-                                        <option>May we contact you?</option>
-                                        <option>By Phone</option>
-                                        <option>By Email</option>
-                                        <option>Phone or Email</option>
-                                        <option>No</option>
+                                        <option >May we contact you?</option>
+                                        <option value='by phone'>By Phone</option>
+                                        <option value='by email'>By Email</option>
+                                        <option value='phone or email'>Phone or Email</option>
+                                        <option value='no'>No</option>
                                         
-                                    </Control.select>
+                                    </Input>
                                 </Col>
-                            </Row>
-                            <Row className="form-group">
+                            </FormGroup>
+                            <FormGroup row>
                                 <Col md={5}>
-                                    <Control.select model=".subject" name="subject"
-                                        className="contact-input form-control"
+                                    <Input type="select" name="subject"
+                                        className="contact-input"
+                                        value={this.state.subject}
+                                        onChange={this.handleInputChange}
                                     >
-                                        <option >Subject...</option>
-                                        <option value="Volunteer">Volunteer</option>
-                                        <option value="Mission Sponsor">Mission Sponsor</option>
-                                        <option value="Donations">Donations</option>
+                                        <option className="dropdown-item" >Subject...</option>
+                                        <option className="dropdown-item" value="Volunteer">Volunteer</option>
+                                        <option value="Community Partner">Community Partners</option>
+                                        <option value="Sponsor An Event">Sponsor An Event</option>
                                         <option value="Other">Other</option>
-                                    </Control.select>
+                                    </Input>
                                 </Col>
-                            </Row>
-                            <Row className="form-group">
+                            </FormGroup>
+                            <FormGroup row>
                                 <Col md={12}>
-                                    <Control.textarea model=".feedback" id="feedback" name="feedback" 
-                                        className="contact-input form-control"
+                                    <Input type="textarea" id="feedback" name="feedback" 
+                                        className="contact-input"
                                         rows="12"
-                                        />
+                                        value={this.state.feedback} 
+                                        onChange={this.handleInputChange}>
+                                    </Input>
                                 </Col>
-                            </Row>
-                            <Row className="form-group">
+                            </FormGroup>
+                            <FormGroup row>
                                 <Col md={3}>
                                     <Buttons 
                                         type="submit" 
-                                        color="primary"
-                                        className="btn-feedback"
-                                        btnText={"Send Feedback"}
-                                    />
+                                        color="primary" 
+                                        className="btn-feedback shadow-lg"
+                                        btnText={"Volunteer"} 
+                                    /> 
                                 </Col>
-                            </Row>
+                            </FormGroup>
                         </Form>
                     </Col>
                 </Row>

@@ -1,9 +1,7 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { createForms } from 'react-redux-form';
 import { Sponsors } from './sponsors';
 import { Members } from './members';
 import { Faqs } from './faqs';
-import { InitialContact} from './forms';
 // import thunk and logger
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
@@ -16,10 +14,7 @@ export const ConfigureStore = () => {
         combineReducers({
             sponsors: Sponsors,
             members: Members,
-            faqs: Faqs,
-            ...createForms({
-                contactForm: InitialContact
-            })
+            faqs: Faqs
         }),
         applyMiddleware(thunk, logger)  
     );

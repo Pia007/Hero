@@ -1,9 +1,42 @@
 import React, { Component } from 'react';
-import { Row, Col, FormGroup, Form, Label, Input, FormFeedback } from 'reactstrap';
+import { Row, Col, FormGroup, Form, Input, Label, FormFeedback } from 'reactstrap';
 import Buttons from './Buttons';
 import Fade from 'react-reveal/Fade';
 
+
+const newState = {
+    fName: '',
+    lName: '',
+    address1: '',
+    city: '',
+    userState: '',
+    zip: '',
+    phone: '',
+    email: '',
+    food: false,
+    health: false,
+    personal: false,
+    fitness: false,
+    prep: false,
+    fundraise: false,
+    events: false,
+    delivery: false,
+    other: false,
+    feedback: '',
+    touched: {
+        fName: false,
+        lName: false,
+        address1: false,
+        city: false,
+        userState: false,
+        zip: false,
+        phone: false,
+        email: false
+    }
+}
+
 class VolunteerForm extends Component {
+    
     constructor(props) {
         super(props);
 
@@ -76,7 +109,7 @@ class VolunteerForm extends Component {
 
         if(this.state.touched.city){
             if(city.length < 3){
-                errors.city = 'City mush be at least 3 characters';
+                errors.city = 'City must be at least 3 characters';
             } else if(city.length > 15) {
                 errors.city = 'City must be 15 or less characters';
             }
@@ -122,10 +155,17 @@ class VolunteerForm extends Component {
             [name]: value
         });
     }
+    
 
-    handleSubmit = (event) => {
-        console.log('Current State is: ' + JSON.stringify(this.state));
-        alert('Current State is: ' + JSON.stringify(this.state));
+    handleSubmit = event => {
+        // bypass Chrome Violation warning
+        setTimeout(
+            () => this.setState({...newState}), 
+            console.log('Current State is: ' + JSON.stringify(this.state)),
+            console.log('IT WORKED!'),
+            alert('Current State is: ' + JSON.stringify(this.state)), 
+        1000);
+        
         event.preventDefault();
     };
 
@@ -143,7 +183,7 @@ class VolunteerForm extends Component {
                     </Col>
                     
                     {/* Form */}
-                    <div className="col">
+                    <Col md={12}>
                         <Form onSubmit={this.handleSubmit} className="mission-text p-3 volunteer-form">
                             <FormGroup row>
                                 <Col md={12}>
@@ -370,15 +410,15 @@ class VolunteerForm extends Component {
                             <FormGroup row>
                                 <Col md={3}>
                                 <Buttons 
-                                        type="submit" 
-                                        color="primary"
-                                        className="shadow-lg btn-feedback"
-                                        btnText={"Volunteer"}
-                                    />
+                                    type="submit" 
+                                    color="primary"
+                                    className="shadow-lg btn-feedback"
+                                    btnText={"Volunteer"}
+                                />
                                 </Col>
                             </FormGroup>
                         </Form>
-                    </div>
+                    </Col>
                 </Row>
             </div>
         );

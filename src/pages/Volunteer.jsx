@@ -1,7 +1,7 @@
 import VolunteerForm from '../components/VolunteerForm';
 import PageHeader from '../components/PageHeader';
 
-const Volunteer = ({siteLocation, pageTitle}) => {
+const Volunteer = () => {
     return (
         <div >
             <PageHeader siteLocation={"Volunteer"} pageTitle={"Volunteer"} />

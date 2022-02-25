@@ -11,7 +11,6 @@ import ScrollToTop from './ScrollToTop';
 import { useLocation, Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchSponsors, fetchMembers, fetchFaqs } from '../redux/ActionCreators';
-import { actions } from 'react-redux-form';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 // Setting up mapStateToProps to get the state from the store - state is the argument
@@ -26,8 +25,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
     fetchSponsors: () => (fetchSponsors()),
     fetchMembers: () => (fetchMembers()),
-    fetchFaqs: () => (fetchFaqs()),
-    resetContactForm: () => (actions.reset('contactForm'))
+    fetchFaqs: () => (fetchFaqs())
 };
 
 class Main extends Component {
@@ -62,7 +60,7 @@ class Main extends Component {
                                     membersLoading={this.props.members.isLoading}
                                     membersErrMess={this.props.members.errMess} 
                                 /> } />
-                                <Route exact path="/contact" render={() => <Contact resetContactForm={this.props.resetContactForm} />} />
+                                <Route exact path="/contact" component={Contact} />
                                 <Route exact path="/involved" component={Involved} />
                                 <Route exact path="/volunteer" component={Volunteer} />
                                 <Route exact path="/faqs" render= {() => <Faqs faqs={this.props.faqs.faqs} 
