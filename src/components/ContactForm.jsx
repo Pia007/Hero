@@ -1,24 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col, FormGroup, Form, Input, FormFeedback } from 'reactstrap';
+import { ToastContainer, toast, Zoom } from 'react-toastify';
 import Fade from 'react-reveal';
 import Buttons from './Buttons';
-
-const newState = {
-    firstName: '',
-    lastName: '',
-    phoneNum: '',
-    email: '',
-    agree: false,
-    contactType: 'By Phone',
-    subject:'',
-    feedback: '',
-    touched: {
-        firstName: false,
-        lastName: false,
-        phoneNum: false,
-        email: false
-    }
-}
 
 class ContactForm extends Component {
     constructor(props) {
@@ -41,9 +25,26 @@ class ContactForm extends Component {
             }
         };
 
-        this.handleInputChange = this.handleInputChange.bind(this);
-        //this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    blankState = {
+        firstName: '',
+        lastName: '',
+        phoneNum: '',
+        email: '',
+        agree: false,
+        contactType: 'By Phone',
+        subject:'',
+        feedback: '',
+        touched: {
+            firstName: false,
+            lastName: false,
+            phoneNum: false,
+            email: false
+        }
+    };
 
     validate(firstName, lastName, phoneNum, email) {
         const errors = {
@@ -86,7 +87,7 @@ class ContactForm extends Component {
         });
     }
 
-    handleInputChange = (event) => {
+    handleChange = (event) => {
         const target = event.target;
         const name = target.name;
         const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -96,15 +97,24 @@ class ContactForm extends Component {
         });
     }
 
+    showToast = () => {
+        setTimeout(() => {
+            toast.success(`Your message has been sent! We will get back to you shortly.`, {
+                position: toast.POSITION.TOP_RIGHT,
+                // icon: ({theme, type}) => <img src='assets/images/new-logo-lp.svg' height="25" weight="25" alt="logo" style={{border: "none"}} className="align-self-start"/>
+            });
+        }, 2000);
+    };
+
     handleSubmit = (event) => {
         // bypass Chrome Violation warning
         setTimeout(
-            () => this.setState({...newState}), 
+            () => this.setState({...this.blankState}), 
             console.log('Current State is: ' + JSON.stringify(this.state)),
-            console.log('IT WORKED!'),
-            alert('Current State is: ' + JSON.stringify(this.state)), 
-        1000);
-        
+            console.log('CONTACT FORM SUBMITTED!'),
+        2000);
+
+        this.showToast();
         event.preventDefault();
     };
 
@@ -132,7 +142,7 @@ class ContactForm extends Component {
                                         value={this.state.firstName} 
                                         invalid={!!errors.firstName}
                                         onBlur={this.handleBlur("firstName")} 
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                         required 
                                     />
                                     <FormFeedback>{errors.firstName}</FormFeedback>
@@ -146,7 +156,7 @@ class ContactForm extends Component {
                                         value={this.state.lastName} 
                                         invalid={!!errors.lastName}
                                         onBlur={this.handleBlur("lastName")} 
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                         required 
                                     />
                                     <FormFeedback>{errors.lastName}</FormFeedback>
@@ -160,7 +170,7 @@ class ContactForm extends Component {
                                         value={this.state.phoneNum}
                                         invalid={!!errors.phoneNum} 
                                         onBlur={this.handleBlur("phoneNum")} 
-                                        onChange={this.handleInputChange}
+                                        onChange={this.handleChange}
                                         required  
                                     />
                                     <FormFeedback>{errors.phoneNum}</FormFeedback>
@@ -174,7 +184,7 @@ class ContactForm extends Component {
                                         value={this.state.email}
                                         invalid={!!errors.email}
                                         onBlur={this.handleBlur("email")} 
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                         required 
                                     />
                                     <FormFeedback>{errors.email}</FormFeedback>
@@ -185,7 +195,7 @@ class ContactForm extends Component {
                                     <Input type="select" name="contactType" 
                                         className="contact-input"
                                         value={this.state.contactType}
-                                        onChange={this.handleInputChange}
+                                        onChange={this.handleChange}
                                     >
                                         <option >May we contact you?</option>
                                         <option value='by phone'>By Phone</option>
@@ -201,7 +211,7 @@ class ContactForm extends Component {
                                     <Input type="select" name="subject"
                                         className="contact-input"
                                         value={this.state.subject}
-                                        onChange={this.handleInputChange}
+                                        onChange={this.handleChange}
                                     >
                                         <option className="dropdown-item" >Subject...</option>
                                         <option className="dropdown-item" value="Volunteer">Volunteer</option>
@@ -217,7 +227,7 @@ class ContactForm extends Component {
                                         className="contact-input"
                                         rows="12"
                                         value={this.state.feedback} 
-                                        onChange={this.handleInputChange}>
+                                        onChange={this.handleChange}>
                                     </Input>
                                 </Col>
                             </FormGroup>
@@ -227,8 +237,16 @@ class ContactForm extends Component {
                                         type="submit" 
                                         color="primary" 
                                         className="btn-feedback shadow-lg"
-                                        btnText={"Volunteer"} 
-                                    /> 
+                                        btnText={"Contact Us"}
+                                        // onClick={props.promise}
+                                    />
+                                    <ToastContainer 
+                                        theme='dark' 
+                                        transition={Zoom} 
+                                        autoClose={3000} 
+                                        bodyClassName="home-bg" 
+                                        toastClassName="home-bg" 
+                                    />
                                 </Col>
                             </FormGroup>
                         </Form>

@@ -6,6 +6,7 @@ import 'font-awesome/css/font-awesome.css';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap-social/bootstrap-social.css';
 import 'bootswatch/dist/spacelab/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import 'typeface-offside';
 import 'typeface-heebo';
 import 'typeface-montserrat';

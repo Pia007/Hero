@@ -1,39 +1,8 @@
 import React, { Component } from 'react';
+import { ToastContainer, toast, Zoom } from 'react-toastify';
 import { Row, Col, FormGroup, Form, Input, Label, FormFeedback } from 'reactstrap';
 import Buttons from './Buttons';
 import Fade from 'react-reveal/Fade';
-
-
-const newState = {
-    fName: '',
-    lName: '',
-    address1: '',
-    city: '',
-    userState: '',
-    zip: '',
-    phone: '',
-    email: '',
-    food: false,
-    health: false,
-    personal: false,
-    fitness: false,
-    prep: false,
-    fundraise: false,
-    events: false,
-    delivery: false,
-    other: false,
-    feedback: '',
-    touched: {
-        fName: false,
-        lName: false,
-        address1: false,
-        city: false,
-        userState: false,
-        zip: false,
-        phone: false,
-        email: false
-    }
-}
 
 class VolunteerForm extends Component {
     
@@ -71,9 +40,41 @@ class VolunteerForm extends Component {
             }
         };
         
-        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    blankState = {
+        fName: '',
+        lName: '',
+        address1: '',
+        city: '',
+        userState: '',
+        zip: '',
+        phone: '',
+        email: '',
+        food: false,
+        health: false,
+        personal: false,
+        fitness: false,
+        prep: false,
+        fundraise: false,
+        events: false,
+        delivery: false,
+        other: false,
+        feedback: '',
+        touched: {
+            fName: false,
+            lName: false,
+            address1: false,
+            city: false,
+            userState: false,
+            zip: false,
+            phone: false,
+            email: false
+        }
+    };
+
     validate(fName, lName, address1, city, userState, zip, phone, email) {
         const errors = {
             fName: '',
@@ -146,7 +147,7 @@ class VolunteerForm extends Component {
         });
     }
 
-    handleInputChange = (event) => {
+    handleChange = (event) => {
         const target = event.target;
         const name = target.name;
         const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -155,17 +156,24 @@ class VolunteerForm extends Component {
             [name]: value
         });
     }
-    
+    showToast = () => {
+        setTimeout(() => {
+            toast.success(`Thank your for your interests in volunteering! We will get back to you shortly.`, {
+                position: toast.POSITION.TOP_RIGHT,
+                // icon: ({theme, type}) => <img src='assets/images/new-logo-lp.svg' height="25" weight="25" alt="logo" style={{border: "none"}} className="align-self-start"/>
+            });
+        }, 2000);
+    }
 
     handleSubmit = event => {
         // bypass Chrome Violation warning
         setTimeout(
-            () => this.setState({...newState}), 
+            () => this.setState({...this.blankState}), 
             console.log('Current State is: ' + JSON.stringify(this.state)),
-            console.log('IT WORKED!'),
-            alert('Current State is: ' + JSON.stringify(this.state)), 
-        1000);
-        
+            console.log('VOLUNTEER FORM SUBMITTED!'),
+        2000);
+
+        this.showToast();
         event.preventDefault();
     };
 
@@ -193,7 +201,7 @@ class VolunteerForm extends Component {
                                         value={this.state.fName} 
                                         invalid={!!errors.fName}
                                         onBlur={this.handleBlur("fName")} 
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                         required 
                                     />
                                     <FormFeedback className="errors pl-2">{errors.fName}</FormFeedback>
@@ -207,7 +215,7 @@ class VolunteerForm extends Component {
                                         value={this.state.lName} 
                                         invalid={!!errors.lName}
                                         onBlur={this.handleBlur("lName")} 
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                         required 
                                     />
                                     <FormFeedback className="errors pl-2">{errors.lName}</FormFeedback>
@@ -221,7 +229,7 @@ class VolunteerForm extends Component {
                                         value={this.state.address1} 
                                         invalid={!!errors.address1}
                                         onBlur={this.handleBlur("address1")} 
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                         required 
                                     />
                                     <FormFeedback className="errors pl-2">{errors.address1}</FormFeedback>
@@ -236,7 +244,7 @@ class VolunteerForm extends Component {
                                         value={this.state.city} 
                                         invalid={!!errors.city}
                                         onBlur={this.handleBlur("city")} 
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                         required 
                                     />
                                     <FormFeedback className="errors pl-2">{errors.city}</FormFeedback>
@@ -249,7 +257,7 @@ class VolunteerForm extends Component {
                                         value={this.state.userState}
                                         invalid={!!errors.userState}
                                         onBlur={this.handleBlur("userState")}
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                         required 
                                     />
                                     <FormFeedback className="errors pl-2">{errors.userState}</FormFeedback>
@@ -261,7 +269,7 @@ class VolunteerForm extends Component {
                                         value={this.state.zip} 
                                         invalid={!!errors.zip}
                                         onBlur={this.handleBlur("zip")} 
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                         required 
                                     />
                                     <FormFeedback className="errors pl-2">{errors.zip}</FormFeedback>
@@ -275,7 +283,7 @@ class VolunteerForm extends Component {
                                         value={this.state.phone}
                                         invalid={!!errors.phone} 
                                         onBlur={this.handleBlur("phone")} 
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                     />
                                     <FormFeedback className="errors pl-2">{errors.phone}</FormFeedback>
                                 </Col>
@@ -286,7 +294,7 @@ class VolunteerForm extends Component {
                                         value={this.state.email}
                                         invalid={!!errors.email}
                                         onBlur={this.handleBlur("email")} 
-                                        onChange={this.handleInputChange} 
+                                        onChange={this.handleChange} 
                                     />
                                     <FormFeedback className="errors pl-2">{errors.email}</FormFeedback>
                                 </Col>
@@ -305,7 +313,7 @@ class VolunteerForm extends Component {
                                                     className="custom-control-input "
                                                     checked={this.state.food}
                                                     value={this.state.food} 
-                                                    onChange={this.handleInputChange}   
+                                                    onChange={this.handleChange}   
                                                 />
                                                 <Label check className="custom-control-label label-interests" htmlFor="food">Food Services</Label>
                                             </FormGroup>
@@ -316,7 +324,7 @@ class VolunteerForm extends Component {
                                                     className="custom-control-input" 
                                                     checked={this.state.health}
                                                     value={this.state.health} 
-                                                    onChange={this.handleInputChange}   
+                                                    onChange={this.handleChange}   
                                                 />
                                                 <Label check className="custom-control-label label-interests" htmlFor="health">Health & Wellness</Label>
                                             </FormGroup>
@@ -329,7 +337,7 @@ class VolunteerForm extends Component {
                                                     className="custom-control-input" 
                                                     checked={this.state.personal}
                                                     value={this.state.personal} 
-                                                    onChange={this.handleInputChange}  
+                                                    onChange={this.handleChange}  
                                                 />
                                                 <Label check className="custom-control-label label-interests" htmlFor="personal">Personal Care</Label>
                                             </FormGroup>
@@ -340,7 +348,7 @@ class VolunteerForm extends Component {
                                                     className="custom-control-input" 
                                                     checked={this.state.fitness}
                                                     value={this.state.fitness} 
-                                                    onChange={this.handleInputChange}  
+                                                    onChange={this.handleChange}  
                                                 />
                                                 <Label check className="custom-control-label label-interests" htmlFor="fitness">Fitness</Label>
                                             </FormGroup>
@@ -353,11 +361,10 @@ class VolunteerForm extends Component {
                                                     className="custom-control-input" 
                                                     checked={this.state.fundraise}
                                                     value={this.state.fundraise} 
-                                                    onChange={this.handleInputChange}  
+                                                    onChange={this.handleChange}  
                                                 />
                                                 <Label check className="custom-control-label label-interests" htmlFor="fundraise">Fundraising</Label>
                                             </FormGroup>
-
                                             <FormGroup check className="custom-control custom-checkbox ">
                                                 <Input type="checkbox" 
                                                     id="events" 
@@ -365,7 +372,7 @@ class VolunteerForm extends Component {
                                                     className="custom-control-input"
                                                     checked={this.state.events}
                                                     value={this.state.events} 
-                                                    onChange={this.handleInputChange}   
+                                                    onChange={this.handleChange}   
                                                 />
                                                 <Label check className="custom-control-label label-interests" htmlFor="events">Events</Label>
                                             </FormGroup>
@@ -378,7 +385,7 @@ class VolunteerForm extends Component {
                                                     className="custom-control-input" 
                                                     checked={this.state.delivery}
                                                     value={this.state.de} 
-                                                    onChange={this.handleInputChange}  
+                                                    onChange={this.handleChange}  
                                                 />
                                                 <label className="custom-control-label label-interests" htmlFor="delivery">Deliveries</label>
                                             </FormGroup>
@@ -388,7 +395,7 @@ class VolunteerForm extends Component {
                                                     className="custom-control-input" 
                                                     checked={this.state.other}
                                                     value={this.state.other} 
-                                                    onChange={this.handleInputChange}  
+                                                    onChange={this.handleChange}  
                                                 />
                                                 <label className="custom-control-label label-interests" htmlFor="other">Other</label>
                                             </FormGroup>
@@ -403,7 +410,7 @@ class VolunteerForm extends Component {
                                         rows="12"
                                         placeholder="Is there anything else you'd like to tell us?"
                                         value={this.state.feedback} 
-                                        onChange={this.handleInputChange}>
+                                        onChange={this.handleChange}>
                                     </Input>
                                 </Col>
                             </FormGroup>
@@ -415,6 +422,13 @@ class VolunteerForm extends Component {
                                     className="shadow-lg btn-feedback"
                                     btnText={"Volunteer"}
                                 />
+                                <ToastContainer 
+                                        theme='dark' 
+                                        transition={Zoom} 
+                                        autoClose={3000} 
+                                        bodyClassName="home-bg" 
+                                        toastClassName="home-bg" 
+                                    />
                                 </Col>
                             </FormGroup>
                         </Form>
