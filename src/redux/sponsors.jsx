@@ -1,10 +1,7 @@
 // Created Sponsor reducer - splitting reducer.js, note where the file path is
-// import { SPONSORS } from "../shared/sponsors";
 // Update reducer to use action type 
 import * as ActionTypes from './ActionTypes';
-// import { SPONSORS } from '../shared/sponsors';
 
-// 
 export const Sponsors = (state = {
     isLoading: true,
     errMess: null,
