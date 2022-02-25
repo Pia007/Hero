@@ -24,37 +24,37 @@ const InvolvedBody = () => {
             <SectionBreak />
 
             <Fade right>
-            <InvolvedCard className={"row row-content flex-lg-row-reverse"}
-                title={"Sponsor Us"}
-                contentOne={"Host A Healthcare Hero is a non-profit organization.We are funded 100% by the generosity of our Mission Sponsors"}
-                contentTwo={"If your organization would like to become a Mission Sponsor, just click the button below. contact us"}
-                imageSrc={"assets/images/sponsor.jpeg"}
-                imageName={"sponsor image"}
-                modalHeaderText={"Sponsor Us"}
-                modalBodyText={"Our Mission Sponsors are organizations that are willing to help us provide meals, health and wellness, fitness, personal care and other services free of charge to our healthcare heroes. "}
-                modalBodyTextTwo={"If you are a business owner or your employer is interested in sponsoring Host A Healthcare Hero, please click the button below to contact us."}
-                modalBodyTextThree={" We are looking forward to working with you!"}
-                value={"Go"}
-                to={"/contact"}
-            />
+                <InvolvedCard className={"row row-content flex-lg-row-reverse"}
+                    title={"Sponsor Us"}
+                    contentOne={"Host A Healthcare Hero is a non-profit organization.We are funded 100% by the generosity of our Mission Sponsors"}
+                    contentTwo={"If your organization would like to become a Mission Sponsor, just click the button below to contact us."}
+                    imageSrc={"assets/images/sponsor.jpeg"}
+                    imageName={"sponsor image"}
+                    modalHeaderText={"Sponsor Us"}
+                    modalBodyText={"Our Mission Sponsors are organizations that are willing to help us provide meals, health and wellness, fitness, personal care and other services free of charge to our healthcare heroes. "}
+                    modalBodyTextTwo={"If you are a business owner or your employer is interested in sponsoring Host A Healthcare Hero, please click the button below to contact us."}
+                    modalBodyTextThree={" We are looking forward to working with you!"}
+                    value={"Go"}
+                    to={"/contact"}
+                />
             </Fade>
             <SectionBreak />
 
             <Fade left>
-            <InvolvedCard className={"row row-content "}
-                title={"Donations"}
-                contentOne={"We have several ways you can donate."}
-                contentTwo={"You or your organization can donate items or become a designated drop-off."}
-                contentThree={"Or you can donate directly to the local food pantry."}
-                imageSrc={"assets/images/food-donate.jpg"}
-                imageName={"donations image"}
-                modalHeaderText={"Donations"}
-                modalBodyText={"We do not ask for monetary donations from individual donors. However, we do ask for other donations from individuals and organizations that are willing to donate to Host A Healthcare Hero. "}
-                modalBodyTextTwo={"I know this is hard to believe but we simply prefer that you donate time, food items, fitness equipment, personal care products...etc. You can even host a food drive!"}
-                modalBodyTextThree={"To find out more about donating, please click the button below to contact us."}
-                value={"Go"}
-                to={"/contact"}
-            /> 
+                <InvolvedCard className={"row row-content "}
+                    title={"Donations"}
+                    contentOne={"We have several ways you can donate."}
+                    contentTwo={"You or your organization can donate items or become a designated drop-off."}
+                    contentThree={"Or you can donate directly to the local food pantry."}
+                    imageSrc={"assets/images/food-donate.jpg"}
+                    imageName={"donations image"}
+                    modalHeaderText={"Donations"}
+                    modalBodyText={"We do not ask for monetary donations from individual donors. However, we do ask for other donations from individuals and organizations that are willing to donate to Host A Healthcare Hero. "}
+                    modalBodyTextTwo={"I know this is hard to believe but we simply prefer that you donate time, food items, fitness equipment, personal care products...etc. You can even host a food drive!"}
+                    modalBodyTextThree={"To find out more about donating, please click the button below to contact us."}
+                    value={"Go"}
+                    to={"/contact"}
+                /> 
             </Fade>
         </div>
     );
