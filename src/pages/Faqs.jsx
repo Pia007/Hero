@@ -18,7 +18,7 @@ const RenderFaqSection = ({ faqTitle,  factType }) => {
         <FadeTransform 
             in
             transformProps={{
-                exitTransform: 'scale(0.5) translateY(-20%)'
+                exitTransform: 'scale(0.5) translateY(0%)'
             }}>
             <Row className="row-content " >
                 <Col xs={12} className="px-sm-0">
