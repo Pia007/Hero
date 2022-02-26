@@ -238,12 +238,11 @@ class ContactForm extends Component {
                                         color="primary" 
                                         className="btn-feedback shadow-lg"
                                         btnText={"Contact Us"}
-                                        // onClick={props.promise}
                                     />
                                     <ToastContainer 
                                         theme='dark' 
                                         transition={Zoom} 
-                                        autoClose={3000} 
+                                        autoClose={5000} 
                                         bodyClassName="home-bg" 
                                         toastClassName="home-bg" 
                                     />

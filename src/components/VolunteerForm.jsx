@@ -425,7 +425,7 @@ class VolunteerForm extends Component {
                                 <ToastContainer 
                                         theme='dark' 
                                         transition={Zoom} 
-                                        autoClose={3000} 
+                                        autoClose={5000} 
                                         bodyClassName="home-bg" 
                                         toastClassName="home-bg" 
                                     />
