@@ -8,10 +8,9 @@ import Volunteer from '../pages/Volunteer';
 import Faqs from '../pages/Faqs';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
-import { useLocation, Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { useLocation, Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchSponsors, fetchMembers, fetchFaqs } from '../redux/ActionCreators';
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 // Setting up mapStateToProps to get the state from the store - state is the argument
 const mapStateToProps = state => {
@@ -46,32 +45,29 @@ class Main extends Component {
         }
         
         return (
-            <div className='home-bg'>
+            
+            <div className='home-bg' >
                 <Header />
-                <TransitionGroup>
-                    <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
-                        <ScrollToTop>
-                            <Switch>
-                                <Route path="/home" component={Home} />
-                                {/* transferring state to redux store - use "props" instead of "state", keeping the structure of the data in mind */}
-                                <Route exact path="/about" render={() => <About sponsors={this.props.sponsors.sponsors} members={this.props.members.members} 
-                                    errMess={this.props.sponsors.errMess}
-                                    isLoading={this.props.sponsors.isLoading}
-                                    membersLoading={this.props.members.isLoading}
-                                    membersErrMess={this.props.members.errMess} 
-                                /> } />
-                                <Route exact path="/contact" component={Contact} />
-                                <Route exact path="/involved" component={Involved} />
-                                <Route exact path="/volunteer" component={Volunteer} />
-                                <Route exact path="/faqs" render= {() => <Faqs faqs={this.props.faqs.faqs} 
-                                    errMess={this.props.faqs.errMess}
-                                    isLoading={this.props.faqs.isLoading} 
-                                /> } />
-                                <Redirect to="/home" />
-                            </Switch>
-                        </ScrollToTop>
-                    </CSSTransition>
-                </TransitionGroup>
+                    <ScrollToTop>
+                        <Switch>
+                            <Route path="/home" component={Home} />
+                            {/* transferring state to redux store - use "props" instead of "state", keeping the structure of the data in mind */}
+                            <Route exact path="/about" render={() => <About sponsors={this.props.sponsors.sponsors} members={this.props.members.members} 
+                                errMess={this.props.sponsors.errMess}
+                                isLoading={this.props.sponsors.isLoading}
+                                membersLoading={this.props.members.isLoading}
+                                membersErrMess={this.props.members.errMess} 
+                            /> } />
+                            <Route exact path="/contact" component={Contact} />
+                            <Route exact path="/involved" component={Involved} />
+                            <Route exact path="/volunteer" component={Volunteer} />
+                            <Route exact path="/faqs" render= {() => <Faqs faqs={this.props.faqs.faqs} 
+                                errMess={this.props.faqs.errMess}
+                                isLoading={this.props.faqs.isLoading} 
+                            /> } />
+                            <Redirect to="/home" />
+                        </Switch>
+                    </ScrollToTop>
                 <RenderFooter />
             </div>
         );
