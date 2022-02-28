@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 export const Intro= () => {
     return (
-        <Jumbotron fluid className="d-flex align-items-center justify-content-around "  style={{height: '80vh'}}>
+        <Jumbotron fluid className="d-flex flex-column align-items-center justify-content-around "  style={{height: '90vh'}}>
             <Row className=" text-center mx-0 row-content p-0">
                 <Col xs={12} className="border-0 px-0 text-center align-self-center justify-content-around">
                     <p className="sub-text align-self-center font-weight-bold text-primary d-none d-md-block">
@@ -36,7 +36,6 @@ export const Intro= () => {
                         <Link to="/about" className=" text-center  btn btn-lg btn-outline-success" > Find Out More </Link> 
                     </Fade>
                 </Col>
-            
             </Row>
         </Jumbotron>
     );
