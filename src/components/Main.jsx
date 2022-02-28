@@ -5,6 +5,7 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Involved from '../pages/Involved';
 import Volunteer from '../pages/Volunteer';
+import VolunteerPortal from '../pages/VolunteerPortal';
 import Faqs from '../pages/Faqs';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
@@ -65,6 +66,7 @@ class Main extends Component {
                                 errMess={this.props.faqs.errMess}
                                 isLoading={this.props.faqs.isLoading} 
                             /> } />
+                            <Route exact path="/volunteerportal" component={VolunteerPortal} />
                             <Redirect to="/home" />
                         </Switch>
                     </ScrollToTop>
