@@ -1,10 +1,10 @@
-import  PageHeader, { FaqCrumbs }  from '../components/PageHeader';
-import SectionBreak from '../components/SectionBreak';
-import Fade from 'react-reveal/Fade';
-import { FadeTransform } from 'react-animation-components';
+import { useState } from 'react';
 import { Row, Col} from 'reactstrap';
 import { FaqAccordion } from '../components/Accordion';
 import { Loading } from '../components/Loadingicon';
+import { FadeTransform } from 'react-animation-components';
+import  PageHeader from '../components/PageHeader';
+import Fade from 'react-reveal/Fade';
 
 
 const RenderFaq = ({ faq }) => {
@@ -15,30 +15,33 @@ const RenderFaq = ({ faq }) => {
 
 const RenderFaqSection = ({ faqTitle,  factType }) => {
     return (
-        <FadeTransform 
-            in
-            transformProps={{
-                exitTransform: 'scale(0.5) translateY(0%)'
-            }}>
-            <Row className="row-content " >
-                <Col xs={12} className="px-sm-0">
-                    <Fade bottom cascade>
-                        <h2 className="text-success my-3">{faqTitle}</h2>
-                    </Fade>
-                    <FaqCrumbs />
-                </Col>
-                <Col xs={12} className="p-0">
-                    <Fade bottom cascade>
-                        {factType}
-                    </Fade>
-                </Col>
-            </Row>
-        </FadeTransform>
+        <div className="container p-0 mt-3">
+            <FadeTransform 
+                in
+                transformProps={{
+                    exitTransform: 'scale(0.5) translateY(0%)'
+                }}>
+                <Row className="row-content " >
+                    <Col xs={12} className="px-sm-0">
+                        <Fade bottom cascade>
+                            <h2 className="text-success my-3">{faqTitle}</h2>
+                        </Fade>
+                    </Col>
+                    <Col xs={12} className="p-0">
+                        <Fade bottom cascade>
+                            {factType}
+                        </Fade>
+                    </Col>
+                </Row>
+            </FadeTransform>
+        </div>
     );
 }
 
 
 const Faqs = (props) => {
+    const [ selected, setSelected ] = useState("generalFaqs");
+    const toggleSelected = () => setSelected(!selected);
     
     const generalFaqs = props.faqs?.filter(faq => faq.category === "General").map(filteredFaq => { 
         return (
@@ -102,49 +105,47 @@ const Faqs = (props) => {
             </div>
         )
     }
+    const FaqHeader = () => {
+        return (
+            <div className="container text-center ">
+                <h1 className='text-primary'> Frequently <br /> Asked Questions</h1>
+            </div>
+        )
+    }
     
     return (
         
-            <div style={{overflow: 'hidden'}}>
-                <div className='container-fluid home-bg ' id='faq'>
-                    <PageHeader siteLocation={"FAQs"} pageTitle={"Frequently Asked Questions"} />
-                    {/* <FaqCrumbs /> */}
-                </div>
-                
-                <div className='container mt-3 sticky' style={{ zIndex: 1}}>
-                    <div className="container p-0 mt-3" id="general">
-                        <RenderFaqSection 
-                            faqTitle={"General"}
-                            factType={generalFaqs}
-                        />
-                    </div>
-                    <SectionBreak />
-
-                    <div className="container p-0  mt-3" id="volFaq">
-                        <RenderFaqSection 
-                            faqTitle={"Volunteer"}
-                            factType={volunteerFaqs}
-                        />
-                    </div>
-                    <SectionBreak />
-
-                    <div className="container p-0" id="sponsor">
-                        <RenderFaqSection 
-                            faqTitle={"Sponsor"}
-                            factType={sponsorFaqs}
-                        />
-                    </div>
-                    <SectionBreak />
-
-                    <div className="container p-0" id="donate">
-                        <RenderFaqSection 
-                            faqTitle={"Donate"}
-                            factType={donateFaqs}
-                        />
-                    </div>
-                </div>
-            </div>
         
+        <div style={{overflow: 'hidden'}}>
+            <div className='container-fluid home-bg ' id='faq'>
+                <PageHeader siteLocation={"FAQs"}  />
+                <FaqHeader />
+            </div>
+            <div className="text-center">
+                <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-2 faqBtn">General</button>
+                <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Volunteer</button>
+                <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Sponsor</button>
+                <button onClick={() => { setSelected('donateFaqs') }}className="btn btn-outline-success faqBtn">Donate</button>
+            </div>
+            
+
+            <div className='container mt-3 sticky' style={{ zIndex: 1}}>
+                
+                { 
+                    (selected === 'generalFaqs') ? <RenderFaqSection faqTitle={"General"} factType={generalFaqs} /> : null 
+                }
+                {
+                    (selected === 'volunteerFaqs') ? <RenderFaqSection faqTitle={"Volunteer"} factType={volunteerFaqs} /> : null 
+                }
+                {
+                    (selected === 'sponsorFaqs') ? <RenderFaqSection faqTitle={"Sponsor"} factType={sponsorFaqs} /> : null 
+                }
+                {
+                    (selected === 'donateFaqs') ? <RenderFaqSection faqTitle={"Donate"} factType={donateFaqs} /> : null 
+                }
+                
+            </div>
+        </div>
     );
 }
 

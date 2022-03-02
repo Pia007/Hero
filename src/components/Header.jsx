@@ -16,7 +16,7 @@ export const Header = (props) => {
                     <NavbarToggler onClick={toggleNav} className="justify-content-end">
                         <i className="fa fa-bars fa-lg text-success nv-icon "/> 
                     </NavbarToggler>
-                    <Collapse side isOpen={navigation} navbar className="justify-content-end">
+                    <Collapse isOpen={navigation} navbar className="justify-content-end">
                         <Nav navbar className="ml-auto text-center text-light nav-text">
                             <NavItem className="nav-item">
                                 <NavLink  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link active" to="/home"> 
@@ -44,11 +44,11 @@ export const Header = (props) => {
                                 </NavLink>
                             </NavItem>
                             <div>
-                            <NavItem>
-                                <Button  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="btn btn-outline-light my-2 my-sm-0 nav-text nav-login ml-2 btn-primary"  id='login-btn' > 
-                                    Login <i class="fa fa-sign-in" aria-hidden="true" />
-                                </Button>
-                            </NavItem>
+                                <NavItem>
+                                    <Button  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="btn btn-outline-light my-2 my-sm-0 nav-text nav-login ml-2 btn-primary"  id='login-btn' > 
+                                        Login <i className="fa fa-sign-in" aria-hidden="true" />
+                                    </Button>
+                                </NavItem>
                             </div>
                         </Nav>
                     </Collapse>

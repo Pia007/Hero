@@ -44,6 +44,7 @@ body {
     padding: 30px;
     background: var(--cl-altBg); 
 }
+
 .findOut {
     text-decoration: none;
 }
@@ -344,6 +345,20 @@ img {
     border-radius: 0 0 3px 3px;
     background-color: none;
     font-size: 16px;
+}
+.faqBtn {
+    background: none;
+    border: none;
+    color: white; 
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.faqBtn:hover,
+.faqBtn:active,
+.faqBtn:focus {
+    background: none;
+    color: var(--color-success);
 }
 .last-dt {
     border-radius: 0 0 3px 3px;

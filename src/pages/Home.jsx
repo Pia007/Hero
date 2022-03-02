@@ -6,9 +6,9 @@ const Home = (props) => {
     
     return (
         <div className=" d-flex align-items-center justify-content-center" style={{height: '100vh', padding: '0'}}>
-            <Jumbotron fluid className="px-3" 
+            <Jumbotron fluid className="px-3"  
                 style={{
-                    backgroundImage: `linear-gradient(rgba(2, 13, 24, 0.9), rgba(2, 13, 24, 0.9)), url(assets/images/background.jpg)`,
+                    backgroundImage: `linear-gradient(rgba(4, 13, 20, 0.9), rgba(4, 13, 20, 0.9)), url(assets/images/background.jpg)`,
                     backgroundPosition: 'center center',
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
