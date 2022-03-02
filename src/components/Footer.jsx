@@ -46,7 +46,7 @@ const Footer = (props) => {
                         </div>
                         <p className="update-text mb-1 text-center footer-heading">
                             Sign up to receive news and updates.
-                        </p>
+                        </p> 
                         <FooterForm />
                     </div>
                 </div>

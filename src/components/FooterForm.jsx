@@ -1,11 +1,7 @@
 /* eslint-disable react/jsx-pascal-case */
 import React, { Component } from 'react';
-import { Row, Col, Label } from 'reactstrap';
-import { Control, LocalForm, Errors } from 'react-redux-form';
+import { Col, FormGroup, Form, Input,  FormFeedback} from 'reactstrap';
 import Buttons from './Buttons';
-
-
-const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
 class FooterForm extends Component {
     constructor(props) {
@@ -19,47 +15,89 @@ class FooterForm extends Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleSubmit(values) {
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
+    validate(email) {
+        const errors = {
+            email: ''
+        };
+
+        const regEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+        if (this.state.touched.email && !regEmail.test(email)) {
+            errors.email = 'Invalid email address';
+        } 
+        return errors;
+    }
+
+    handleBlur = (field) => () => {
+        this.setState({
+            touched: { ...this.state.touched, [field]: true }
+        });
+    }
+
+    handleChange = (event) => {
+        const target = event.target;
+        const name = target.name;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+
+        this.setState({
+            [name]: value
+        });
+    }
+
+    handleSubmit = event => {
+        setTimeout(() => {
+            console.log('Current State is: ' + JSON.stringify(this.state));
+            console.log('NEWSLETTER REQUEST SUBMITTED');
+            this.resetForm();
+        }, 2000);
+
+        event.preventDefault();
     };
+
+    resetForm() {
+        this.setState({
+            email: '',
+            touched: {
+                email: false
+            }
+        });
+    }
     
     render() {
+
+        const errors = this.validate( this.state.email);
+
         return (
-            <LocalForm onSubmit={values => this.handleSubmit(values)}>
-                <Row className="form-group d-flex justify-content-center">
+            <Form onSubmit={this.handleSubmit}>
+                <FormGroup row className="d-flex justify-content-center">
                     <Col xs={8}  >
-                        <Label htmlFor="email" className="col-8 col-form-label mx-auto invisible" />
-                        <Control.text model=".email" name="email" id="email" 
-                            className="contact-input form-control ft-signup col-10 col-md-12 mx-auto"
+                        <Input type="email" htmlFor="email"name="email" id="email" 
+                            className="contact-input"
                             placeholder="Email" 
-                            validators={{
-                                validEmail
-                            }}
+                            value={this.state.email}
+                            invalid={!!errors.email}
+                            onBlur={this.handleBlur("email")} 
+                            onChange={this.handleChange} 
+                            
                         />
-                        <Errors 
-                            className="d-inline-flex justify-content-start pl-2 text-danger errors"
-                            model=".email"
-                            show="touched"
-                            component="div"
-                            messages={{
-                                // required: 'Required',
-                                validEmail: 'Invalid email address'
-                            }}
-                        />
+                        <FormFeedback className="pl-2">{errors.email}</FormFeedback>
+
                     </Col>
-                </Row>
-                <Row className="form-group mb-0 px-3 d-flex justify-content-center">
+                    
+                </FormGroup>
+                <FormGroup row className=" mb-0 px-3 d-flex justify-content-center">
                     <Buttons 
+                        id="Popover1"
                         type="submit" 
                         color=""
                         className="btn btn-outline-light mx-auto ft-signup"
                         btnText={"Sign Up"}
+                        
                     />
-                </Row>
-            </LocalForm>
+                </FormGroup>
+            </Form>
         );
     }
 }

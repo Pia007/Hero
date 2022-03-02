@@ -4,6 +4,7 @@ import { ToastContainer, toast, Zoom } from 'react-toastify';
 import Fade from 'react-reveal';
 import Buttons from './Buttons';
 
+const contactToastId = 'contact-toast-id';
 class ContactForm extends Component {
     constructor(props) {
         super(props);
@@ -28,23 +29,6 @@ class ContactForm extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-
-    blankState = {
-        firstName: '',
-        lastName: '',
-        phoneNum: '',
-        email: '',
-        agree: false,
-        contactType: 'By Phone',
-        subject:'',
-        feedback: '',
-        touched: {
-            firstName: false,
-            lastName: false,
-            phoneNum: false,
-            email: false
-        }
-    };
 
     validate(firstName, lastName, phoneNum, email) {
         const errors = {
@@ -75,8 +59,9 @@ class ContactForm extends Component {
             errors.phoneNum = 'The phone number should contain only numbers';
         }
 
-        if (this.state.touched.email && !email.includes('@')) {
-            errors.email = 'The email should contain @';
+        const regEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+        if (this.state.touched.email && !regEmail.test(email)) {
+            errors.email = 'Invalid email address';
         }
         return errors;
     }
@@ -98,26 +83,44 @@ class ContactForm extends Component {
     }
 
     showToast = () => {
-        setTimeout(() => {
             toast.success(`Your message has been sent! We will get back to you shortly.`, {
                 position: toast.POSITION.TOP_RIGHT,
-                // icon: ({theme, type}) => <img src='assets/images/new-logo-lp.svg' height="25" weight="25" alt="logo" style={{border: "none"}} className="align-self-start"/>
+                toastId: contactToastId,
             });
-        }, 2000);
+        
     };
+
+    resetForm = () => {
+        this.setState({
+            firstName: '',
+            lastName: '',
+            phoneNum: '',
+            email: '',
+            agree: false,
+            contactType: 'By Phone',
+            subject:'',
+            feedback: '',
+            touched: {
+                firstName: false,
+                lastName: false,
+                phoneNum: false,
+                email: false
+            }
+        });
+    }
 
     handleSubmit = (event) => {
         // bypass Chrome Violation warning
-        setTimeout(
-            () => this.setState({...this.blankState}), 
-            console.log('Current State is: ' + JSON.stringify(this.state)),
-            console.log('CONTACT FORM SUBMITTED!'),
-        2000);
+        setTimeout(() => { 
+            console.log('Current State is: ' + JSON.stringify(this.state));
+            console.log('CONTACT FORM SUBMITTED!');
+            this.resetForm();
+        },2000);
 
         this.showToast();
+        
         event.preventDefault();
     };
-
 
     render() {
 

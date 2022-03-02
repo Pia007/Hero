@@ -4,6 +4,7 @@ import { Row, Col, FormGroup, Form, Input, Label, FormFeedback } from 'reactstra
 import Buttons from './Buttons';
 import Fade from 'react-reveal/Fade';
 
+const volunteerToastId = 'contact-toast-id';
 class VolunteerForm extends Component {
     
     constructor(props) {
@@ -44,36 +45,6 @@ class VolunteerForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    blankState = {
-        fName: '',
-        lName: '',
-        address1: '',
-        city: '',
-        userState: '',
-        zip: '',
-        phone: '',
-        email: '',
-        food: false,
-        health: false,
-        personal: false,
-        fitness: false,
-        prep: false,
-        fundraise: false,
-        events: false,
-        delivery: false,
-        other: false,
-        feedback: '',
-        touched: {
-            fName: false,
-            lName: false,
-            address1: false,
-            city: false,
-            userState: false,
-            zip: false,
-            phone: false,
-            email: false
-        }
-    };
 
     validate(fName, lName, address1, city, userState, zip, phone, email) {
         const errors = {
@@ -135,8 +106,9 @@ class VolunteerForm extends Component {
             errors.phone = 'The phone number should contain only numbers';
         }
 
-        if (this.state.touched.email && !email.includes('@')) {
-            errors.email = 'The email should contain @';
+        const regEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+        if (this.state.touched.email && !regEmail.test(email)) {
+            errors.email = 'Invalid email address';
         }
         return errors;
     }
@@ -158,24 +130,58 @@ class VolunteerForm extends Component {
     }
     showToast = () => {
         setTimeout(() => {
-            toast.success(`Thank your for your interests in volunteering! We will get back to you shortly.`, {
+            toast.success(`Thanks for your interests in volunteering! We will get back to you shortly.`, {
                 position: toast.POSITION.TOP_RIGHT,
-                // icon: ({theme, type}) => <img src='assets/images/new-logo-lp.svg' height="25" weight="25" alt="logo" style={{border: "none"}} className="align-self-start"/>
+                toastId: volunteerToastId,
             });
         }, 2000);
     }
 
     handleSubmit = event => {
         // bypass Chrome Violation warning
-        setTimeout(
-            () => this.setState({...this.blankState}), 
-            console.log('Current State is: ' + JSON.stringify(this.state)),
-            console.log('VOLUNTEER FORM SUBMITTED!'),
-        2000);
+        setTimeout(() => { 
+            console.log('Current State is: ' + JSON.stringify(this.state));
+            console.log('VOLUNTEER FORM SUBMITTED!');
+            this.resetForm();
+        }, 2000);
 
+        // this.resetForm();
         this.showToast();
         event.preventDefault();
     };
+
+    resetForm = () => {
+        this.setState({
+            fName: '',
+            lName: '',
+            address1: '',
+            city: '',
+            userState: '',
+            zip: '',
+            phone: '',
+            email: '',
+            food: false,
+            health: false,
+            personal: false,
+            fitness: false,
+            prep: false,
+            fundraise: false,
+            events: false,
+            delivery: false,
+            other: false,
+            feedback: '',
+            touched: {
+                fName: false,
+                lName: false,
+                address1: false,
+                city: false,
+                userState: false,
+                zip: false,
+                phone: false,
+                email: false
+            }
+        });
+    }
 
     render() {
 
@@ -384,7 +390,7 @@ class VolunteerForm extends Component {
                                                     name="delivery" 
                                                     className="custom-control-input" 
                                                     checked={this.state.delivery}
-                                                    value={this.state.de} 
+                                                    value={this.state.delivery} 
                                                     onChange={this.handleChange}  
                                                 />
                                                 <label className="custom-control-label label-interests" htmlFor="delivery">Deliveries</label>
@@ -421,6 +427,10 @@ class VolunteerForm extends Component {
                                     color="primary"
                                     className="shadow-lg btn-feedback"
                                     btnText={"Volunteer"}
+                                    onClick={() => {
+                                        this.resetForm();
+                                        this.handleSubmit();
+                                    }}
                                 />
                                 <ToastContainer 
                                         theme='dark' 
