@@ -11,4 +11,8 @@ export const ADD_FAQS = 'ADD_FAQS';
 export const FAQS_LOADING = 'FAQS_LOADING';
 export const FAQS_FAILED = 'FAQS_FAILED';
 
+export const ADD_BIOS = 'ADD_BIOS';
+export const BIOS_LOADING = 'BIOS_LOADING';
+export const BIOS_FAILED = 'BIOS_FAILED';
+
 

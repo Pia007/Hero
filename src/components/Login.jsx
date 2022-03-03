@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Row, Form, FormGroup, Input, Label, FormFeedback } from 'reactstrap';
-import { CREDENTIALS } from '../shared/loginData';
+import { BIOS } from '../shared/biosData';
 import Buttons from './Buttons';
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
@@ -10,8 +10,8 @@ class LoginForm extends Component {
         super(props);
         this.state = {
             email: '',
-            password: '',
-            credentials: CREDENTIALS
+            password: ''
+            // bios: BIOS
         };
     }
     

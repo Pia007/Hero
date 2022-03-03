@@ -1,8 +1,9 @@
 // Create ActionCreators.jsx:
 import * as ActionTypes from './ActionTypes';
-import { SPONSORS } from '../shared/sponsors';
-import { MEMBERS } from '../shared/members';
+import { SPONSORS } from '../shared/sponsorsData';
+import { MEMBERS } from '../shared/membersData';
 import { FAQS } from '../shared/faqsData'; 
+import { BIOS } from '../shared/biosData'; 
 
 // Fetches sponsors from the store
 export const fetchSponsors = () => dispatch => {
@@ -71,3 +72,24 @@ export const addFaqs = faqs => ({
 });
 
 
+
+export const fetchBios = () => dispatch => {
+    dispatch(biosLoading());
+    dispatch(biosFailed());
+    dispatch(addBios(BIOS));
+}
+
+export const biosLoading = () => ({
+    type: ActionTypes.BIOS_LOADING
+});
+
+export const biosFailed = errMess => ({
+    type: ActionTypes.BIOS_FAILED,
+    payload: errMess
+});
+
+export const addBios = bios => ({
+    type: ActionTypes.ADD_BIOS,
+    payload: bios
+
+});
