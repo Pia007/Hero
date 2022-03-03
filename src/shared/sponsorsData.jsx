@@ -18,5 +18,10 @@ export const SPONSORS = [
         id: 3,
         name:"Jersey Strength & Fitness, LLC.",
         description: " originated on the boardwalk of Atlantic City. After retiring with 7 locations in John Fitness wanted to give back and began working with several organizations to provide functional training to individuals with Parkinson's disease. That was 15 years ago. Since then, Jersey S&F has open 4 new locations throughout northern New Jersey soley dedicated to the community. Jersey Strength & Fitness has partnered with Host A Healthcare Worker to extend free fitness services to healthcare workers."
+    },
+    {
+        id: 4,
+        name:"Phoenix Software Developers, LLC.",
+        description: " was founded by three high school classmates that had a keen interest in computers and software that continued into their college years. Phoenix Software Developers has proudly provided free software development trainee to members of under-served communities for over 15 years. They have partnered with Host A Healthcare Worker to extend free software development trainee to healthcare workers."
     }
 ];
