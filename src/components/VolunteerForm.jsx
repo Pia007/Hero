@@ -198,7 +198,7 @@ class VolunteerForm extends Component {
                     
                     {/* Form */}
                     <Col md={12}>
-                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 volunteer-form">
+                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 form">
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="text" htmlFor="fName" name="fName" id="fName" 

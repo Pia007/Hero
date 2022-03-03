@@ -371,8 +371,8 @@ img {
 .address-info {
     font-size: 16px; 
 }
-.contact-form,
-.volunteer-form {
+
+.form {
     background: #04203f;
     border: 3px double var(--table-bg-alt);
     border-radius: 5px;
@@ -482,20 +482,9 @@ ul li .faq-link:focus {
     top: 0;
     /* margin-bottom: 30px; */
 }
-/* ul li .faq-link:visited {
-    background: none;
-    text-decoration: none;
-    color: var(--color-success);
-} */
-/* .active{
-    background-color: red;
-    color: #fff;
+.login-input {
+    border: 3px double #446e9b;
 }
-
-.active a{
-    background-color: red;
-    color: #fff;
-} */
 
 @media screen and (min-width: 475px) {
     h1 {

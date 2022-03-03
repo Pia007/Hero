@@ -136,7 +136,7 @@ class ContactForm extends Component {
                     </Col>
                     {/* Form */}
                     <Col md={12} >
-                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 contact-form">
+                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 form">
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="text" htmlFor="firstName" name="firstName" id="firstName" 
