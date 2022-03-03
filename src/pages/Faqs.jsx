@@ -41,7 +41,6 @@ const RenderFaqSection = ({ faqTitle,  factType }) => {
 
 const Faqs = (props) => {
     const [ selected, setSelected ] = useState("generalFaqs");
-    const toggleSelected = () => setSelected(!selected);
     
     const generalFaqs = props.faqs?.filter(faq => faq.category === "General").map(filteredFaq => { 
         return (
