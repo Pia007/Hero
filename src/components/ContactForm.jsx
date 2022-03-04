@@ -240,7 +240,7 @@ class ContactForm extends Component {
                                         type="submit" 
                                         color="primary" 
                                         className="btn-feedback shadow-lg"
-                                        btnText={"Contact Us"}
+                                        btntext={"Contact Us"}
                                     />
                                     <ToastContainer 
                                         theme='dark' 

@@ -11,21 +11,23 @@ import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import { useLocation, Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchSponsors, fetchMembers, fetchFaqs } from '../redux/ActionCreators';
+import { fetchSponsors, fetchMembers, fetchFaqs , fetchBios } from '../redux/ActionCreators';
 
 // Setting up mapStateToProps to get the state from the store - state is the argument
 const mapStateToProps = state => {
     return {
         sponsors: state.sponsors,
         members: state.members,
-        faqs: state.faqs
+        faqs: state.faqs,
+        bios: state.bios
     };
 };
 // Setting up mapDispatchToProps object to get the dispatch function from the store - dispatch is the argument
 const mapDispatchToProps = {
     fetchSponsors: () => (fetchSponsors()),
     fetchMembers: () => (fetchMembers()),
-    fetchFaqs: () => (fetchFaqs())
+    fetchFaqs: () => (fetchFaqs()),
+    fetchBios: () => (fetchBios())
 };
 
 class Main extends Component {
@@ -36,6 +38,7 @@ class Main extends Component {
         this.props.fetchSponsors();
         this.props.fetchMembers();
         this.props.fetchFaqs();
+        this.props.fetchBios();
     }
 
     render() {
@@ -62,11 +65,14 @@ class Main extends Component {
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/involved" component={Involved} />
                             <Route exact path="/volunteer" component={Volunteer} />
-                            <Route exact path="/faqs" render= {() => <Faqs faqs={this.props.faqs.faqs} 
-                                errMess={this.props.faqs.errMess}
-                                isLoading={this.props.faqs.isLoading} 
+                            <Route exact path="/faqs" render={() => <Faqs faqs={this.props.faqs.faqs} 
+                                faqErrMess={this.props.faqs.errMess}
+                                faqIsLoading={this.props.faqs.isLoading} 
                             /> } />
-                            <Route exact path="/volunteerportal" component={VolunteerPortal} />
+                            <Route exact path="/volunteerportal" render={() => <VolunteerPortal bios={this.props.bios.bios}
+                                biosErrMess={this.props.bios.errMess}
+                                biosIsLoading={this.props.bios.isLoading} 
+                            />} />
                             <Redirect to="/home" />
                         </Switch>
                     </ScrollToTop>

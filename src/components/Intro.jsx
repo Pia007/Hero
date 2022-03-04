@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 
 export const Intro= () => {
     return (
-        <Jumbotron fluid className="d-flex flex-column align-items-center justify-content-around "  style={{height: '90vh'}}>
+        <Jumbotron  className="d-flex flex-column align-content-center justify-content-around hero-inner p-0" style={{height: '100vh'}}>
             <Row className=" text-center mx-0 row-content p-0">
                 <Col xs={12} className="border-0 px-0 text-center align-self-center justify-content-around">
                     <p className="sub-text align-self-center font-weight-bold text-primary d-none d-md-block">

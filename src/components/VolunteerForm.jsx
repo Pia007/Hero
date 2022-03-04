@@ -426,7 +426,7 @@ class VolunteerForm extends Component {
                                     type="submit" 
                                     color="primary"
                                     className="shadow-lg btn-feedback"
-                                    btnText={"Volunteer"}
+                                    btntext={"Volunteer"}
                                     onClick={() => {
                                         this.resetForm();
                                         this.handleSubmit();

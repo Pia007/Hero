@@ -18,7 +18,14 @@ const RenderAccordionItem = ({ sponsor }) => {
 };
 
 // render each team member
-const RenderTeamMember = ({ member }) => {
+const RenderTeamMember = ({ member, isLoading, errMess }) => {
+    if (isLoading) {
+        return <Loading />;
+    }
+
+    if(errMess) {
+        return <h4>{errMess}</h4>;
+    }  
     return (
         <Col className=" text-primary mission-text px-0">
             <p>{member.name}, {member.title}</p>

@@ -93,7 +93,7 @@ class FooterForm extends Component {
                         type="submit" 
                         color=""
                         className="btn btn-outline-light mx-auto ft-signup"
-                        btnText={"Sign Up"}
+                        btntext={"Sign Up"}
                         
                     />
                 </FormGroup>
