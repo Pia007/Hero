@@ -13,7 +13,14 @@ const RenderFaq = ({ faq }) => {
     );
 }
 
-const RenderFaqSection = ({ faqTitle,  factType }) => {
+const RenderFaqSection = ({ faqTitle,  factType, isLoading, errMess }) => {
+    if (isLoading) {
+        return <Loading />;
+    }
+
+    if(errMess) {
+        return <h4>{errMess}</h4>;
+    }  
     return (
         <div className="container p-0 mt-3">
             <FadeTransform 
@@ -112,40 +119,42 @@ const Faqs = (props) => {
         )
     }
     
-    return (
-        
-        
-        <div style={{overflow: 'hidden'}}>
-            <div className='container-fluid home-bg ' id='faq'>
-                <PageHeader siteLocation={"FAQs"}  />
-                <FaqHeader />
-            </div>
-            <div className="text-center">
-                <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-2 faqBtn">General</button>
-                <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Volunteer</button>
-                <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Sponsor</button>
-                <button onClick={() => { setSelected('donateFaqs') }}className="btn btn-outline-success faqBtn">Donate</button>
-            </div>
-            
+    if(props.faqs) {
+        return (
 
-            <div className='container mt-3 sticky' style={{ zIndex: 1}}>
+            <div style={{overflow: 'hidden'}}>
+                <div className='container-fluid home-bg ' id='faq'>
+                    <PageHeader siteLocation={"FAQs"}  />
+                    <FaqHeader />
+                </div>
+                <div className="text-center">
+                    <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-2 faqBtn">General</button>
+                    <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Volunteer</button>
+                    <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Sponsor</button>
+                    <button onClick={() => { setSelected('donateFaqs') }}className="btn btn-outline-success faqBtn">Donate</button>
+                </div>
                 
-                { 
-                    (selected === 'generalFaqs') ? <RenderFaqSection faqTitle={"General"} factType={generalFaqs} /> : null 
-                }
-                {
-                    (selected === 'volunteerFaqs') ? <RenderFaqSection faqTitle={"Volunteer"} factType={volunteerFaqs} /> : null 
-                }
-                {
-                    (selected === 'sponsorFaqs') ? <RenderFaqSection faqTitle={"Sponsor"} factType={sponsorFaqs} /> : null 
-                }
-                {
-                    (selected === 'donateFaqs') ? <RenderFaqSection faqTitle={"Donate"} factType={donateFaqs} /> : null 
-                }
-                
+
+                <div className='container mt-3 sticky' style={{ zIndex: 1}}>
+                    
+                    { 
+                        (selected === 'generalFaqs') ? <RenderFaqSection faqTitle={"General"} factType={generalFaqs} /> : null 
+                    }
+                    {
+                        (selected === 'volunteerFaqs') ? <RenderFaqSection faqTitle={"Volunteer"} factType={volunteerFaqs} /> : null 
+                    }
+                    {
+                        (selected === 'sponsorFaqs') ? <RenderFaqSection faqTitle={"Sponsor"} factType={sponsorFaqs} /> : null 
+                    }
+                    {
+                        (selected === 'donateFaqs') ? <RenderFaqSection faqTitle={"Donate"} factType={donateFaqs} /> : null 
+                    }
+                    
+                </div>
             </div>
-        </div>
-    );
+        )
+    }
+    return <div />
 }
 
 export default Faqs;

@@ -3,10 +3,10 @@
 import * as ActionTypes from './ActionTypes';
 
 export const Sponsors = (state = {
-    isLoading: true,
-    errMess: null,
-    sponsors: []
-    }, action) => {
+        isLoading: true,
+        errMess: null,
+        sponsors: []
+        }, action) => {
     switch (action.type) {
         case ActionTypes.ADD_SPONSORS:
             return {...state, isLoading: false, errMess: null, sponsors: action.payload};

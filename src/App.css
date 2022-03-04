@@ -18,16 +18,26 @@
 
     /* offside is clean */
 }
-html,
+
+
 body {
     font-family: var(--font-ptSans);
     width: 100%;
     height: 100vh;
-    
-    
-    /* Removed bc it throws off ScrollToTop component */
 }
 
+/* body {
+    background-image: linear-gradient(rgba(4, 13, 20, 0.9), rgba(4, 13, 20, 0.9)), url(../public/assets/images/background.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    
+} */
 .lp-text {
     font-size: 50px; 
 }
@@ -196,7 +206,31 @@ img {
     background: transparent; 
     word-spacing: 1px;
 }
-
+.hero {
+    background-image: linear-gradient(rgba(4, 13, 20, 0.9), rgba(4, 13, 20, 0.9)), url(../public/assets/images/background.jpg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    -webkit-background-size: cover;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    overflow: hidden;
+    height: auto;
+}
+.hero-inner {
+    background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    background-blend-mode: multiply;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    
+} 
 .sub-text {
     font-size: 50px; 
     text-shadow: 1px 1px 3px;
@@ -411,7 +445,9 @@ img {
     font-size: 16px;
     font-weight: 500;
 }
-
+.login {
+    border: 3px double var(--table-bg-alt);
+}
   
   /* option:hover {
     background: #593196;

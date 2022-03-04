@@ -3,7 +3,7 @@ import * as ActionTypes from './ActionTypes';
 export const Faqs = (state = {
     isLoading: true,
     errMess: null,
-    sponsors: []
+    faqs: []
     }, action) => {
     switch (action.type) {
         case ActionTypes.ADD_FAQS:

@@ -4,7 +4,7 @@ import * as ActionTypes from './ActionTypes';
 export const Members = (state = {
     isLoading: true,
     errMess: null,
-    sponsors: []
+    members: []
     }, action) => {
     switch (action.type) {
         case ActionTypes.ADD_MEMBERS:

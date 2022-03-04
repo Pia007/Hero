@@ -52,6 +52,10 @@ export const addMembers = members => ({
 
 export const fetchFaqs = () => dispatch => {
     dispatch(faqsLoading());
+
+    setTimeout(() => {
+        dispatch(addFaqs(FAQS));
+    }, 2000);
     dispatch(faqsFailed());
     dispatch(addFaqs(FAQS));
 }
