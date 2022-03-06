@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, NavbarToggler, Collapse, Nav, NavItem, Button} from 'reactstrap';
+import { Navbar, NavbarToggler, Collapse, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
 
@@ -29,13 +29,13 @@ export const Header = (props) => {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/contact"> 
-                                    Contact
+                                <NavLink onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/involved"> 
+                                    Get Involved
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/involved"> 
-                                    Get Involved
+                                <NavLink onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/contact"> 
+                                    Contact
                                 </NavLink>
                             </NavItem>
                             <NavItem>
@@ -48,17 +48,12 @@ export const Header = (props) => {
                                     <NavLink  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/volunteerportal" > 
                                         Login <i className="fa fa-sign-in" aria-hidden="true" />
                                     </NavLink>
-                                    {/* <Button  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="btn btn-outline-light my-2 my-sm-0 nav-text nav-login ml-2 btn-primary"  id='login-btn' > 
-                                        Login <i className="fa fa-sign-in" aria-hidden="true" />
-                                    </Button> */}
                                 </NavItem>
                             </div>
                         </Nav>
                     </Collapse>
                 </div>
             </Navbar>
-        
-            
         </React.Fragment>
     );
 }
