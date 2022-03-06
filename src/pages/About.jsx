@@ -6,6 +6,7 @@ import { AccordionItem } from '../components/Accordion';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
 import Fade from 'react-reveal/Fade';
+import {  SEO } from '../components/SEO';
 
 // Accordion for each sponsor
 const RenderAccordionItem = ({ sponsor }) => {
@@ -108,6 +109,7 @@ const About = (props) => {
 
     return (
         <div className="container ">
+            <SEO title={"About | Host A Healthcare Hero"}  description={"description"} content={"About page of website"}/>
             <SiteCrumbs siteLocation={"About"}  />
             <PageTitle pageTitle={"Our Mission"} />
             <Fade bottom cascade>

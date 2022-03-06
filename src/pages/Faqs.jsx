@@ -3,6 +3,7 @@ import { Row, Col} from 'reactstrap';
 import { FaqAccordion } from '../components/Accordion';
 import { Loading } from '../components/Loadingicon';
 import { FadeTransform } from 'react-animation-components';
+import { SEO } from '../components/SEO';
 import  PageHeader from '../components/PageHeader';
 import Fade from 'react-reveal/Fade';
 
@@ -123,6 +124,7 @@ const Faqs = (props) => {
         return (
 
             <div style={{overflow: 'hidden'}}>
+                <SEO title={"FAQs | Host A Healthcare Hero"}  description={"description"} content={"Faqs page of the website"}/>
                 <div className='container-fluid home-bg ' id='faq'>
                     <PageHeader siteLocation={"FAQs"}  />
                     <FaqHeader />

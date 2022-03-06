@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Main from './components/Main';
 import { BrowserRouter } from 'react-router-dom';
-// Implementing Redux: Install redux and react-redux
-    // import statements for Provider component and the ConfigureStore function
 import { Provider } from 'react-redux';
 import { ConfigureStore } from './redux/configureStore';
+import { Helmet } from 'react-helmet';
 import './App.css';
 
 // In configuresStore.js: the function returns the redux store 
@@ -18,6 +17,11 @@ class App extends Component {
             <Provider store={store}>
                 <BrowserRouter >
                     <div className="App">
+                        <Helmet>
+                            <title>Host A Heathcare Hero</title>
+                            <meta name="description" content="Volunteer to give back to healthcare heroes" />
+                            <meta name="theme-color" content="#008f68" />
+                        </Helmet>
                         <Main  />
                     </div>
                 </BrowserRouter>
