@@ -1,14 +1,17 @@
-import { Row, Col} from 'reactstrap';
+import React from 'react';
 import InvolvedModal from './InvolvedModal';
 import Fade from 'react-reveal/Fade';
-import React from 'react';
+import { Row, Col} from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const InvolvedCard =({ 
     className, 
     title, 
     contentOne, 
     contentTwo, 
-    contentThree, 
+    contentThree,
+    fact, 
+    facts,
     modalHeaderText,
     modalBodyText,
     modalBodyTextTwo, 
@@ -27,10 +30,11 @@ const InvolvedCard =({
                     <Fade bottom cascade>
                         <h2 className="text-primary">{title}</h2>
                     </Fade>
-                        <p className=" mission-text">{contentOne}</p>
-                        <p className=" mission-text">{contentTwo}</p>
-                        <p className=" mission-text">{contentThree}</p>
-                    
+                        <p className="mission-text">{contentOne}<Link to='/contact' style={{textDecoration: 'underline'}}>contact us</Link>.</p>
+                        <p className="mission-text">
+                            {contentThree}<Link to='/faqs' style={{textDecoration: 'underline'}}>FAQs</Link>. 
+                            {contentTwo}
+                        </p>
                     <InvolvedModal 
                         modalHeaderText={modalHeaderText}
                         modalBodyText={modalBodyText}

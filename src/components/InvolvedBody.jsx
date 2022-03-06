@@ -9,8 +9,9 @@ const InvolvedBody = () => {
             <Fade left >
                 <InvolvedCard className={"row row-content"} 
                     title={"Volunteer"}
-                    contentOne={"We provide thousands of services to healthcare workers and it could not be done without you. We are always looking for volunteers to help us out. If you are interested in volunteering, please contact us."}
-                    contentTwo={"To learn more about the volunteer process, please click the button below."}
+                    contentOne={"We provide thousands of services to healthcare workers and it could not be done without you. We are always looking for volunteers to help us out. If you are interested in volunteering, please "}
+                    contentTwo={" And, to learn more about the volunteer process, please click the button below."}
+                    contentThree={"Feel free to review our "}
                     imageSrc={"assets/images/vol-barber.jpg"}
                     imageName={"volunteer image"}
                     modalHeaderText={"Volunteer"}
@@ -26,8 +27,8 @@ const InvolvedBody = () => {
             <Fade right>
                 <InvolvedCard className={"row row-content flex-lg-row-reverse"}
                     title={"Sponsor Us"}
-                    contentOne={"Host A Healthcare Hero is a non-profit organization.We are funded 100% by the generosity of our Mission Sponsors"}
-                    contentTwo={"If your organization would like to become a Mission Sponsor, just click the button below to contact us."}
+                    contentOne={"Host A Healthcare Hero is a non-profit organization. We are funded 100% by the generosity of our Mission Sponsors. We are looking for sponsors to help us grow our mission. If you or your organization are interested in becoming a Mission Sponsor, please "}
+                    contentThree={"Click the button below to learn more, or, review our "}
                     imageSrc={"assets/images/sponsor.jpeg"}
                     imageName={"sponsor image"}
                     modalHeaderText={"Sponsor Us"}
@@ -43,9 +44,9 @@ const InvolvedBody = () => {
             <Fade left>
                 <InvolvedCard className={"row row-content "}
                     title={"Donations"}
-                    contentOne={"We have several ways you can donate."}
-                    contentTwo={"You or your organization can donate items or become a designated drop-off."}
-                    contentThree={"Or you can donate directly to the local food pantry."}
+                    contentOne={"You or your organization can donate items or become a designated drop-off site. Or, you can donate directly to the local food pantry. If you have questions about donating, please "}
+                    contentTwo={""}
+                    contentThree={"You can also click the button below or review our "}
                     imageSrc={"assets/images/food-donate.jpg"}
                     imageName={"donations image"}
                     modalHeaderText={"Donations"}

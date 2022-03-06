@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
-import Buttons from './Buttons';
 import { Link } from 'react-router-dom';
+import Buttons from './Buttons';
 
 const InvolvedModal = ({modalHeaderText, modalBodyText, modalBodyTextTwo, modalBodyTextThree, to, value, text}) => {
     const [modal, setModal] = useState(false);

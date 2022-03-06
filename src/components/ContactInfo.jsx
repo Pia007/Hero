@@ -1,8 +1,8 @@
-import React from 'react';
 import { Row, Col } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
-const ContactInfo = (props) =>{
+const ContactInfo = () =>{
     return (
         <div className="container">
             {/* Contact Info */}
@@ -14,6 +14,7 @@ const ContactInfo = (props) =>{
                         </p>
                         <p className="mission-text">
                             Please complete the contact form below and we will get back to you as soon as possible.
+                            You are welcome to review our <Link to='/faqs' style={{textDecoration: 'underline'}}>FAQs</Link> for any questions.
                         </p>
                         <p className="mission-text">
                             Thank you for your interest in Host A Healthcare Hero!
