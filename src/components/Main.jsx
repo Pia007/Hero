@@ -9,6 +9,7 @@ import VolunteerPortal from '../pages/VolunteerPortal';
 import Faqs from '../pages/Faqs';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
+import { SEO } from '../components/SEO';
 import { useLocation, Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchSponsors, fetchMembers, fetchFaqs , fetchBios } from '../redux/ActionCreators';
@@ -51,6 +52,7 @@ class Main extends Component {
         return (
             
             <div className='home-bg' >
+                <SEO title={"Host A Healthcare Hero"} content={ "Volunteer to give back to an healtcare hero"}/>
                 <Header />
                     <ScrollToTop>
                         <Switch>
