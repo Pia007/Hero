@@ -7,23 +7,12 @@ const Home = (props) => {
     
     return (
         // <div className=" d-flex align-items-center justify-content-center" style={{height: '100vh', padding: '0'}}>
-        <>   
+        <div style={{overflow: 'hidden'}} className="">   
             <SEO title={"Landing Page | Host A Healthcare Hero "} description={"description"}  content={"Landing Page of website"}/>
-            <Jumbotron fluid className="px-3 p-0 hero"  style={{height: '100vh'}}
-                // style={{
-                //     backgroundImage: `linear-gradient(rgba(4, 13, 20, 0.9), rgba(4, 13, 20, 0.9)), url(assets/images/background.jpg)`,
-                //     backgroundPosition: 'center center',
-                //     backgroundRepeat: 'no-repeat',
-                //     backgroundSize: 'cover',
-                //     width:'100%',
-                //     height:'100%',
-                //     position: 'relative',
-                //     overflow: 'hidden'
-                // }}
-            >
-                <Intro />
+            <Jumbotron fluid className=" m-0 p-auto hero"  style={{height: '100vh', overflowY: 'hidden'}}>
+                <Intro /> 
             </Jumbotron>
-        </> 
+        </div> 
         // </div>
     );
 }

@@ -24,6 +24,7 @@ body {
     font-family: var(--font-ptSans);
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 /* body {
@@ -49,11 +50,11 @@ body {
     font-size: 24px; 
 }
 
-.jumbotron {
+/* .jumbotron {
     margin: 0;
     padding: 30px;
     background: var(--cl-altBg); 
-}
+} */
 
 .findOut {
     text-decoration: none;
@@ -208,18 +209,27 @@ img {
 }
 .hero {
     background-image: linear-gradient(rgba(4, 13, 20, 0.9), rgba(4, 13, 20, 0.9)), url(../public/assets/images/background.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-blend-mode: multiply;
     -webkit-background-size: cover;
-    -moz-background-size: contain;
-    -o-background-size: contain;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     overflow: hidden;
     height: auto;
 }
 .hero-inner {
+    position: fixed;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: var(--cl-altBg);
+    overflow: hidden;
+}
+/* .hero-inner {
     background-size: cover;
     background-size: cover;
     background-position: center center;
@@ -230,7 +240,7 @@ img {
     -moz-background-size: cover;
     -o-background-size: cover;
     
-} 
+}  */
 .sub-text {
     font-size: 50px; 
     text-shadow: 1px 1px 3px;
