@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Row, Col} from 'reactstrap';
 import { FaqAccordion } from '../components/Accordion';
-import { Loading } from '../components/Loadingicon';
+import { Loading } from '../components/LoadingIcon';
 import { FadeTransform } from 'react-animation-components';
 import { SEO } from '../components/SEO';
 import  PageHeader from '../components/PageHeader';
@@ -14,14 +14,14 @@ const RenderFaq = ({ faq }) => {
     );
 }
 
-const RenderFaqSection = ({ faqTitle,  factType, isLoading, errMess }) => {
-    if (isLoading) {
-        return <Loading />;
-    }
+const RenderFaqSection = ({ faqTitle,  factType }) => {
+    // if (faqIsLoading) {
+    //     return <Loading />;
+    // }
 
-    if(errMess) {
-        return <h4>{errMess}</h4>;
-    }  
+    // if(faqErrMess) {
+    //     return <h4>{faqErrMess}</h4>;
+    // }  
     return (
         <div className="container p-0 mt-3">
             <FadeTransform 
@@ -36,12 +36,18 @@ const RenderFaqSection = ({ faqTitle,  factType, isLoading, errMess }) => {
                         </Fade>
                     </Col>
                     <Col xs={12} className="p-0">
-                        <Fade bottom cascade>
-                            {factType}
-                        </Fade>
+                        {factType}
                     </Col>
                 </Row>
             </FadeTransform>
+        </div>
+    );
+}
+
+const FaqHeader = () => {
+    return (
+        <div className="container text-center ">
+            <h1 className='text-primary'> Frequently <br /> Asked Questions</h1>
         </div>
     );
 }
@@ -80,7 +86,6 @@ const Faqs = (props) => {
         );
     });
 
-
     const sponsorFaqs = props.faqs?.filter(faq => faq.category === "Sponsor").map(filteredFaq => { 
         return (
             <div key={filteredFaq.id} className="col p-0">
@@ -91,7 +96,7 @@ const Faqs = (props) => {
         );
     });
 
-    if (props.isLoading) {
+    if (props.faqIsLoading) {
         return (
             <div className="container">
                 <div className="row">
@@ -101,7 +106,7 @@ const Faqs = (props) => {
         );
     }
 
-    if (props.errMess) {
+    if (props.faqErrMess) {
         return (
             <div className="container">
                 <div className="row">
@@ -112,51 +117,42 @@ const Faqs = (props) => {
             </div>
         )
     }
-    const FaqHeader = () => {
-        return (
-            <div className="container text-center ">
-                <h1 className='text-primary'> Frequently <br /> Asked Questions</h1>
-            </div>
-        )
-    }
     
-    if(props.faqs) {
-        return (
-
-            <div style={{overflow: 'hidden'}}>
-                <SEO title={"FAQs | Host A Healthcare Hero"}  description={"description"} content={"Faqs page of the website"}/>
-                <div className='container-fluid home-bg ' id='faq'>
-                    <PageHeader siteLocation={"FAQs"}  />
-                    <FaqHeader />
-                </div>
-                <div className="text-center">
-                    <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-2 faqBtn">General</button>
-                    <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Volunteer</button>
-                    <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Sponsor</button>
-                    <button onClick={() => { setSelected('donateFaqs') }}className="btn btn-outline-success faqBtn">Donate</button>
-                </div>
-                
-
-                <div className='container mt-3 sticky' style={{ zIndex: 1}}>
-                    
-                    { 
-                        (selected === 'generalFaqs') ? <RenderFaqSection faqTitle={"General"} factType={generalFaqs} /> : null 
-                    }
-                    {
-                        (selected === 'volunteerFaqs') ? <RenderFaqSection faqTitle={"Volunteer"} factType={volunteerFaqs} /> : null 
-                    }
-                    {
-                        (selected === 'sponsorFaqs') ? <RenderFaqSection faqTitle={"Sponsor"} factType={sponsorFaqs} /> : null 
-                    }
-                    {
-                        (selected === 'donateFaqs') ? <RenderFaqSection faqTitle={"Donate"} factType={donateFaqs} /> : null 
-                    }
-                    
-                </div>
+    return (
+        <>
+        <div style={{overflow: 'hidden'}}>
+            <SEO title={"FAQs | Host A Healthcare Hero"}  description={"description"} content={"Faqs page of the website"}/>
+            <div className='container-fluid home-bg ' id='faq'>
+                <PageHeader siteLocation={"FAQs"}  />
+                <FaqHeader />
             </div>
-        )
-    }
-    return <div />
+            <div className="text-center">
+                <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-2 faqBtn">General</button>
+                <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Volunteer</button>
+                <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Sponsor</button>
+                <button onClick={() => { setSelected('donateFaqs') }}className="btn btn-outline-success faqBtn">Donate</button>
+            </div>
+            
+
+            <div className='container mt-3 sticky' style={{ zIndex: 1}}>
+                
+                { 
+                    (selected === 'generalFaqs') ? <RenderFaqSection faqTitle={"General"} factType={generalFaqs} /> : null 
+                }
+                {
+                    (selected === 'volunteerFaqs') ? <RenderFaqSection faqTitle={"Volunteer"} factType={volunteerFaqs} /> : null 
+                }
+                {
+                    (selected === 'sponsorFaqs') ? <RenderFaqSection faqTitle={"Sponsor"} factType={sponsorFaqs} /> : null 
+                }
+                {
+                    (selected === 'donateFaqs') ? <RenderFaqSection faqTitle={"Donate"} factType={donateFaqs} /> : null 
+                }
+                
+            </div>
+        </div>
+        </>
+    );
 }
 
 export default Faqs;

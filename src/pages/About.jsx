@@ -1,7 +1,7 @@
 import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
 import { Row, Col } from 'reactstrap';
-import { Loading } from '../components/Loadingicon';
+import { Loading } from '../components/LoadingIcon';
 import { AccordionItem } from '../components/Accordion';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
@@ -71,7 +71,6 @@ const About = (props) => {
             </div>
         )
     }
-
 
     // define & map over team members and pass each to RenderTeamMember
     const memberList = props.members?.map(member => {
@@ -199,7 +198,7 @@ const About = (props) => {
                 {/* END MISSION SPONSORS  */}
 
                 {/* FOUNDATION */}
-                {/* Member list is rendered in theis row */}
+                {/* Member list is rendered in this row */}
                 <Fade bottom cascade>
                     <Row className="row-content">
                         <Col className="px-sm-0 ">

@@ -8,8 +8,11 @@ import { BIOS } from '../shared/biosData';
 // Fetches sponsors from the store
 export const fetchSponsors = () => dispatch => {
     dispatch(sponsorsLoading());
-    dispatch(sponsorsFailed());
-    dispatch(addSponsors(SPONSORS));
+
+    setTimeout(() => {
+        dispatch(addSponsors(SPONSORS));
+    }, 2000);
+    
 };
 
 export const sponsorsLoading = () => ({
@@ -30,8 +33,10 @@ export const addSponsors = sponsors => ({
 //added dipatch members failed
 export const fetchMembers = () => dispatch => {
     dispatch(membersLoading());
-    dispatch(membersFailed());
-    dispatch(addMembers(MEMBERS));
+
+    setTimeout(() => {
+        dispatch(addMembers(MEMBERS));
+    }, 2000);
 }
 
 export const membersLoading = () => ({
@@ -49,15 +54,13 @@ export const addMembers = members => ({
 
 });
 
-
 export const fetchFaqs = () => dispatch => {
     dispatch(faqsLoading());
 
     setTimeout(() => {
         dispatch(addFaqs(FAQS));
-    }, 2000);
-    dispatch(faqsFailed());
-    dispatch(addFaqs(FAQS));
+    }, 12000);
+    
 }
 
 export const faqsLoading = () => ({
@@ -79,8 +82,10 @@ export const addFaqs = faqs => ({
 
 export const fetchBios = () => dispatch => {
     dispatch(biosLoading());
-    dispatch(biosFailed());
-    dispatch(addBios(BIOS));
+
+    setTimeout(() => {
+        dispatch(addBios(BIOS));
+    }, 2000);
 }
 
 export const biosLoading = () => ({
