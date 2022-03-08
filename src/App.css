@@ -178,7 +178,7 @@ a, a:hover {
 }
 
 .row-content {
-    padding: 50px 0;
+    padding-bottom: 40px ;
     min-height: 100px; 
 }
 h1 {
@@ -362,8 +362,7 @@ img {
     width: 33.33px;
     height: 33.33px;
 } 
-.accordion-title,
-.faq-accordion-title {
+.accordion-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -372,31 +371,31 @@ img {
     border-radius: 3px 3px 0 0;
     border-bottom: 3px double var(--color-success);
     font-size: 22px;
+    padding: 1rem;
 }
 .faq-accordion-title {
     border: 2px double #446e9b;
-    
 }
 
-.accordion-title,
-.accordion-description,
-.faq-accordion-title,
-.faq-accordion-description {
+/* .accordion-title,
+.faq-accordion-title {
     padding: 1rem;
-}
+} */
 .sponsor-name {
     font-size: 22px;
     font-weight: 600;
 }
-.question {
+.title-content {
     font-size: 18px;
     font-weight: 600;
 }
-.sponsor-name-description {
-    font-weight: 600;
-}
-.accordion-description,
-.faq-accordion-description {
+/* .description {
+    font-weight: 500;
+} */
+
+.description {
+    padding: 1rem;
+    font-weight: 500;
     border-radius: 0 0 3px 3px;
     border: 2px double var(--primary);
     background-color: var(--table-bg);
@@ -626,8 +625,7 @@ ul li .faq-link:focus {
     }
     
     .table-text,
-    .accordion-description,
-    .faq-accordion-description {
+    .description {
         font-size: 18px; 
     }
 }
@@ -665,8 +663,8 @@ ul li .faq-link:focus {
     .question {
         font-size: 26px;
     }
-    .accordion-description,
-    .faq-accordion-description {
+    
+    .description {
         font-size: 20px; 
     }
 }

@@ -59,7 +59,7 @@ export const fetchFaqs = () => dispatch => {
 
     setTimeout(() => {
         dispatch(addFaqs(FAQS));
-    }, 12000);
+    }, 2000);
     
 }
 
