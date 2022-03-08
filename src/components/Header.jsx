@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
 import { Navbar, NavbarToggler, Collapse, Nav, NavItem } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation  } from 'react-router-dom';
+import HostHeader from './HostHeader';
 
 
 export const Header = (props) => {
     const [navigation, setNavigation] = useState(false);
     const toggleNav = () => setNavigation(!navigation);
+    
+    const RenderHostHeader= () => {
+        const location = useLocation();
+        return location.pathname === '/home' ? null : <HostHeader />;
+    }
 
     return (
         <React.Fragment>
             
             <Navbar className="navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light bg-primary">
                 <div className="container justify-content-between">
-                    <NavLink to="/home"><img src="assets/images/new-logo.svg"  alt="logo" className=" text-lg nav-logo" /></NavLink>
+                    <div className='d-flex'>
+                        <NavLink to="/home"><img src="assets/images/new-logo.svg"  alt="logo" className=" text-lg nav-logo mt-1" /></NavLink>
+                        <RenderHostHeader />
+                    </div>
                     <NavbarToggler onClick={toggleNav} className="justify-content-end">
                         <i className="fa fa-bars fa-lg text-success nv-icon "/> 
                     </NavbarToggler>

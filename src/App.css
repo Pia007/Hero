@@ -69,10 +69,21 @@ a, a:hover {
     background: none;
     border: none;
 }
+.nav-logo-sm {
+    width: 12px;
+    height: 12px;
+    background: none;
+    border: none;
+}
 
 .nav-logo,
 .nv-icons {
     font-size: 40px; 
+}
+.host-header {
+    line-height: 1.2;
+    border-left: 1.5px solid #04203f;
+    
 }
 
 .hdr-icon-link {
@@ -229,6 +240,13 @@ img {
     background: var(--cl-altBg);
     overflow: hidden;
 }
+.landing {
+    scrollbar-width: none;
+
+}
+/* .landing::-webkit-scrollbar {
+    display: none;
+} */
 /* .hero-inner {
     background-size: cover;
     background-size: cover;
