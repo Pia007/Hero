@@ -1,6 +1,5 @@
 import React from 'react';
-import { Row, Col, Card, CardBody } from 'reactstrap';
-import CardHeader from 'reactstrap/lib/CardHeader';
+import { Row, Col, Card, CardBody, CardHeader } from 'reactstrap';
 
 const AboutTable = (props) => {
     return (
@@ -10,7 +9,7 @@ const AboutTable = (props) => {
                     <span className="about-table-header">By the Numbers</span>
                     <img src="assets/images/new-logo.svg" className="float-right table-icon"  alt="logo"/>
                 </CardHeader>
-                <CardBody className="py-0 border-0 text-primary ">
+                <CardBody className="py-0 border-0 text-primary about-card-body">
                     <Row className="mb-0 border border-primary border-top-0 border-bottom-0 about-card-odd">
                         <Col className="mb-0 py-2 table-text">Founded</Col>
                         <Col className="mb-0 py-2 table-text">June 24, 2019</Col>

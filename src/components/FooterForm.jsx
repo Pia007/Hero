@@ -94,7 +94,6 @@ class FooterForm extends Component {
                         color=""
                         className="btn btn-outline-light mx-auto ft-signup"
                         btntext={"Sign Up"}
-                        
                     />
                 </FormGroup>
             </Form>

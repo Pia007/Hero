@@ -3,6 +3,7 @@ import Main from './components/Main';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConfigureStore } from './redux/configureStore';
+import { SEO } from './components/SEO';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import './App.css';
 
@@ -18,11 +19,7 @@ class App extends Component {
                 <BrowserRouter >
                     <HelmetProvider>
                         <div className="App">
-                            <Helmet>
-                                <title>Host A Heathcare Hero</title>
-                                <meta name="description" content="Volunteer to give back to healthcare heroes" />
-                                <meta name="theme-color" content="#008f68" />
-                            </Helmet>
+                        <SEO title={"Host A Healthcare Hero "} description={"description"}  content={"Volunteer to give back to a healthcare hero."}/>
                             <Main  />
                         </div>
                     </HelmetProvider>

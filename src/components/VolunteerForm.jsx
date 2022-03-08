@@ -437,7 +437,7 @@ class VolunteerForm extends Component {
                                         transition={Zoom} 
                                         autoClose={5000} 
                                         bodyClassName="home-bg" 
-                                        toastClassName="home-bg" 
+                                        toastClassName="home-bg"
                                     />
                                 </Col>
                             </FormGroup>

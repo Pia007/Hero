@@ -1,8 +1,9 @@
 /* eslint-disable react/jsx-pascal-case */
+import { SEO } from '../components/SEO';
 import PageHeader from '../components/PageHeader';
 import ContactInfo from '../components/ContactInfo';
 import ContactForm from '../components/ContactForm';
-import { SEO } from '../components/SEO';
+
 
 const Contact = () => {
         return (

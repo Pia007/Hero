@@ -1,8 +1,18 @@
 import React, { useState} from 'react';
 import PageHeader from '../components/PageHeader';
-import { Col, Row, Form, FormGroup, Input, Label, FormFeedback, Button, Card, CardImg, CardBody, CardText } from 'reactstrap';
 import Buttons from '../components/Buttons';
 import { Link } from 'react-router-dom';
+import { Col, 
+        Row, 
+        Form, 
+        FormGroup, 
+        Input, 
+        Card, 
+        CardImg, 
+        CardBody, 
+        CardText } 
+from 'reactstrap';
+
 
 function Login(props) {
     const [email, setEmail] = useState('');

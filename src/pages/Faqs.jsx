@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Row, Col} from 'reactstrap';
+import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
 import { Accordion} from '../components/Accordion';
 import { Loading } from '../components/LoadingIcon';
+import { Row, Col} from 'reactstrap';
 import { FadeTransform } from 'react-animation-components';
-import { SEO } from '../components/SEO';
 import  PageHeader from '../components/PageHeader';
 import Fade from 'react-reveal/Fade';
 
@@ -119,39 +119,39 @@ const Faqs = (props) => {
     }
     
     return (
-        <>
-        <div style={{overflow: 'hidden'}}>
-            <SEO title={"FAQs | Host A Healthcare Hero"}  description={"description"} content={"Faqs page of the website"}/>
-            <div className='container-fluid home-bg ' id='faq'>
-                <PageHeader siteLocation={"FAQs"}  />
-                <FaqHeader />
-            </div>
-            <div className="text-center">
-                <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-2 faqBtn">General</button>
-                <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Volunteer</button>
-                <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Sponsor</button>
-                <button onClick={() => { setSelected('donateFaqs') }}className="btn btn-outline-success faqBtn">Donate</button>
-            </div>
-            
+        <React.Fragment>
+            <div style={{overflow: 'hidden'}}>
+                <SEO title={"FAQs | Host A Healthcare Hero"}  description={"description"} content={"Faqs page of the website"}/>
+                <div className='container-fluid home-bg ' id='faq'>
+                    <PageHeader siteLocation={"FAQs"}  />
+                    <FaqHeader />
+                </div>
+                <div className="text-center">
+                    <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-2 faqBtn">General</button>
+                    <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Volunteer</button>
+                    <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Sponsor</button>
+                    <button onClick={() => { setSelected('donateFaqs') }}className="btn btn-outline-success faqBtn">Donate</button>
+                </div>
+                
 
-            <div className='container mt-3 sticky' style={{ zIndex: 1}}>
-                
-                { 
-                    (selected === 'generalFaqs') ? <RenderFaqSection faqTitle={"General"} factType={generalFaqs} /> : null 
-                }
-                {
-                    (selected === 'volunteerFaqs') ? <RenderFaqSection faqTitle={"Volunteer"} factType={volunteerFaqs} /> : null 
-                }
-                {
-                    (selected === 'sponsorFaqs') ? <RenderFaqSection faqTitle={"Sponsor"} factType={sponsorFaqs} /> : null 
-                }
-                {
-                    (selected === 'donateFaqs') ? <RenderFaqSection faqTitle={"Donate"} factType={donateFaqs} /> : null 
-                }
-                
+                <div className='container mt-3 '>
+                    
+                    { 
+                        (selected === 'generalFaqs') ? <RenderFaqSection faqTitle={"General"} factType={generalFaqs} /> : null 
+                    }
+                    {
+                        (selected === 'volunteerFaqs') ? <RenderFaqSection faqTitle={"Volunteer"} factType={volunteerFaqs} /> : null 
+                    }
+                    {
+                        (selected === 'sponsorFaqs') ? <RenderFaqSection faqTitle={"Sponsor"} factType={sponsorFaqs} /> : null 
+                    }
+                    {
+                        (selected === 'donateFaqs') ? <RenderFaqSection faqTitle={"Donate"} factType={donateFaqs} /> : null 
+                    }
+                    
+                </div>
             </div>
-        </div>
-        </>
+        </React.Fragment>
     );
 }
 

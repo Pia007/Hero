@@ -1,12 +1,13 @@
+import {  SEO } from '../components/SEO';
 import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
-import { Row, Col } from 'reactstrap';
 import { Loading } from '../components/LoadingIcon';
 import { Accordion } from '../components/Accordion';
+import { Row, Col } from 'reactstrap';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
 import Fade from 'react-reveal/Fade';
-import {  SEO } from '../components/SEO';
+
 
 // Accordion for each sponsor
 const RenderAccordionItem = ({ sponsor }) => {
