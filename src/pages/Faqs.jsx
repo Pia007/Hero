@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Row, Col} from 'reactstrap';
-import { FaqAccordion } from '../components/Accordion';
+import { Accordion} from '../components/Accordion';
 import { Loading } from '../components/LoadingIcon';
 import { FadeTransform } from 'react-animation-components';
 import { SEO } from '../components/SEO';
@@ -10,18 +10,18 @@ import Fade from 'react-reveal/Fade';
 
 const RenderFaq = ({ faq }) => {
     return (
-        <FaqAccordion question={faq.question} answer={faq.answer} className="faq-accordion-description"/>
+        <Accordion
+            name={faq.question} 
+            description={faq.answer}
+            titleHolder={'accordion-title faq-accordion-title'}
+            titleContent={'title-content'} 
+            className="faq-accordion-description"
+        />
     );
 }
 
 const RenderFaqSection = ({ faqTitle,  factType }) => {
-    // if (faqIsLoading) {
-    //     return <Loading />;
-    // }
 
-    // if(faqErrMess) {
-    //     return <h4>{faqErrMess}</h4>;
-    // }  
     return (
         <div className="container p-0 mt-3">
             <FadeTransform 
