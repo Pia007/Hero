@@ -19,7 +19,7 @@ export const Header = (props) => {
             <Navbar className="navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light bg-primary">
                 <div className="container justify-content-between">
                     <div className='d-flex'>
-                        <NavLink to="/home"><img src="assets/images/new-logo.svg"  alt="logo" className=" text-lg nav-logo mt-1" /></NavLink>
+                        <NavLink to="/home"><img src="/assets/images/new-logo.svg"  alt="logo" className=" text-lg nav-logo mt-1" /></NavLink>
                         <RenderHostHeader />
                     </div>
                     <NavbarToggler onClick={toggleNav} className="justify-content-end">
@@ -27,11 +27,11 @@ export const Header = (props) => {
                     </NavbarToggler>
                     <Collapse isOpen={navigation} navbar className="justify-content-end">
                         <Nav navbar className="ml-auto text-center text-light nav-text">
-                            <NavItem className="nav-item">
+                            {/* <NavItem className="nav-item">
                                 <NavLink  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link active" to="/home"> 
                                     Home
                                 </NavLink>
-                            </NavItem>
+                            </NavItem> */}
                             <NavItem>
                                 <NavLink onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/about"> 
                                     About
@@ -48,14 +48,14 @@ export const Header = (props) => {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="btn btn-outline-light my-2 my-sm-0 nav-text nav-volunteer" id="vol-link" to="/volunteer"> 
+                                <NavLink onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="btn btn-outline-light my-2 my-sm-0 nav-text nav-volunteer" id="vol-link" to="/volunteersignup"> 
                                     Volunteer
                                 </NavLink>
                             </NavItem>
                             <div>
                                 <NavItem>
-                                    <NavLink  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/volunteerportal" > 
-                                        Login <i className="fa fa-sign-in" aria-hidden="true" />
+                                    <NavLink  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/volunteers" > 
+                                        Spotlight 
                                     </NavLink>
                                 </NavItem>
                             </div>
