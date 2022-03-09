@@ -3,7 +3,7 @@ import * as ActionTypes from './ActionTypes';
 import { SPONSORS } from '../shared/sponsorsData';
 import { MEMBERS } from '../shared/membersData';
 import { FAQS } from '../shared/faqsData'; 
-import { BIOS } from '../shared/biosData'; 
+import { VOLUNTEERS } from '../shared/volunteersData'; 
 
 // Fetches sponsors from the store
 export const fetchSponsors = () => dispatch => {
@@ -80,25 +80,25 @@ export const addFaqs = faqs => ({
 
 
 
-export const fetchBios = () => dispatch => {
-    dispatch(biosLoading());
+export const fetchVolunteers = () => dispatch => {
+    dispatch(volunteersLoading());
 
     setTimeout(() => {
-        dispatch(addBios(BIOS));
+        dispatch(addVolunteers(VOLUNTEERS));
     }, 2000);
 }
 
-export const biosLoading = () => ({
-    type: ActionTypes.BIOS_LOADING
+export const volunteersLoading = () => ({
+    type: ActionTypes.VOLUNTEERS_LOADING
 });
 
-export const biosFailed = errMess => ({
-    type: ActionTypes.BIOS_FAILED,
+export const volunteersFailed = errMess => ({
+    type: ActionTypes.VOLUNTEERS_FAILED,
     payload: errMess
 });
 
-export const addBios = bios => ({
-    type: ActionTypes.ADD_BIOS,
-    payload: bios
+export const addVolunteers = volunteers => ({
+    type: ActionTypes.ADD_VOLUNTEERS,
+    payload: volunteers
 
 });

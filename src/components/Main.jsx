@@ -5,14 +5,15 @@ import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Involved from '../pages/Involved';
 import Volunteer from '../pages/Volunteer';
-import VolunteerPortal from '../pages/VolunteerPortal';
+import Volunteers from '../pages/VolunteerDirectory'; 
+import VolunteerBio from '../pages/VolunteerBios';
 import Faqs from '../pages/Faqs';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import { SEO } from '../components/SEO';
 import { useLocation, Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchSponsors, fetchMembers, fetchFaqs , fetchBios } from '../redux/ActionCreators';
+import { fetchSponsors, fetchMembers, fetchFaqs , fetchVolunteers } from '../redux/ActionCreators';
 
 // Setting up mapStateToProps to get the state from the store - state is the argument
 const mapStateToProps = state => {
@@ -20,7 +21,7 @@ const mapStateToProps = state => {
         sponsors: state.sponsors,
         members: state.members,
         faqs: state.faqs,
-        bios: state.bios
+        volunteers: state.volunteers
     };
 };
 // Setting up mapDispatchToProps object to get the dispatch function from the store - dispatch is the argument
@@ -28,7 +29,7 @@ const mapDispatchToProps = {
     fetchSponsors: () => (fetchSponsors()),
     fetchMembers: () => (fetchMembers()),
     fetchFaqs: () => (fetchFaqs()),
-    fetchBios: () => (fetchBios())
+    fetchVolunteers: () => (fetchVolunteers())
 };
 
 class Main extends Component {
@@ -39,7 +40,7 @@ class Main extends Component {
         this.props.fetchSponsors();
         this.props.fetchMembers();
         this.props.fetchFaqs();
-        this.props.fetchBios();
+        this.props.fetchVolunteers();
     }
 
     render() {
@@ -49,6 +50,17 @@ class Main extends Component {
             return location.pathname === '/home' ? null : <Footer />;
         }
         
+        const VolunteerWithId = ({ match }) => {
+            return (
+                <VolunteerBio
+                    volunteer={this.props.volunteers.volunteers.filter(volunteer => volunteer.id === +match.params.volunteerId)[0]}
+                    infoIsLoading={this.props.volunteers.isLoading}
+                    infoErrMess={this.props.volunteers.errMess}
+                />
+            );
+        };
+
+
         return (
             
             <div className='home-bg' >
@@ -69,19 +81,15 @@ class Main extends Component {
                             />
                             <Route exact path="/contact" component={Contact} />
                             <Route exact path="/involved" component={Involved} />
-                            <Route exact path="/volunteer" component={Volunteer} />
+                            <Route exact path="/volunteersignup" component={Volunteer} />
                             <Route exact path="/faqs" render={() => 
                                 <Faqs faqs={this.props.faqs.faqs} 
                                     faqErrMess={this.props.faqs.errMess}
                                     faqIsLoading={this.props.faqs.isLoading} 
                                 /> } 
                             />
-                            <Route exact path="/volunteerportal" render={() => 
-                                <VolunteerPortal bios={this.props.bios.bios}
-                                    biosErrMess={this.props.bios.errMess}
-                                    biosIsLoading={this.props.bios.isLoading} 
-                                />} 
-                            />
+                            <Route exact path="/volunteers" render={() => <Volunteers volunteers={this.props.volunteers} />}/>
+                            <Route exact path="/volunteers/:volunteerId" component={VolunteerWithId}/>
                             <Redirect to="/home" />
                         </Switch>
                     </ScrollToTop>

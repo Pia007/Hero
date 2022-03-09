@@ -1,4 +1,4 @@
-export const BIOS = [
+export const VOLUNTEERS = [
     {
         id: 0,
         first: "Richard",
