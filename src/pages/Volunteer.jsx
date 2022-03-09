@@ -4,7 +4,7 @@ import VolunteerForm from '../components/VolunteerForm';
 import { SEO } from '../components/SEO';
 
 
-const Volunteer = () => {
+const VolunteerSignUp = () => {
     return (
         <div >
             <SEO title={"Volunteer | Host A Healthcare Hero"} description={"description"} content={"Volunteer form page of the website"} />
@@ -15,4 +15,4 @@ const Volunteer = () => {
         </div>
     );
 }
-export default Volunteer;
+export default VolunteerSignUp;
