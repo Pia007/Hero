@@ -14,7 +14,7 @@ const VolunteerInfo = (props) => {
                             showing healthcare workers their appreciation. 
                         </p>
                         <p className="mission-text">
-                            Get started by completing the form below and a volunteer coordinator will contact you within 2 business days to discuss the onboarding process. 
+                            Get started by completing the form below and a Volunteer Coordinator will contact you within 2 business days to discuss the onboarding process. 
                             In the meantime, you can review our <Link to='/faqs' style={{textDecoration: 'underline'}}>FAQs</Link> or <Link to='/contact' style={{textDecoration: 'underline'}}>contact us</Link>.
                         </p>
                         <p className="mission-text">
