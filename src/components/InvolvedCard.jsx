@@ -10,8 +10,6 @@ const InvolvedCard =({
     contentOne, 
     contentTwo, 
     contentThree,
-    fact, 
-    facts,
     modalHeaderText,
     modalBodyText,
     modalBodyTextTwo, 
@@ -19,8 +17,7 @@ const InvolvedCard =({
     value,
     to,
     imageSrc, 
-    imageName 
-
+    imageName
     }) => {
 
     return (

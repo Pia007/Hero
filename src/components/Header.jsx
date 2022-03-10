@@ -48,7 +48,7 @@ export const Header = (props) => {
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="btn btn-outline-light my-2 my-sm-0 nav-text nav-volunteer" id="vol-link" to="/volunteersignup"> 
+                                <NavLink onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="btn btn-outline-light my-2 my-sm-0 mx-sm-2 nav-text nav-volunteer" id="vol-link" to="/volunteersignup"> 
                                     Volunteer
                                 </NavLink>
                             </NavItem>

@@ -14,7 +14,7 @@ export const SiteCrumbs = ({ siteLocation }) => {
 
 export const PageTitle = ({ pageTitle }) => {
     return (
-        <Fade bothrefm cascade>
+        <Fade bottom cascade>
             <h1 className="text-center text-primary">{pageTitle}</h1>
         </Fade>
     );
