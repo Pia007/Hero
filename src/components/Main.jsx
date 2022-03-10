@@ -69,12 +69,11 @@ class Main extends Component {
                     <ScrollToTop>
                         <Switch>
                             <Route path="/home" component={Home} />
-                            {/* transferring state to redux store - use "props" instead of "state", keeping the structure of the data in mind */}
                             <Route exact path="/about" render={() => 
                                 <About sponsors={this.props.sponsors.sponsors} 
-                                    members={this.props.members.members} 
                                     errMess={this.props.sponsors.errMess}
                                     isLoading={this.props.sponsors.isLoading}
+                                    members={this.props.members.members} 
                                     membersLoading={this.props.members.isLoading}
                                     membersErrMess={this.props.members.errMess} 
                                 /> } 
@@ -88,7 +87,12 @@ class Main extends Component {
                                     faqIsLoading={this.props.faqs.isLoading} 
                                 /> } 
                             />
-                            <Route exact path="/volunteers" render={() => <Volunteers volunteers={this.props.volunteers} />}/>
+                            <Route exact path="/volunteers" render={() => 
+                                <Volunteers volunteers={this.props.volunteers} 
+                                    volunteersErr={this.props.volunteers.errMess}
+                                    volunteersLoading={this.props.volunteers.isLoading}
+                                />}
+                            />
                             <Route exact path="/volunteers/:volunteerId" component={VolunteerWithId}/>
                             <Redirect to="/home" />
                         </Switch>
