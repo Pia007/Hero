@@ -2,7 +2,7 @@ import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
-const VolunteerInfo = (props) => {
+const VolunteerInfo = () => {
     return (
         <div className='container'>
             <Fade bottom cascade>
