@@ -16,7 +16,7 @@ const InvolvedBody = () => {
                     imageName={"volunteer image"}
                     modalHeaderText={"Volunteer"}
                     modalBodyText={"Thank you for your interest in volunteering! Our goal is to place our volunteers with Mission Sponsors that suit the volunteers interests, vocation or both. "}
-                    modalBodyTextTwo={"A Volunteer Coordinators will work with you, indvidually. to ensure that your placement is seemless. We appreciate your help and would love to have you as a volunteer."}
+                    modalBodyTextTwo={"A Volunteer Coordinator will work with you, indvidually, to ensure that your placement is seemless. We appreciate your help and would love to have you as a volunteer."}
                     modalBodyTextThree={" Please click the button below to complete the volunteer form and a coordinator will reach out to you within 48hrs."}
                     value={"Go"}
                     to={"/volunteer"}
@@ -32,8 +32,8 @@ const InvolvedBody = () => {
                     imageSrc={"assets/images/sponsor.jpeg"}
                     imageName={"sponsor image"}
                     modalHeaderText={"Sponsor Us"}
-                    modalBodyText={"Our Mission Sponsors are organizations that are willing to help us provide meals, health and wellness, fitness, personal care and other services free of charge to our healthcare heroes. "}
-                    modalBodyTextTwo={"If you are a business owner or your employer is interested in sponsoring Host A Healthcare Hero, please click the button below to contact us."}
+                    modalBodyText={"Our Mission Sponsors are organizations that are willing to help us provide meals, health & wellness, fitness, personal care and other services free of charge to our healthcare heroes. "}
+                    modalBodyTextTwo={"If you are a business owner or your employer is interested in becoming a Mission Sponsor, please click the button below to contact us."}
                     modalBodyTextThree={" We are looking forward to working with you!"}
                     value={"Go"}
                     to={"/contact"}
