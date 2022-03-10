@@ -40,8 +40,6 @@ const RenderTeamMember = ({ member, isLoading, errMess }) => {
 
 const About = (props) => {
 
-    // define & map over sponsors and pass each to RenderAccordionItem
-    // fixed about page refresh issue by using?
     const sponsor = props.sponsors?.map(sponsor => {
         return (
             <div key={sponsor.id} className="col p-0">
@@ -52,7 +50,6 @@ const About = (props) => {
         )
     });
 
-    // Set up Conditional Rendering
     if (props.isLoading) {
         return (
             <div className="container">
@@ -75,7 +72,6 @@ const About = (props) => {
         )
     }
 
-    // define & map over team members and pass each to RenderTeamMember
     const memberList = props.members?.map(member => {
         return (
             <div key={member.id} className="col p-0">
@@ -118,11 +114,11 @@ const About = (props) => {
                 <Row className="row-content pt-0">
                     <Col className="px-sm-0">
                         <p className="text-center text-primary mission-text">
-                            <strong >Host A Healthcare Hero </strong> Around the world, healthcare workers have been stretched beyond their limits. Many have succumbed to illness 
-                            and been estranged from their loved ones. Right here in northern New Jersey, like most, our healthcare workers
-                            have gone above and beyond to provide us with quality care. Yet, they have little time for themselves. We are an 
-                            organization committed to showing healthcare heroes that we appreciate them. Their well being is just as important 
-                            as ours. We aim to provide meals, health and wellness, fitness and personal care services free of charge to our 
+                            Around the world, healthcare workers have been stretched beyond their limits. Many have succumbed to illness 
+                            and have been estranged from their loved ones. Right here in northern New Jersey, like most, our healthcare workers
+                            have gone above and beyond to provide us with quality care. Yet, they have little time for themselves. 
+                            <strong > Host A Healthcare Hero </strong> is committed to showing healthcare heroes that we appreciate them. 
+                            Their well being is just as important as ours. We aim to provide meals, health & wellness, fitness and personal care services free of charge to our 
                             healthcare heroes.
                         </p>
                     </Col>
@@ -155,15 +151,14 @@ const About = (props) => {
                         <Col className="px-0 pr-xl-3">    
                         <Col className="text-primary mission-text px-sm-0 mb-3">
                             Sofia was determined to not just make a difference for her patients but for her coworkers, too. She 
-                            found that many of her coworkers only ate one meal a day. Usually an unhealthy one. Most, found it hard to 
-                            sleep after their shifts. Although, they were on their feet for 12 to 14hrs a day, many were in poor health. 
-                            Combining all of these, she also learn that they had very little time for basic personal care. Like a simple 
-                            haircut.
+                            found that many of her coworkers only ate one meal a day. Usually an unhealthy one. Most found it hard to 
+                            sleep after their shifts even though they were on their feet for 12 to 14 hours each day. And, many were in poor health. 
+                            Additonally, she learned that they had very little time for basic personal care. Like a simple haircut.
                         </Col>
                         <Col className="text-primary mission-text px-sm-0 mb-4">
                             She began researching healthy eating and mindful meditation. Before long, Sofia was sharing this information
                             with her peers. Eventually, this collective sharing included fitness tips.  The core group consisted of five healthcare
-                            professionals that branched out and spreaded health and wellness tips throughout northern New Jersey. They were
+                            professionals that branched out and shared health and wellness tips throughout northern New Jersey. They were
                             healthcare heroes.
                         </Col>
                     </Col> 

@@ -22,6 +22,6 @@ export const SPONSORS = [
     {
         id: 4,
         name:"Phoenix Software Developers, LLC.",
-        description: " was founded by three high school classmates that had a keen interest in computers and software that continued into their college years. Phoenix Software Developers has proudly provided free software development trainee to members of under-served communities for over 15 years. They have partnered with Host A Healthcare Worker to extend free software development trainee to healthcare workers."
+        description: " was founded by three high school classmates that had a keen interest in computers and software that continued into their college years. Phoenix Software Developers has proudly provided free software development training to members of under-served communities for over 15 years. They have partnered with Host A Healthcare Worker to extend free software development trainee to healthcare workers."
     }
 ];
