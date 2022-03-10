@@ -1,48 +1,36 @@
-import React, { useState} from 'react';
+import React from 'react';
 import PageHeader from '../components/PageHeader';
-import Buttons from '../components/Buttons';
 import { Loading } from '../components/LoadingIcon';
-import { Link } from 'react-router-dom';
-import { Col, 
-        Row, 
-        Form, 
-        FormGroup, 
-        Input, 
-        Card, 
-        CardImg, 
-        CardBody, 
-        CardText } 
+import { Col, Row, Card, CardImg, CardBody } 
 from 'reactstrap';
 
 function RenderVolunteer({ volunteer })  {
     return (
-        <div className="col-md-5 m-1" >
-            {/* <FadeTransform 
-                in
-                transformProps={{
-                    exitTransform: 'scale(0.5) translateY(-50%)'
-                }}> */}
-            <Card>
-                <CardImg top src={volunteer.image} alt={volunteer.first} />
-                <CardBody>
-                    <CardText>{volunteer.role}</CardText>
-                </CardBody>
+        <React.Fragment>
+            <Card className="d-flex flex-direction-column meet-card ">
+                <Row className='row-content justify-content-around mb-6'>
+                    <Col lg={5} className=" m-1 px-4 p-lg-3" >
+                        <CardImg src={volunteer.image} alt={volunteer.first} className="col d-flex img-fluid img-thumbnail mr-3 bg-primary meet-img"/>
+                        {/* <FadeTransform 
+                            in
+                            transformProps={{
+                                exitTransform: 'scale(0.5) translateY(-50%)'
+                            }}> */}
+                    </Col>
+                    <Col lg={6} className="m-1">
+                        <CardBody className="my-xl-5">
+                            <h3 className='text-center mb-4 meet-role'>{volunteer.role}</h3>
+                            <h5 className=' meet-text'>{volunteer.description}</h5>
+                            {/* </FadeTransform> */}
+                        </CardBody>
+                    </Col>
+                </Row>
             </Card>
-            {/* </FadeTransform> */}
-        </div>
+        </React.Fragment>
     );
 }
 
 function VolunteerBio(props) {
-
-    // const getBio = props.bios.bios.filter(bio => bio.name === "Richard" ).map(filteredBio => {
-
-    //     return (
-    //         <div key={filteredBio.id} className="col-md-6 m-1">
-    //             <RenderBioCard bio={filteredBio} />
-    //         </div>
-    //     );
-    // });
 
     if (props.infoIsLoading) {
         return (
@@ -69,14 +57,13 @@ function VolunteerBio(props) {
     if(props.volunteer) {
         return (
             <div className="container">
-                <PageHeader siteLocation={props.volunteer.first} pageTitle={"Volunteer Spotlight"} />
-                {/* <Login /> */}
-                <h2>{props.volunteer.first}</h2>
-                <div className="row">
+                <PageHeader siteLocation={props.volunteer.first} pageTitle={`Meet ${props.volunteer.first}`} />
+                <div className="meet-holder"> 
+                
                     <RenderVolunteer volunteer={props.volunteer}/>
+                
                 </div>
             </div>
-            
         )
     }
     return <div />;
