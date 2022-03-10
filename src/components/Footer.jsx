@@ -1,4 +1,5 @@
 import React from 'react';
+import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import FooterForm  from './FooterForm';
 
@@ -6,8 +7,8 @@ const Footer = (props) => {
     return (
         <footer className="site-footer text-light bg-primary" >
             <div className="container ">
-                <div className="row p-5">
-                    <div className="col-md-4 mb-4 text-center p-0">
+                <Row className="p-5">
+                    <Col md={4} className="mb-4 text-center p-0">
                         <h3 className="text-light ft-heading"><u className="u-line">Address</u></h3>
                         <address className="tex-light ft-info">
                             2124 W Heroes LN, Suite 99<br />
@@ -22,23 +23,23 @@ const Footer = (props) => {
                             <i className="fa fa-envelope-o" /> 
                             {' '}info@healthcareheroes.org
                         </a>
-                    </div>
-                    <div className="col-md-4 p-md-0">
-                        <div className="col-sm-12 mx-auto mx-md-0 mb-4 p-xs-3 p-md-0 px-md-auto">
+                    </Col>
+                    <Col md={4} className="p-md-0">
+                        <Col className="mx-auto mx-md-0 mb-4 p-xs-3 p-md-0 px-md-auto">
                             <h3 className="text-light text-center ft-heading"><u className="u-line">Info</u></h3>
                             <ul className="list-unstyled ft-info">
                                 <li className="text-center "><Link className="active" to="/home">Home</Link></li>
                                 <li className="text-center "><Link to="/about">About</Link></li>
-                                <li className="text-center "><Link to="/contact">Contact</Link></li>
                                 <li className="text-center "><Link to="/involved">Get Involved</Link></li>
+                                <li className="text-center "><Link to="/contact">Contact</Link></li>
                                 <li className="text-center "><Link to="/volunteer">Volunteer</Link></li>
                                 <li className="text-center "><Link to="/faqs">FAQs</Link></li>
                             </ul>
-                        </div>
-                    </div>
+                        </Col>
+                    </Col>
                     
-                    <div className="col-md-4 p-0">
-                        <div className="mb-3  text-center ">
+                    <Col md={4} className="p-0">
+                        <div className="mb-3 text-center ">
                             <a className="btn btn-social-icon pt-md-0 pl-0" href="http://instagram.com/" aria-label="Instagram"><i className="fa fa-instagram text-light"></i></a>
                             <a className="btn btn-social-icon pt-md-0" href="http://facebook.com/" aria-label="Facebook"><i className="fa fa-facebook text-light"></i></a>
                             <a className="btn btn-social-icon pt-md-0" href="http://twitter.com/" aria-label="Twitter"><i className="fa fa-twitter text-light"></i></a>
@@ -48,8 +49,8 @@ const Footer = (props) => {
                             Sign up to receive news and updates.
                         </p> 
                         <FooterForm />
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </div>
             <p className="copyright text-center text-light mb-0 pb-2">
                 &copy; 2022 HOST A HEALTHCARE HERO 
