@@ -11,14 +11,14 @@ function RenderVolunteer({ volunteer })  {
             <Card className="d-flex flex-direction-column meet-card ">
                 <Row className='row-content justify-content-around mb-6'>
                     <Col lg={5} className=" m-1 px-4 p-lg-3" >
-                        <CardImg src={volunteer.image} alt={volunteer.first} className="col d-flex img-fluid img-thumbnail mr-3 bg-primary meet-img"/>
+                        <CardImg src={volunteer.image} alt={volunteer.first} className="col d-flex img-fluid img-thumbnail mr-3 mt-lg-3 bg-primary meet-img"/>
                     </Col>
                     <Col lg={6} className="m-1">
-                        <CardBody className="my-xl-3 text-success">
+                        <CardBody className="my-xl-3 text-success px-lg-0 px-xl-3">
                             <Fade bottom cascade>
                                 <h3 className='text-center mb-4 meet-role '>{volunteer.role}</h3>
                             </Fade>
-                                <h5 className=' meet-text'>{volunteer.description}</h5>
+                                <h5 className=' meet-text'>" {volunteer.description} "</h5>
                             <Fade bottom >
                                 <h5 className='text-right meet-text px-5 '><em>~ {volunteer.first}</em> </h5>
                             </Fade>

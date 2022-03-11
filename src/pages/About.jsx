@@ -15,8 +15,7 @@ const RenderAccordionItem = ({ sponsor }) => {
         <Accordion
             name={sponsor.name} 
             description={sponsor.description} 
-            titleHolder={'bg-primary accordion-title'}
-            titleContent={"sponsor-name"}
+            titleHolder={'bg-primary accordion-title px-3 py-3'}
         />
     );
 };
