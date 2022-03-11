@@ -48,7 +48,7 @@ export const VOLUNTEERS = [
         password: "marathon123",
         image:"/assets/images/female4.png",
         role: "Personal Trainer",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ullam, veritatis sint illum quidem tempore id ipsam exercitationem dolorum nostrum repudiandae dolore qui? Explicabo laboriosam cum at ullam perspiciatis a itaque, nisi pariatur quasi aliquam commodi quis eos aperiam molestias sapiente placeat inventore sequi maiores doloribus? Commodi placeat nesciunt eum cumque, soluta, numquam blanditiis optio vel inventore doloremque incidunt itaque!"
+        description: "Hi, I'm Marlie. I've been volunteering with Host A Healthcare Hero for over a year. I am a nurse and a personal trainer. Three months into the pandemic, like most of my colleagues, my mental health began to decline. A coworker told me about Host A Healthcare Hero and I began receiving assistance. Once my mental health was restored, I decided to pay it forward by donating my time. Today, it feels good to know that I am helping our heroes get into shape and feel good about theirselves."
     },
     {
         id: 5,
@@ -78,7 +78,7 @@ export const VOLUNTEERS = [
         password: "react123",
         image:"/assets/images/male3.png",
         role: "Barber",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ullam, veritatis sint illum quidem tempore id ipsam exercitationem dolorum nostrum repudiandae dolore qui? Explicabo laboriosam cum at ullam perspiciatis a itaque, nisi pariatur quasi aliquam commodi quis eos aperiam molestias sapiente placeat inventore sequi maiores doloribus? Commodi placeat nesciunt eum cumque, soluta, numquam blanditiis optio vel inventore doloremque incidunt itaque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ullam, veritatis sint illum quidem tempore id ipsam exercitationem dolorum nostrum repudiandae dolore qui? Explicabo laboriosam cum at ullam perspiciatis a itaque, nisi pariatur quasi aliquam commodi quis eos aperiam molestias sapiente placeat inventore sequi maiores doloribus? Commodi placeat nesciunt eum cumque, soluta, numquam blanditiis optio vel inventore doloremque incidunt itaque!"
+        description: "I'm Mario. When the pandemic hit, many of my clients were unable to get a haircut. I decided to provide free haircuts to my clients that were also displaced by the pandemic. It just so happend that one of my clients, at the time, was a Mission Sponsor. He shared the overall goal of Host A Healthcare Hero with me, and shortly thereafter I began volunteering.. Initially, I was concerned about having a conflict of interest with the barbershop that I work at once we reopened. I spoke with my manager. Not only was he supportive, he now donates his services, too."
     }
     // {
     //     id: 8,
