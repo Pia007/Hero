@@ -1,20 +1,16 @@
 :root {
-    --input-bg: #e4eefa;
-    --input-font: #446e9b;
-    --primary: #446e9b;
-    --table-bg: #c9def5;
-    --table-bg-alt: #aecbeb;
-    --color-danger: #FF0000;
-    --color-success: #3cb521;
-    --font-heebo: 'Heebo', sans-serif;
-    --font-montserrat: 'Montserrat', sans-serif;
-    --font-roboto: 'Roboto', sans-serif;
-    --font-rubik: 'Rubik', sans-serif;
+    --input-bg: #E4EEfA;
+    --primary: #446E9B;
+    --background: #04203F;
+    --table-bg: #C9DEF5;
+    --table-bg-alt: #AECBEB;
+    --danger: #CD0200;
+    --success: #3CB521;
     --font-ubuntu: 'Ubuntu', sans-serif;
-    --font-work-sans: 'Work Sans', sans-serif;
     --font-offside: 'Offside', sans-serif; 
     --font-ubuntu: 'Ubuntu', sans-serif;
     --font-ptSans: 'Pt-sans', sans-serif;
+    --font-workSans: 'Work Sans', sans-serif;
 }
 html {
     width: 100%;
@@ -33,7 +29,7 @@ body {
 }
 
 .home-bg {
-    background: #04203f;
+    background: var(--background);
 }
 .logo-text {
     font-size: 24px; 
@@ -58,35 +54,35 @@ a, a:hover {
     background: none;
     border: none;
 }
-
 .nav-logo,
 .nv-icons {
     font-size: 40px; 
 }
+.host-header,
+.nav-text,
+.nav-link,
+#vol-link,
+.contact-input,
+.tel,
+.vol-title,
+.spotlight-intro,
+.meet-text,
+.ft-heading {
+    font-size: 18px;
+}
 .host-header {
     line-height: 1.2;
-    border-left: 1.5px solid #04203f;
-    font-size: 18px;
-    
-}
-
-.hdr-icon-link {
-    font-size: 40px; 
+    border-left: 1.5px solid var(--background);
 }
 
 .nav-text {
-    font-size: 18px;
     font-weight: 500; 
-}
-.nav-link,
-#vol-link {
-    font-size: 18px;
 }
 
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active {
-    color: #3cb521; 
+    color: var(--success); 
 }
 .nav-login {
     background:none;
@@ -96,13 +92,25 @@ a, a:hover {
 #vol-link:hover,
 #vol-link:focus,
 #vol-link:active {
-    color: #3cb521;
-    background: #446e9b; 
+    color: var(--success);
+    background: var(--primary); 
 }
 
-.ft-input,
+.nav-volunteer:hover,
+#vol-link > .nav-text > .nav-volunteer:active {
+    color: var(--success);
+    border: 1px double var(--success);
+} 
+
 .ft-signup {
     border-radius: 20px; 
+}
+.ft-signup:hover,
+.ft-signup:focus,
+.ft-signup:active {
+    border: 3px double var(--success);
+    background: var(--primary);
+    color: white;
 }
 
 .btn-feedback,
@@ -112,53 +120,23 @@ a, a:hover {
     font-size: 16px; 
 }
 
-.ft-input {
-    border: 4px double #f9f8fc; 
-}
-
-.nav-volunteer:hover,
-#vol-link > .nav-text > .nav-volunteer:active {
-    color: #3cb521;
-    border: 1px double #3cb521;
-} 
-
-#login-btn:hover,
-#login-btn:focus,
-#login-btn:active {
-    color: #3cb521;
-    background: none; 
-    border: none;
-    outline: none;
-}
-
-.ft-signup:hover,
-.ft-signup:active {
-    color: #593196; 
-}
-
-.toggler-color {
-    color: #ebf9ff; 
-}
-
 .breadcrumb {
     background: transparent;
     padding-left: 0;
     padding-top: 4px;
 }
-
 .bc-prev {
     font-weight: 600;
 }
-
 .bc-now {
     opacity: 65%;
 }
-
 .breadcrumb .breadcrumb-item::before {
     opacity: 50%; 
 }
 
-.row-content {
+.row-content,
+.card-row {
     padding: 40px 0;
     min-height: 100px; 
 }
@@ -172,22 +150,19 @@ h2 {
     text-shadow: 1px 1px 3px;
     
 }
-
 h2 {
     margin: 20px 0; 
     font-size: 26px; 
 }
 
-
 hr {
-    border: 3px double var(--color-success); 
+    border: 3px double var(--success); 
     opacity: 50%; 
 }
 img,
 .vol-card-body {
-    border: 3px double #446e9b; 
+    border: 3px double var(--primary); 
 }
-
 .landing-caption {
     top: 50%;
     left: 50%;
@@ -235,7 +210,7 @@ img,
 }
 .btn-learn {
     max-width: 120px;
-    border-radius: 30px;
+    border-radius: 35px;
     height: 45px;
     font-size: 16px;
     font-weight: 500; 
@@ -245,8 +220,8 @@ img,
     font-size: 16px; 
     overflow-wrap: normal;
 }
-/* About */
 
+/* About */
 .about-card-holder {
     background: transparent; 
 }
@@ -275,23 +250,16 @@ img,
     cursor: pointer;
     color: white;
     border-radius: 3px 3px 0 0;
-    border-bottom: 3px double var(--color-success);
+    border-bottom: 3px double var(--success);
     font-size: 22px;
+    font-weight: 600;
     padding: 1rem;
 }
 .faq-accordion-title {
-    border: 2px double #446e9b;
-}
-
-.sponsor-name {
-    font-size: 22px;
-    font-weight: 600;
-}
-.title-content {
+    border: 2px double var(--primary);
     font-size: 18px;
-    font-weight: 600;
+    
 }
-
 
 .description {
     padding: 1rem;
@@ -299,9 +267,10 @@ img,
     border-radius: 0 0 3px 3px;
     border: 2px double var(--primary);
     background-color: var(--table-bg);
+    font-size: 16px;
 }
 .faq-accordion-description {
-    border: 2px double #446e9b;
+    border: 2px double var(--primary);
     border-top: none;
     border-radius: 0 0 3px 3px;
     background-color: none;
@@ -319,14 +288,10 @@ img,
 .faqBtn:active,
 .faqBtn:focus {
     background: none;
-    color: var(--color-success);
+    color: var(--success);
 }
 .last-dt {
     border-radius: 0 0 3px 3px;
-}
-
-.partners {
-    border: 2px outset #593196; 
 }
 
 .address-info {
@@ -334,36 +299,35 @@ img,
 }
 
 .form {
-    background: #04203f;
+    background: var(--background);
     border: 3px double var(--table-bg-alt);
     border-radius: 5px;
 }
 .contact-input {
-    border: 3px double #446e9b;
+    border: 3px double var(--primary);
     height: 40px;
-    font-size: 18px;
-    color: var(--input-font);
+    color: var(--primary);
     background: var(--input-bg); 
 }
 .errors {
-    color: red;
+    color: var(--danger);
     font-size: 14px;
 }
 
 .form-control::-webkit-input-placeholder {
-    color: var(--input-font); 
+    color: var(--primary); 
 }
 
 .custom-control-label::before {
     background: var(--input-bg); ;
-    border: 1px double #446e9b !important; 
+    border: 1px double var(--primary) !important; 
 }
 .label-agree::before,
 .label-interests::before {
     -webkit-border-radius: 0px ;
     -moz-border-radius: 0px ;
     border-radius: 0px !important; 
-    border: 1px double #446e9b !important;
+    border: 1px double var(--primary) !important;
 }
 .contact-input> option {
     background: var(--input-bg);
@@ -372,16 +336,12 @@ img,
     font-size: 16px;
     font-weight: 500;
 }
-.login {
-    border: 3px double var(--table-bg-alt);
-}
-  
 
 
 /* modal */
 .modalCustom {
     border-radius: 5px ;
-    border: 3px double #446e9b; 
+    border: 3px double var(--primary); 
 }
 .modal-header, 
 .modal-body {
@@ -389,40 +349,19 @@ img,
 }
 .modal-title {
     color: white;
-  
 }
 .modal-body {
-    color: var(--input-font);
+    color: var(--primary);
 }
 .close {
     color: #ff1d1b;
     text-shadow: none;
-    
 }
-
-.ig { color: #E1306C; }
-
-.fb { color: #3B5998; }
-
-.tw { color: #1DA1F2; }
-
-.yt { color: #dd4b39; }
-
-.fd-modal-hd { border-bottom: 3px double #593196; }
 
 .site-footer {
     padding: 0;
     color: #EEEEEE;
     border: #345578;
-}
-
-.ft-heading {
-    font-size: 18px;
-    font-weight: 600; 
-}
-
-.tel {
-    font-size: 18px;
 }
 
 ul li .faq-link:hover,
@@ -432,14 +371,9 @@ ul li .faq-link:focus {
     color: white;
 }
 
-.login-input {
-    border: 3px double #446e9b;
-}
-
 /* Volunteer Cards */
 .vol-cards,
 .meet-img {
-    /* 23 230 75 */
     border: 3px double rgb(110, 163, 199);
     box-shadow:  inset 50px 50px 100px #03162b,
         inset -50px -50px 100px #052a53;
@@ -453,33 +387,26 @@ ul li .faq-link:focus {
     border: 3px groove rgb(110, 163, 199);
     border-top: none;
 }
-.vol-title {
-    font-size: 18px;
-    font-family: var(--font-offside);
-}
-.spotlight-intro {
-    font-size: 18px;
-}
+
 .meet-holder {
-    /* height: 55vh; */
     margin: 40px auto;
-    /* align-content: center; */
 }
 .meet-card {
     margin-bottom: 50px;
-    background: #04203f;
+    font-family: var(--font-offside);
+    background: var(--background);
     border-radius: 10px;
-    /* border: 3px double rgb(110, 163, 199); */
     box-shadow: inset 50px 25px 100px #03162b,
         inset -50px -25px 50px #052a53;
 }
 .meet-role {
-    /* font-size: 18px; */
     font-family: var(--font-offside);
 }
 .meet-text {
-    font-size: 18px;
     line-height: 1.3;
+}
+.design {
+    font-weight: 600;
 }
 
 @media screen and (min-width: 475px) {
@@ -493,16 +420,12 @@ ul li .faq-link:focus {
         width: 42px;
         height: 42px;
     }
+    .faq-accordion-title {
+        font-size: 20px;
+    }
     .mission-text {
         font-size: 18px; 
     }
-    .header-text {
-        font-size: 40px; 
-    }
-    .hdr-icon-link {
-        font-size: 50px; 
-    }
-    
 }
 
 
@@ -524,36 +447,32 @@ ul li .faq-link:focus {
         top: 40%;
     }
     .nav-link,
-    #vol-link {
+    #vol-link,
+    .mission-text,
+    .meet-text {
         font-size: 20px;
     }
-    .mission-text {
-        font-size: 20px; 
-    }
-    .header-text {
-        font-size: 42px; 
-    }
-    .hdr-icon-link {
-        font-size: 55px; 
-    }
-    .btn-learn {
-        height: 50px;
-        font-size: 18px;
-    }
-    .about-table-header 
-    .sponsor-name,
-    .question {
-        font-size: 24px;
-    }
+    .btn-learn,
+    .faqBtn,
     .table-text,
     .description {
         font-size: 18px; 
     }
-    .meet-text {
-        font-size: 20px;
-        line-height: 1.2;
+    .btn-learn {
+        max-width: fit-content;
+        height: 55px;
+        border-radius: 45px;
     }
-    
+    .about-table-header, 
+    .question {
+        font-size: 24px;
+    }
+    .accordion-title {
+        font-size: 22px;
+    }
+    /* .meet-text {
+        line-height: 1.2;
+    } */
 }
 
 @media screen and (min-width: 992px) {
@@ -570,29 +489,14 @@ ul li .faq-link:focus {
         width: 64px;
         height: 64px;
     }
-    .hdr-icon-link {
-        font-size: 60px; 
-    }
-    .btn-learn {
-        height: 55px;
-    }
-    
-    .thanks {
-        font-size: 42px; 
-    }
-    .sub-thanks {
-        font-size: 20px; 
-    }
     .table-icon {
         width: 40px;
         height: 40px;
     } 
     .about-table-header,
-    .sponsor-name,
     .question {
         font-size: 26px;
     }
-    
     .description,
     .vol-title,
     .spotlight-intro {
@@ -619,16 +523,12 @@ ul li .faq-link:focus {
         width: 78px;
         height: 78px;
     }
-    .btn-learn {
-        height: 60px;
-    }
+    
     .vol-title {
         font-size: 22px;
     }
     .meet-holder {
         margin-bottom: 222px;
     }
-    .meet-text {
-        font-size: 22px;
-    }
+
 }
