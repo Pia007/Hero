@@ -200,7 +200,7 @@ const About = (props) => {
                     <Row className="row-content">
                         <Col className="px-sm-0 ">
                             <Fade bottom cascade>
-                                <h2 className="text-primary">Host A Hero Foundation</h2>
+                                <h2 className="text-primary">Host A Healthcare Hero</h2>
                             </Fade>
                             {memberList}
                         </Col>

@@ -2,7 +2,7 @@ export const SPONSORS = [
     {
         id: 0,
         name: "Alpha Food Services, Inc.",
-        description: "Alpha Food Services, Inc., is a family business that has proudly served northern New Jersey for over 75 years. Over the years the business has grown to include 8 restaurants, 4 food trucks, 2 food distribution warehouses and a food pantry. When the pandemic hit, Alpha Food Services was able toassist in mediating the food crisis. They have partnered with Host A Healthcare Hero to provide health meals to healthcare workers."
+        description: "Alpha Food Services, Inc., is a family business that has proudly served northern New Jersey for over 75 years. Over the years the business has grown to include 8 restaurants, 4 food trucks, 2 food distribution warehouses and a food pantry. When the pandemic hit, Alpha Food Services was able to assist in mediating the food crisis. They have partnered with Host A Healthcare Hero to provide health meals to healthcare workers."
     },
     {
         id: 1,
