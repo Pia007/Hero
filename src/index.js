@@ -8,12 +8,9 @@ import 'bootstrap-social/bootstrap-social.css';
 import 'bootswatch/dist/spacelab/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import 'typeface-offside';
-import 'typeface-heebo';
-import 'typeface-montserrat';
+import 'typeface-work-sans';
 import 'typeface-open-sans';
-import 'typeface-roboto';
 import 'typeface-ubuntu';
-import 'typeface-rubik';
 import 'typeface-pt-sans';
 import App from './App';
 

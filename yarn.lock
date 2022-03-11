@@ -11474,16 +11474,6 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typeface-heebo@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-heebo/-/typeface-heebo-1.1.13.tgz#aba8889a5da653ef1956e49a7d0a09d8e78b45c9"
-  integrity sha512-cVMlg2AXPBz0nVL9SKw/pClexSLkcZBEEv+buoxug1jq5YWT3Fh5QKY1d4KAi8c2zauipRZU6hnduBfs+1/m/g==
-
-typeface-montserrat@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-1.1.13.tgz#2a16729c174dd1a8c3fec05a851b7725412606cc"
-  integrity sha512-Pklkyj0e+K+6I/t0M6JBDBphpfJkF1k+3qd8qDnp9aVtCC7oGBQWTAcL6+5eArfGe7h73uPwyal73hEkf9YCUA==
-
 typeface-offside@^1.1.13:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/typeface-offside/-/typeface-offside-1.1.13.tgz#d9b2c65f5fc2295c5c2966786613823985b400b6"
@@ -11499,20 +11489,15 @@ typeface-pt-sans@^1.1.13:
   resolved "https://registry.yarnpkg.com/typeface-pt-sans/-/typeface-pt-sans-1.1.13.tgz#ae4ae13028bbad07173aafceb141912c48e3bcfe"
   integrity sha512-x7FsHrKhbanfwRF0UkRI7UuQqUHUw4yPJJ4T9+0JODSVHM2q607IgF0Kifdvw4echLlVAdwOYibObD+GS5UN6w==
 
-typeface-roboto@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-roboto/-/typeface-roboto-1.1.13.tgz#9c4517cb91e311706c74823e857b4bac9a764ae5"
-  integrity sha512-YXvbd3a1QTREoD+FJoEkl0VQNJoEjewR2H11IjVv4bp6ahuIcw0yyw/3udC4vJkHw3T3cUh85FTg8eWef3pSaw==
-
-typeface-rubik@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-rubik/-/typeface-rubik-1.1.13.tgz#c01d40f05718590bc05d08ea404666a8ef56377a"
-  integrity sha512-mMWgn3bYfT6V4WWA3yvdEM3AkTA7iK1XwhlOX3+vWfqHc6O9I2RUsi9krEXzNdQ1UE/eoEFBRigMtu30PsdEDg==
-
 typeface-ubuntu@^1.1.13:
   version "1.1.13"
   resolved "https://registry.yarnpkg.com/typeface-ubuntu/-/typeface-ubuntu-1.1.13.tgz#266b8ff251ef60a943ad810b830e225bd8c6eb8b"
   integrity sha512-Rg1WdJd8fXr2nKF4/UqFw4Y7IKhomEBI7z9ZEyRf0YRV6ue+OipamCNEIEyhXZlhymde0RQrWMmagbyeyOQwSA==
+
+typeface-work-sans@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-work-sans/-/typeface-work-sans-1.1.13.tgz#344ac638cbebcd55611fc4c2d08c7c9b47792157"
+  integrity sha512-LA5agpsXPLWFaUB88mhxsjtwius4Eu2AHuy5gaKeRY8RMHpEzJbDCES8DWbJ/vAYOljaE1OIoKeqrFdDqjKDtQ==
 
 uglify-js@^3.1.4:
   version "3.15.1"
