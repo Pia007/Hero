@@ -17,7 +17,7 @@ const InvolvedBody = () => {
                     modalHeaderText={"Volunteer"}
                     modalBodyText={"Thank you for your interest in volunteering! Our goal is to place our volunteers with Mission Sponsors that suit the volunteers interests, vocation or both. "}
                     modalBodyTextTwo={"A Volunteer Coordinator will work with you, indvidually, to ensure that your placement is seemless. We appreciate your help and would love to have you as a volunteer."}
-                    modalBodyTextThree={" Please click the button below to complete the volunteer form and a coordinator will reach out to you within 48hrs."}
+                    modalBodyTextThree={" Please click the button below to complete the volunteer form and a coordinator will reach out to you within 2 business days."}
                     value={"Go"}
                     to={"/volunteer"}
                 />
