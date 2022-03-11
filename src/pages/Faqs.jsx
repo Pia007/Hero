@@ -14,13 +14,12 @@ const RenderFaq = ({ faq }) => {
             name={faq.question} 
             description={faq.answer}
             titleHolder={'accordion-title faq-accordion-title'}
-            titleContent={'title-content'} 
             className="faq-accordion-description"
         />
     );
 }
 
-const RenderFaqSection = ({ faqTitle,  factType }) => {
+const RenderFaqSection = ({ faqTitle, factType }) => {
 
     return (
         <div className="container p-0 mt-3">
@@ -126,10 +125,10 @@ const Faqs = (props) => {
                     <PageHeader siteLocation={"FAQs"}  />
                     <FaqHeader />
                 </div>
-                <div className="text-center">
-                    <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-2 faqBtn">General</button>
-                    <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Volunteer</button>
-                    <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-2 faqBtn">Sponsor</button>
+                <div className="container text-center p-0">
+                    <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-sm-2 faqBtn">General</button>
+                    <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-sm-2 faqBtn">Volunteer</button>
+                    <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-sm-2 faqBtn">Sponsor</button>
                     <button onClick={() => { setSelected('donateFaqs') }}className="btn btn-outline-success faqBtn">Donate</button>
                 </div>
                 
