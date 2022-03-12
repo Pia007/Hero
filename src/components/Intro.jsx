@@ -2,6 +2,7 @@ import React from 'react';
 import { Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
+import logo from '../images/new-logo-lp.svg';
 
 export const Intro= () => {
     return (
@@ -11,7 +12,7 @@ export const Intro= () => {
                     <Col xs={12} className="border-0 px-0 mb-3 mb-md-5 text-center align-self-center justify-content-around" >
                         <p className="sub-text align-self-center font-weight-bold text-primary d-none d-md-block">
                             <Fade bottom cascade>
-                                <span className=''>H</span><img src="../assets/images/new-logo-lp.svg"  alt="logo" className="img-fluid lp-logo" /><span className=''>st a Healthcare Hero</span>
+                                <span className=''>H</span><img src={logo}  alt="logo" className="img-fluid lp-logo" /><span className=''>st a Healthcare Hero</span>
                             </Fade>
                         </p>
                         
@@ -20,7 +21,7 @@ export const Intro= () => {
                                 <span className=''>H</span>
                             </Fade>
                             <Fade bottom cascade>
-                                    <img src="/assets/images/new-logo-lp.svg"  alt="logo" className="img-fluid lp-logo" />
+                                    <img src={logo}  alt="logo" className="img-fluid lp-logo" />
                             </Fade>
                             <Fade bottom cascade>
                                 <span className=''>st</span> 

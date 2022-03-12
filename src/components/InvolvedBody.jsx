@@ -2,6 +2,9 @@ import React from 'react';
 import InvolvedCard from './InvolvedCard';
 import SectionBreak from './SectionBreak';
 import Fade from 'react-reveal/Fade';
+import volImg from '../images/volunteer.jpg';
+import sponImg from '../images/sponsor.jpeg';
+import donImg from '../images/donate.jpg';
 
 const InvolvedBody = () => {
     return (
@@ -12,7 +15,7 @@ const InvolvedBody = () => {
                     contentOne={"We provide thousands of services to healthcare workers and it could not be done without you. We are always looking for volunteers to help us out. If you are interested in volunteering, please "}
                     contentTwo={" And, to learn more about the volunteer process, please click the button below."}
                     contentThree={"Feel free to review our "}
-                    imageSrc={"assets/images/vol-barber.jpg"}
+                    imageSrc={volImg}
                     imageName={"volunteer image"}
                     modalHeaderText={"Volunteer"}
                     modalBodyText={"Thank you for your interest in volunteering! Our goal is to place our volunteers with Mission Sponsors that suit the volunteers interests, vocation or both. "}
@@ -29,7 +32,7 @@ const InvolvedBody = () => {
                     title={"Sponsor Us"}
                     contentOne={"Host A Healthcare Hero is a non-profit organization. We are funded 100% by the generosity of our Mission Sponsors. We are looking for sponsors to help us grow our mission. If you or your organization are interested in becoming a Mission Sponsor, please "}
                     contentThree={"Click the button below to learn more, or, review our "}
-                    imageSrc={"assets/images/sponsor.jpeg"}
+                    imageSrc={sponImg}
                     imageName={"sponsor image"}
                     modalHeaderText={"Sponsor Us"}
                     modalBodyText={"Our Mission Sponsors are organizations that are willing to help us provide meals, health & wellness, fitness, personal care and other services free of charge to our healthcare heroes. "}
@@ -47,7 +50,7 @@ const InvolvedBody = () => {
                     contentOne={"You or your organization can donate items or become a designated drop-off site. Or, you can donate directly to the local food pantry. If you have questions about donating, please "}
                     contentTwo={""}
                     contentThree={"You can also click the button below or review our "}
-                    imageSrc={"assets/images/food-donate.jpg"}
+                    imageSrc={donImg}
                     imageName={"donations image"}
                     modalHeaderText={"Donations"}
                     modalBodyText={"We do not ask for monetary donations from individual donors. However, we do ask for other donations from individuals and organizations that are willing to donate to Host A Healthcare Hero. "}

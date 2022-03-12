@@ -13,7 +13,8 @@ import ScrollToTop from './ScrollToTop';
 import { SEO } from '../components/SEO';
 import { useLocation, Switch, Route, Redirect, withRouter} from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchSponsors, fetchMembers, fetchFaqs , fetchVolunteers } from '../redux/ActionCreators';
+import { fetchSponsors, fetchMembers, fetchFaqs  } from '../redux/ActionCreators';
+import { VOLUNTEERS } from '../shared/volunteersData';
 
 // Setting up mapStateToProps to get the state from the store - state is the argument
 const mapStateToProps = state => {
@@ -21,7 +22,7 @@ const mapStateToProps = state => {
         sponsors: state.sponsors,
         members: state.members,
         faqs: state.faqs,
-        volunteers: state.volunteers
+        // volunteers: state.volunteers
     };
 };
 // Setting up mapDispatchToProps object to get the dispatch function from the store - dispatch is the argument
@@ -29,18 +30,24 @@ const mapDispatchToProps = {
     fetchSponsors: () => (fetchSponsors()),
     fetchMembers: () => (fetchMembers()),
     fetchFaqs: () => (fetchFaqs()),
-    fetchVolunteers: () => (fetchVolunteers())
+    // fetchVolunteers: () => (fetchVolunteers())
 };
 
 class Main extends Component {
     // removed constructor
+    constructor(props) {
+        super(props);
+        this.state = {
+            volunteers: VOLUNTEERS
+        };
+    }
 
     // added componentDidMount to fetch data from the store 
     componentDidMount() {
         this.props.fetchSponsors();
         this.props.fetchMembers();
         this.props.fetchFaqs();
-        this.props.fetchVolunteers();
+        // this.props.fetchVolunteers();
     }
 
     render() {
@@ -53,9 +60,9 @@ class Main extends Component {
         const VolunteerWithId = ({ match }) => {
             return (
                 <VolunteerBio
-                    volunteer={this.props.volunteers.volunteers.filter(volunteer => volunteer.id === +match.params.volunteerId)[0]}
-                    infoIsLoading={this.props.volunteers.isLoading}
-                    infoErrMess={this.props.volunteers.errMess}
+                    volunteer={this.state.volunteers.filter(volunteer => volunteer.id === +match.params.volunteerId)[0]}
+                    // infoIsLoading={this.props.volunteers.isLoading}
+                    // infoErrMess={this.props.volunteers.errMess}
                 />
             );
         };
@@ -88,9 +95,9 @@ class Main extends Component {
                                 /> } 
                             />
                             <Route exact path="/volunteers" render={() => 
-                                <Volunteers volunteers={this.props.volunteers} 
-                                    volunteersErr={this.props.volunteers.errMess}
-                                    volunteersLoading={this.props.volunteers.isLoading}
+                                <Volunteers volunteers={this.state.volunteers} 
+                                    // volunteersErr={this.props.volunteers.errMess}
+                                    // volunteersLoading={this.props.volunteers.isLoading}
                                 />}
                             />
                             <Route exact path="/volunteers/:volunteerId" component={VolunteerWithId}/>

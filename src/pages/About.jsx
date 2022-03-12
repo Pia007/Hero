@@ -7,6 +7,7 @@ import { Row, Col } from 'reactstrap';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
 import Fade from 'react-reveal/Fade';
+import aboutImg from "../images/about.jpg"
 
 
 // Accordion for each sponsor
@@ -127,7 +128,7 @@ const About = (props) => {
                 
                 <Row>
                     <Col className="px-sm-0 mt-5">
-                        <img className="col img-fluid d-flex mb-3 mb-xl-0 mr-3 p-0 pt-lg-0 img-thumbnail" src="assets/images/about.jpg" alt="staff" />
+                        <img className="col img-fluid d-flex mb-3 mb-xl-0 mr-3 p-0 pt-lg-0 img-thumbnail" src={aboutImg} alt="staff" />
                     </Col>
                 </Row>
 

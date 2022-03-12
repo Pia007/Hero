@@ -5,6 +5,7 @@ import { Loading } from '../components/LoadingIcon';
 import { Link } from 'react-router-dom';
 import { Row, Card, CardImg, CardTitle, CardBody } from 'reactstrap';
 import { FadeTransform } from 'react-animation-components';
+// import { VOLUNTEERS } from '../shared/volunteersData';
 
 function RenderBioCard({ volunteer })  {
     return (
@@ -27,8 +28,9 @@ function RenderBioCard({ volunteer })  {
 }
 
 function Volunteers(props) {
+    // const [volunteers, setVolunteers] = React.useState(VOLUNTEERS);
 
-    const volunteers = props.volunteers.volunteers.map(volunteer => {
+    const volunteers = props.volunteers.map(volunteer => {
         return (
             <div key={volunteer.id} className="col-md-4 m-0">
                 <RenderBioCard volunteer={volunteer} />
