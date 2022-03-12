@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
 import { Accordion} from '../components/Accordion';
-import { Loading } from '../components/LoadingIcon';
+import { Loading } from '../components/Loading';
 import { Row, Col} from 'reactstrap';
 import { FadeTransform } from 'react-animation-components';
 import  PageHeader from '../components/PageHeader';

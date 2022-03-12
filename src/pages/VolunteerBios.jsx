@@ -2,7 +2,7 @@ import React from 'react';
 import PageHeader from '../components/PageHeader';
 import Fade from 'react-reveal/Fade';
 import { SEO } from '../components/SEO';
-import { Loading } from '../components/LoadingIcon';
+import { Loading } from '../components/Loading';
 import { Col, Row, Card, CardImg, CardBody } from 'reactstrap';
 
 function RenderVolunteer({ volunteer })  {

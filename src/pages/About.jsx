@@ -1,7 +1,7 @@
 import {  SEO } from '../components/SEO';
 import { SiteCrumbs } from '../components/PageHeader';
 import { PageTitle } from '../components/PageHeader';
-import { Loading } from '../components/LoadingIcon';
+import { Loading } from '../components/Loading';
 import { Accordion } from '../components/Accordion';
 import { Row, Col } from 'reactstrap';
 import SectionBreak from '../components/SectionBreak';

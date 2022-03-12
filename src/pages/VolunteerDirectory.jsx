@@ -1,7 +1,7 @@
 import React from 'react';
 import PageHeader from '../components/PageHeader';
 import { SEO } from '../components/SEO';
-import { Loading } from '../components/LoadingIcon';
+import { Loading } from '../components/Loading';
 import { Link } from 'react-router-dom';
 import { Row, Card, CardImg, CardTitle, CardBody } from 'reactstrap';
 import { FadeTransform } from 'react-animation-components';
