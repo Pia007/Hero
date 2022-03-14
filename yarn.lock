@@ -11489,11 +11489,6 @@ typeface-ubuntu@^1.1.13:
   resolved "https://registry.yarnpkg.com/typeface-ubuntu/-/typeface-ubuntu-1.1.13.tgz#266b8ff251ef60a943ad810b830e225bd8c6eb8b"
   integrity sha512-Rg1WdJd8fXr2nKF4/UqFw4Y7IKhomEBI7z9ZEyRf0YRV6ue+OipamCNEIEyhXZlhymde0RQrWMmagbyeyOQwSA==
 
-typeface-work-sans@^1.1.13:
-  version "1.1.13"
-  resolved "https://registry.yarnpkg.com/typeface-work-sans/-/typeface-work-sans-1.1.13.tgz#344ac638cbebcd55611fc4c2d08c7c9b47792157"
-  integrity sha512-LA5agpsXPLWFaUB88mhxsjtwius4Eu2AHuy5gaKeRY8RMHpEzJbDCES8DWbJ/vAYOljaE1OIoKeqrFdDqjKDtQ==
-
 uglify-js@^3.1.4:
   version "3.15.1"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.15.1.tgz#9403dc6fa5695a6172a91bc983ea39f0f7c9086d"

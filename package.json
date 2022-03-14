@@ -37,7 +37,6 @@
     "typeface-open-sans": "^1.1.13",
     "typeface-pt-sans": "^1.1.13",
     "typeface-ubuntu": "^1.1.13",
-    "typeface-work-sans": "^1.1.13",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

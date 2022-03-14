@@ -20,7 +20,7 @@ class App extends Component {
                     <HelmetProvider>
                         <div className="App">
                         <SEO title={"Host A Healthcare Hero "} description={"description"}  content={"Volunteer to give back to a healthcare hero."}/>
-                            <Main  />
+                            <Main  style={{height: '100vh'}}/>
                         </div>
                     </HelmetProvider>
                 </HashRouter>
