@@ -20,14 +20,14 @@ export const Header = (props) => {
             <Navbar className="navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light bg-primary">
                 <div className="container justify-content-between">
                     <div className='d-flex'>
-                        <NavLink to="/home"><img src={newLogo}  alt="logo" className=" text-lg nav-logo mt-1" /></NavLink>
+                        <NavLink to="/home" onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))}><img src={newLogo}  alt="logo" className=" text-lg nav-logo mt-1" /></NavLink>
                         <RenderHostHeader />
                     </div>
                     <NavbarToggler onClick={toggleNav} className="justify-content-end">
                         <i className="fa fa-bars fa-lg text-success nv-icon "/> 
                     </NavbarToggler>
                     <Collapse isOpen={navigation} navbar className="justify-content-end">
-                        <Nav navbar className="ml-auto text-center text-light nav-text">
+                        <Nav navbar className="ml-auto text-center text-light ">
                             {/* <NavItem className="nav-item">
                                 <NavLink  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link active" to="/home"> 
                                     Home
@@ -53,13 +53,11 @@ export const Header = (props) => {
                                     Volunteer
                                 </NavLink>
                             </NavItem>
-                            <div>
-                                <NavItem>
-                                    <NavLink  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/volunteers" > 
-                                        Spotlight 
-                                    </NavLink>
-                                </NavItem>
-                            </div>
+                            <NavItem>
+                                <NavLink  onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/volunteers" > 
+                                    Spotlight 
+                                </NavLink>
+                            </NavItem>
                         </Nav>
                     </Collapse>
                 </div>
