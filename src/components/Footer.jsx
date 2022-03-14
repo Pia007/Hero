@@ -3,11 +3,11 @@ import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import FooterForm  from './FooterForm';
 
-const Footer = (props) => {
+const Footer = () => {
     return (
         <footer className="site-footer text-light bg-primary" >
             <div className="container ">
-                <Row className="py-4 p-sm-4 px-2 pb-0">
+                <Row className="px-5 pt-5 pb-2">
                     <Col md={4} className="mb-4 text-center p-0">
                         <h5 className="text-light ft-heading"><u className="u-line">Address</u></h5>
                         <address className="tex-light ft-info">

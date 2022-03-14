@@ -23,12 +23,12 @@ const InvolvedCard =({
     return (
         <React.Fragment >
             <Row className={className}>
-                <Col lg={6} className="my-auto text-primary" >
+                <Col lg={6} className="my-auto text-sky" >
                     <Fade bottom cascade>
-                        <h2 className="text-primary">{title}</h2>
+                        <h2 className="text-sky">{title}</h2>
                     </Fade>
-                        <p className="mission-text">{contentOne}<Link to='/contact' style={{textDecoration: 'underline'}}>contact us</Link>.</p>
-                        <p className="mission-text">
+                        <p className="mission-text ">{contentOne}<Link to='/contact' style={{textDecoration: 'underline'}}>contact us</Link>.</p>
+                        <p className="mission-text ">
                             {contentThree}<Link to='/faqs' style={{textDecoration: 'underline'}}>FAQs</Link>. 
                             {contentTwo}
                         </p>
@@ -43,7 +43,7 @@ const InvolvedCard =({
                     />
                 </Col>
                 <Col lg={6}>
-                    <img className="col d-flex my-4 my-lg-0 mr-3 img-fluid p-0  img-thumbnail" src={imageSrc} alt={imageName} />
+                    <img className="col d-flex my-4 my-lg-0 mr-3 img-fluid p-0 img-thumbnail" src={imageSrc} alt={imageName} />
                 </Col> 
             </Row>
         </React.Fragment>

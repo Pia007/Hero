@@ -127,16 +127,16 @@ class ContactForm extends Component {
         const errors = this.validate(this.state.firstName, this.state.lastName, this.state.phoneNum, this.state.email);
 
         return (
-            <div className="container">
+            <div className="container text-primary">
                 <Row className="row-content">
                     <Col md={12} >
                         <Fade bottom cascade>
-                            <h2 className="text-primary">We want to hear from you!</h2>
+                            <h2 className="text-sky">We want to hear from you!</h2>
                         </Fade>
                     </Col>
                     {/* Form */}
                     <Col md={12} >
-                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 form">
+                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 form text-primary">
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="text" htmlFor="firstName" name="firstName" id="firstName" 
@@ -200,11 +200,11 @@ class ContactForm extends Component {
                                         value={this.state.contactType}
                                         onChange={this.handleChange}
                                     >
-                                        <option >May we contact you?</option>
-                                        <option value='by phone'>By Phone</option>
-                                        <option value='by email'>By Email</option>
-                                        <option value='phone or email'>Phone or Email</option>
-                                        <option value='no'>No</option>
+                                        <option className="option">May we contact you?</option>
+                                        <option className="option" value='by phone'>By Phone</option>
+                                        <option className="option" value='by email'>By Email</option>
+                                        <option className="option" value='phone or email'>Phone or Email</option>
+                                        <option className="option" value='no'>No</option>
                                         
                                     </Input>
                                 </Col>
@@ -212,21 +212,21 @@ class ContactForm extends Component {
                             <FormGroup row>
                                 <Col md={5}>
                                     <Input type="select" name="subject"
-                                        className="contact-input"
+                                        className="contact-input "
                                         value={this.state.subject}
                                         onChange={this.handleChange}
                                     >
-                                        <option className="dropdown-item" >Subject...</option>
-                                        <option className="dropdown-item" value="Volunteer">Volunteer</option>
-                                        <option value="Community Partner">Community Partners</option>
-                                        <option value="Sponsor An Event">Sponsor An Event</option>
-                                        <option value="Other">Other</option>
+                                        <option className="option" >Subject...</option>
+                                        <option className="option" value="Volunteer">Volunteer</option>
+                                        <option className="option" value="Community Partner" >Community Partners</option>
+                                        <option className="option" value="Sponsor An Event">Sponsor An Event</option>
+                                        <option className="option" value="Other">Other</option>
                                     </Input>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="textarea" id="feedback" name="feedback" 
+                                    <Input type="textarea" htmlFor="feedback" id="feedback" name="feedback" 
                                         className="contact-input"
                                         rows="12"
                                         value={this.state.feedback} 

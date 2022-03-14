@@ -31,7 +31,7 @@ const RenderTeamMember = ({ member, isLoading, errMess }) => {
         return <h4>{errMess}</h4>;
     }  
     return (
-        <Col className=" text-primary mission-text px-0">
+        <Col className=" text-sky mission-text px-0">
             <p>{member.name}, {member.title}</p>
         </Col>
     );
@@ -107,13 +107,13 @@ const About = (props) => {
 
     return (
         <div className="container ">
-            <SEO title={"About | Host A Healthcare Hero"}  description={"description"} content={"About page of website"}/>
+            <SEO title={"About Us | Host A Healthcare Hero"}  description={"description"} content={"About page of website"}/>
             <SiteCrumbs siteLocation={"About"}  />
             <PageTitle pageTitle={"Our Mission"} />
             <Fade bottom cascade>
                 <Row className="row-content pt-0">
                     <Col className="px-sm-0">
-                        <p className="text-center text-primary mission-text">
+                        <p className="text-center text-sky mission-text">
                             Around the world, healthcare workers have been stretched beyond their limits. Many have succumbed to illness 
                             and have been estranged from their loved ones. Right here in northern New Jersey, like most, our healthcare workers
                             have gone above and beyond to provide us with quality care. Yet, they have little time for themselves. 
@@ -135,10 +135,10 @@ const About = (props) => {
                 <Row className="pt-4"> 
                     <Col className="px-0">
                         <Fade bottom cascade>
-                            <h2 className="px-3 px-sm-0 text-primary">Our History</h2>
+                            <h2 className="px-3 px-sm-0 text-sky">Our History</h2>
                         </Fade>
                         
-                        <Col className="text-primary mission-text mb-3 px-sm-0 ">
+                        <Col className="text-sky mission-text mb-3 px-sm-0 ">
                             It all began in 2010. Sofia Dawson was fresh out of nursing school and headed to her 
                             first job as a nurse. Like many nurses, she was excited to provide care for her patients.
                             But, she soon saw a side of the healthcare profession that is not taught in school. She saw 
@@ -149,13 +149,13 @@ const About = (props) => {
                 </Row>
                 <Row className="pb-lg-4">
                         <Col className="px-0 pr-xl-3">    
-                        <Col className="text-primary mission-text px-sm-0 mb-3">
+                        <Col className="text-sky mission-text px-sm-0 mb-3">
                             Sofia was determined to not just make a difference for her patients but for her coworkers, too. She 
                             found that many of her coworkers only ate one meal a day. Usually an unhealthy one. Most found it hard to 
                             sleep after their shifts even though they were on their feet for 12 to 14 hours each day. And, many were in poor health. 
                             Additonally, she learned that they had very little time for basic personal care. Like a simple haircut.
                         </Col>
-                        <Col className="text-primary mission-text px-sm-0 mb-4">
+                        <Col className="text-sky mission-text px-sm-0 mb-4">
                             She began researching healthy eating and mindful meditation. Before long, Sofia was sharing this information
                             with her peers. Eventually, this collective sharing included fitness tips.  The core group consisted of five healthcare
                             professionals that branched out and shared health and wellness tips throughout northern New Jersey. They were
@@ -164,7 +164,7 @@ const About = (props) => {
                     </Col> 
                     <Row className="flex-lg-row-reverse mb-lg-4 ">
                         <Col className="">
-                            <Col className="text-primary mission-text mb-4 mb-md-0 px-sm-0 pr-lg-0">
+                            <Col className="text-sky mission-text mb-4 mb-md-0 px-sm-0 pr-lg-0">
                                 In 2019, Sofia was given the opportunity to speak at a healthcare symposium. She invited her fellow
                                 heroes to join her. It was at that event, that they decided to make it official. <strong>Host A Healthcare Hero </strong>
                                 was born. Six months later, the Covid-19 pandemic hit northern New Jersey. As the healthcare system
@@ -184,7 +184,7 @@ const About = (props) => {
                     <Row className="row-content ">
                         <Col xs={12} className="px-sm-0">
                             <Fade bottom cascade>
-                            <h2 className="text-primary my-3">Mission Sponsors</h2>
+                            <h2 className="text-sky my-3">Mission Sponsors</h2>
                             </Fade>
                         </Col>
                         <Col xs={12} className="p-0">
@@ -201,7 +201,7 @@ const About = (props) => {
                     <Row className="row-content">
                         <Col className="px-sm-0 ">
                             <Fade bottom cascade>
-                                <h2 className="text-primary">Host A Healthcare Hero</h2>
+                                <h2 className="text-sky">Host A Healthcare Hero</h2>
                             </Fade>
                             {memberList}
                         </Col>

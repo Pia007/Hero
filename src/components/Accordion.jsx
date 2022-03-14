@@ -11,7 +11,7 @@ export const Accordion = ({ name, description, titleHolder }) => {
                 <div >{isOpen ? '-' : '+'}</div>
             </div>
                 {isOpen && 
-                    <div className="text-primary p-1 description mb-1 px-3">
+                    <div className="text-primary p-1 description mb-1 px-3 shadow-lg">
                         {description}
                     </div>
                 }

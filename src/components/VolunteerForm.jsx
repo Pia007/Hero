@@ -192,7 +192,7 @@ class VolunteerForm extends Component {
                 <Row className="row-content">
                     <Col xs={12}>
                         <Fade bottom cascade>
-                            <h2 className="text-primary">Join us!</h2>
+                            <h2 className="text-sky">Join us!</h2>
                         </Fade>
                     </Col>
                     
@@ -307,7 +307,7 @@ class VolunteerForm extends Component {
                             </FormGroup>
                             
                             <FormGroup row >
-                                <div className="col text-primary mt-2">
+                                <div className="col text-sky mt-2">
                                     <strong className="mission-text "> Interests<span className="label-interests"> (check all that apply) </span></strong>
                                     <FormGroup row>
                                         <Col xs={6} lg={3}>
@@ -411,7 +411,7 @@ class VolunteerForm extends Component {
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="textarea" id="feedback" name="feedback" 
+                                    <Input type="textarea" htmlFor="feedback" id="feedback" name="feedback" 
                                         className="contact-input"
                                         rows="12"
                                         placeholder="Is there anything else you'd like to tell us?"

@@ -8,9 +8,9 @@ class FooterForm extends Component {
         super(props);
 
         this.state = {
-            email: '',
+            newsEmail: '',
             touched: {
-                email: false
+                newsEmail: false
             }
         };
 
@@ -18,14 +18,14 @@ class FooterForm extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    validate(email) {
+    validate(newsEmail) {
         const errors = {
-            email: ''
+            newsEmail: ''
         };
 
         const regEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
-        if (this.state.touched.email && !regEmail.test(email)) {
-            errors.email = 'Invalid email address';
+        if (this.state.touched.newsEmail && !regEmail.test(newsEmail)) {
+            errors.newsEmail = 'Invalid email address';
         } 
         return errors;
     }
@@ -58,31 +58,31 @@ class FooterForm extends Component {
 
     resetForm() {
         this.setState({
-            email: '',
+            newsEmail: '',
             touched: {
-                email: false
+                newsEmail: false
             }
         });
     }
     
     render() {
 
-        const errors = this.validate( this.state.email);
+        const errors = this.validate( this.state.newsEmail);
 
         return (
             <Form onSubmit={this.handleSubmit}>
                 <FormGroup row className="d-flex justify-content-center">
                     <Col xs={8}  >
-                        <Input type="email" htmlFor="email"name="email" id="email" 
+                        <Input type="email" htmlFor="newsEmail"name="newsEmail" id="newsEmail" 
                             className="contact-input"
                             placeholder="Email" 
-                            value={this.state.email}
-                            invalid={!!errors.email}
-                            onBlur={this.handleBlur("email")} 
+                            value={this.state.newsEmail}
+                            invalid={!!errors.newsEmail}
+                            onBlur={this.handleBlur("newsEmail")} 
                             onChange={this.handleChange} 
                             
                         />
-                        <FormFeedback className="pl-2">{errors.email}</FormFeedback>
+                        <FormFeedback className="pl-2">{errors.newsEmail}</FormFeedback>
 
                     </Col>
                     

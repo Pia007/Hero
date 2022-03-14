@@ -7,7 +7,6 @@ export const SEO = ({title, description, content }) => {
             <title>{title}</title>
             <meta name={description} content={content} />
             <meta name="author" content="Pia Torain" />
-            <link rel="canonical" href="newConicalUrl" />
         </Helmet>
     )
 }

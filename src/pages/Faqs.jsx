@@ -46,7 +46,7 @@ const RenderFaqSection = ({ faqTitle, factType }) => {
 const FaqHeader = () => {
     return (
         <div className="container text-center ">
-            <h1 className='text-primary'> Frequently <br /> Asked Questions</h1>
+            <h1 className='text-sky'> Frequently <br /> Asked Questions</h1>
         </div>
     );
 }
