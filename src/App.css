@@ -1,6 +1,9 @@
 :root {
     --input-bg: #E4EEfA;
-    --primary: #446E9B;
+    --primary: #95c0ee;
+    /* --logo: #0f3058; */
+    /* --primary: #9eb2c7; */
+    /* --primary: #446E9B; */
     --background: #04203F;
     --table-bg: #C9DEF5;
     --table-bg-alt: #AECBEB;
@@ -10,29 +13,22 @@
     --font-offside: 'Offside', sans-serif; 
     --font-ubuntu: 'Ubuntu', sans-serif;
     --font-ptSans: 'Pt-sans', sans-serif;
-    --font-workSans: 'Work Sans', sans-serif;
-}
-html {
-    width: 100%;
-    height: 100%;
 }
 
+html,
 body {
-    font-family: var(--font-ptSans);
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
     overflow-x: hidden;
+    color: var(--primary);
+    font-size: 1em;
+    font-family: var(--font-ptSans);
 }
-
-.lp-text {
-    font-size: 50px; 
+.text-sky {
+    color: var(--primary);
 }
-
 .home-bg {
     background: var(--background);
-}
-.logo-text {
-    font-size: 24px; 
 }
 
 .findOut {
@@ -43,40 +39,31 @@ a, a:hover {
     text-decoration: none; 
 }
 .nav-logo {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     background: none;
     border: none;
 }
 .nav-logo-sm {
-    width: 14px;
-    height: 14px;
+    width: .9375rem;
+    height: .9375rem;
     background: none;
     border: none;
 }
-.nav-logo,
-.nv-icons {
-    font-size: 40px; 
-}
-.host-header,
-.nav-text,
-.nav-link,
-#vol-link,
-.contact-input,
-.tel,
-.vol-title,
-.spotlight-intro,
-.meet-text,
-.ft-heading {
-    font-size: 18px;
-}
-.host-header {
-    line-height: 1.2;
-    border-left: 1.5px solid var(--background);
+.nav-text {
+    font-size: .875em;
+    font-weight: 500;
 }
 
-.nav-text {
-    font-weight: 500; 
+.nav-link,
+#vol-link, 
+.vol-title,
+.ft-heading {
+    font-size: 1.125em;
+}
+.host-header {
+    line-height: 1.3;
+    border-left: 1.5px solid var(--background);
 }
 
 .nav-link:hover,
@@ -103,7 +90,7 @@ a, a:hover {
 } 
 
 .ft-signup {
-    border-radius: 20px; 
+    border-radius: 1.25rem; 
 }
 .ft-signup:hover,
 .ft-signup:focus,
@@ -115,14 +102,12 @@ a, a:hover {
 
 .btn-feedback,
 .btn-vol-app {
-    height: 50px;
-    border-radius: 30px;
-    font-size: 16px; 
+    height: 3.125rem;
+    border-radius: 1.875rem;
 }
 
 .breadcrumb {
     background: transparent;
-    padding-left: 0;
     padding-top: 4px;
 }
 .bc-prev {
@@ -137,22 +122,22 @@ a, a:hover {
 
 .row-content,
 .card-row {
-    padding: 40px 0;
-    min-height: 100px; 
+    padding: 2.5rem 0;
+    min-height: 6.25rem; 
 }
 h1 {
-    font-size: 32px;
+    font-size: 2em;
     text-shadow: 1px 1px 3px;
 }
 h1,
 h2 {
-    font-weight: 600;
+    font-weight: 500;
     text-shadow: 1px 1px 3px;
     
 }
 h2 {
-    margin: 20px 0; 
-    font-size: 26px; 
+    margin: 1.25rem 0; 
+    font-size: 1.625em; 
 }
 
 hr {
@@ -163,12 +148,12 @@ img,
 .vol-card-body {
     border: 3px double var(--primary); 
 }
-.landing-caption {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-    background: transparent; 
-    word-spacing: 1px;
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 3.125rem auto;
 }
 .hero {
     background-image: 
@@ -185,39 +170,38 @@ img,
     -o-background-size: cover;
     overflow: hidden;
     height: auto;
-}
-.hero-inner {
-    position: fixed;
-    top: 30%;
-    display: flex;
+
     justify-content: center;
     align-content: center;
-    background: var(--cl-altBg);
-    overflow: hidden;
+}
+.hero::-webkit-scrollbar {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
 }
 .landing {
     scrollbar-width: none;
-
+}
+.intro-container::-webkit-scrollbar {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
 }
 .sub-text {
-    font-size: 50px; 
+    font-size: 3.1em; 
     text-shadow: 1px 1px 3px;
 }
 .lp-logo {
-    width: 38px;
-    height: 38px;
+    width: 2.375rem;
+    height: 2.375rem;
     border: none;
 }
 .btn-learn {
-    max-width: 120px;
-    border-radius: 35px;
-    height: 45px;
-    font-size: 16px;
+    max-width: 7.5rem;
+    border-radius: 2.1875rem;
+    height: 2.8125rem;
     font-weight: 500; 
 }
 
 .mission-text {
-    font-size: 16px; 
     overflow-wrap: normal;
 }
 
@@ -226,8 +210,8 @@ img,
     background: transparent; 
 }
 .about-table-header{
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 1.375em;
+    font-weight: 500;
 }
 .about-card-body {
     padding: 15px;
@@ -240,8 +224,9 @@ img,
     background: var(--table-bg-alt);
 }
 .table-icon {
-    width: 33.33px;
-    height: 33.33px;
+    width: 2.083125rem;
+    height: 2.083125rem;
+    border: none;
 } 
 .accordion-title {
     display: flex;
@@ -251,13 +236,14 @@ img,
     color: white;
     border-radius: 3px 3px 0 0;
     border-bottom: 3px double var(--success);
-    font-size: 22px;
-    font-weight: 600;
+    font-size: clamp(1.375em, 2vw, 1.475em);
+    font-weight: 500;
     padding: 1rem;
 }
 .faq-accordion-title {
     border: 2px double var(--primary);
-    font-size: 18px;
+    font-size: 1.125em;
+    font-weight: 500;
     
 }
 
@@ -267,20 +253,17 @@ img,
     border-radius: 0 0 3px 3px;
     border: 2px double var(--primary);
     background-color: var(--table-bg);
-    font-size: 16px;
 }
 .faq-accordion-description {
     border: 2px double var(--primary);
     border-top: none;
     border-radius: 0 0 3px 3px;
     background-color: none;
-    font-size: 16px;
 }
 .faqBtn {
     background: none;
     border: none;
-    color: white; 
-    font-size: 16px;
+    color: white;
     font-weight: 600;
     cursor: pointer;
 }
@@ -294,10 +277,6 @@ img,
     border-radius: 0 0 3px 3px;
 }
 
-.address-info {
-    font-size: 16px; 
-}
-
 .form {
     background: var(--background);
     border: 3px double var(--table-bg-alt);
@@ -305,22 +284,26 @@ img,
 }
 .contact-input {
     border: 3px double var(--primary);
-    height: 40px;
-    color: var(--primary);
+    height: 2.5rem;
+    color: #446E9B;
     background: var(--input-bg); 
+}
+.options {
+    color: #446E9B;
 }
 .errors {
     color: var(--danger);
-    font-size: 14px;
+    font-size: .875em;
 }
 
 .form-control::-webkit-input-placeholder {
-    color: var(--primary); 
+    color: #446E9B; 
+    font-size: 1.1em;
 }
 
 .custom-control-label::before {
     background: var(--input-bg); ;
-    border: 1px double var(--primary) !important; 
+    border: 1px double #446E9B !important; 
 }
 .label-agree::before,
 .label-interests::before {
@@ -333,7 +316,7 @@ img,
     background: var(--input-bg);
 }
 .label-interests {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -375,8 +358,8 @@ ul li .faq-link:focus {
 .vol-cards,
 .meet-img {
     border: 3px double rgb(110, 163, 199);
-    box-shadow:  inset 50px 50px 100px #03162b,
-        inset -50px -50px 100px #052a53;
+    box-shadow:  inset 3.125rem 3.125rem 6.25rem #03162b,
+        inset -3.125rem -3.125rem 6.25rem #052a53;
 }
 .cd-img {
     border: 3px groove rgb(110, 163, 199);
@@ -389,74 +372,73 @@ ul li .faq-link:focus {
 }
 
 .meet-holder {
-    margin: 40px auto;
+    margin: 2.5rem auto;
 }
 .meet-card {
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
     font-family: var(--font-offside);
     background: var(--background);
     border-radius: 10px;
-    box-shadow: inset 50px 25px 100px #03162b,
-        inset -50px -25px 50px #052a53;
+    box-shadow: inset 3.125rem 1.5625rem 6.25rem #03162b,
+        inset -3.125rem -1.5625rem 3.125rem #052a53;
 }
 .meet-role {
     font-family: var(--font-offside);
+    font-size: 1.375em;
 }
 .meet-text {
     line-height: 1.3;
+    font-size: 1em;
 }
 .design {
     font-weight: 600;
 }
 
-@media screen and (min-width: 475px) {
-    h1 {
-        font-size: 34px;
-    }
+@media screen and (min-width: 29.6875rem) {
     .sub-text {
-        font-size: 60px; 
+        font-size: 3.4em;
     }
     .lp-logo {
-        width: 42px;
-        height: 42px;
+        width: 2.625rem;
+        height: 2.625rem;
     }
     .faq-accordion-title {
-        font-size: 20px;
+        font-size: 1.25em;
     }
     .mission-text {
-        font-size: 18px; 
+        font-size: 1.125em; 
     }
 }
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
+    
     h1 {
-        font-size: 36px;
+        font-size: 2.5em;
     }
     h2 {
-        font-size: 30px; 
+        font-size: 1.875em; 
     }
     .sub-text {
-        font-size: 60px; 
+        margin: 200px 0 3.125rem 0 ;
     }
     .lp-logo {
-        width: 42px;
-        height: 42px;
+        width: 2.625rem;
+        height: 2.625rem;
     }
-    .hero-inner {
-        top: 40%;
-    }
-    .nav-link,
-    #vol-link,
+    
     .mission-text,
     .meet-text {
-        font-size: 20px;
+        font-size: 1.25em;
     }
+    .meet-role {
+        font-size: 1.5em;
+    }
+    
     .btn-learn,
     .faqBtn,
-    .table-text,
-    .description {
-        font-size: 18px; 
+    .table-text {
+        font-size: 1.125em; 
     }
     .btn-learn {
         max-width: fit-content;
@@ -465,70 +447,55 @@ ul li .faq-link:focus {
     }
     .about-table-header, 
     .question {
-        font-size: 24px;
+        font-size: 1.5em;
     }
     .accordion-title {
-        font-size: 22px;
+        font-size: 1.3em;
     }
-    /* .meet-text {
-        line-height: 1.2;
-    } */
 }
 
-@media screen and (min-width: 992px) {
-    h1 {
-        font-size: 40px;
-    }
-    h2 {
-        font-size: 36px; 
-    }
+@media screen and (min-width: 62rem) {
     .sub-text {
-        font-size: 79px; 
+        font-size: 4.4em; 
     }
     .lp-logo {
-        width: 64px;
-        height: 64px;
+        width: 3.625rem;
+        height: 3.625rem;
     }
     .table-icon {
-        width: 40px;
-        height: 40px;
+        width: 2.5rem;
+        height: 2.5rem;
     } 
-    .about-table-header,
-    .question {
-        font-size: 26px;
-    }
-    .description,
-    .vol-title,
-    .spotlight-intro {
-        font-size: 20px; 
-    }
-    .meet-holder {
-        margin-top: 60px;
-        margin-bottom: 275px;
+    .spotlight-intro,
+    .vol-title {
+        font-size: 1.25em; 
     }
     
+    .meet-holder {
+        margin-top: 3.75rem;
+        margin-bottom: 17.1875rem;
+    }
 }
 
-@media screen and (min-width: 1200px) {
-    h1 {
-        font-size: 46px;
+@media screen and (min-width: 75rem) {
+    h1{
+        font-size: 2.875em;
     }
     h2 {
-        font-size: 40px; 
+        font-size: 2.5em; 
     }
     .sub-text {
-        font-size: 98px; 
+        font-size: 5.3em; 
     }
     .lp-logo{
-        width: 78px;
-        height: 78px;
+        width: 4.375rem;
+        height: 4.375rem;
     }
     
     .vol-title {
-        font-size: 22px;
+        font-size: 1.375em;
     }
     .meet-holder {
-        margin-bottom: 222px;
+        margin-bottom: 13.875rem;
     }
-
 }
