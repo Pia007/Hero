@@ -17,7 +17,7 @@ export const VOLUNTEERS = [
         email: "demo1@demo.com",
         password: "1a2b3c4d",
         image:"../assets/images/male1.png",
-        role: "Logistics - Transportation",
+        role: "Logistics",
         description: "Hey, I'm Richard. I became a volunteer in March of 2020. My grandfather was part of the inaugural group of volunteers back in 2019. He always spoke of how much he enjoyed the comraderie amongst the volunteers. His tenure was cut short by the virus when he passed away in February of 2020. Host A Healthcare Hero was very kind to my family during that difficult time. It was easy for me to decide to pick up where my grandfather left off. I started donating my Operations Management kills to help with logistics and transportation. I even get out there and drive from time to time just like my grandfather did. "
     },
     {
