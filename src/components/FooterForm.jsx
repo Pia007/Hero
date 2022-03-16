@@ -76,6 +76,7 @@ class FooterForm extends Component {
                         <Input type="email" htmlFor="newsEmail"name="newsEmail" id="newsEmail" 
                             className="contact-input"
                             placeholder="Email" 
+                            aria-label="Email"
                             value={this.state.newsEmail}
                             invalid={!!errors.newsEmail}
                             onBlur={this.handleBlur("newsEmail")} 

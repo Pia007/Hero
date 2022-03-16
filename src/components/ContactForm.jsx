@@ -142,6 +142,7 @@ class ContactForm extends Component {
                                     <Input type="text" htmlFor="firstName" name="firstName" id="firstName" 
                                         className="contact-input "
                                         placeholder="First Name" 
+                                        aria-label="First Name"
                                         value={this.state.firstName} 
                                         invalid={!!errors.firstName}
                                         onBlur={this.handleBlur("firstName")} 
@@ -156,6 +157,7 @@ class ContactForm extends Component {
                                     <Input type="text" htmlFor="lastName"name="lastName" id="lastName" 
                                         className="contact-input"
                                         placeholder="Last Name" 
+                                        aria-label="Last Name"
                                         value={this.state.lastName} 
                                         invalid={!!errors.lastName}
                                         onBlur={this.handleBlur("lastName")} 
@@ -170,6 +172,7 @@ class ContactForm extends Component {
                                     <Input type="tel" htmlFor="phonNum" name="phoneNum" id="phoneNum"
                                         className="contact-input" 
                                         placeholder="Phone Number" 
+                                        aria-label="Phone Number"
                                         value={this.state.phoneNum}
                                         invalid={!!errors.phoneNum} 
                                         onBlur={this.handleBlur("phoneNum")} 
@@ -184,6 +187,7 @@ class ContactForm extends Component {
                                     <Input type="email" htmlFor="email"name="email" id="email" 
                                         className="contact-input"
                                         placeholder="Email" 
+                                        aria-label="Email"
                                         value={this.state.email}
                                         invalid={!!errors.email}
                                         onBlur={this.handleBlur("email")} 
@@ -197,6 +201,7 @@ class ContactForm extends Component {
                                 <Col md={5}>
                                     <Input type="select" name="contactType" 
                                         className="contact-input"
+
                                         value={this.state.contactType}
                                         onChange={this.handleChange}
                                     >
@@ -217,7 +222,7 @@ class ContactForm extends Component {
                                         onChange={this.handleChange}
                                     >
                                         <option className="option" >Subject...</option>
-                                        <option className="option" value="Volunteer">Volunteer</option>
+                                        <option className="option" value="Volunteer" >Volunteer</option>
                                         <option className="option" value="Community Partner" >Community Partners</option>
                                         <option className="option" value="Sponsor An Event">Sponsor An Event</option>
                                         <option className="option" value="Other">Other</option>

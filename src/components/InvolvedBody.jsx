@@ -1,4 +1,3 @@
-import React from 'react';
 import InvolvedCard from './InvolvedCard';
 import SectionBreak from './SectionBreak';
 import Fade from 'react-reveal/Fade';

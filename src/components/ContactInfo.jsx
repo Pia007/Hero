@@ -27,18 +27,18 @@ const ContactInfo = () =>{
 
                 <Row className=" p-0">
                     <Col sm={6} className="text-sky">
-                        <h5 className="mb-0 mission-text text-sky"><u >Address:</u></h5>
+                        <p className="mb-0 mission-text text-sky"><u >Address:</u></p>
                         <address className="address-info">
                             2124 W Heroes LN, Suite 99<br />
                             Fictitious City, NJ 01007<br />
                         </address>
-                        <h5 className="mb-0 mission-text text-sky"><u >Hours:</u></h5>
+                        <p className="mb-0 mission-text text-sky"><u >Hours:</u></p>
                         <address className=" address-info">
                             Monday - Friday<br />
                             9AM - 3PM<br />
                         </address>
 
-                        <h5 className="mb-0 mission-text text-sky"><u className="">Phone & Email</u></h5>
+                        <p className="mb-0 mission-text text-sky"><u className="">Phone & Email</u></p>
                         <a role="button" className="btn btn-link p-0 address-info text-sky" href="tel:+19737774321"><i className="fa fa-phone" ></i> 1-973-777-4321</a><br />
                         <a role="button" className="btn btn-link p-0 address-info text-sky" href="mailto:notARealEmail@NotReal.org"><i className="fa fa-envelope-o" ></i> info@healthcareheroes.org</a>
                     </Col>

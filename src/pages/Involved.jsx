@@ -1,12 +1,13 @@
-import React from 'react';
 import PageHeader from '../components/PageHeader';
 import InvolvedBody from '../components/InvolvedBody';
 import { SEO } from '../components/SEO';
 
 const Involved = () => {
     return (
-        <div className="container" style={{overflowX: 'hidden'}}>
-            <SEO title={"Get Involved | Host A Healthcare Hero"}  description={"description"} content={"Get Involved page of the website"} />
+        // <div className="container" style={{overflowX: 'hidden'}}>
+        // <div className="container" style={{overflowX: 'hidden'}}>
+        <div className="container"style={{overflowX: 'hidden'}} >
+            <SEO title={"Get Involved | Host A Healthcare Hero"}  description={"description"} content={"Get Involved page of the website"} /> 
             <PageHeader siteLocation={"Get Involved"} pageTitle={"Get Involved"} />
             <InvolvedBody />
         </div>

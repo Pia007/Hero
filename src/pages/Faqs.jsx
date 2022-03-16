@@ -13,7 +13,7 @@ const RenderFaq = ({ faq }) => {
         <Accordion
             name={faq.question} 
             description={faq.answer}
-            titleHolder={'accordion-title faq-accordion-title'}
+            titleHolder={'accordion-title faq-accordion-title py-3 px-3 '}
             className="faq-accordion-description"
         />
     );
@@ -118,39 +118,38 @@ const Faqs = (props) => {
     }
     
     return (
-        <React.Fragment>
-            <div style={{overflow: 'hidden'}}>
-                <SEO title={"FAQs | Host A Healthcare Hero"}  description={"description"} content={"Faqs page of the website"}/>
-                <div className='container-fluid home-bg ' id='faq'>
-                    <PageHeader siteLocation={"FAQs"}  />
-                    <FaqHeader />
-                </div>
-                <div className="container text-center p-0">
-                    <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-sm-2 faqBtn">General</button>
-                    <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-sm-2 faqBtn">Volunteer</button>
-                    <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-sm-2 faqBtn">Sponsor</button>
-                    <button onClick={() => { setSelected('donateFaqs') }}className="btn btn-outline-success faqBtn">Donate</button>
-                </div>
-                
-
-                <div className='container mt-3 '>
-                    
-                    { 
-                        (selected === 'generalFaqs') ? <RenderFaqSection faqTitle={"General"} factType={generalFaqs} /> : null 
-                    }
-                    {
-                        (selected === 'volunteerFaqs') ? <RenderFaqSection faqTitle={"Volunteer"} factType={volunteerFaqs} /> : null 
-                    }
-                    {
-                        (selected === 'sponsorFaqs') ? <RenderFaqSection faqTitle={"Sponsor"} factType={sponsorFaqs} /> : null 
-                    }
-                    {
-                        (selected === 'donateFaqs') ? <RenderFaqSection faqTitle={"Donate"} factType={donateFaqs} /> : null 
-                    }
-                    
-                </div>
+        
+        <div className='container'>
+            <SEO title={"FAQs | Host A Healthcare Hero"}  description={"description"} content={"Faqs page of the website"}/>
+            <div className='container-fluid home-bg ' id='faq'>
+                <PageHeader siteLocation={"FAQs"}  />
+                <FaqHeader />
             </div>
-        </React.Fragment>
+            <div className="container text-center p-0">
+                <button onClick={() => { setSelected('generalFaqs') }} className="btn btn-outline-success mr-sm-2 faqBtn">General</button>
+                <button onClick={() => { setSelected('volunteerFaqs') }} className="btn btn-outline-success mr-sm-2 faqBtn">Volunteer</button>
+                <button onClick={() => { setSelected('sponsorFaqs') }} className="btn btn-outline-success mr-sm-2 faqBtn">Sponsor</button>
+                <button onClick={() => { setSelected('donateFaqs') }}className="btn btn-outline-success faqBtn">Donate</button>
+            </div>
+            
+
+            <div className='container mt-3 '>
+                
+                { 
+                    (selected === 'generalFaqs') ? <RenderFaqSection faqTitle={"General"} factType={generalFaqs} /> : null 
+                }
+                {
+                    (selected === 'volunteerFaqs') ? <RenderFaqSection faqTitle={"Volunteer"} factType={volunteerFaqs} /> : null 
+                }
+                {
+                    (selected === 'sponsorFaqs') ? <RenderFaqSection faqTitle={"Sponsor"} factType={sponsorFaqs} /> : null 
+                }
+                {
+                    (selected === 'donateFaqs') ? <RenderFaqSection faqTitle={"Donate"} factType={donateFaqs} /> : null 
+                }
+                
+            </div>
+        </div>
     );
 }
 

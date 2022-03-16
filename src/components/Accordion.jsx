@@ -18,5 +18,3 @@ export const Accordion = ({ name, description, titleHolder }) => {
         </div>
     );
 };
-
-

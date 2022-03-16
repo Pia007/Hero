@@ -5,7 +5,7 @@ import { SEO } from '../components/SEO';
 import { Loading } from '../components/Loading';
 import { Col, Row, Card, CardImg, CardBody } from 'reactstrap';
 
-function RenderVolunteer({ volunteer })  {
+const RenderVolunteer = ({ volunteer }) => {
     return (
         <React.Fragment>
             <Card className="d-flex flex-direction-column meet-card ">
@@ -18,9 +18,9 @@ function RenderVolunteer({ volunteer })  {
                             <Fade bottom cascade>
                                 <h3 className='text-center mb-4 meet-role '>{volunteer.role}</h3>
                             </Fade>
-                                <h5 className='col-md-10 col-lg-12 mx-auto  meet-text'>" {volunteer.description} "</h5>
+                                <blockquote className='col-md-10 col-lg-12 mx-auto  meet-text'>"{volunteer.description}"</blockquote>
                             <Fade bottom >
-                                <h5 className='text-right meet-text mx-5'><em>~ {volunteer.first}</em> </h5>
+                                <cite className='float-right meet-text mx-5'><em>~ {volunteer.first}</em> </cite>
                             </Fade>
                         </CardBody>
                     </Col>
@@ -30,7 +30,7 @@ function RenderVolunteer({ volunteer })  {
     );
 }
 
-function VolunteerBio(props) {
+const VolunteerBio = (props) => {
 
     if (props.infoIsLoading) {
         return (

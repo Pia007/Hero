@@ -38,7 +38,7 @@ export const VOLUNTEERS = [
         password: "bootstrap123",
         image:"../assets/images/male4.png",
         role: "Chef",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ullam, veritatis sint illum quidem tempore id ipsam exercitationem dolorum nostrum repudiandae dolore qui? Explicabo laboriosam cum at ullam perspiciatis a itaque, nisi pariatur quasi aliquam commodi quis eos aperiam molestias sapiente placeat inventore sequi maiores doloribus? Commodi placeat nesciunt eum cumque, soluta, numquam blanditiis optio vel inventore doloremque incidunt itaque!"
+        description: "I was forced to shutdown my restaurant in NYC. Cooking is a part of me. So, I started preparing meals for my neighbors to enjoy and I learned that many of them worked long hours at the local hospital. I thought that providing healthy meals for them and their families was the least that I could do. At the time, I did not know that my neighbor, Sophia, was the heart of Host A Healthcare Hero. She connected me with Alpha Food Services and the rest is history."
     },
     {
         id: 4,
@@ -58,7 +58,7 @@ export const VOLUNTEERS = [
         password: "syntax123",
         image:"../assets/images/male2.png",
         role: "Software Engineer",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ullam, veritatis sint illum quidem tempore id ipsam exercitationem dolorum nostrum repudiandae dolore qui? Explicabo laboriosam cum at ullam perspiciatis a itaque, nisi pariatur quasi aliquam commodi quis eos aperiam molestias sapiente placeat inventore sequi maiores doloribus? Commodi placeat nesciunt eum cumque, soluta, numquam blanditiis optio vel inventore doloremque incidunt itaque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ullam, veritatis sint illum quidem tempore id ipsam exercitationem dolorum nostrum repudiandae dolore qui? Explicabo laboriosam cum at ullam perspiciatis a itaque, nisi pariatur quasi aliquam commodi quis eos aperiam molestias sapiente placeat inventore sequi maiores doloribus? Commodi placeat nesciunt eum cumque, soluta, numquam blanditiis optio vel inventore doloremque incidunt itaque!"
+        description: "The pandemic has really taken a toll on the workforce. Not only were people unable to work, healthcare workers were overworked. We were already providing free software and computer training to under represented communities before the pandemic, deciding to partner with Host A Healthcare Hero to extend the same service to healthcare workers was a the right choice. The toll that the pandemic has taken on them is immeasurable. Providing free training will give them the option to work in other aspects of healthcare or a different career field. "
     },
     {
         id: 6,
@@ -68,7 +68,7 @@ export const VOLUNTEERS = [
         password: "javscript123",
         image:"../assets/images/female5.svg",
         role: "Yoga Instructor",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ullam, veritatis sint illum quidem tempore id ipsam exercitationem dolorum nostrum repudiandae dolore qui? Explicabo laboriosam cum at ullam perspiciatis a itaque, nisi pariatur quasi aliquam commodi quis eos aperiam molestias sapiente placeat inventore sequi maiores doloribus? Commodi placeat nesciunt eum cumque, soluta, numquam blanditiis optio vel inventore doloremque incidunt itaque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ullam, veritatis sint illum quidem tempore id ipsam exercitationem dolorum nostrum repudiandae dolore qui? Explicabo laboriosam cum at ullam perspiciatis a itaque, nisi pariatur quasi aliquam commodi quis eos aperiam molestias sapiente placeat inventore sequi maiores doloribus? Commodi placeat nesciunt eum cumque, soluta, numquam blanditiis optio vel inventore doloremque incidunt itaque!"
+        description: "Hi, I'm Kenji. Practicing yoga & meditation helped me through law school and again when I found myself working from home at the heart of the pandemic. A family friend told me about Host A Healthcare Hero. I reach out and spoke with a Volunteer Coordinator about volunteering. I wasn't sure how I could help. But, after sharing that I am a Certified Yoga Instructor, the coordinator help me decide to share that service. Today, I teach a few classes a week and its been wonderful to help healthcare workers get their minds and bodies in shape."
     },
     {
         id: 7,
@@ -80,13 +80,4 @@ export const VOLUNTEERS = [
         role: "Barber",
         description: "I'm Mario. When the pandemic hit, many of my clients were unable to get a haircut. I decided to provide free haircuts to my clients that were also displaced by the pandemic. It just so happend that one of my clients, at the time, was a Mission Sponsor. He shared the overall goal of Host A Healthcare Hero with me, and shortly thereafter I began volunteering.. Initially, I was concerned about having a conflict of interest with the barbershop that I work at once we reopened. I spoke with my manager. Not only was he supportive, he now donates his services, too."
     }
-    // {
-    //     id: 8,
-    //     first: "Rosa",
-    //     last: "Dubkoski",
-    //     email: "demo6@demo.com",
-    //     password: "nucampers123",
-    //     image:"/assets/images/female6.png",
-    //     role: "Dietician"
-    // }
 ]

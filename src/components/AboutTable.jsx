@@ -1,8 +1,7 @@
-import React from 'react';
 import { Row, Col, Card, CardBody, CardHeader } from 'reactstrap';
 import newLogo from '../images/new-logo.svg';
 
-const AboutTable = (props) => {
+const AboutTable = () => {
     return (
         <Col lg={6} className="mb-5 my-lg-auto border-primary">
             <Card className="col my-auto mb-md-0 mt-md-5 mt-lg-0 border-0 px-sm-0 about-card-holder">

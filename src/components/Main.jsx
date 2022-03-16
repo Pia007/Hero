@@ -42,6 +42,7 @@ class Main extends Component {
         this.props.fetchFaqs();
         this.props.fetchVolunteers();
     }
+    
 
     render() {
         // hide footer if user is on the home page
@@ -66,37 +67,37 @@ class Main extends Component {
             <div className='home-bg' >
                 <SEO title={"Host A Healthcare Hero"} content={ "Volunteer to give back to an healtcare hero"}/>
                 <Header />
-                    <ScrollToTop>
-                        <Switch>
-                            <Route path="/home" component={Home} />
-                            <Route exact path="/about" render={() => 
-                                <About sponsors={this.props.sponsors.sponsors} 
-                                    errMess={this.props.sponsors.errMess}
-                                    isLoading={this.props.sponsors.isLoading}
-                                    members={this.props.members.members} 
-                                    membersLoading={this.props.members.isLoading}
-                                    membersErrMess={this.props.members.errMess} 
-                                /> } 
-                            />
-                            <Route exact path="/contact" component={Contact} />
-                            <Route exact path="/involved" component={Involved} />
-                            <Route exact path="/volunteersignup" component={Volunteer} />
-                            <Route exact path="/faqs" render={() => 
-                                <Faqs faqs={this.props.faqs.faqs} 
-                                    faqErrMess={this.props.faqs.errMess}
-                                    faqIsLoading={this.props.faqs.isLoading} 
-                                /> } 
-                            />
-                            <Route exact path="/volunteers" render={() => 
-                                <Volunteers volunteers={this.props.volunteers} 
-                                    volunteersErr={this.props.volunteers.errMess}
-                                    volunteersLoading={this.props.volunteers.isLoading}
-                                />}
-                            />
-                            <Route exact path="/volunteers/:volunteerId" component={VolunteerWithId}/>
-                            <Redirect to="/home" />
-                        </Switch>
-                    </ScrollToTop>
+                <ScrollToTop >
+                    <Switch>
+                        <Route path="/home" component={Home} />
+                        <Route exact path="/about" render={() => 
+                            <About sponsors={this.props.sponsors.sponsors} 
+                                errMess={this.props.sponsors.errMess}
+                                isLoading={this.props.sponsors.isLoading}
+                                members={this.props.members.members} 
+                                membersLoading={this.props.members.isLoading}
+                                membersErrMess={this.props.members.errMess} 
+                            /> } 
+                        />
+                        <Route exact path="/contact" component={Contact} />
+                        <Route exact path="/involved" component={Involved} />
+                        <Route exact path="/volunteersignup" component={Volunteer} />
+                        <Route exact path="/faqs" render={() => 
+                            <Faqs faqs={this.props.faqs.faqs} 
+                                faqErrMess={this.props.faqs.errMess}
+                                faqIsLoading={this.props.faqs.isLoading} 
+                            /> } 
+                        />
+                        <Route exact path="/volunteers" render={() => 
+                            <Volunteers volunteers={this.props.volunteers} 
+                                volunteersErr={this.props.volunteers.errMess}
+                                volunteersLoading={this.props.volunteers.isLoading}
+                            />}
+                        />
+                        <Route exact path="/volunteers/:volunteerId" component={VolunteerWithId}/>
+                        <Redirect to="/home" />
+                    </Switch>
+                </ScrollToTop> 
                 <RenderFooter />
             </div>
         );

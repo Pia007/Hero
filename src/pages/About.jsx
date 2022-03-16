@@ -16,7 +16,7 @@ const RenderAccordionItem = ({ sponsor }) => {
         <Accordion
             name={sponsor.name} 
             description={sponsor.description} 
-            titleHolder={'bg-primary accordion-title px-3 py-3'}
+            titleHolder={'bg-primary accordion-title px-3 py-2'}
         />
     );
 };
@@ -110,9 +110,11 @@ const About = (props) => {
             <SEO title={"About Us | Host A Healthcare Hero"}  description={"description"} content={"About page of website"}/>
             <SiteCrumbs siteLocation={"About"}  />
             <PageTitle pageTitle={"Our Mission"} />
-            <Fade bottom cascade>
+            {/* <Fade bottom cascade> */}
                 <Row className="row-content pt-0">
+                    
                     <Col className="px-sm-0">
+                    <Fade bottom>
                         <p className="text-center text-sky mission-text">
                             Around the world, healthcare workers have been stretched beyond their limits. Many have succumbed to illness 
                             and have been estranged from their loved ones. Right here in northern New Jersey, like most, our healthcare workers
@@ -121,7 +123,9 @@ const About = (props) => {
                             Their well being is just as important as ours. We aim to provide meals, health & wellness, fitness and personal care services free of charge to our 
                             healthcare heroes.
                         </p>
+                        </Fade>
                     </Col>
+                    
                 </Row>
             
                 <SectionBreak />
@@ -137,7 +141,7 @@ const About = (props) => {
                         <Fade bottom cascade>
                             <h2 className="px-3 px-sm-0 text-sky">Our History</h2>
                         </Fade>
-                        
+                        <Fade bottom>
                         <Col className="text-sky mission-text mb-3 px-sm-0 ">
                             It all began in 2010. Sofia Dawson was fresh out of nursing school and headed to her 
                             first job as a nurse. Like many nurses, she was excited to provide care for her patients.
@@ -145,25 +149,31 @@ const About = (props) => {
                             that not only were nurses stressed, overworked  and unhealthy, so were workers from every aspect of 
                             healthcare. 
                         </Col>
+                        </Fade>
                     </Col>
                 </Row>
                 <Row className="pb-lg-4">
-                        <Col className="px-0 pr-xl-3">    
-                        <Col className="text-sky mission-text px-sm-0 mb-3">
-                            Sofia was determined to not just make a difference for her patients but for her coworkers, too. She 
-                            found that many of her coworkers only ate one meal a day. Usually an unhealthy one. Most found it hard to 
-                            sleep after their shifts even though they were on their feet for 12 to 14 hours each day. And, many were in poor health. 
-                            Additonally, she learned that they had very little time for basic personal care. Like a simple haircut.
-                        </Col>
+                    <Col className="px-0 pr-xl-3"> 
+                        <Fade bottom >      
+                            <Col className="text-sky mission-text px-sm-0 mb-3">
+                                Sofia was determined to not just make a difference for her patients but for her coworkers, too. She 
+                                found that many of her coworkers only ate one meal a day. Usually an unhealthy one. Most found it hard to 
+                                sleep after their shifts even though they were on their feet for 12 to 14 hours each day. And, many were in poor health. 
+                                Additonally, she learned that they had very little time for basic personal care. Like a simple haircut.
+                            </Col>
+                        </Fade>
+                        <Fade bottom >
                         <Col className="text-sky mission-text px-sm-0 mb-4">
                             She began researching healthy eating and mindful meditation. Before long, Sofia was sharing this information
                             with her peers. Eventually, this collective sharing included fitness tips.  The core group consisted of five healthcare
                             professionals that branched out and shared health and wellness tips throughout northern New Jersey. They were
                             healthcare heroes.
                         </Col>
+                        </Fade>
                     </Col> 
                     <Row className="flex-lg-row-reverse mb-lg-4 ">
                         <Col className="">
+                            <Fade bottom >
                             <Col className="text-sky mission-text mb-4 mb-md-0 px-sm-0 pr-lg-0">
                                 In 2019, Sofia was given the opportunity to speak at a healthcare symposium. She invited her fellow
                                 heroes to join her. It was at that event, that they decided to make it official. <strong>Host A Healthcare Hero </strong>
@@ -171,6 +181,7 @@ const About = (props) => {
                                 was tested, Host A Healthcare Hero was more determined than ever to provide quality care for patients and 
                                 healthcare workers. The call went out for help, community heroes answered and the rest is history.
                             </Col>
+                            </Fade>
                         </Col> 
                         <AboutTable />
                     </Row>
@@ -209,7 +220,7 @@ const About = (props) => {
                 </Fade>
                 {/* END FOUNDATION */}
                 
-            </Fade>
+            {/* </Fade> */}
         </div>
     );
 }

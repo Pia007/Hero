@@ -1,4 +1,3 @@
-import React from 'react';
 import Fade from 'react-reveal/Fade';
 import logo from '../images/new-logo-lp.svg';
 import { Link } from 'react-router-dom';

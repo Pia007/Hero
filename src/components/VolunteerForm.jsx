@@ -204,6 +204,7 @@ class VolunteerForm extends Component {
                                     <Input type="text" htmlFor="fName" name="fName" id="fName" 
                                         className="contact-input "
                                         placeholder="First Name" 
+                                        aria-label="First Name"
                                         value={this.state.fName} 
                                         invalid={!!errors.fName}
                                         onBlur={this.handleBlur("fName")} 
@@ -218,6 +219,7 @@ class VolunteerForm extends Component {
                                     <Input type="text" htmlFor="lName"name="lName" id="lName" 
                                         className="contact-input"
                                         placeholder="Last Name" 
+                                        aria-label="Last Name"
                                         value={this.state.lName} 
                                         invalid={!!errors.lName}
                                         onBlur={this.handleBlur("lName")} 
@@ -232,6 +234,7 @@ class VolunteerForm extends Component {
                                     <Input type="text" htmlFor="address1"name="address1" id="address1" 
                                         className="contact-input"
                                         placeholder="Steet Address" 
+                                        aria-label="Street Address"
                                         value={this.state.address1} 
                                         invalid={!!errors.address1}
                                         onBlur={this.handleBlur("address1")} 
@@ -247,6 +250,7 @@ class VolunteerForm extends Component {
                                     <Input type="text" htmlFor="city" name="city" id="city" 
                                         className="contact-input"
                                         placeholder="City" 
+                                        aria-label="City"
                                         value={this.state.city} 
                                         invalid={!!errors.city}
                                         onBlur={this.handleBlur("city")} 
@@ -260,6 +264,7 @@ class VolunteerForm extends Component {
                                     <Input type="text" htmlFor="userState" name="userState" id="userState" 
                                         className="contact-input"
                                         placeholder="State" 
+                                        aria-label="State"
                                         value={this.state.userState}
                                         invalid={!!errors.userState}
                                         onBlur={this.handleBlur("userState")}
@@ -272,6 +277,7 @@ class VolunteerForm extends Component {
                                     <Input type="text" htmlFor="zip" name="zip" id="zip" 
                                         className="contact-input"
                                         placeholder="Postal Code" 
+                                        aria-label="Postal Code"
                                         value={this.state.zip} 
                                         invalid={!!errors.zip}
                                         onBlur={this.handleBlur("zip")} 
@@ -286,6 +292,7 @@ class VolunteerForm extends Component {
                                     <Input type="tel" htmlFor="phonNum" name="phone" id="phone"
                                         className="contact-input" 
                                         placeholder="Phone Number" 
+                                        aria-label="Phone Number"
                                         value={this.state.phone}
                                         invalid={!!errors.phone} 
                                         onBlur={this.handleBlur("phone")} 
@@ -297,6 +304,7 @@ class VolunteerForm extends Component {
                                     <Input type="email" htmlFor="email"name="email" id="email" 
                                         className="contact-input"
                                         placeholder="Email" 
+                                        aria-label="Email"
                                         value={this.state.email}
                                         invalid={!!errors.email}
                                         onBlur={this.handleBlur("email")} 
@@ -415,6 +423,7 @@ class VolunteerForm extends Component {
                                         className="contact-input"
                                         rows="12"
                                         placeholder="Is there anything else you'd like to tell us?"
+                                        aria-label="Is there anything else you'd like to tell us?"
                                         value={this.state.feedback} 
                                         onChange={this.handleChange}>
                                     </Input>
