@@ -233,6 +233,7 @@ class ContactForm extends Component {
                                 <Col md={12}>
                                     <Input type="textarea" htmlFor="feedback" id="feedback" name="feedback" 
                                         className="contact-input"
+                                        aria-label="feedback"
                                         rows="12"
                                         value={this.state.feedback} 
                                         onChange={this.handleChange}>
