@@ -75,6 +75,7 @@
 <img src="https://img.shields.io/badge/-Bootswatch-285d95?style=plastic" /></a>
 
 <h2 style="color: #3CB521"> Installation</h2>
+
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) version 16.13.2. From your command line:
 
 ```bash
