@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ToastContainer, toast, Zoom } from 'react-toastify';
 import { Row, Col, FormGroup, Form, Input, Label, FormFeedback } from 'reactstrap';
 import Buttons from './Buttons';
-import Fade from 'react-reveal/Fade';
+import { FadeTransform } from 'react-animation-components';
 
 const volunteerToastId = 'contact-toast-id';
 class VolunteerForm extends Component {
@@ -190,11 +190,16 @@ class VolunteerForm extends Component {
         return (
             <div className="container">
                 <Row className="row-content">
-                    <Col xs={12}>
-                        <Fade bottom cascade>
+                    <FadeTransform 
+                            in
+                            transformProps={{
+                                exitTransform: 'scale(0.5) translateY(0%)'
+                        }}
+                    > 
+                        <Col xs={12}>
                             <h2 className="text-sky">Join us!</h2>
-                        </Fade>
-                    </Col>
+                        </Col>
+                    </FadeTransform>
                     
                     {/* Form */}
                     <Col md={12}>

@@ -1,6 +1,6 @@
 import { Breadcrumb, BreadcrumbItem, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import Fade from 'react-reveal/Fade';
+import { FadeTransform } from 'react-animation-components';
 
 export const SiteCrumbs = ({ siteLocation }) => {
     return (
@@ -14,9 +14,15 @@ export const SiteCrumbs = ({ siteLocation }) => {
 export const PageTitle = ({ pageTitle }) => {
     return (
         <div className="container-fluid">
-            <Fade bottom cascade>
+            <FadeTransform 
+                in
+                transformProps={{
+                    exitTransform: 'scale(0.5) translateY(0%)'
+            }}
+        > 
                 <h1 className="text-center text-sky">{pageTitle}</h1>
-            </Fade>
+            {/* </Fade> */}
+        </FadeTransform>
         </div>
     );
 }

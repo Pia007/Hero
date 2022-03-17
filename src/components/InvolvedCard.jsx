@@ -1,6 +1,5 @@
 import React from 'react';
 import InvolvedModal from './InvolvedModal';
-import Fade from 'react-reveal/Fade';
 import { Row, Col} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
@@ -24,9 +23,9 @@ const InvolvedCard =({
         <React.Fragment >
             <Row className={className}>
                 <Col lg={6} className="my-auto text-sky" >
-                    <Fade bottom cascade>
+                    {/* <Fade bottom cascade> */}
                         <h2 className="text-sky">{title}</h2>
-                    </Fade>
+                    {/* </Fade> */}
                         <p className="mission-text ">{contentOne}<Link to='/contact' style={{textDecoration: 'underline'}}>contact us</Link>.</p>
                         <p className="mission-text ">
                             {contentThree}<Link to='/faqs' style={{textDecoration: 'underline'}}>FAQs</Link>. 
@@ -43,7 +42,7 @@ const InvolvedCard =({
                     />
                 </Col>
                 <Col lg={6}>
-                    <img className="col d-flex my-4 my-lg-0 mr-3 img-fluid p-0 img-thumbnail" src={imageSrc} alt={imageName} />
+                    <img className="col d-flex my-4 my-lg-5 mr-3 img-fluid p-0 img-thumbnail" src={imageSrc} alt={imageName} />
                 </Col> 
             </Row>
         </React.Fragment>

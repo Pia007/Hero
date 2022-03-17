@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col, FormGroup, Form, Input, FormFeedback } from 'reactstrap';
 import { ToastContainer, toast, Zoom } from 'react-toastify';
-import Fade from 'react-reveal';
 import Buttons from './Buttons';
+import { FadeTransform } from 'react-animation-components';
 
 const contactToastId = 'contact-toast-id';
 class ContactForm extends Component {
@@ -129,11 +129,16 @@ class ContactForm extends Component {
         return (
             <div className="container text-primary">
                 <Row className="row-content">
-                    <Col md={12} >
-                        <Fade bottom cascade>
+                    <FadeTransform 
+                            in
+                            transformProps={{
+                                exitTransform: 'scale(0.5) translateY(0%)'
+                        }}
+                    > 
+                        <Col md={12} >
                             <h2 className="text-sky">We want to hear from you!</h2>
-                        </Fade>
-                    </Col>
+                        </Col>
+                    </FadeTransform>
                     {/* Form */}
                     <Col md={12} >
                         <Form onSubmit={this.handleSubmit} tabIndex={1} className="mission-text p-3 form text-primary">

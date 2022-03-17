@@ -14,16 +14,15 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/Pia007/Hero/commits/main">
+    <!-- <a href="https://github.com/Pia007/Hero/commits/main">
     <img src="https://img.shields.io/github/last-commit/Pia007/Hero?style=plastic&logo=github&labelColor=white"
          alt="GitHub last commit"></a>
     <img src="https://img.shields.io/github/commit-activity/w/Pia007/Hero?style=plastic&logo=github&logoColor=white"
          alt="Hero commits">
     <img src="https://img.shields.io/github/languages/count/Pia007/Hero?style=plastic" alt="languages"/>
-    <a href="https://twitter.com/intent/tweet?text=Checkout FeenixRizn:&url=https%3A%2F%2Fgithub.com%2FPia007C%2FHero">
-    <img src="https://img.shields.io/twitter/url/https/github.com/Pia007/Hero.svg?style=plastic&logo=twitter"
-         alt="GitHub tweet">
-    
+     Pia007C%2FHero">
+    <img src="https://img.shields.io/twitter/url?logo=Twitter&style=plastic&url=https%3A%2F%2Ftwitter.com%2F"
+         alt="GitHub tweet">  -->
 </p>
 
 <p align="center">
@@ -49,8 +48,8 @@
 
 <h2 style="color: #3CB521">Technologies </h2>
 
-<img src="https://img.shields.io/github/languages/top/Pia007/ Hero?style=plastic&logo=github&logoColor=white" alt="Hero languages">
-<img src="https://img.shields.io/github/languages/count/Pia007/Hero?style=plastic&logo=github&logoColor=white" alt="languages"/>
+<!-- <img src="https://img.shields.io/github/languages/top/Pia007/ Hero?style=plastic&logo=github&logoColor=white" alt="Hero languages">
+<img src="https://img.shields.io/github/languages/count/Pia007/Hero?style=plastic&logo=github&logoColor=white" alt="languages"/> -->
 
 
 <a href="https://reactjs.org/" alt="react documentation"><img src="https://img.shields.io/badge/-React-61DBFB?style=plastic&labelColor=black&logo=react&logoColor=61DBFB"/></a>
