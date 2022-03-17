@@ -20,7 +20,7 @@
     <img src="https://img.shields.io/github/commit-activity/w/Pia007/Hero?style=plastic&logo=github&logoColor=white"
          alt="Hero commits">
     <img src="https://img.shields.io/github/languages/count/Pia007/Hero?style=plastic" alt="languages"/>
-    <a href="https://twitter.com/intent/tweet?text=Try this CS:GO AutoExec:&url=https%3A%2F%2Fgithub.com%2FArmynC%2FArminC-AutoExec">
+    <a href="https://twitter.com/intent/tweet?text=Checkout FeenixRizn:&url=https%3A%2F%2Fgithub.com%2FPia007C%2FHero">
     <img src="https://img.shields.io/twitter/url/https/github.com/Pia007/Hero.svg?style=plastic&logo=twitter"
          alt="GitHub tweet">
     
