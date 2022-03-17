@@ -2,17 +2,17 @@ export const SPONSORS = [
     {
         id: 0,
         name: "Alpha Food Services, Inc.",
-        description: "Alpha Food Services, Inc., is a family business that has proudly served northern New Jersey for over 75 years. Over the years the business has grown to include 8 restaurants, 4 food trucks, 2 food distribution warehouses and a food pantry. When the pandemic hit, Alpha Food Services was able to assist in mediating the food crisis. They have partnered with Host A Healthcare Hero to provide health meals to healthcare workers."
+        description: "Alpha Food Services, Inc., is a family business that has proudly served northern New Jersey for over 75 years. Over the years the business has grown to include 8 restaurants, 4 food trucks, 2 food distribution warehouses and a food pantry. When the pandemic hit, Alpha Food Services was able to assist in mediating the food crisis. They have partnered with Host a Healthcare Hero to provide health meals to healthcare workers."
     },
     {
         id: 1,
         name:"Choprah Health & Wellness, LLC.",
-        description: "Choprah Health & Wellness, LLC., is a non-profit health and wellness center that provides free mental health and holistic services to the community. They have been in service for 30 years and have partnered with Host A Healthcare Hero to provide free mental health and holistic services to healthcare workers."
+        description: "Choprah Health & Wellness, LLC., is a non-profit health and wellness center that provides free mental health and holistic services to the community. They have been in service for 30 years and have partnered with Host a Healthcare Hero to provide free mental health and holistic services to healthcare workers."
     },
     {
         id: 2,
         name:"Cutz 4 All, LLC.",
-        description: "Cutz 4 All, LLC., has proudly served northern New Jersey for over 25 years. Over the years, with 5 locations, they have worked with several foundations to provide grooming services for cancer patients, disabled Americans and victims of domestic violence. They are dedicated to working with Host A Healthcare Hero to extend free services to healthcare workers."
+        description: "Cutz 4 All, LLC., has proudly served northern New Jersey for over 25 years. Over the years, with 5 locations, they have worked with several foundations to provide grooming services for cancer patients, disabled Americans and victims of domestic violence. They are dedicated to working with Host a Healthcare Hero to extend free services to healthcare workers."
     },
     {
         id: 3,

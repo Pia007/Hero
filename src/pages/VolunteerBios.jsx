@@ -57,7 +57,7 @@ const VolunteerBio = (props) => {
     if(props.volunteer) {
         return (
             <div className="container">
-                <SEO title={ ` ${props.volunteer.first} | Host A Healthcare Hero`}  description={"description"} content={`Biography of volunteer ${props.volunteer.first}`}/>
+                <SEO title={ ` ${props.volunteer.first} | Host a Healthcare Hero`}  description={"description"} content={`Biography of volunteer ${props.volunteer.first}`} />
                 <PageHeader siteLocation={props.volunteer.first} pageTitle={`Meet ${props.volunteer.first}`} />
                 <div className="meet-holder"> 
                     <RenderVolunteer volunteer={props.volunteer}/>

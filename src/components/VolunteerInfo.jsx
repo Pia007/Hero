@@ -9,7 +9,7 @@ const VolunteerInfo = () => {
                 <Row className="row-content pb-0 ">
                     <Col md={7} className="text-sky">
                         <p className="mission-text">
-                            We are excited about your interest in becoming a <strong>Host A Healthcare Hero</strong> volunteer. 
+                            We are excited about your interest in becoming a <strong>Host a Healthcare Hero</strong> volunteer. 
                             Our volunteer community is constantly growing and we are looking for volunteers who are passionate about 
                             showing healthcare workers their appreciation. 
                         </p>

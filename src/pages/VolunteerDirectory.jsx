@@ -59,7 +59,7 @@ const Volunteers = (props) => {
 
     return (
         <div className="container">
-            <SEO title={"Volunteer Spotlight | Host A Healthcare Hero"}  description={"description"} content={"Spotlight on a few of the volunteers"}/>
+            <SEO title={"Volunteer Spotlight | Host a Healthcare Hero"}  description={"description"} content={"Spotlight on a few of the volunteers"} />
             <PageHeader siteLocation={"Spotlight"} pageTitle={"Volunteer Spotlight"} />
             <p className='text-center text-success mb-0 spotlight-intro'>
                 To get an idea of who our volunteers are, click on an image to find out more about any of these amazing people.

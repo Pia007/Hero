@@ -29,7 +29,7 @@ const InvolvedBody = () => {
             <Fade right>
                 <InvolvedCard className={"row row-content flex-lg-row-reverse"}
                     title={"Sponsor Us"}
-                    contentOne={"Host A Healthcare Hero is a non-profit organization. We are funded 100% by the generosity of our Mission Sponsors. We are looking for sponsors to help us grow our mission. If you or your organization are interested in becoming a Mission Sponsor, please "}
+                    contentOne={"Host a Healthcare Hero is a non-profit organization. We are funded 100% by the generosity of our Mission Sponsors. We are looking for sponsors to help us grow our mission. If you or your organization are interested in becoming a Mission Sponsor, please "}
                     contentThree={"Click the button below to learn more, or, review our "}
                     imageSrc={sponImg}
                     imageName={"sponsor image"}
@@ -52,7 +52,7 @@ const InvolvedBody = () => {
                     imageSrc={donImg}
                     imageName={"donations image"}
                     modalHeaderText={"Donations"}
-                    modalBodyText={"We do not ask for monetary donations from individual donors. However, we do ask for other donations from individuals and organizations that are willing to donate to Host A Healthcare Hero. "}
+                    modalBodyText={"We do not ask for monetary donations from individual donors. However, we do ask for other donations from individuals and organizations that are willing to donate to Host a Healthcare Hero. "}
                     modalBodyTextTwo={"I know this is hard to believe but we simply prefer that you donate time, food items, fitness equipment, personal care products...etc. You can even host a food drive!"}
                     modalBodyTextThree={"To find out more about donating, please click the button below to contact us."}
                     value={"Go"}

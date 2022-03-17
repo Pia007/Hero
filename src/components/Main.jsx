@@ -65,7 +65,7 @@ class Main extends Component {
         return (
             
             <div className='home-bg' >
-                <SEO title={"Host A Healthcare Hero"} content={ "Volunteer to give back to an healtcare hero"}/>
+                <SEO title={"Host a Healthcare Hero"} content={ "Volunteer to give back to an healtcare hero"}/>
                 <Header />
                 <ScrollToTop >
                     <Switch>

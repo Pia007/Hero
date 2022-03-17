@@ -202,6 +202,7 @@ class VolunteerForm extends Component {
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="text" htmlFor="fName" name="fName" id="fName" 
+                                        tabIndex={1}
                                         className="contact-input "
                                         placeholder="First Name" 
                                         aria-label="First Name"
@@ -217,6 +218,7 @@ class VolunteerForm extends Component {
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="text" htmlFor="lName"name="lName" id="lName" 
+                                        tabIndex={2}
                                         className="contact-input"
                                         placeholder="Last Name" 
                                         aria-label="Last Name"
@@ -231,7 +233,8 @@ class VolunteerForm extends Component {
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="text" htmlFor="address1"name="address1" id="address1" 
+                                    <Input type="text" htmlFor="address1"name="address1" id="address1"
+                                        tabIndex={3} 
                                         className="contact-input"
                                         placeholder="Steet Address" 
                                         aria-label="Street Address"
@@ -248,6 +251,7 @@ class VolunteerForm extends Component {
                             <FormGroup row>
                                 <Col md={4} className="mb-3 mb-md-0">
                                     <Input type="text" htmlFor="city" name="city" id="city" 
+                                        tabIndex={4}
                                         className="contact-input"
                                         placeholder="City" 
                                         aria-label="City"
@@ -262,6 +266,7 @@ class VolunteerForm extends Component {
                             
                                 <Col md={4} className="mb-3 mb-md-0">
                                     <Input type="text" htmlFor="userState" name="userState" id="userState" 
+                                        tabIndex={5}
                                         className="contact-input"
                                         placeholder="State" 
                                         aria-label="State"
@@ -275,6 +280,7 @@ class VolunteerForm extends Component {
                                 </Col>
                                 <Col md={4} >
                                     <Input type="text" htmlFor="zip" name="zip" id="zip" 
+                                        tabIndex={6}
                                         className="contact-input"
                                         placeholder="Postal Code" 
                                         aria-label="Postal Code"
@@ -290,6 +296,7 @@ class VolunteerForm extends Component {
                             <FormGroup row>
                                 <Col md={6} className="mb-3 mb-md-0">
                                     <Input type="tel" htmlFor="phonNum" name="phone" id="phone"
+                                        tabIndex={7}
                                         className="contact-input" 
                                         placeholder="Phone Number" 
                                         aria-label="Phone Number"
@@ -302,6 +309,7 @@ class VolunteerForm extends Component {
                                 </Col>
                                 <Col md={6}>
                                     <Input type="email" htmlFor="email"name="email" id="email" 
+                                        tabIndex={8}
                                         className="contact-input"
                                         placeholder="Email" 
                                         aria-label="Email"
@@ -322,6 +330,7 @@ class VolunteerForm extends Component {
                                             <FormGroup check className="custom-control custom-checkbox ">
                                                 <Input 
                                                     type="checkbox" 
+                                                    tabIndex={9}
                                                     id="food" 
                                                     name="food" 
                                                     className="custom-control-input "
@@ -333,6 +342,7 @@ class VolunteerForm extends Component {
                                             </FormGroup>
                                             <FormGroup check className="custom-control custom-checkbox ">
                                                 <Input type="checkbox" 
+                                                    tabIndex={10}
                                                     id="health" 
                                                     name="health" 
                                                     className="custom-control-input" 
@@ -346,6 +356,7 @@ class VolunteerForm extends Component {
                                         <Col xs={6} lg={3}>
                                             <FormGroup check className="custom-control custom-checkbox ">
                                                 <Input type="checkbox" 
+                                                    tabIndex={11}
                                                     id="personal" 
                                                     name="personal" 
                                                     className="custom-control-input" 
@@ -357,6 +368,7 @@ class VolunteerForm extends Component {
                                             </FormGroup>
                                             <FormGroup check className="custom-control custom-checkbox ">
                                                 <Input type="checkbox" 
+                                                    tabIndex={12}
                                                     id="fitness" 
                                                     name="fitness" 
                                                     className="custom-control-input" 
@@ -370,6 +382,7 @@ class VolunteerForm extends Component {
                                         <Col xs={6} lg={3}>
                                             <FormGroup check className="custom-control custom-checkbox ">
                                                 <Input type="checkbox" 
+                                                    tabIndex={13}
                                                     id="fundraise" 
                                                     name="fundraise" 
                                                     className="custom-control-input" 
@@ -380,7 +393,8 @@ class VolunteerForm extends Component {
                                                 <Label check className="custom-control-label label-interests" htmlFor="fundraise">Fundraising</Label>
                                             </FormGroup>
                                             <FormGroup check className="custom-control custom-checkbox ">
-                                                <Input type="checkbox" 
+                                                <Input type="checkbox"
+                                                    tabIndex={14} 
                                                     id="events" 
                                                     name="events" 
                                                     className="custom-control-input"
@@ -394,6 +408,7 @@ class VolunteerForm extends Component {
                                         <Col xs={6} lg={3}>
                                             <FormGroup check className="custom-control custom-checkbox ">
                                                 <Input type="checkbox" 
+                                                    tabIndex={15}
                                                     id="delivery" 
                                                     name="delivery" 
                                                     className="custom-control-input" 
@@ -405,6 +420,7 @@ class VolunteerForm extends Component {
                                             </FormGroup>
                                             <FormGroup check className="custom-control custom-checkbox ">
                                                 <Input type="checkbox" 
+                                                    tabIndex={16}
                                                     id="other" name="other" 
                                                     className="custom-control-input" 
                                                     checked={this.state.other}
@@ -420,6 +436,7 @@ class VolunteerForm extends Component {
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="textarea" htmlFor="feedback" id="feedback" name="feedback" 
+                                        tabIndex={17}
                                         className="contact-input"
                                         rows="12"
                                         placeholder="Is there anything else you'd like to tell us?"

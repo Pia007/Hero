@@ -9,7 +9,7 @@ const ContactInfo = () =>{
             <Fade bottom cascade>
                 <Row className="row-content pb-0 mb-4">
                     <Col md={7} className="mission-text">
-                        <p><strong>Host A Healthcare Hero</strong> relies heavily on the strength of Mission Sponsors and
+                        <p><strong>Host a Healthcare Hero</strong> relies heavily on the strength of Mission Sponsors and
                             volunteers to provide healthcare heroes with appreciative care. We'd love to hear your thoughts, concerns and ideas.
                         </p>
                         <p>
@@ -17,7 +17,7 @@ const ContactInfo = () =>{
                             you are welcome to review our <Link to='/faqs' style={{textDecoration: 'underline'}}>FAQs</Link>.
                         </p>
                         <p>
-                            Thank you for your interest in Host A Healthcare Hero!
+                            Thank you for your interest in Host a Healthcare Hero!
                         </p>
                         <p>
                             Lorem ipsum, Executive Director
