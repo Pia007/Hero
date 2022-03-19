@@ -59,11 +59,18 @@ const Volunteers = (props) => {
 
     return (
         <div className="container">
-            <SEO title={"Volunteer Spotlight | Host a Healthcare Hero"}  description={"description"} content={"Spotlight on a few of the volunteers"} />
+            <SEO title={"Volunteer Spotlight | Host a Healthcare Hero"}  description={"Spotlight on a few of the volunteers"} />
             <PageHeader siteLocation={"Spotlight"} pageTitle={"Volunteer Spotlight"} />
-            <p className='text-center text-success mb-0 spotlight-intro'>
-                To get an idea of who our volunteers are, click on an image to find out more about any of these amazing people.
-            </p>
+            <FadeTransform 
+                in
+                transformProps={{
+                    exitTransform: 'scale(0.5) translateY(0%)'
+                }}
+            > 
+                <p className='text-center text-success mb-0 spotlight-intro'>
+                    To get an idea of who our volunteers are, click on an image to find out more about any of these amazing people.
+                </p>
+            </FadeTransform>
             <Row className='row-content justify-content-around my-6'>
                 {volunteers}
             </Row>

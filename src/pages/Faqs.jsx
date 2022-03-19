@@ -120,7 +120,7 @@ const Faqs = (props) => {
     return (
         
         <div className='container'>
-            <SEO title={"FAQs | Host a Healthcare Hero"}  description={"description"} content={"Faqs page of the website"}/>
+            <SEO title={"FAQs | Host a Healthcare Hero"}  description={"Faqs page of the website"} />
             <div className='container-fluid home-bg ' id='faq'>
                 <PageHeader siteLocation={"FAQs"}  />
                 <FaqHeader />

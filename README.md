@@ -13,6 +13,10 @@
     <img src="https://img.shields.io/netlify/95d95814-5c95-444a-8558-0f9258bb6626?style=plastic&logo=netlify" alt="netlify status" >
 </p>
 
+<a href="https://twitter.com/home" target="_blank">
+    <img src="https://img.shields.io/twitter/url?style=flat-square&logo=twitter&url=https://twitter.com/home" alt="GitHub tweet">
+</a>
+
 <p align="center">
     <!-- <a href="https://github.com/Pia007/Hero/commits/main">
     <img src="https://img.shields.io/github/last-commit/Pia007/Hero?style=plastic&logo=github&labelColor=white"
@@ -36,7 +40,7 @@
 
 <h2 style="color: #3CB521"> About </h2>
 
-[**Host a Healthcare Hero**](https://hostahealtcarehero.netlify.app/) is a web application that describes the goals and mission of a non-profit organization that partners with local businesses and volunteers to provide health, wellness, and personal care services to healthcare workers from all levels of the healthcare system. 
+[**Host a Healthcare Hero**](https://hostahealtcarehero.netlify.app/) is a single-page application(SPA) that describes the goals and mission of a non-profit organization that partners with local businesses and volunteers to provide health, wellness, and personal care services to healthcare workers from all levels of the healthcare system. 
 
 <br />
 
@@ -44,6 +48,11 @@
 </a>
 
 <br />
+
+<h3 style="color: #3CB521"> Live Demo </h3>
+
+[**Host a Healthcare Hero**](https://hostahealtcarehero.netlify.app/) is hosted on Netlify.
+
 
 
 <h2 style="color: #3CB521">Technologies </h2>
@@ -94,9 +103,9 @@ $ npm start or yarn start
 <h2 style="color: #3CB521">FAQs</h2>
 
 **1. Is the organization an actual organization?** <br/>
-No. Host a Healthcare Hero is not a real organization. <br/>
+No. Host a Healthcare Hero is not a real organization. Although, the overall content is based on the experiences of actual healthcare workers that were kind enough to provide insight.<br/>
 
-**2. What's the purpose in building this web application.** <br/>
+**2. What's the purpose of building this web application.** <br/>
 This application is a software development student project that focuses on the use of the [React](https://reactjs.org/) library, [Redux](https://react-react.js.org/) state management and [Bootstrap](https://getbootstrap.com/) framework. <br/>
 
 **3. How was the subject matter selected?** <br/>

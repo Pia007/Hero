@@ -107,7 +107,7 @@ const About = (props) => {
 
     return (
         <div className="container" style={{overflowX: 'hidden'}}>
-            <SEO title={"About Us | Host a Healthcare Hero"}  description={"description"} content={"About page of website"}/>
+            <SEO title={"About Us | Host a Healthcare Hero"}  description={"About page of website"} />
             <SiteCrumbs siteLocation={"About"}  />
             <PageTitle pageTitle={"Our Mission"} />
             <Row className="row-content pt-0">

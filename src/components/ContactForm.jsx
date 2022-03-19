@@ -141,11 +141,10 @@ class ContactForm extends Component {
                     </FadeTransform>
                     {/* Form */}
                     <Col md={12} >
-                        <Form onSubmit={this.handleSubmit} tabIndex={1} className="mission-text p-3 form text-primary">
+                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 form text-primary">
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="text" htmlFor="firstName" name="firstName" id="firstName"
-                                        tabIndex={1} 
                                         className="contact-input "
                                         placeholder="First Name" 
                                         aria-label="First Name"
@@ -161,7 +160,6 @@ class ContactForm extends Component {
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="text" htmlFor="lastName"name="lastName" id="lastName" 
-                                        tabIndex={2}
                                         className="contact-input"
                                         placeholder="Last Name" 
                                         aria-label="Last Name"
@@ -177,7 +175,6 @@ class ContactForm extends Component {
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="tel" htmlFor="phonNum" name="phoneNum" id="phoneNum"
-                                        tabIndex={3}
                                         className="contact-input" 
                                         placeholder="Phone Number" 
                                         aria-label="Phone Number"
@@ -193,7 +190,6 @@ class ContactForm extends Component {
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="email" htmlFor="email"name="email" id="email" 
-                                        tabIndex={4}
                                         className="contact-input"
                                         placeholder="Email" 
                                         aria-label="Email"
@@ -210,7 +206,6 @@ class ContactForm extends Component {
                                 <Col md={5}>
                                     <Input type="select" name="contactType" 
                                         id="contactType"
-                                        tabIndex={5}
                                         className="contact-input"
                                         value={this.state.contactType}
                                         onChange={this.handleChange}
@@ -228,7 +223,6 @@ class ContactForm extends Component {
                                 <Col md={5}>
                                     <Input type="select" name="subject"
                                         id="subject"
-                                        tabIndex={6}
                                         className="contact-input "
                                         value={this.state.subject}
                                         onChange={this.handleChange}
@@ -244,7 +238,6 @@ class ContactForm extends Component {
                             <FormGroup row>
                                 <Col md={12}>
                                     <Input type="textarea" htmlFor="feedback" id="feedback" name="feedback"
-                                        tabIndex={7} 
                                         className="contact-input"
                                         aria-label="feedback"
                                         rows="12"

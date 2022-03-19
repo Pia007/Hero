@@ -42,7 +42,7 @@ const InvolvedCard =({
                     />
                 </Col>
                 <Col lg={6}>
-                    <img className="col d-flex my-4 my-lg-5 mr-3 img-fluid p-0 img-thumbnail" src={imageSrc} alt={imageName} />
+                    <img className="col d-flex my-4 my-lg-5 mr-3 img-fluid p-0 img-thumbnail" style={{maxWidth: "525px", maxHeight: "395px"}}src={imageSrc} alt={imageName} />
                 </Col> 
             </Row>
         </React.Fragment>

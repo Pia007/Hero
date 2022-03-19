@@ -13,20 +13,26 @@ export const Intro= () => {
                 </p>
                 
                 <h1 className="sub-text align-self-center font-weight-bold text-sky d-md-none mb-3">
-                    <Fade bottom cascade>
+                    {/* <Fade bottom cascade> */}
                         <span className=''>H</span>
-                    </Fade>
-                    <Fade bottom cascade>
+                    {/* </Fade>
+                    <Fade bottom cascade> */}
                             <img src={logo}  alt="logo" className="img-fluid lp-logo" />
-                    </Fade>
-                    <Fade bottom cascade>
+                    {/* </Fade>
+                    <Fade bottom cascade> */}
                         <span className=''>st</span> 
-                    </Fade>
+                    {/* </Fade> */}
                     <br />
-                    <Fade bottom cascade ><span>a</span></Fade>
+                    {/* <Fade bottom cascade > */}
+                        <span>a</span>
+                        {/* </Fade> */}
                     <br />   
-                    <Fade bottom cascade>Healthcare</Fade> 
-                    <Fade bottom cascade>Hero</Fade> 
+                    {/* <Fade bottom cascade> */}
+                        Healthcare
+                        {/* </Fade>  */}
+                    {/* <Fade bottom cascade> */}
+                        Hero
+                        {/* </Fade>  */}
                 </h1>
                 <Fade bottom cascade>
                     <Link to="/about" className=" text-center btn btn-lg btn-outline-success" > Find Out More </Link> 
