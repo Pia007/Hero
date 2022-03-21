@@ -12,6 +12,7 @@ export const Intro= () => {
                     </Fade>
                 </p>
                 
+                {/* mobile intro */}
                 <h1 className='sub-text align-self-center font-weight-bold d-md-none mb-3'>
                     <span style={{color: '#96c0ee'}}>H</span>
                         <img src={logo}  alt='logo' className='img-fluid lp-logo' />
@@ -20,6 +21,7 @@ export const Intro= () => {
                     <span style={{color: '#96c0ee'}}>a
                     <br />
                         Healthcare
+                        <br />
                         Hero
                     </span>
                 </h1>

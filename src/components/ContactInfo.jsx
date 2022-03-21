@@ -6,7 +6,6 @@ import Fade from 'react-reveal/Fade';
 const ContactInfo = () =>{
     return (
         <div className='container'>
-            {/* Contact Info */}
             <Fade bottom cascade> 
                 <Row className='row-content pb-0 mb-4'>
                     <Col md={7} className='mission-text'>
@@ -46,7 +45,6 @@ const ContactInfo = () =>{
                 </Row>
             </Fade>
         </div>
-    
     );
 }
 

@@ -1,5 +1,5 @@
 import { SEO } from '../components/SEO';
-import PageHeader from '../components/PageHeader';
+import { PageHeader }from '../components/PageElements';
 import ContactInfo from '../components/ContactInfo';
 import ContactForm from '../components/ContactForm';
 

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
+import { PageHeader }from '../components/PageElements';
 import { Accordion} from '../components/Accordion';
 import { Loading } from '../components/Loading';
+import { SectionTitle } from '../components/PageElements';
 import { Row, Col} from 'reactstrap';
 import { FadeTransform } from 'react-animation-components';
-import  PageHeader from '../components/PageHeader';
 import Fade from 'react-reveal/Fade';
 
 
@@ -20,41 +21,27 @@ const RenderFaq = ({ faq }) => {
 }
 
 const RenderFaqSection = ({ faqTitle, factType }) => {
-
     return (
         <div className='container p-0 mt-3'>
-            <FadeTransform 
-                in
-                transformProps={{
-                    exitTransform: 'scale(0.5) translateY(0%)'
-            }}>
-                <Row className='row-content ' >
-                    <Col xs={12} className='px-sm-0'>
-                        <Fade bottom cascade>
-                            <h2 className='text-success my-3'>{faqTitle}</h2>
-                        </Fade>
-                    </Col>
-                    <Col xs={12} className='p-0'>
-                        {factType}
-                    </Col>
-                </Row>
-            </FadeTransform>
+            <Row className='row-content ' >
+                <Col xs={12} className='px-sm-0'>
+                    <SectionTitle sectionTitle={faqTitle} />
+                </Col>
+                <Col xs={12} className='p-0'>
+                    {factType}
+                </Col>
+            </Row>
         </div>
     );
 }
 
 const FaqHeader = () => {
     return (
-        <FadeTransform 
-            in
-            transformProps={{
-                exitTransform: 'scale(0.5) translateY(0%)'
-            }}
-        >
+        <Fade bottom cascade>
             <div className='container text-center'>
                 <h1 style={{color: '#96c0ee'}}> Frequently <br /> Asked Questions</h1>
             </div>
-        </FadeTransform>
+        </Fade>
     );
 }
 

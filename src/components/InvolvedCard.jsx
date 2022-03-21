@@ -1,5 +1,6 @@
 import React from 'react';
 import InvolvedModal from './InvolvedModal';
+import { SectionTitle }from '../components/PageElements';
 import { Row, Col} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
@@ -23,7 +24,7 @@ const InvolvedCard =({
         <React.Fragment >
             <Row className={className}>
                 <Col lg={6} className='my-auto' >
-                    <h2 style={{color: '#96c0ee'}}>{title}</h2>
+                <SectionTitle sectionTitle={title} className='px-3 px-sm-0'/>
                     <p className='mission-text '>{contentOne}<Link to='/contact' style={{textDecoration: 'underline'}}>contact us</Link>.</p>
                     <p className='mission-text '>
                         {contentThree}<Link to='/faqs' style={{textDecoration: 'underline'}}>FAQs</Link>. 

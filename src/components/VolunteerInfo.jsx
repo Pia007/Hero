@@ -18,7 +18,7 @@ const VolunteerInfo = () => {
                             In the meantime, you can review our <Link to='/faqs' style={{textDecoration: 'underline'}}>FAQs</Link> or <Link to='/contact' style={{textDecoration: 'underline'}}>contact us</Link>.
                         </p>
                         <p className='mission-text'>
-                            We're look forward to you becoming a volunteer!
+                            We're look forward to you becoming a Hero Volunteer!
                         </p>
                         <p className='mission-text'>
                             Lorem ipsum, Volunteer Manager

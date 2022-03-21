@@ -1,17 +1,35 @@
 import {  SEO } from '../components/SEO';
-import { SiteCrumbs } from '../components/PageHeader';
-import { PageTitle } from '../components/PageHeader';
+import { SiteCrumbs } from '../components/PageElements';
+import { PageTitle } from '../components/PageElements';
 import { Loading } from '../components/Loading';
 import { Accordion } from '../components/Accordion';
 import { Row, Col } from 'reactstrap';
+import { SectionTitle }from '../components/PageElements';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
 import Fade from 'react-reveal/Fade';
 import aboutImg from '../images/about.jpg'
 
 
-// Accordion for each sponsor
-const RenderAccordionItem = ({ sponsor }) => {
+// accordion for each sponsor
+const RenderAccordionItem = ({ sponsor, isLoading, errMess }) => {
+    if(isLoading) {
+        return (
+            <Loading />
+        );
+    }
+
+    if(errMess) {
+        return (
+            <div className='container'>
+                <Row>
+                    <Col>
+                        <h4>{errMess}</h4>
+                    </Col>
+                </Row>
+            </div>
+        )
+    }
     return (
         <Accordion
             name={sponsor.name} 
@@ -21,29 +39,27 @@ const RenderAccordionItem = ({ sponsor }) => {
     );
 };
 
-// render each team member
-const RenderTeamMember = ({ member, isLoading, errMess }) => {
-    if (isLoading) {
-        return <Loading />;
-    }
-
-    if(errMess) {
-        return <h4>{errMess}</h4>;
-    }  
+// render each staff member
+const RenderTeamMember = ({ member}) => {
     return (
         <Col className='mission-text px-0'>
             <p>{member.name}, {member.title}</p>
-        </Col>
+        </Col> 
     );
 };
 
+
+
 const About = (props) => {
 
-    const sponsor = props.sponsors?.map(sponsor => {
+    //map through & return each sponsor as an accordion
+    const sponsor = props.sponsors.map(sponsor => {
         return (
             <Col key={sponsor.id} className='p-0'>
                 <RenderAccordionItem
                     sponsor={sponsor}
+                    isLoading={props.isLoading}
+                    errMess={props.errMess}
                 />
             </Col>
         )
@@ -71,7 +87,8 @@ const About = (props) => {
         )
     }
 
-    const memberList = props.members?.map(member => {
+    // map through & return each staff member
+    const memberList = props.members.map(member => {
         return (
             <Col key={member.id} className='p-0'>
                 <RenderTeamMember
@@ -80,29 +97,6 @@ const About = (props) => {
             </Col>
         )
     });
-
-    // Set up Conditional Rendering
-    if (props.isLoading) {
-        return (
-            <div className='container'>
-                <Row>
-                    <Loading />
-                </Row>
-            </div>
-        );
-    }
-
-    if (props.errMess) {
-        return (
-            <div className='container'>
-                <Row>
-                    <Col>
-                        <h4>{props.errMess}</h4>
-                    </Col>
-                </Row>
-            </div>
-        )
-    }
 
     return (
         <div className='container' style={{overflowX: 'hidden'}}>
@@ -132,9 +126,7 @@ const About = (props) => {
 
             <Row className='pt-4'> 
                 <Col className='px-0'>
-                    <Fade bottom>
-                        <h2 className='px-3 px-sm-0' style={{color: '#96c0ee'}}>Our History</h2>
-                    </Fade>
+                    <SectionTitle sectionTitle={'Our History'} className='px-3 px-sm-0'/>
                     <Col className='mission-text mb-3 px-sm-0'>
                         It all began in 2010. Sofia Dawson was fresh out of nursing school and headed to her 
                         first job as a nurse. Like many nurses, she was excited to provide care for her patients.
@@ -148,9 +140,9 @@ const About = (props) => {
                 <Col className='px-0 pr-xl-3'>
                     <Col className='mission-text px-sm-0 mb-3'>
                         Sofia was determined to not just make a difference for her patients but for her coworkers, too. She 
-                        found that many of her coworkers only ate one meal a day. Usually an unhealthy one. Most found it hard to 
-                        sleep after their shifts even though they were on their feet for 12 to 14 hours each day. And, many were in poor health. 
-                        Additonally, she learned that they had very little time for basic personal care. Like a simple haircut.
+                        found that many of her coworkers only ate one meal a day - usually an unhealthy one. Most found it hard to 
+                        sleep after their shifts even though they were on their feet for 12 to 14 hours each day. In addition, many were in poor health. 
+                        She also learned that they had very little time for basic personal care, like a simple haircut.
                     </Col>
                     <Col className='mission-text px-sm-0 mb-4'>
                         She began researching healthy eating and mindful meditation. Before long, Sofia was sharing this information
@@ -179,9 +171,7 @@ const About = (props) => {
             
             <Row className='row-content'>
                 <Col xs={12} className='px-sm-0'>
-                    <Fade bottom >
-                        <h2 className='my-3' style={{color: '#96c0ee'}}>Mission Sponsors</h2>
-                    </Fade>
+                    <SectionTitle sectionTitle={'Hero Sponsors'} className='px-3 px-sm-0'/>
                 </Col>
                 <Col xs={12} className='p-0'>
                     {sponsor}
@@ -195,10 +185,10 @@ const About = (props) => {
             {/* Member list is rendered in this row */}
             <Row className='row-content'>
                 <Col className='px-sm-0 '>
+                    <SectionTitle sectionTitle={'Host a Healthcare Hero'} className='px-3 px-sm-0'/>
                     <Fade bottom >
-                        <h2 style={{color: '#96c0ee'}}>Host a Healthcare Hero</h2>
+                        {memberList}
                     </Fade>
-                    {memberList}
                 </Col>
             </Row> 
             {/* END FOUNDATION */}

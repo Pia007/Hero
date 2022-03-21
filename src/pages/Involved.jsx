@@ -1,6 +1,6 @@
-import PageHeader from '../components/PageHeader';
-import InvolvedBody from '../components/InvolvedBody';
 import { SEO } from '../components/SEO';
+import { PageHeader }from '../components/PageElements';
+import InvolvedBody from '../components/InvolvedBody';
 
 const Involved = () => {
     return (

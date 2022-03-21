@@ -1,18 +1,15 @@
-import PageHeader from '../components/PageHeader';
 import { SEO } from '../components/SEO';
+import { PageHeader }from '../components/PageElements';
 import { Loading } from '../components/Loading';
 import { Link } from 'react-router-dom';
 import { Row, Col, Card, CardImg, CardTitle, CardBody } from 'reactstrap';
 import { FadeTransform } from 'react-animation-components';
+import Zoom from 'react-reveal/Fade';
 
 const RenderBioCard = ({ volunteer }) =>  {
     return (
-        <FadeTransform 
-            in
-            transformProps={{
-                exitTransform: 'scale(0.5) translateY(0%)'
-            }}
-        > 
+        <Zoom duration={500}>
+        
             <Card className='mb-5 bg-primary vol-cards'>
                 <Link to={`/volunteers/${volunteer.id}`}>
                     <CardImg className='cd-img p-2' src={volunteer.image} alt={volunteer.first} />
@@ -21,7 +18,7 @@ const RenderBioCard = ({ volunteer }) =>  {
                     </CardBody>
                 </Link>
             </Card>
-        </FadeTransform> 
+        </Zoom> 
     );
 }
 
@@ -30,7 +27,10 @@ const VolunteerSpotlight = (props) => {
     const volunteers = props.volunteers.volunteers.map(volunteer => {
         return (
             <Col md={4} key={volunteer.id} className='m-0'>
-                <RenderBioCard volunteer={volunteer} />
+                <RenderBioCard volunteer={volunteer} 
+                    isLoading={props.volunteers.isLoading}
+                    errMess={props.volunteers.errMess}
+                />
             </Col>
         );
     });

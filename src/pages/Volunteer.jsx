@@ -1,8 +1,7 @@
-import PageHeader from '../components/PageHeader';
+import { SEO } from '../components/SEO';
+import { PageHeader }from '../components/PageElements';
 import VolunteerInfo from '../components/VolunteerInfo';
 import VolunteerForm from '../components/VolunteerForm';
-import { SEO } from '../components/SEO';
-
 
 const VolunteerSignUp = () => {
     return (

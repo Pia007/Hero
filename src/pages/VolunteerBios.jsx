@@ -1,7 +1,7 @@
 import React from 'react';
-import PageHeader from '../components/PageHeader';
-import { FadeTransform } from 'react-animation-components';
 import { SEO } from '../components/SEO';
+import { PageHeader }from '../components/PageElements';
+import { FadeTransform } from 'react-animation-components';
 import { Loading } from '../components/Loading';
 import { Row, Col, Card, CardImg, CardBody } from 'reactstrap';
 
@@ -21,7 +21,7 @@ const RenderVolunteer = ({ volunteer }) => {
                         </Col>
                         <Col xs={12} lg={6} className='m-1 mx-auto mx-lg-0'>
                             <CardBody className='my-xl-3 text-success px-0 px-lg-0 px-xl-3'>
-                                <h3 className='text-center mb-4 meet-role'>{volunteer.role}</h3>
+                                <p className='text-center mb-4 meet-role'>{volunteer.role}</p>
                                 <blockquote className='col-md-10 col-lg-12 mx-auto  meet-text'>'{volunteer.description}'</blockquote>
                                 <cite className='float-right meet-text mx-5'><em>~ {volunteer.first}</em> </cite>
                             </CardBody>

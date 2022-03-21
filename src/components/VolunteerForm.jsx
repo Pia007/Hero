@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { SectionTitle } from '../components/PageElements';
 import { ToastContainer, toast, Zoom } from 'react-toastify';
 import { Row, Col, FormGroup, Form, Input, Label, FormFeedback } from 'reactstrap';
 import Buttons from './Buttons';
-import { FadeTransform } from 'react-animation-components';
 
 const volunteerToastId = 'contact-toast-id';
 class VolunteerForm extends Component {
@@ -129,23 +129,19 @@ class VolunteerForm extends Component {
         });
     }
     showToast = () => {
-        setTimeout(() => {
-            toast.success(`Thanks for your interests in volunteering! We will get back to you shortly.`, {
-                position: toast.POSITION.TOP_RIGHT,
-                toastId: volunteerToastId,
-            });
-        }, 2000);
+        toast.success(`${this.state.fName}, thanks for your interests in volunteering! We will get back to you shortly.`, {
+            position: toast.POSITION.TOP_RIGHT,
+            toastId: volunteerToastId,
+        });
     }
 
     handleSubmit = event => {
-        // bypass Chrome Violation warning
         setTimeout(() => { 
             console.log('Current State is: ' + JSON.stringify(this.state));
             console.log('VOLUNTEER FORM SUBMITTED!');
             this.resetForm();
         }, 2000);
 
-        // this.resetForm();
         this.showToast();
         event.preventDefault();
     };
@@ -190,17 +186,9 @@ class VolunteerForm extends Component {
         return (
             <div className='container'>
                 <Row className='row-content'>
-                    <FadeTransform 
-                        in
-                        transformProps={{
-                            exitTransform: 'scale(0.5) translateY(0%)'
-                        }}
-                    > 
-                        <Col xs={12}>
-                            <h2 style={{color: '#96c0ee'}}>Join us!</h2>
-                        </Col>
-                    </FadeTransform>
-                    
+                    <Col xs={12}>
+                        <SectionTitle sectionTitle={'Join Us'} className='px-3 px-sm-0'/>
+                    </Col>
                     {/* Form */}
                     <Col md={12}>
                         <Form onSubmit={this.handleSubmit} className='mission-text p-3 form'>
