@@ -18,7 +18,7 @@ export const VOLUNTEERS = [
         password: "1a2b3c4d",
         image:"../assets/images/male1.png",
         role: "Logistics",
-        description: "Hey, I'm Richard. I became a volunteer in March of 2020. My grandfather was part of the inaugural group of volunteers back in 2019. He always spoke of how much he enjoyed the comraderie amongst the volunteers. His tenure was cut short by the virus when he passed away in February of 2020. Host a Healthcare Hero was very kind to my family during that difficult time. It was easy for me to decide to pick up where my grandfather left off. I started donating my Operations Management kills to help with logistics and transportation. I even get out there and drive from time to time just like my grandfather did. "
+        description: "Hey, I'm Richard. I became a volunteer in March of 2020. My grandfather was part of the inaugural group of volunteers back in 2019. He always spoke of how much he enjoyed the comraderie amongst the volunteers. His tenure was cut short by the virus when he passed away in February of 2020. Host a Healthcare Hero was very kind to my family during that difficult time. It was easy for me to decide to pick up where my grandfather left off. I started donating my Operations Management skills to help with logistics and transportation. I even get out there and drive from time to time just like my grandfather did. "
     },
     {
         id: 2,
@@ -58,7 +58,7 @@ export const VOLUNTEERS = [
         password: "syntax123",
         image:"../assets/images/male2.png",
         role: "Software Engineer",
-        description: "The pandemic has really taken a toll on the workforce. Not only were people unable to work, healthcare workers were overworked. We were already providing free software and computer training to under represented communities before the pandemic, deciding to partner with Host a Healthcare Hero to extend the same service to healthcare workers was a the right choice. The toll that the pandemic has taken on them is immeasurable. Providing free training will give them the option to work in other aspects of healthcare or a different career field. "
+        description: "The pandemic has really taken a toll on the workforce. Not only were people unable to work, healthcare workers were overworked. We were already providing free software and computer training to under represented communities before the pandemic, deciding to partner with Host a Healthcare Hero to extend the same service to healthcare workers was the right choice. The toll that the pandemic has taken on them is immeasurable. Providing free training will give them the option to work in other aspects of healthcare or a different career field. "
     },
     {
         id: 6,
@@ -68,7 +68,7 @@ export const VOLUNTEERS = [
         password: "javscript123",
         image:"../assets/images/female5.svg",
         role: "Yoga Instructor",
-        description: "Hi, I'm Kenji. Practicing yoga & meditation helped me through law school and again when I found myself working from home at the heart of the pandemic. A family friend told me about Host a Healthcare Hero. I reach out and spoke with a Volunteer Coordinator about volunteering. I wasn't sure how I could help. But, after sharing that I am a Certified Yoga Instructor, the coordinator help me decide to share that service. Today, I teach a few classes a week and its been wonderful to help healthcare workers get their minds and bodies in shape."
+        description: "Hi, I'm Kenji. Practicing yoga & meditation helped me through law school and again when I found myself working from home at the heart of the pandemic. A family friend told me about Host a Healthcare Hero. I reach out and spoke with a Volunteer Coordinator about volunteering. I wasn't sure how I could help. But, after sharing that I am a Certified Yoga Instructor, the coordinator helped me decide to share that service. Today, I teach a few classes a week and its been wonderful to help healthcare workers get their minds and bodies in shape."
     },
     {
         id: 7,
@@ -78,6 +78,6 @@ export const VOLUNTEERS = [
         password: "react123",
         image:"../assets/images/male3.png",
         role: "Barber",
-        description: "I'm Mario. When the pandemic hit, many of my clients were unable to get a haircut. I decided to provide free haircuts to my clients that were also displaced by the pandemic. It just so happend that one of my clients, at the time, was a Mission Sponsor. He shared the overall goal of Host a Healthcare Hero with me, and shortly thereafter I began volunteering.. Initially, I was concerned about having a conflict of interest with the barbershop that I work at once we reopened. I spoke with my manager. Not only was he supportive, he now donates his services, too."
+        description: "I'm Mario. When the pandemic hit, many of my clients were unable to get a haircut. I decided to provide free haircuts to my clients that were also displaced by the pandemic. It just so happend that one of my clients, at the time, was a Mission Sponsor. He shared the overall goal of Host a Healthcare Hero with me, and shortly thereafter I began volunteering. Initially, I was concerned about having a conflict of interest with the barbershop that I work at once we reopened. I spoke with my manager. Not only was he supportive, he now donates his services, too."
     }
 ]

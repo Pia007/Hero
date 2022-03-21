@@ -39,7 +39,7 @@ export const FAQS = [
         id: 6,
         category: "Donate",
         question: "Are there set hours and or days for donations?",
-        answer: "Each Mission Site accepts donations during regular business hours. If you need to arrange a donation for a specific date or time, please contact us."
+        answer: "Each Hero Site accepts donations during regular business hours. If you need to arrange a donation for a specific date or time, please contact us."
     },
     {
         id: 7,
@@ -61,8 +61,8 @@ export const FAQS = [
     {
         id: 10,
         category: "Sponsor",
-        question: "As a Mission, can I used my volunteer hours to support my business?",
-        answer: "No. We are not allowed to use your volunteer to support your business. Volunteers are only allowed to participate in activities at your business that directly supports our mission."
+        question: "As a Hero Sponsor, can I use my volunteer hours to support my business?",
+        answer: "No. You cannot use your volunteer hours to support your business. Volunteers are only allowed to participate in activities at your business that directly supports our mission."
     },
     {
         id: 11,
@@ -73,20 +73,20 @@ export const FAQS = [
     {
         id: 12,
         category: "Sponsor",
-        question: "I am a business owner and I want to become a Mission Sponsor. How do I do that?",
+        question: "I am a business owner and I want to become a Hero Sponsor. How do I do that?",
         answer: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis excepturi ipsam tempora aliquam. Facilis qui impedit velit fugiat veritatis quia."
     },
     {
         id: 13,
         category: "Sponsor",
-        question: "Are Mission Sponsors required to use volunteers to help out?",
-        answer: "Yes, we require all Mission Sponsors to use volunteers to help out. If you are interested in becoming a Mission Sponsor, please contact us."
+        question: "Are Hero Sponsors required to use volunteers to help out?",
+        answer: "Yes, we require all Hero Sponsors to use volunteers to help out. If you are interested in becoming a Hero Sponsor, please contact us."
     },
     {
         id: 14,
         category: "Sponsor",
-        question: "Is there a fee to become a Mission Sponsor?",
-        answer: "Mission Sponsors do not have to pay a fee to become a Mission Sponsor. "
+        question: "Is there a fee to become a Hero Sponsor?",
+        answer: "Hero Sponsors do not have to pay a fee to become a Hero Sponsor. "
     },
     {
         id: 15,
@@ -97,19 +97,19 @@ export const FAQS = [
     {
         id: 16,
         category: "Sponsor",
-        question: "How often do Mission Sponsors meet?",
-        answer: "Mission Sponsors meet every other week. We meet on the first Tuesday of the month at 6:00 PM in the Mission Sponsorship Center."
+        question: "How often do Hero Sponsors meet?",
+        answer: "Hero Sponsors meet every other week. We meet on the first Tuesday of the month at 6:00 PM in the Hero Sponsorship Center."
     },
     {
         id: 17,
         category: "Sponsor",
-        question: "Is there a Mission Sponsor application process?",
-        answer: "Yes. We have a process for Mission Sponsors to apply. "
+        question: "Is there a Hero Sponsor application process?",
+        answer: "Yes. We have a process for Hero Sponsors to apply. "
     },
     {   id: 18,
         category: "Sponsor",
-        question: "What is the Mission Sponsorship Center?",
-        answer: "The Mission Sponsorship Center is located at the back of the Mission Center. We meet every other week on the first Tuesday of the month at 6:00 PM."
+        question: "What is the Hero Sponsorship Center?",
+        answer: "The Hero Sponsorship Center is located at the back of the Hero Center. We meet every other week on the first Tuesday of the month at 6:00 PM."
     },
     {
         id: 19,
@@ -151,7 +151,7 @@ export const FAQS = [
         id: 25,
         category: "Volunteer",
         question: "What hours can I volunteer?",
-        answer: "Our volunteers are asked to donate 4-20hrs per week and many of our services are 24hs/7days a week. We, observe all major holidays, but there are occassion where we ask volunteers to participate on major holidays. Contact us for more information."
+        answer: "Our volunteers are asked to donate 4-20hrs per week and many of our services are 24hs a week. We observe all major holidays, but there are occasions where we ask volunteers to participate on major holidays. Contact us for more information."
     },
     {
         id: 26,
@@ -197,8 +197,8 @@ export const FAQS = [
     {
         id: 33,
         category: "General",
-        question: "What's the difference between a Mission Sponsor and a Mission Volunteer?",
-        answer: "A sponsor is a company that provides service to our community free of charge.  A volunteer is a person who is willing to help the us provide services to our community."
+        question: "What's the difference between a Hero Sponsor and a Hero Volunteer?",
+        answer: "A sponsor is a company that provides a service to our community free of charge.  A volunteer is a person who is willing to donate their time to serve the community."
     },
     {
         id: 34,

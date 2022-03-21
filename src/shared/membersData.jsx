@@ -32,7 +32,7 @@ export const MEMBERS = [
     {
         id: 6,
         name: "Lorem ipsum",
-        title: "Mission Partnerships"
+        title: "Hero Partnerships"
     },
     {
         id: 7,
