@@ -31,27 +31,27 @@ export const Header = () => {
                     <Collapse isOpen={navigation} navbar className='justify-content-end'>
                         <Nav navbar className='ml-auto text-center text-light '>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation) : setNavigation(navigation))} className='nav-link' to='/about'> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation) : setNavigation(navigation))} className='nav-link' to='/about' replace> 
                                     About
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/involved'> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/involved' replace> 
                                     Get Involved
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/contact'> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/contact' replace> 
                                     Contact
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/volunteersignup'> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/volunteersignup' replace> 
                                     Volunteer
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/volunteerspotlight' > 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/volunteerspotlight' replace> 
                                     Spotlight 
                                 </NavLink>
                             </NavItem>

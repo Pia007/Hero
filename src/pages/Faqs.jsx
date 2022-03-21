@@ -3,7 +3,6 @@ import { SEO } from '../components/SEO';
 import { PageHeader }from '../components/PageElements';
 import { Accordion} from '../components/Accordion';
 import { Loading } from '../components/Loading';
-import { SectionTitle } from '../components/PageElements';
 import { Row, Col} from 'reactstrap';
 import { FadeTransform } from 'react-animation-components';
 import Fade from 'react-reveal/Fade';
@@ -25,7 +24,9 @@ const RenderFaqSection = ({ faqTitle, factType }) => {
         <div className='container p-0 mt-3'>
             <Row className='row-content ' >
                 <Col xs={12} className='px-sm-0'>
-                    <SectionTitle sectionTitle={faqTitle} />
+                    <Fade bottom cascade >
+                        <h2 className='text-success'>{faqTitle}</h2>
+                    </Fade>
                 </Col>
                 <Col xs={12} className='p-0'>
                     {factType}

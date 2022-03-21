@@ -36,10 +36,14 @@ h2 {
 h2 {
     margin: 1.25rem 0; 
     font-size: 1.625em; 
+    color: var(--primary);
 }
 hr {
     border: 3px double var(--success); 
     opacity: 50%; 
+}
+.primary {
+    color: var(--primary);
 }
 
 /* Navigation */
@@ -235,6 +239,9 @@ img,
 .faqBtn:active,
 .faqBtn:focus {
     background: none;
+    color: var(--success);
+}
+.faqTitle {
     color: var(--success);
 }
 /* End FAQs Buttons */

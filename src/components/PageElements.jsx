@@ -23,9 +23,11 @@ export const PageTitle = ({ pageTitle }) => {
 
 export const SectionTitle = ({ sectionTitle }) => {
     return (
-        <Fade bottom cascade >
-            <h2 style={{color: '#96c0ee'}}>{sectionTitle}</h2>
-        </Fade>
+        <div className='container-fluid p-0'>
+            <Fade bottom cascade >
+                <h2 >{sectionTitle}</h2>
+            </Fade>
+        </div> 
     )
 }
 

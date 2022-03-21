@@ -90,7 +90,7 @@ const About = (props) => {
     // map through & return each staff member
     const memberList = props.members.map(member => {
         return (
-            <Col key={member.id} className='p-0'>
+            <Col key={member.id} className='px-sm-0 px-0'>
                 <RenderTeamMember
                     member={member}
                 />
@@ -126,7 +126,10 @@ const About = (props) => {
 
             <Row className='pt-4'> 
                 <Col className='px-0'>
-                    <SectionTitle sectionTitle={'Our History'} className='px-3 px-sm-0'/>
+                    <Col className='px-3 px-sm-0'>
+                        <SectionTitle sectionTitle={'Our History'} color={'#96c0ee'} />
+                    </Col>
+                    
                     <Col className='mission-text mb-3 px-sm-0'>
                         It all began in 2010. Sofia Dawson was fresh out of nursing school and headed to her 
                         first job as a nurse. Like many nurses, she was excited to provide care for her patients.
@@ -171,7 +174,7 @@ const About = (props) => {
             
             <Row className='row-content'>
                 <Col xs={12} className='px-sm-0'>
-                    <SectionTitle sectionTitle={'Hero Sponsors'} className='px-3 px-sm-0'/>
+                    <SectionTitle sectionTitle={'Hero Sponsors'} color={'primary'}/>
                 </Col>
                 <Col xs={12} className='p-0'>
                     {sponsor}
@@ -184,8 +187,11 @@ const About = (props) => {
             {/* FOUNDATION */}
             {/* Member list is rendered in this row */}
             <Row className='row-content'>
-                <Col className='px-sm-0 '>
-                    <SectionTitle sectionTitle={'Host a Healthcare Hero'} className='px-3 px-sm-0'/>
+                <Col className='px-sm-0'>
+                    <SectionTitle sectionTitle={'Host a Healthcare Hero'} color={'96c0ee'}/>
+                    
+                </Col>
+                <Col xs={12} className='px-sm-0'>
                     <Fade bottom >
                         {memberList}
                     </Fade>
