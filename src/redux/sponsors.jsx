@@ -3,9 +3,9 @@
 import * as ActionTypes from './ActionTypes';
 
 export const Sponsors = (state = {
-        isLoading: true,
-        errMess: null,
-        sponsors: []
+            isLoading: true,
+            errMess: null,
+            sponsors: []
         }, action) => {
     switch (action.type) {
         case ActionTypes.ADD_SPONSORS:
