@@ -22,15 +22,13 @@ const InvolvedCard =({
     return (
         <React.Fragment >
             <Row className={className}>
-                <Col lg={6} className="my-auto text-sky" >
-                    {/* <Fade bottom cascade> */}
-                        <h2 className="text-sky">{title}</h2>
-                    {/* </Fade> */}
-                        <p className="mission-text ">{contentOne}<Link to='/contact' style={{textDecoration: 'underline'}}>contact us</Link>.</p>
-                        <p className="mission-text ">
-                            {contentThree}<Link to='/faqs' style={{textDecoration: 'underline'}}>FAQs</Link>. 
-                            {contentTwo}
-                        </p>
+                <Col lg={6} className='my-auto' >
+                    <h2 style={{color: '#96c0ee'}}>{title}</h2>
+                    <p className='mission-text '>{contentOne}<Link to='/contact' style={{textDecoration: 'underline'}}>contact us</Link>.</p>
+                    <p className='mission-text '>
+                        {contentThree}<Link to='/faqs' style={{textDecoration: 'underline'}}>FAQs</Link>. 
+                        {contentTwo}
+                    </p>
                     <InvolvedModal 
                         modalHeaderText={modalHeaderText}
                         modalBodyText={modalBodyText}
@@ -42,7 +40,12 @@ const InvolvedCard =({
                     />
                 </Col>
                 <Col lg={6}>
-                    <img className="col d-flex my-4 my-lg-5 mr-3 img-fluid p-0 img-thumbnail" style={{maxWidth: "525px", maxHeight: "395px"}}src={imageSrc} alt={imageName} />
+                    <img 
+                        className='col d-flex my-4 my-lg-5 mr-3 img-fluid p-0 img-thumbnail' 
+                        style={{maxWidth: '525px', maxHeight: '395px'}}
+                        src={imageSrc} 
+                        alt={imageName} 
+                    />
                 </Col> 
             </Row>
         </React.Fragment>

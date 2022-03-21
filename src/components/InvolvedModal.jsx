@@ -9,9 +9,9 @@ const InvolvedModal = ({modalHeaderText, modalBodyText, modalBodyTextTwo, modalB
     
     return (
         <React.Fragment>
-            <Buttons color={"primary"} clickHandler={toggleModal} btntext={"Learn More"} className="col-6 col-sm-6 col-md-4 mx-auto shadow-lg btn-learn"/>
-            <Modal centered scrollable isOpen={modal} toggle={toggleModal} className="" >
-                <ModalHeader toggle={toggleModal} className="bg-success text-primary">{modalHeaderText}</ModalHeader>
+            <Buttons color={'primary'} clickHandler={toggleModal} btntext={'Learn More'} className='col-6 col-sm-6 col-md-4 mx-auto shadow-lg btn-learn'/>
+            <Modal centered scrollable isOpen={modal} toggle={toggleModal} className='' >
+                <ModalHeader toggle={toggleModal} className='bg-success text-primary'>{modalHeaderText}</ModalHeader>
                 <ModalBody>
                     <p>{modalBodyText}</p>
                     <p>{modalBodyTextTwo}</p>
@@ -19,16 +19,16 @@ const InvolvedModal = ({modalHeaderText, modalBodyText, modalBodyTextTwo, modalB
                 </ModalBody>
                 <ModalFooter>
                     <Button 
-                        color="danger" 
-                        className="btn " 
+                        color='danger' 
+                        className='btn ' 
                         value={value}
                         onClick={toggleModal}
                         >
                             Cancel
                         </Button>
                     <Link 
-                        className="btn btn-success mission text shadow-md"
-                        value={value} color="success" to={to}>
+                        className='btn btn-success mission text shadow-md'
+                        value={value} color='success' to={to}>
                         {text}
                     </Link>
                 </ModalFooter>

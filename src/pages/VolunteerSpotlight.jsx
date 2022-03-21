@@ -2,7 +2,7 @@ import PageHeader from '../components/PageHeader';
 import { SEO } from '../components/SEO';
 import { Loading } from '../components/Loading';
 import { Link } from 'react-router-dom';
-import { Row, Card, CardImg, CardTitle, CardBody } from 'reactstrap';
+import { Row, Col, Card, CardImg, CardTitle, CardBody } from 'reactstrap';
 import { FadeTransform } from 'react-animation-components';
 
 const RenderBioCard = ({ volunteer }) =>  {
@@ -13,11 +13,11 @@ const RenderBioCard = ({ volunteer }) =>  {
                 exitTransform: 'scale(0.5) translateY(0%)'
             }}
         > 
-            <Card className="mb-5 bg-primary vol-cards">
+            <Card className='mb-5 bg-primary vol-cards'>
                 <Link to={`/volunteers/${volunteer.id}`}>
-                    <CardImg className="cd-img p-2" src={volunteer.image} alt={volunteer.first} />
-                    <CardBody className="p-1 vol-card-body text-center text-light">
-                        <CardTitle className="my-1 vol-title ">{volunteer.first}</CardTitle>
+                    <CardImg className='cd-img p-2' src={volunteer.image} alt={volunteer.first} />
+                    <CardBody className='p-1 vol-card-body text-center text-light'>
+                        <CardTitle className='my-1 vol-title '>{volunteer.first}</CardTitle>
                     </CardBody>
                 </Link>
             </Card>
@@ -25,42 +25,42 @@ const RenderBioCard = ({ volunteer }) =>  {
     );
 }
 
-const Volunteers = (props) => {
+const VolunteerSpotlight = (props) => {
 
     const volunteers = props.volunteers.volunteers.map(volunteer => {
         return (
-            <div key={volunteer.id} className="col-md-4 m-0">
+            <Col md={4} key={volunteer.id} className='m-0'>
                 <RenderBioCard volunteer={volunteer} />
-            </div>
+            </Col>
         );
     });
 
     if (props.volunteersLoading) {
         return (
-            <div className="container">
-                <div className="row">
+            <div className='container'>
+                <Row>
                     <Loading />
-                </div>
+                </Row>
             </div>
         );
     }
 
     if (props.volunteersErr) {
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col">
+            <div className='container'>
+                <Row>
+                    <Col>
                         <h4>{props.errMess}</h4>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </div>
         );
     }
 
     return (
-        <div className="container">
-            <SEO title={"Volunteer Spotlight | Host a Healthcare Hero"}  description={"Spotlight on a few of the volunteers"} />
-            <PageHeader siteLocation={"Spotlight"} pageTitle={"Volunteer Spotlight"} />
+        <div className='container'>
+            <SEO title={'Volunteer Spotlight | Host a Healthcare Hero'} description={'description'} content={'Spotlight on a few of the volunteers'} />
+            <PageHeader siteLocation={'Spotlight'} pageTitle={'Volunteer Spotlight'} />
             <FadeTransform 
                 in
                 transformProps={{
@@ -78,4 +78,4 @@ const Volunteers = (props) => {
     );
 }
 
-export default Volunteers;
+export default VolunteerSpotlight;

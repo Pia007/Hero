@@ -15,7 +15,7 @@
     --font-ubuntu: 'Ubuntu', sans-serif;
     --font-ptSans: 'Pt-sans', sans-serif;
 }
-/* removed overflow auto & hidden do to interference with ScrollToTop */
+
 html,
 body {
     width: 100%;
@@ -23,23 +23,34 @@ body {
     color: var(--primary);
     font-size: 1em;
     font-family: var(--font-ptSans);
-}
-.text-sky {
-    color: var(--primary);
-}
-.home-bg {
     background: var(--background);
 }
+h1 {
+    font-size: 2em;
+    text-shadow: 1px 1px 3px;
+}
+h1,
+h2 {
+    font-weight: 500;
+    text-shadow: 1px 1px 3px;
+    
+}
+h2 {
+    margin: 1.25rem 0; 
+    font-size: 1.625em; 
+}
+hr {
+    border: 3px double var(--success); 
+    opacity: 50%; 
+}
 
-.findOut {
-    text-decoration: none;
+/* Navigation */
+.mynav {
+    background: linear-gradient(to left, #5184bb, #0d3461);
 }
 a, a:hover {
     color: inherit;
     text-decoration: none; 
-}
-.mynav {
-    background: linear-gradient(to left, #5184bb, #0d3461);
 }
 .nav-logo {
     width: 2.5rem;
@@ -57,7 +68,6 @@ a, a:hover {
     font-size: .875em;
     font-weight: 500;
 }
-
 .nav-link,
 #vol-link, 
 .vol-title,
@@ -68,24 +78,17 @@ a, a:hover {
     line-height: 1.3;
     border-left: 1.5px solid var(--background);
 }
-
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active {
     color: var(--success); 
 }
-/* .nav-login {
-    background:none;
-    outline: none;
-    border: none;
-} */
 #vol-link:hover,
 #vol-link:focus,
 #vol-link:active {
     color: var(--success);
     background: var(--primary); 
 }
-
 .nav-volunteer:hover,
 #vol-link > .nav-text > .nav-volunteer:active {
     color: var(--success);
@@ -94,24 +97,10 @@ a, a:hover {
 .nv-icon {
     font-size: 2rem;
 } 
+/* End Navigation */
 
-.ft-signup {
-    border-radius: 1.25rem; 
-}
-.ft-signup:hover,
-.ft-signup:focus,
-.ft-signup:active {
-    border: 3px double var(--success);
-    background: var(--primary);
-    color: white;
-}
 
-.btn-feedback,
-.btn-vol-app {
-    height: 3.125rem;
-    border-radius: 1.875rem;
-}
-
+/* Breadcrumb */
 .breadcrumb {
     background: transparent;
     padding-top: 4px;
@@ -123,36 +112,20 @@ a, a:hover {
     opacity: 65%; 
     color: #d47500;
 }
+/* End Breadcrumb */
 
 .row-content,
 .card-row {
     padding: 1.25rem 0;
     min-height: 6.25rem; 
 }
-h1 {
-    font-size: 2em;
-    text-shadow: 1px 1px 3px;
-}
-h1,
-h2 {
-    font-weight: 500;
-    text-shadow: 1px 1px 3px;
-    
-}
-h2 {
-    margin: 1.25rem 0; 
-    font-size: 1.625em; 
-}
 
-hr {
-    border: 3px double var(--success); 
-    opacity: 50%; 
-}
 img,
 .vol-card-body {
     border: 3px double var(--primary); 
 }
 
+/* Landing Page */
 .intro-container {
     display: flex;
     justify-content: center;
@@ -178,7 +151,6 @@ img,
     justify-content: center;
     align-content: center;
 }
-
 .sub-text {
     font-size: 3.1em; 
     text-shadow: 1px 1px 3px;
@@ -188,18 +160,12 @@ img,
     height: 2.375rem;
     border: none;
 }
-.btn-learn {
-    max-width: 7.5rem;
-    border-radius: 2.1875rem;
-    height: 2.8125rem;
-    font-weight: 500; 
+.findOut {
+    text-decoration: none;
 }
+/* End Landing Page */
 
-.mission-text {
-    overflow-wrap: normal;
-}
-
-/* About */
+/* About Table*/
 .about-card-holder {
     background: transparent; 
 }
@@ -210,7 +176,6 @@ img,
 .about-card-body {
     padding: 15px;
 } 
-
 .about-card-odd {
     background: var(--table-bg); 
 }
@@ -222,6 +187,12 @@ img,
     height: 2.083125rem;
     border: none;
 } 
+.last-dt {
+    border-radius: 0 0 3px 3px;
+}
+/* End About Table */
+
+/* Accordions */
 .accordion-title {
     display: flex;
     flex-direction: row;
@@ -239,7 +210,6 @@ img,
     font-size: clamp(1.25em, 2vw, 1.5em);
     font-weight: 500;
 }
-
 .description {
     padding: 1rem;
     font-weight: 500;
@@ -253,6 +223,9 @@ img,
     border-radius: 0 0 3px 3px;
     background-color: none;
 }
+/* End Accordions */
+
+/* FAQs Buttons*/
 .faqBtn {
     background: none;
     border: none;
@@ -266,16 +239,15 @@ img,
     background: none;
     color: var(--success);
 }
-.last-dt {
-    border-radius: 0 0 3px 3px;
-}
+/* End FAQs Buttons */
 
+/* Contact & Volunteer Forms*/
 .form {
     background: var(--background);
     border: 3px double var(--table-bg-alt);
     border-radius: 5px;
 }
-.contact-input {
+.form-input {
     border: 3px double var(--primary);
     height: 2.5rem;
     color: #446E9B;
@@ -288,12 +260,10 @@ img,
     color: var(--danger);
     font-size: .875em;
 }
-
 .form-control::-webkit-input-placeholder {
     color: #446E9B; 
     font-size: 1.1em;
 }
-
 .custom-control-label::before {
     background: var(--input-bg); ;
     border: 1px double #446E9B !important; 
@@ -305,16 +275,21 @@ img,
     border-radius: 0px !important; 
     border: 1px double var(--primary) !important;
 }
-.contact-input> option {
+.form-input> option {
     background: var(--input-bg);
 }
 .label-interests {
     font-size: 1rem;
     font-weight: 500;
 }
+.btn-feedback,
+.btn-vol-app {
+    height: 3.125rem;
+    border-radius: 1.875rem;
+}
+/* End Contact & Volunteer Forms*/
 
-
-/* modal */
+/* Modals */
 .modalCustom {
     border-radius: 5px ;
     border: 3px double var(--primary); 
@@ -343,19 +318,32 @@ img,
     color: transparent;
     text-shadow: none;
 }
+.btn-learn {
+    max-width: 7.5rem;
+    border-radius: 2.1875rem;
+    height: 2.8125rem;
+    font-weight: 500; 
+}
+/* End Modals */
+
+/* Footer */
 .site-footer {
     padding: 0;
     color: #EEEEEE;
     border: #345578;
     background: linear-gradient(to left, #0d3461, #5184bb);
 }
-
-ul li .faq-link:hover,
-ul li .faq-link:focus {
-    text-decoration: none;
-    opacity: 100%;
+.ft-signup {
+    border-radius: 1.25rem; 
+}
+.ft-signup:hover,
+.ft-signup:focus,
+.ft-signup:active {
+    border: 3px double var(--success);
+    background: var(--primary);
     color: white;
 }
+/* End Footer */
 
 /* Volunteer Cards */
 .vol-cards,
@@ -368,12 +356,10 @@ ul li .faq-link:focus {
     border: 3px groove rgb(110, 163, 199);
     border-bottom: none;
 }
-
 .vol-card-body {
     border: 3px groove rgb(110, 163, 199);
     border-top: none;
 }
-
 .meet-holder {
     margin: 2.5rem auto;
 }
@@ -397,11 +383,12 @@ ul li .faq-link:focus {
     font-weight: 600;
 }
 
+/* BREAKPOINTS */
+/* 475px */
 @media screen and (min-width: 29.6875rem) {
     .row-content,
     .card-row {
         padding: 1.5rem 0;
-        
     }
     .sub-text {
         font-size: 3.4em;
@@ -418,7 +405,7 @@ ul li .faq-link:focus {
     }
 }
 
-
+/* 768px */
 @media screen and (min-width: 48rem) {
     .row-content,
     .card-row {
@@ -437,7 +424,6 @@ ul li .faq-link:focus {
         width: 2.625rem;
         height: 2.625rem;
     }
-    
     .mission-text,
     .meet-text {
         font-size: 1.25em;
@@ -445,7 +431,6 @@ ul li .faq-link:focus {
     .meet-role {
         font-size: 1.5em;
     }
-    
     .btn-learn,
     .faqBtn,
     .table-text {
@@ -462,6 +447,7 @@ ul li .faq-link:focus {
     }
 }
 
+/* 992px */
 @media screen and (min-width: 62rem) {
     .row-content,
     .card-row {
@@ -482,13 +468,13 @@ ul li .faq-link:focus {
     .vol-title {
         font-size: 1.25em; 
     }
-    
     .meet-holder {
         margin-top: 3.75rem;
         margin-bottom: 17.1875rem;
     }
 }
 
+/* 1200px */
 @media screen and (min-width: 75rem) {
     .row-content,
     .card-row {
@@ -507,7 +493,6 @@ ul li .faq-link:focus {
         width: 4.375rem;
         height: 4.375rem;
     }
-    
     .vol-title {
         font-size: 1.375em;
     }

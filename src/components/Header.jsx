@@ -16,42 +16,42 @@ export const Header = () => {
 
     return (
         <React.Fragment>
-            <Navbar className="navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light mynav" style={{zIndex: '5'}}>
-                <div className="container justify-content-between">
+            <Navbar className='navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light mynav' style={{zIndex: '5'}}>
+                <div className='container justify-content-between'>
                     <div className='d-flex'>
-                        <NavLink tag='link' to="/home" 
+                        <NavLink tag='link' to='/home' 
                             onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))}>
-                                <img src={newLogo}  alt="logo" className=" text-lg nav-logo mt-1" />
+                                <img src={newLogo}  alt='logo' className=' text-lg nav-logo mt-1' />
                         </NavLink>
                         <RenderHostHeader />
                     </div>
-                    <NavbarToggler onClick={toggleNav} className="justify-content-end">
-                        <i className="fa fa-bars fa-lg text-success nv-icon "/> 
+                    <NavbarToggler onClick={toggleNav} className='justify-content-end'>
+                        <i className='fa fa-bars fa-lg text-success nv-icon '/> 
                     </NavbarToggler>
-                    <Collapse isOpen={navigation} navbar className="justify-content-end">
-                        <Nav navbar className="ml-auto text-center text-light ">
+                    <Collapse isOpen={navigation} navbar className='justify-content-end'>
+                        <Nav navbar className='ml-auto text-center text-light '>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation) : setNavigation(navigation))} className="nav-link" to="/about"> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation) : setNavigation(navigation))} className='nav-link' to='/about'> 
                                     About
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/involved"> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/involved'> 
                                     Get Involved
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/contact"> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/contact'> 
                                     Contact
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="btn btn-outline-light my-2 my-sm-0 mx-sm-2 nav-text nav-volunteer" id="vol-link" to="/volunteersignup"> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='btn btn-outline-light my-2 my-sm-0 mx-sm-2 nav-text nav-volunteer' id='vol-link' to='/volunteersignup'> 
                                     Volunteer
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag="link" onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className="nav-link" to="/volunteers" > 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/volunteerspotlight' > 
                                     Spotlight 
                                 </NavLink>
                             </NavItem>

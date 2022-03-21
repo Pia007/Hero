@@ -8,11 +8,7 @@ import { VOLUNTEERS } from '../shared/volunteersData';
 // Fetches sponsors from the store
 export const fetchSponsors = () => dispatch => {
     dispatch(sponsorsLoading());
-
-    setTimeout(() => {
-        dispatch(addSponsors(SPONSORS));
-    }, 2000);
-    
+    dispatch(addSponsors(SPONSORS));
 };
 
 export const sponsorsLoading = () => ({
@@ -33,10 +29,7 @@ export const addSponsors = sponsors => ({
 //added dipatch members failed
 export const fetchMembers = () => dispatch => {
     dispatch(membersLoading());
-
-    setTimeout(() => {
-        dispatch(addMembers(MEMBERS));
-    }, 2000);
+    dispatch(addMembers(MEMBERS));
 }
 
 export const membersLoading = () => ({
@@ -56,11 +49,7 @@ export const addMembers = members => ({
 
 export const fetchFaqs = () => dispatch => {
     dispatch(faqsLoading());
-
-    setTimeout(() => {
-        dispatch(addFaqs(FAQS));
-    }, 2000);
-    
+    dispatch(addFaqs(FAQS));
 }
 
 export const faqsLoading = () => ({
@@ -82,10 +71,7 @@ export const addFaqs = faqs => ({
 
 export const fetchVolunteers = () => dispatch => {
     dispatch(volunteersLoading());
-
-    setTimeout(() => {
-        dispatch(addVolunteers(VOLUNTEERS));
-    }, 2000);
+    dispatch(addVolunteers(VOLUNTEERS));
 }
 
 export const volunteersLoading = () => ({

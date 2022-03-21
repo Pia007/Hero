@@ -68,7 +68,7 @@ class VolunteerForm extends Component {
 
         if (this.state.touched.lName) {
             if(lName.length < 2) {
-                errors.lName = "Last name must be at least 2 characters";
+                errors.lName = 'Last name must be at least 2 characters';
             } else if(lName.length > 15){
                 errors.lName = 'Last name must be 15 or less characters';
             }
@@ -188,235 +188,235 @@ class VolunteerForm extends Component {
         const errors = this.validate(this.state.fName, this.state.lName, this.state.address1, this.state.city, this.state.userState, this.state.zip, this.state.phone, this.state.email);
 
         return (
-            <div className="container">
-                <Row className="row-content">
+            <div className='container'>
+                <Row className='row-content'>
                     <FadeTransform 
-                            in
-                            transformProps={{
-                                exitTransform: 'scale(0.5) translateY(0%)'
+                        in
+                        transformProps={{
+                            exitTransform: 'scale(0.5) translateY(0%)'
                         }}
                     > 
                         <Col xs={12}>
-                            <h2 className="text-sky">Join us!</h2>
+                            <h2 style={{color: '#96c0ee'}}>Join us!</h2>
                         </Col>
                     </FadeTransform>
                     
                     {/* Form */}
                     <Col md={12}>
-                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 form">
+                        <Form onSubmit={this.handleSubmit} className='mission-text p-3 form'>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="text" htmlFor="fName" name="fName" id="fName" 
-                                        className="contact-input "
-                                        placeholder="First Name" 
-                                        aria-label="First Name"
+                                    <Input type='text' htmlFor='fName' name='fName' id='fName' 
+                                        className='form-input '
+                                        placeholder='First Name' 
+                                        aria-label='First Name'
                                         value={this.state.fName} 
                                         invalid={!!errors.fName}
-                                        onBlur={this.handleBlur("fName")} 
+                                        onBlur={this.handleBlur('fName')} 
                                         onChange={this.handleChange} 
                                         required 
                                     />
-                                    <FormFeedback className="errors pl-2">{errors.fName}</FormFeedback>
+                                    <FormFeedback className='errors pl-2'>{errors.fName}</FormFeedback>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="text" htmlFor="lName"name="lName" id="lName"
-                                        className="contact-input"
-                                        placeholder="Last Name" 
-                                        aria-label="Last Name"
+                                    <Input type='text' htmlFor='lName'name='lName' id='lName'
+                                        className='form-input'
+                                        placeholder='Last Name' 
+                                        aria-label='Last Name'
                                         value={this.state.lName} 
                                         invalid={!!errors.lName}
-                                        onBlur={this.handleBlur("lName")} 
+                                        onBlur={this.handleBlur('lName')} 
                                         onChange={this.handleChange} 
                                         required 
                                     />
-                                    <FormFeedback className="errors pl-2">{errors.lName}</FormFeedback>
+                                    <FormFeedback className='errors pl-2'>{errors.lName}</FormFeedback>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="text" htmlFor="address1"name="address1" id="address1"
-                                        className="contact-input"
-                                        placeholder="Steet Address" 
-                                        aria-label="Street Address"
+                                    <Input type='text' htmlFor='address1'name='address1' id='address1'
+                                        className='form-input'
+                                        placeholder='Steet Address' 
+                                        aria-label='Street Address'
                                         value={this.state.address1} 
                                         invalid={!!errors.address1}
-                                        onBlur={this.handleBlur("address1")} 
+                                        onBlur={this.handleBlur('address1')} 
                                         onChange={this.handleChange} 
                                         required 
                                     />
-                                    <FormFeedback className="errors pl-2">{errors.address1}</FormFeedback>
+                                    <FormFeedback className='errors pl-2'>{errors.address1}</FormFeedback>
                                 </Col>
                             </FormGroup>
                             
                             <FormGroup row>
-                                <Col md={4} className="mb-3 mb-md-0">
-                                    <Input type="text" htmlFor="city" name="city" id="city" 
-                                        className="contact-input"
-                                        placeholder="City" 
-                                        aria-label="City"
+                                <Col md={4} className='mb-3 mb-md-0'>
+                                    <Input type='text' htmlFor='city' name='city' id='city' 
+                                        className='form-input'
+                                        placeholder='City' 
+                                        aria-label='City'
                                         value={this.state.city} 
                                         invalid={!!errors.city}
-                                        onBlur={this.handleBlur("city")} 
+                                        onBlur={this.handleBlur('city')} 
                                         onChange={this.handleChange} 
                                         required 
                                     />
-                                    <FormFeedback className="errors pl-2">{errors.city}</FormFeedback>
+                                    <FormFeedback className='errors pl-2'>{errors.city}</FormFeedback>
                                 </Col>
                             
-                                <Col md={4} className="mb-3 mb-md-0">
-                                    <Input type="text" htmlFor="userState" name="userState" id="userState"
-                                        className="contact-input"
-                                        placeholder="State" 
-                                        aria-label="State"
+                                <Col md={4} className='mb-3 mb-md-0'>
+                                    <Input type='text' htmlFor='userState' name='userState' id='userState'
+                                        className='form-input'
+                                        placeholder='State' 
+                                        aria-label='State'
                                         value={this.state.userState}
                                         invalid={!!errors.userState}
-                                        onBlur={this.handleBlur("userState")}
+                                        onBlur={this.handleBlur('userState')}
                                         onChange={this.handleChange} 
                                         required 
                                     />
-                                    <FormFeedback className="errors pl-2">{errors.userState}</FormFeedback>
+                                    <FormFeedback className='errors pl-2'>{errors.userState}</FormFeedback>
                                 </Col>
                                 <Col md={4} >
-                                    <Input type="text" htmlFor="zip" name="zip" id="zip"
-                                        className="contact-input"
-                                        placeholder="Postal Code" 
-                                        aria-label="Postal Code"
+                                    <Input type='text' htmlFor='zip' name='zip' id='zip'
+                                        className='form-input'
+                                        placeholder='Postal Code' 
+                                        aria-label='Postal Code'
                                         value={this.state.zip} 
                                         invalid={!!errors.zip}
-                                        onBlur={this.handleBlur("zip")} 
+                                        onBlur={this.handleBlur('zip')} 
                                         onChange={this.handleChange} 
                                         required 
                                     />
-                                    <FormFeedback className="errors pl-2">{errors.zip}</FormFeedback>
+                                    <FormFeedback className='errors pl-2'>{errors.zip}</FormFeedback>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
-                                <Col md={6} className="mb-3 mb-md-0">
-                                    <Input type="tel" htmlFor="phonNum" name="phone" id="phone"
-                                        className="contact-input" 
-                                        placeholder="Phone Number" 
-                                        aria-label="Phone Number"
+                                <Col md={6} className='mb-3 mb-md-0'>
+                                    <Input type='tel' htmlFor='phonNum' name='phone' id='phone'
+                                        className='form-input' 
+                                        placeholder='Phone Number' 
+                                        aria-label='Phone Number'
                                         value={this.state.phone}
                                         invalid={!!errors.phone} 
-                                        onBlur={this.handleBlur("phone")} 
+                                        onBlur={this.handleBlur('phone')} 
                                         onChange={this.handleChange} 
                                     />
-                                    <FormFeedback className="errors pl-2">{errors.phone}</FormFeedback>
+                                    <FormFeedback className='errors pl-2'>{errors.phone}</FormFeedback>
                                 </Col>
                                 <Col md={6}>
-                                    <Input type="email" htmlFor="email"name="email" id="email"
-                                        className="contact-input"
-                                        placeholder="Email" 
-                                        aria-label="Email"
+                                    <Input type='email' htmlFor='email'name='email' id='email'
+                                        className='form-input'
+                                        placeholder='Email' 
+                                        aria-label='Email'
                                         value={this.state.email}
                                         invalid={!!errors.email}
-                                        onBlur={this.handleBlur("email")} 
+                                        onBlur={this.handleBlur('email')} 
                                         onChange={this.handleChange} 
                                     />
-                                    <FormFeedback className="errors pl-2">{errors.email}</FormFeedback>
+                                    <FormFeedback className='errors pl-2'>{errors.email}</FormFeedback>
                                 </Col>
                             </FormGroup>
                             
                             <FormGroup row >
-                                <div className="col text-sky mt-2">
-                                    <strong className="mission-text "> Interests<span className="label-interests"> (check all that apply) </span></strong>
+                                <div className='col mt-2'>
+                                    <strong className='mission-text '> Interests<span className='label-interests'> (check all that apply) </span></strong>
                                     <FormGroup row>
                                         <Col xs={6} lg={3}>
-                                            <FormGroup check className="custom-control custom-checkbox ">
+                                            <FormGroup check className='custom-control custom-checkbox '>
                                                 <Input 
-                                                    type="checkbox" 
-                                                    id="food" 
-                                                    name="food" 
-                                                    className="custom-control-input "
+                                                    type='checkbox' 
+                                                    id='food' 
+                                                    name='food' 
+                                                    className='custom-control-input '
                                                     checked={this.state.food}
                                                     value={this.state.food} 
                                                     onChange={this.handleChange}   
                                                 />
-                                                <Label check className="custom-control-label label-interests" htmlFor="food">Food Services</Label>
+                                                <Label check className='custom-control-label label-interests' htmlFor='food'>Food Services</Label>
                                             </FormGroup>
-                                            <FormGroup check className="custom-control custom-checkbox ">
-                                                <Input type="checkbox" 
-                                                    id="health" 
-                                                    name="health" 
-                                                    className="custom-control-input" 
+                                            <FormGroup check className='custom-control custom-checkbox '>
+                                                <Input type='checkbox' 
+                                                    id='health' 
+                                                    name='health' 
+                                                    className='custom-control-input' 
                                                     checked={this.state.health}
                                                     value={this.state.health} 
                                                     onChange={this.handleChange}   
                                                 />
-                                                <Label check className="custom-control-label label-interests" htmlFor="health">Health & Wellness</Label>
+                                                <Label check className='custom-control-label label-interests' htmlFor='health'>Health & Wellness</Label>
                                             </FormGroup>
                                         </Col>
                                         <Col xs={6} lg={3}>
-                                            <FormGroup check className="custom-control custom-checkbox ">
-                                                <Input type="checkbox"
-                                                    id="personal" 
-                                                    name="personal" 
-                                                    className="custom-control-input" 
+                                            <FormGroup check className='custom-control custom-checkbox '>
+                                                <Input type='checkbox'
+                                                    id='personal' 
+                                                    name='personal' 
+                                                    className='custom-control-input' 
                                                     checked={this.state.personal}
                                                     value={this.state.personal} 
                                                     onChange={this.handleChange}  
                                                 />
-                                                <Label check className="custom-control-label label-interests" htmlFor="personal">Personal Care</Label>
+                                                <Label check className='custom-control-label label-interests' htmlFor='personal'>Personal Care</Label>
                                             </FormGroup>
-                                            <FormGroup check className="custom-control custom-checkbox ">
-                                                <Input type="checkbox" 
-                                                    id="fitness" 
-                                                    name="fitness" 
-                                                    className="custom-control-input" 
+                                            <FormGroup check className='custom-control custom-checkbox '>
+                                                <Input type='checkbox' 
+                                                    id='fitness' 
+                                                    name='fitness' 
+                                                    className='custom-control-input' 
                                                     checked={this.state.fitness}
                                                     value={this.state.fitness} 
                                                     onChange={this.handleChange}  
                                                 />
-                                                <Label check className="custom-control-label label-interests" htmlFor="fitness">Fitness</Label>
+                                                <Label check className='custom-control-label label-interests' htmlFor='fitness'>Fitness</Label>
                                             </FormGroup>
                                         </Col>
                                         <Col xs={6} lg={3}>
-                                            <FormGroup check className="custom-control custom-checkbox ">
-                                                <Input type="checkbox" 
-                                                    id="fundraise" 
-                                                    name="fundraise" 
-                                                    className="custom-control-input" 
+                                            <FormGroup check className='custom-control custom-checkbox '>
+                                                <Input type='checkbox' 
+                                                    id='fundraise' 
+                                                    name='fundraise' 
+                                                    className='custom-control-input' 
                                                     checked={this.state.fundraise}
                                                     value={this.state.fundraise} 
                                                     onChange={this.handleChange}  
                                                 />
-                                                <Label check className="custom-control-label label-interests" htmlFor="fundraise">Fundraising</Label>
+                                                <Label check className='custom-control-label label-interests' htmlFor='fundraise'>Fundraising</Label>
                                             </FormGroup>
-                                            <FormGroup check className="custom-control custom-checkbox ">
-                                                <Input type="checkbox"
-                                                    id="events" 
-                                                    name="events" 
-                                                    className="custom-control-input"
+                                            <FormGroup check className='custom-control custom-checkbox '>
+                                                <Input type='checkbox'
+                                                    id='events' 
+                                                    name='events' 
+                                                    className='custom-control-input'
                                                     checked={this.state.events}
                                                     value={this.state.events} 
                                                     onChange={this.handleChange}   
                                                 />
-                                                <Label check className="custom-control-label label-interests" htmlFor="events">Events</Label>
+                                                <Label check className='custom-control-label label-interests' htmlFor='events'>Events</Label>
                                             </FormGroup>
                                         </Col>
                                         <Col xs={6} lg={3}>
-                                            <FormGroup check className="custom-control custom-checkbox ">
-                                                <Input type="checkbox" 
-                                                    id="delivery" 
-                                                    name="delivery" 
-                                                    className="custom-control-input" 
+                                            <FormGroup check className='custom-control custom-checkbox '>
+                                                <Input type='checkbox' 
+                                                    id='delivery' 
+                                                    name='delivery' 
+                                                    className='custom-control-input' 
                                                     checked={this.state.delivery}
                                                     value={this.state.delivery} 
                                                     onChange={this.handleChange}  
                                                 />
-                                                <label className="custom-control-label label-interests" htmlFor="delivery">Deliveries</label>
+                                                <label className='custom-control-label label-interests' htmlFor='delivery'>Deliveries</label>
                                             </FormGroup>
-                                            <FormGroup check className="custom-control custom-checkbox ">
-                                                <Input type="checkbox"
-                                                    id="other" name="other" 
-                                                    className="custom-control-input" 
+                                            <FormGroup check className='custom-control custom-checkbox '>
+                                                <Input type='checkbox'
+                                                    id='other' name='other' 
+                                                    className='custom-control-input' 
                                                     checked={this.state.other}
                                                     value={this.state.other} 
                                                     onChange={this.handleChange}  
                                                 />
-                                                <label className="custom-control-label label-interests" htmlFor="other">Other</label>
+                                                <label className='custom-control-label label-interests' htmlFor='other'>Other</label>
                                             </FormGroup>
                                         </Col>
                                     </FormGroup>
@@ -424,35 +424,35 @@ class VolunteerForm extends Component {
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="textarea" htmlFor="feedback" id="feedback" name="feedback"
-                                        className="contact-input"
-                                        rows="12"
+                                    <Input type='textarea' htmlFor='feedback' id='feedback' name='feedback'
+                                        className='form-input'
+                                        rows='12'
                                         placeholder="Is there anything else you'd like to tell us?"
                                         aria-label="Is there anything else you'd like to tell us?"
                                         value={this.state.feedback} 
-                                        onChange={this.handleChange}>
-                                    </Input>
+                                        onChange={this.handleChange}
+                                    />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={3}>
                                 <Buttons 
-                                    type="submit" 
-                                    color="primary"
-                                    className="shadow-lg btn-feedback"
-                                    btntext={"Volunteer"}
+                                    type='submit' 
+                                    color='primary'
+                                    className='shadow-lg btn-feedback'
+                                    btntext={'Volunteer'}
                                     onClick={() => {
                                         this.resetForm();
                                         this.handleSubmit();
                                     }}
                                 />
                                 <ToastContainer 
-                                        theme='dark' 
-                                        transition={Zoom} 
-                                        autoClose={5000} 
-                                        bodyClassName="home-bg" 
-                                        toastClassName="home-bg"
-                                    />
+                                    theme='dark' 
+                                    transition={Zoom} 
+                                    autoClose={5000} 
+                                    bodyClassName='home-bg' 
+                                    toastClassName='home-bg'
+                                />
                                 </Col>
                             </FormGroup>
                         </Form>

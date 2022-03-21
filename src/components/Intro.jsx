@@ -4,38 +4,27 @@ import { Link } from 'react-router-dom';
 
 export const Intro= () => {
     return (
-        <div className=" intro-container" style={{maxWidth: '95%',  height: '90vh', margin: 'auto'}}>
-            <div className="border-0 px-0 mb-3 mb-md-5 text-center align-self-center justify-content-around" style={{maxWidth: '90%',  height: '80vh', margin: 'auto'}}>
-                <p className="sub-text align-self-center font-weight-bold text-sky d-none d-md-block">
+        <div className='intro-container' style={{maxWidth: '95%',  height: '90vh', margin: 'auto'}}>
+            <div className='border-0 px-0 mb-3 mb-md-5 text-center align-self-center justify-content-around' style={{maxWidth: '90%',  height: '80vh', margin: 'auto'}}>
+                <p className='sub-text align-self-center font-weight-bold d-none d-md-block'>
                     <Fade bottom cascade>
-                        <span className=''>H</span><img src={logo}  alt="logo" className="img-fluid lp-logo" /><span className=''>st a Healthcare Hero</span>
+                        <span className=''>H</span><img src={logo}  alt='logo' className='img-fluid lp-logo' /><span className=''>st a Healthcare Hero</span>
                     </Fade>
                 </p>
                 
-                <h1 className="sub-text align-self-center font-weight-bold text-sky d-md-none mb-3">
-                    {/* <Fade bottom cascade> */}
-                        <span className=''>H</span>
-                    {/* </Fade>
-                    <Fade bottom cascade> */}
-                            <img src={logo}  alt="logo" className="img-fluid lp-logo" />
-                    {/* </Fade>
-                    <Fade bottom cascade> */}
-                        <span className=''>st</span> 
-                    {/* </Fade> */}
+                <h1 className='sub-text align-self-center font-weight-bold d-md-none mb-3'>
+                    <span style={{color: '#96c0ee'}}>H</span>
+                        <img src={logo}  alt='logo' className='img-fluid lp-logo' />
+                    <span style={{color: '#96c0ee'}}>st</span> 
                     <br />
-                    {/* <Fade bottom cascade > */}
-                        <span>a</span>
-                        {/* </Fade> */}
-                    <br />   
-                    {/* <Fade bottom cascade> */}
+                    <span style={{color: '#96c0ee'}}>a
+                    <br />
                         Healthcare
-                        {/* </Fade>  */}
-                    {/* <Fade bottom cascade> */}
                         Hero
-                        {/* </Fade>  */}
+                    </span>
                 </h1>
                 <Fade bottom cascade>
-                    <Link to="/about" className=" text-center btn btn-lg btn-outline-success" > Find Out More </Link> 
+                    <Link to='/about' className=' text-center btn btn-lg btn-outline-success'> Find Out More </Link> 
                 </Fade>
             </div>
         </div>

@@ -48,7 +48,7 @@ class ContactForm extends Component {
 
         if (this.state.touched.lastName) {
             if(lastName.length < 2) {
-                errors.lastName = "Last name must be at least 2 characters";
+                errors.lastName = 'Last name must be at least 2 characters';
             } else if(lastName.length > 15){
                 errors.lastName = 'Last name must be 15 or less characters';
             }
@@ -110,7 +110,6 @@ class ContactForm extends Component {
     }
 
     handleSubmit = (event) => {
-        // bypass Chrome Violation warning
         setTimeout(() => { 
             console.log('Current State is: ' + JSON.stringify(this.state));
             console.log('CONTACT FORM SUBMITTED!');
@@ -127,30 +126,30 @@ class ContactForm extends Component {
         const errors = this.validate(this.state.firstName, this.state.lastName, this.state.phoneNum, this.state.email);
 
         return (
-            <div className="container text-primary">
-                <Row className="row-content">
+            <div className='container text-primary'>
+                <Row className='row-content'>
                     <FadeTransform 
                             in
                             transformProps={{
                                 exitTransform: 'scale(0.5) translateY(0%)'
                         }}
                     > 
-                        <Col md={12} >
-                            <h2 className="text-sky">We want to hear from you!</h2>
+                        <Col md={12}>
+                            <h2 style={{color: '#96c0ee'}}>We want to hear from you!</h2>
                         </Col>
                     </FadeTransform>
                     {/* Form */}
-                    <Col md={12} >
-                        <Form onSubmit={this.handleSubmit} className="mission-text p-3 form text-primary">
+                    <Col md={12}>
+                        <Form onSubmit={this.handleSubmit} className='mission-text p-3 form text-primary'>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="text" htmlFor="firstName" name="firstName" id="firstName"
-                                        className="contact-input "
-                                        placeholder="First Name" 
-                                        aria-label="First Name"
+                                    <Input type='text' htmlFor='firstName' name='firstName' id='firstName'
+                                        className='form-input '
+                                        placeholder='First Name' 
+                                        aria-label='First Name'
                                         value={this.state.firstName} 
                                         invalid={!!errors.firstName}
-                                        onBlur={this.handleBlur("firstName")} 
+                                        onBlur={this.handleBlur('firstName')} 
                                         onChange={this.handleChange} 
                                         required 
                                     />
@@ -159,13 +158,13 @@ class ContactForm extends Component {
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="text" htmlFor="lastName"name="lastName" id="lastName" 
-                                        className="contact-input"
-                                        placeholder="Last Name" 
-                                        aria-label="Last Name"
+                                    <Input type='text' htmlFor='lastName'name='lastName' id='lastName' 
+                                        className='form-input'
+                                        placeholder='Last Name' 
+                                        aria-label='Last Name'
                                         value={this.state.lastName} 
                                         invalid={!!errors.lastName}
-                                        onBlur={this.handleBlur("lastName")} 
+                                        onBlur={this.handleBlur('lastName')} 
                                         onChange={this.handleChange} 
                                         required 
                                     />
@@ -174,13 +173,13 @@ class ContactForm extends Component {
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="tel" htmlFor="phonNum" name="phoneNum" id="phoneNum"
-                                        className="contact-input" 
-                                        placeholder="Phone Number" 
-                                        aria-label="Phone Number"
+                                    <Input type='tel' htmlFor='phonNum' name='phoneNum' id='phoneNum'
+                                        className='form-input' 
+                                        placeholder='Phone Number' 
+                                        aria-label='Phone Number'
                                         value={this.state.phoneNum}
                                         invalid={!!errors.phoneNum} 
-                                        onBlur={this.handleBlur("phoneNum")} 
+                                        onBlur={this.handleBlur('phoneNum')} 
                                         onChange={this.handleChange}
                                         required  
                                     />
@@ -189,13 +188,13 @@ class ContactForm extends Component {
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="email" htmlFor="email"name="email" id="email" 
-                                        className="contact-input"
-                                        placeholder="Email" 
-                                        aria-label="Email"
+                                    <Input type='email' htmlFor='email'name='email' id='email' 
+                                        className='form-input'
+                                        placeholder='Email' 
+                                        aria-label='Email'
                                         value={this.state.email}
                                         invalid={!!errors.email}
-                                        onBlur={this.handleBlur("email")} 
+                                        onBlur={this.handleBlur('email')} 
                                         onChange={this.handleChange} 
                                         required 
                                     />
@@ -204,62 +203,61 @@ class ContactForm extends Component {
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={5}>
-                                    <Input type="select" name="contactType" 
-                                        id="contactType"
-                                        className="contact-input"
+                                    <Input type='select' name='contactType' 
+                                        id='contactType'
+                                        className='form-input'
                                         value={this.state.contactType}
                                         onChange={this.handleChange}
                                     >
-                                        <option className="option">May we contact you?</option>
-                                        <option className="option" value='by phone'>By Phone</option>
-                                        <option className="option" value='by email'>By Email</option>
-                                        <option className="option" value='phone or email'>Phone or Email</option>
-                                        <option className="option" value='no'>No</option>
-                                        
+                                        <option className='option'>May we contact you?</option>
+                                        <option className='option' value='by phone'>By Phone</option>
+                                        <option className='option' value='by email'>By Email</option>
+                                        <option className='option' value='phone or email'>Phone or Email</option>
+                                        <option className='option' value='no'>No</option>
                                     </Input>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={5}>
-                                    <Input type="select" name="subject"
-                                        id="subject"
-                                        className="contact-input "
+                                    <Input type='select' name='subject'
+                                        id='subject'
+                                        className='form-input '
                                         value={this.state.subject}
                                         onChange={this.handleChange}
                                     >
-                                        <option className="option" >Subject...</option>
-                                        <option className="option" value="Volunteer" >Volunteer</option>
-                                        <option className="option" value="Community Partner" >Community Partners</option>
-                                        <option className="option" value="Sponsor An Event">Sponsor An Event</option>
-                                        <option className="option" value="Other">Other</option>
+                                        <option className='option' >Subject...</option>
+                                        <option className='option' value='Volunteer' >Volunteer</option>
+                                        <option className='option' value='Community Partner' >Community Partners</option>
+                                        <option className='option' value='Sponsor An Event'>Sponsor An Event</option>
+                                        <option className='option' value='Other'>Other</option>
                                     </Input>
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={12}>
-                                    <Input type="textarea" htmlFor="feedback" id="feedback" name="feedback"
-                                        className="contact-input"
-                                        aria-label="feedback"
-                                        rows="12"
+                                    <Input type='textarea' htmlFor='feedback' id='feedback' name='feedback'
+                                        className='form-input'
+                                        aria-label='feedback'
+                                        rows='12'
                                         value={this.state.feedback} 
-                                        onChange={this.handleChange}>
-                                    </Input>
+                                        onChange={this.handleChange}
+                                    />
                                 </Col>
                             </FormGroup>
                             <FormGroup row>
                                 <Col md={3}>
                                     <Buttons 
-                                        type="submit" 
-                                        color="primary" 
-                                        className="btn-feedback shadow-lg"
-                                        btntext={"Contact Us"}
+                                        type='submit' 
+                                        color='primary' 
+                                        className='btn-feedback shadow-lg'
+                                        btntext={'Contact Us'}
                                     />
                                     <ToastContainer 
                                         theme='dark' 
                                         transition={Zoom} 
                                         autoClose={5000} 
-                                        bodyClassName="home-bg" 
-                                        toastClassName="home-bg" 
+                                        bodyClassName='home-bg' 
+                                        toastClassName='home-bg' 
                                     />
                                 </Col>
                             </FormGroup>

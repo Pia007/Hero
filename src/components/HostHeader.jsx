@@ -3,8 +3,8 @@ import newLogo from '../images/new-logo.svg';
 
 const HostHeader = () => {
     return (
-        <NavLink to="/home" >
-            <p className='host-header my-1 ml-1 pl-2 d-none d-sm-block'>H<img src={newLogo}  alt="logo" className="nav-logo-sm" />st a <br />
+        <NavLink to='/home' >
+            <p className='host-header my-1 ml-1 pl-2 d-none d-sm-block'>H<img src={newLogo}  alt='logo' className='nav-logo-sm' />st a <br />
                 Healthcare Hero
             </p>
         </NavLink>

@@ -1,15 +1,11 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 
-export const SEO = ({title, description}) => {
+export const SEO = ({title, description, content }) => {
     return(
         <Helmet>
-            <meta property="twitter:card" content="summary_large_image" />
-            <meta property="twitter:title" content={title} />
-            <meta property="twitter:description" content={description} />
-            {/* <meta property="og:url" content="https://hostahealtcarehero.netlify.app/" /> */}
-            <meta property="twitter:image" content="https://hostahealtcarehero.netlify.app/hero-logo.png" />
-            <meta name="og:author" content="Pia Torain" />
-            <link rel="canonical" href="https://hostahealtcarehero.netlify.app/" />
+            <title>{title}</title>
+            <meta name={description} content={content} />
+            <meta name="author" content="Pia Torain" />
         </Helmet>
-    )
+    );
 }

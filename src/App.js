@@ -17,9 +17,9 @@ function App() {
         <Provider store={store}>
             <HashRouter >
                 <HelmetProvider>
-                    <div className="App" >
-                        <SEO title={"Host A Healthcare Hero "} description={"description"}  content={"Volunteer to give back to a healthcare hero."}/>
-                        <Main  style={{maxWidth: "100vw", paddingX: '10'}}/>
+                    <div className='App'>
+                        <SEO title={'Host A Healthcare Hero '} description={'description'} content={'Volunteer to give back to a healthcare hero.'} />
+                        <Main style={{maxWidth: '100vw', paddingX: '10'}} />
                     </div>
                 </HelmetProvider>
             </HashRouter>

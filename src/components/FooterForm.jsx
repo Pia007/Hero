@@ -71,30 +71,26 @@ class FooterForm extends Component {
 
         return (
             <Form onSubmit={this.handleSubmit}>
-                <FormGroup row className="d-flex justify-content-center">
+                <FormGroup row className='d-flex justify-content-center'>
                     <Col xs={8}  >
-                        <Input type="email" htmlFor="newsEmail"name="newsEmail" id="newsEmail" 
-                            className="contact-input"
-                            placeholder="Email" 
-                            aria-label="Email"
+                        <Input type='email' htmlFor='newsEmail'name='newsEmail' id='newsEmail' 
+                            className='contact-input'
+                            placeholder='Email' 
+                            aria-label='Email'
                             value={this.state.newsEmail}
                             invalid={!!errors.newsEmail}
-                            onBlur={this.handleBlur("newsEmail")} 
+                            onBlur={this.handleBlur('newsEmail')} 
                             onChange={this.handleChange} 
-                            
                         />
-                        <FormFeedback className="pl-2">{errors.newsEmail}</FormFeedback>
-
+                        <FormFeedback className='pl-2'>{errors.newsEmail}</FormFeedback>
                     </Col>
-                    
                 </FormGroup>
-                <FormGroup row className=" mb-0 px-3 d-flex justify-content-center">
+                <FormGroup row className=' mb-0 px-3 d-flex justify-content-center'>
                     <Buttons 
-                        id="Popover1"
-                        type="submit" 
-                        color=""
-                        className="btn btn-outline-light mx-auto ft-signup"
-                        btntext={"Sign Up"}
+                        type='submit' 
+                        color=''
+                        className='btn btn-outline-light mx-auto ft-signup'
+                        btntext={'Sign Up'}
                     />
                 </FormGroup>
             </Form>

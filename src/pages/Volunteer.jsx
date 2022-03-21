@@ -7,8 +7,8 @@ import { SEO } from '../components/SEO';
 const VolunteerSignUp = () => {
     return (
         <div className='container'>
-            <SEO title={"Volunteer | Host a Healthcare Hero"} description={"Volunteer form page of the website"} /> 
-            <PageHeader siteLocation={"Volunteer"} pageTitle={"Volunteer"} />
+            <SEO title={'Volunteer | Host a Healthcare Hero'} description={'description'} content={'Volunteer form page of the website'} /> 
+            <PageHeader siteLocation={'Volunteer'} pageTitle={'Volunteer'} />
             <VolunteerInfo />
             <VolunteerForm />
             
