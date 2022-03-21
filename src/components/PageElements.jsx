@@ -1,6 +1,6 @@
 import { Breadcrumb, BreadcrumbItem, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { FadeTransform } from 'react-animation-components';
+import Fade from 'react-reveal/Fade';
 
 export const SiteCrumbs = ({ siteLocation }) => {
     return (
@@ -14,19 +14,22 @@ export const SiteCrumbs = ({ siteLocation }) => {
 export const PageTitle = ({ pageTitle }) => {
     return (
         <div className='container-fluid'>
-            <FadeTransform 
-                in
-                transformProps={{
-                    exitTransform: 'scale(0.5) translateY(0%)'
-                }}
-            > 
+            <Fade bottom cascade> 
                 <h1 className='text-center' style={{color: '#96c0ee'}}>{pageTitle}</h1>
-            </FadeTransform>
+            </Fade>
         </div>
     );
 }
 
-const PageHeader = ({ siteLocation, pageTitle }) => {
+export const SectionTitle = ({ sectionTitle }) => {
+    return (
+        <Fade bottom cascade >
+            <h2 style={{color: '#96c0ee'}}>{sectionTitle}</h2>
+        </Fade>
+    )
+}
+
+export const PageHeader = ({ siteLocation, pageTitle }) => {
     return (
         <div className='container mb-3'>
             <Row>
@@ -38,5 +41,3 @@ const PageHeader = ({ siteLocation, pageTitle }) => {
         </div>
     );
 }
-
-export default PageHeader;
