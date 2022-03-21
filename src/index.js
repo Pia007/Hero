@@ -8,8 +8,6 @@ import 'bootstrap-social/bootstrap-social.css';
 import 'bootswatch/dist/spacelab/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import 'typeface-offside';
-import 'typeface-open-sans';
-import 'typeface-ubuntu';
 import 'typeface-pt-sans';
 import App from './App';
 
