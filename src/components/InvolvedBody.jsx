@@ -12,7 +12,7 @@ const InvolvedBody = () => {
                 <InvolvedCard className={'row row-content'} 
                     title={'Volunteer'}
                     contentOne={'We provide thousands of services to healthcare workers and it could not be done without you. We are always looking for volunteers to help us out. If you are interested in volunteering, please '}
-                    contentTwo={' And, to learn more about the volunteer process, please click the button below.'}
+                    contentTwo={' To learn more about the volunteer process, please click the button below.'}
                     contentThree={'Feel free to review our '}
                     imageSrc={volImg}
                     imageName={'volunteer image'}
@@ -21,7 +21,7 @@ const InvolvedBody = () => {
                     modalBodyTextTwo={'A Volunteer Coordinator will work with you, indvidually, to ensure that your placement is seemless. We appreciate your help and would love to have you as a volunteer.'}
                     modalBodyTextThree={' Please click the button below to complete the volunteer form and a coordinator will reach out to you within 2 business days.'}
                     value={'Go'}
-                    to={'/volunteer'}
+                    to={'/volunteersignup'}
                 />
             </Fade>
             <SectionBreak />
@@ -29,7 +29,7 @@ const InvolvedBody = () => {
             <Fade right>
                 <InvolvedCard className={'row row-content flex-lg-row-reverse'}
                     title={'Sponsor Us'}
-                    contentOne={'Host a Healthcare Hero is a non-profit organization. We are funded 100% by the generosity of our Mission Sponsors. We are looking for sponsors to help us grow our mission. If you or your organization are interested in becoming a Mission Sponsor, please '}
+                    contentOne={'Host a Healthcare Hero is a non-profit organization. We are funded 100% by the generosity of our Mission Sponsors. We are looking for sponsors to help us grow our mission. If you or your organization is interested in becoming a Mission Sponsor, please '}
                     contentThree={'Click the button below to learn more, or, review our '}
                     imageSrc={sponImg}
                     imageName={'sponsor image'}
@@ -46,7 +46,7 @@ const InvolvedBody = () => {
             <Fade left>
                 <InvolvedCard className={'row row-content '}
                     title={'Donations'}
-                    contentOne={'You or your organization can donate items or become a designated drop-off site. Or, you can donate directly to the local food pantry. If you have questions about donating, please '}
+                    contentOne={'You or your organization can donate items, become a designated drop-off site, or donate directly to the local food pantry. If you have questions about donating, please '}
                     contentTwo={''}
                     contentThree={'You can also click the button below or review our '}
                     imageSrc={donImg}
