@@ -7,13 +7,9 @@ import { SEO } from './components/SEO';
 import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 
-// In configuresStore.js: the function returns the redux store 
-// we capture that return value in a constant called store
 const store = ConfigureStore();
 function App() {
     return (
-        //Wrap BrowserRouter in Provider tags with store as an attribute 
-        // makes the redux store available to all connected components that are children of app
         <Provider store={store}>
             <HashRouter >
                 <HelmetProvider>
