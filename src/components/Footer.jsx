@@ -1,5 +1,5 @@
-import { Row, Col } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Row, Col, Nav, NavItem  } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 import FooterForm  from './FooterForm';
 
 const Footer = () => {
@@ -23,26 +23,88 @@ const Footer = () => {
                             {' '}info@healthcareheroes.org
                         </a>
                     </Col>
+                    
+                    {/* Vertical Nav */}
                     <Col md={4} className='p-md-0'>
                         <Col className='mx-auto mx-md-0 mb-4 p-xs-3 p-md-0 px-md-auto'>
                             <p className='mb-0 text-light text-center ft-heading'><u className='u-line'>Info</u></p>
-                            <ul className='list-unstyled ft-info'>
-                                <li className='text-center '><Link className='active' to='/home'>Home</Link></li>
-                                <li className='text-center '><Link to='/about'>About</Link></li>
-                                <li className='text-center '><Link to='/involved'>Get Involved</Link></li>
-                                <li className='text-center '><Link to='/contact'>Contact</Link></li>
-                                <li className='text-center '><Link to='/volunteersignup'>Volunteer</Link></li>
-                                <li className='text-center '><Link to='/faqs'>FAQs</Link></li>
-                            </ul>
+                            <Nav vertical className='list-unstyled ft-info'>
+                                <NavItem className='text-center'>
+                                    <NavLink className='ft-link' activeClassName='nav-active' to='/home'>
+                                        Home
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className='text-center'>
+                                    <NavLink className='ft-link' activeClassName='nav-active' to='/about'>
+                                        About
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className='text-center'>
+                                    <NavLink className='ft-link' activeClassName='nav-active' to='/involved'>
+                                        Get Involved
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className='text-center'>
+                                    <NavLink className='ft-link' activeClassName='nav-active' to='/contact'>
+                                        Contact
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className='text-center'>
+                                    <NavLink className='ft-link' activeClassName='nav-active' to='/volunteersignup'>
+                                        Volunteer
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className='text-center'>
+                                    <NavLink className='ft-link' activeClassName='nav-active' to='/volunteerspotlight'>
+                                        Spotlight
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className='text-center'>
+                                    <NavLink className='ft-link' activeClassName='nav-active' to='/faqs'>
+                                        FAQs
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
                         </Col>
                     </Col>
                     
+                    {/* Social Media */}
                     <Col md={4} className='p-0'>
                         <div className='mb-3 text-center '>
-                            <a className='btn btn-social-icon pt-md-0 pl-0' href='http://instagram.com/' aria-label='Instagram'><i className='fa fa-instagram text-light'></i></a>
-                            <a className='btn btn-social-icon pt-md-0' href='http://facebook.com/' aria-label='Facebook'><i className='fa fa-facebook text-light'></i></a>
-                            <a className='btn btn-social-icon pt-md-0' href='http://twitter.com/' aria-label='Twitter'><i className='fa fa-twitter text-light'></i></a>
-                            <a className='btn btn-social-icon pt-md-0' href='http://youtube.com/' aria-label='YouTube'><i className='fa fa-youtube text-light'></i></a>
+                            <a 
+                                href='http://instagram.com/' 
+                                target='_blank' 
+                                rel='noreferrer' 
+                                aria-label='Instagram'
+                                className='btn btn-social-icon pt-md-0 pl-0' 
+                            >
+                                <i className='fa fa-instagram text-light' />
+                            </a>
+                            <a  
+                                href='http://facebook.com/' 
+                                target='_blank' rel='noreferrer' 
+                                aria-label='Facebook'
+                                className='btn btn-social-icon pt-md-0'
+                            >
+                                <i className='fa fa-facebook text-light'/>
+                            </a>
+                            <a 
+                                href='http://twitter.com/' 
+                                target='_blank' 
+                                rel='noreferrer' 
+                                aria-label='Twitter'
+                                className='btn btn-social-icon pt-md-0' 
+                            >
+                                <i className='fa fa-twitter text-light'/>
+                            </a>
+                            <a  
+                                href='http://youtube.com/' 
+                                target='_blank' rel='noreferrer' 
+                                aria-label='YouTube'
+                                className='btn btn-social-icon pt-md-0'
+                            >
+                                <i className='fa fa-youtube text-light'/>
+                            </a>
                         </div>
                         <p className='update-text mb-1 text-center footer-heading'>
                             Sign up to receive news and updates.

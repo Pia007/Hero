@@ -72,9 +72,9 @@ class FooterForm extends Component {
         return (
             <Form onSubmit={this.handleSubmit}>
                 <FormGroup row className='d-flex justify-content-center'>
-                    <Col xs={8}  >
+                    <Col xs={10} sm={7} md={12} lg={10} >
                         <Input type='email' htmlFor='newsEmail'name='newsEmail' id='newsEmail' 
-                            className='contact-input'
+                            className='form-input'
                             placeholder='Email' 
                             aria-label='Email'
                             value={this.state.newsEmail}

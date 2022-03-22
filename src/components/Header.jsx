@@ -19,7 +19,7 @@ export const Header = () => {
             <Navbar className='navbar navbar-expand-lg d-flex justify-content-end sticky-top text-light mynav' style={{zIndex: '5'}}>
                 <div className='container justify-content-between'>
                     <div className='d-flex'>
-                        <NavLink tag='link' to='/home' 
+                        <NavLink tag='link' to='/home'
                             onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))}>
                                 <img src={newLogo}  alt='logo' className=' text-lg nav-logo mt-1' />
                         </NavLink>
@@ -31,28 +31,33 @@ export const Header = () => {
                     <Collapse isOpen={navigation} navbar className='justify-content-end'>
                         <Nav navbar className='ml-auto text-center text-light '>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation) : setNavigation(navigation))} className='nav-link' to='/about' replace> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation) : setNavigation(navigation))} className='nav-link' activeClassName='nav-active' to='/about' replace> 
                                     About
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/involved' replace> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' activeClassName='nav-active' to='/involved' replace> 
                                     Get Involved
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/contact' replace> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' activeClassName='nav-active' to='/contact' replace> 
                                     Contact
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/volunteersignup' replace> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' activeClassName='nav-active' to='/volunteersignup' replace> 
                                     Volunteer
                                 </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' to='/volunteerspotlight' replace> 
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' activeClassName='nav-active' to='/volunteerspotlight' replace> 
                                     Spotlight 
+                                </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink tag='link' onClick={() => (navigation ? setNavigation(!navigation): setNavigation(navigation))} className='nav-link' activeClassName='nav-active' to='/faqs' replace> 
+                                    FAQs 
                                 </NavLink>
                             </NavItem>
                         </Nav>

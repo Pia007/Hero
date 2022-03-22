@@ -1,4 +1,4 @@
-import {  SEO } from '../components/SEO';
+import { SEO } from '../components/SEO';
 import { SiteCrumbs } from '../components/PageElements';
 import { PageTitle } from '../components/PageElements';
 import { Loading } from '../components/Loading';
@@ -171,7 +171,7 @@ const About = (props) => {
 
             {/* MISSION SPONSORS */}
             {/* Each sponsor is rendered in this row as an accordion item */}
-            
+        
             <Row className='row-content'>
                 <Col xs={12} className='px-sm-0'>
                     <SectionTitle sectionTitle={'Hero Sponsors'} color={'primary'}/>
