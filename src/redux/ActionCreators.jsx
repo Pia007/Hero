@@ -1,14 +1,12 @@
-// Create ActionCreators.jsx:
 import * as ActionTypes from './ActionTypes';
 import { SPONSORS } from '../shared/sponsorsData';
 import { MEMBERS } from '../shared/membersData';
 import { FAQS } from '../shared/faqsData'; 
 import { VOLUNTEERS } from '../shared/volunteersData'; 
 
-// Fetches sponsors from the store
+
 export const fetchSponsors = () => dispatch => {
     dispatch(sponsorsLoading());
-    //dispatch(addSponsors(SPONSORS));
 
     setTimeout(() => {
         dispatch(addSponsors(SPONSORS));
@@ -72,14 +70,12 @@ export const addFaqs = faqs => ({
 });
 
 
-
 export const fetchVolunteers = () => dispatch => {
     dispatch(volunteersLoading());
-    //dispatch(addVolunteers(VOLUNTEERS));
 
     setTimeout(() => {
         dispatch(addVolunteers(VOLUNTEERS));
-    }, 200);
+    }, 2000);
 }
 
 export const volunteersLoading = () => ({
