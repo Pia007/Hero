@@ -46,10 +46,10 @@ const FaqHeader = () => {
     );
 }
 
-const Faqs = (props) => {
+const Faqs = ({ faqs }) => {
     const [ selected, setSelected ] = useState('generalFaqs');
     
-    const generalFaqs = props.faqs?.filter(faq => faq.category === 'General').map(filteredFaq => { 
+    const generalFaqs = faqs.filter(faq => faq.category === 'General').map(filteredFaq => { 
         return (
             <Col key={filteredFaq.id} className='p-0'>
                 <RenderFaq
@@ -59,7 +59,7 @@ const Faqs = (props) => {
         );
     });
 
-    const volunteerFaqs = props.faqs?.filter(faq => faq.category === 'Volunteer').map(filteredFaq => { 
+    const volunteerFaqs = faqs.filter(faq => faq.category === 'Volunteer').map(filteredFaq => { 
         return (
             <Col key={filteredFaq.id} className='p-0'>
                 <RenderFaq
@@ -69,7 +69,7 @@ const Faqs = (props) => {
         );
     });
 
-    const donateFaqs = props.faqs?.filter(faq => faq.category === 'Donate').map(filteredFaq => { 
+    const donateFaqs = faqs.filter(faq => faq.category === 'Donate').map(filteredFaq => { 
         return (
             <Col key={filteredFaq.id} className='p-0'>
                 <RenderFaq
@@ -79,7 +79,7 @@ const Faqs = (props) => {
         );
     });
 
-    const sponsorFaqs = props.faqs?.filter(faq => faq.category === 'Sponsor').map(filteredFaq => { 
+    const sponsorFaqs = faqs.filter(faq => faq.category === 'Sponsor').map(filteredFaq => { 
         return (
             <Col key={filteredFaq.id} className='p-0'>
                 <RenderFaq
@@ -89,7 +89,7 @@ const Faqs = (props) => {
         );
     });
 
-    if (props.faqIsLoading) {
+    if (faqs.faqIsLoading) {
         return (
             <div className='container'>
                 <Row>
@@ -99,12 +99,12 @@ const Faqs = (props) => {
         );
     }
 
-    if (props.faqErrMess) {
+    if (faqs.faqErrMess) {
         return (
             <div className='container'>
                 <Row>
                     <Col>
-                        <h4>{props.errMess}</h4>
+                        <h4>{faqs.errMess}</h4>
                     </Col>
                 </Row>
             </div>
