@@ -24,7 +24,7 @@
 
 <h2 style="color: #3CB521"> About </h2>
 
-[**Host a Healthcare Hero**](https://hostahealtcarehero.netlify.app/) is a single-page application(SPA) that describes the goals and mission of a non-profit organization that partners with local businesses and volunteers to provide health, wellness, and personal care services to healthcare workers from all levels of the healthcare system. 
+[**Host a Healthcare Hero**](https://hostahealtcarehero.netlify.app/) is a single-page application(SPA) that describes the goals and mission of a fictional non-profit organization that partners with local businesses and volunteers to provide health, wellness, and personal care services to healthcare workers from all levels of the healthcare system. 
 
 <br />
 
@@ -46,7 +46,6 @@
 
 <a href="https://reactjs.org/" target="_blank" alt="react documentation"><img src="https://img.shields.io/badge/-React-61DBFB?style=plastic&labelColor=black&logo=react&logoColor=61DBFB"/></a>
 <a href="https://react-redux.js.org/" target="_blank" alt="react redux documentation"><img src="https://img.shields.io/badge/-Redux-764ABC?style=plastic&labelColor=black&logo=redux&logoColor=764ABC"/></a>
-<a href="https://nodejs.org/en/" target="_blank" alt="react redux documentation"><img src="https://img.shields.io/badge/-Nodejs-3C873A?style=plastic&labelColor=black&logo=node.js&logoColor=3C873A"/></a>
 <a href="https://getbootstrap.com/" target="_blank" alt="bootstrap documentation"><img src="https://img.shields.io/badge/-Bootstrap-553C7B?style=plastic&labelColor=black&logo=bootstrap&logoColor=553C7B" /></a>
 <a href="https://yarnpkg.com/" target="_blank" alt="yarn documentation"><img src="https://img.shields.io/badge/-Yarn-117CAD?style=plastic&labelColor=black&logo=yarn&logoColor=117CAD" /></a>
 <a href="https://code.visualstudio.com/" target="_blank" alt="visual stydio code documentation"><img src="https://img.shields.io/badge/-Visual_Studio-337AB7?style=plastic&labelColor=black&logo=visualstudio&logoColor=337AB7" /></a>
