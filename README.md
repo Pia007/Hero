@@ -28,20 +28,19 @@
 
 <br />
 
-<a href="https://github.com/Pia007/Hero/"><img src="https://user-images.githubusercontent.com/66088725/158652396-e07b0846-e84b-4ea0-9768-ef3bce7326a0.png" >
-</a>
-
-<br />
-
-<!-- ![Gif Demo](https://github.com/pia007/hero/images/../../../../../src/images/Hero.gif) -->
-
-<br />
-
 <h3 style="color: #3CB521"> Live Demo </h3>
 
 [**Host a Healthcare Hero**](https://hostahealtcarehero.netlify.app/) is hosted on Netlify.
+<br />
+
+
+<a href="https://github.com/Pia007/Hero/"><img src="https://user-images.githubusercontent.com/66088725/158652396-e07b0846-e84b-4ea0-9768-ef3bce7326a0.png" >
+</a>
+<br />
+
 
 <br />
+
 
 <h2 style="color: #3CB521">Technologies </h2>
 
@@ -50,6 +49,7 @@
 <a href="https://nodejs.org/en/" target="_blank" alt="react redux documentation"><img src="https://img.shields.io/badge/-Nodejs-3C873A?style=plastic&labelColor=black&logo=node.js&logoColor=3C873A"/></a>
 <a href="https://getbootstrap.com/" target="_blank" alt="bootstrap documentation"><img src="https://img.shields.io/badge/-Bootstrap-553C7B?style=plastic&labelColor=black&logo=bootstrap&logoColor=553C7B" /></a>
 <a href="https://yarnpkg.com/" target="_blank" alt="yarn documentation"><img src="https://img.shields.io/badge/-Yarn-117CAD?style=plastic&labelColor=black&logo=yarn&logoColor=117CAD" /></a>
+<a href="https://code.visualstudio.com/" target="_blank" alt="visual stydio code documentation"><img src="https://img.shields.io/badge/-Visual_Studio-337AB7?style=plastic&labelColor=black&logo=visualstudio&logoColor=337AB7" /></a>
 
 
 <h3 style="color: #3CB521">Key Dependencies</h3>
