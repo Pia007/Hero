@@ -29,7 +29,7 @@ export const Accordion = ({ name, description, titleHolder }) => {
                 </CardHeader>
                 <Fade when={isOpen} duration={500}>
                     <Collapse isOpen={isOpen} className='text-primary p-0 shadow-lg description '>
-                        <CardBody style={{backgroundColor: 'transparent', border: 'none', padding: '12px'}}>
+                        <CardBody style={{backgroundColor: 'transparent', border: 'none', padding: '.625rem'}}>
                             {description}
                         </CardBody>
                     </Collapse>

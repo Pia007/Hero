@@ -2,6 +2,19 @@ import { Row, Col, Nav, NavItem  } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import FooterForm  from './FooterForm';
 
+function FooterLinkTitle ({ className, navClass, to, title, onClick }) {
+    return (
+        <NavItem className={className}>
+            <NavLink
+                className={navClass} activeClassName='nav-active' 
+                to={to} 
+                onClick={onClick}>
+                    {title}
+            </NavLink>
+        </NavItem>
+    );
+}
+
 const Footer = () => {
     return (
         <footer className='site-footer text-light ' >
@@ -29,7 +42,13 @@ const Footer = () => {
                         <Col className='mx-auto mx-md-0 mb-4 p-xs-3 p-md-0 px-md-auto'>
                             <p className='mb-0 text-light text-center ft-heading'><u className='u-line'>Info</u></p>
                             <Nav vertical className='list-unstyled ft-info'>
-                                <NavItem className='text-center'>
+                                <FooterLinkTitle to='/about' title='About' className={'text-center'} navClass={'ft-link'} />
+                                <FooterLinkTitle to='/involved' title='Get Involved' className={'text-center'} navClass={'ft-link'} />
+                                <FooterLinkTitle to='/contact' title='Contact' className={'text-center'} navClass={'ft-link'} />
+                                <FooterLinkTitle to='/volunteersignup' title='Volunteer' className={'text-center'} navClass={'ft-link'} />
+                                <FooterLinkTitle to='/volunteerspotlight' title='Spotlight' className={'text-center'} navClass={'ft-link'} />
+                                <FooterLinkTitle to='/faqs' title='FAQs' className={'text-center'} navClass={'ft-link'} />
+                                {/* <NavItem className='text-center'>
                                     <NavLink className='ft-link' activeClassName='nav-active' to='/home'>
                                         Home
                                     </NavLink>
@@ -63,7 +82,7 @@ const Footer = () => {
                                     <NavLink className='ft-link' activeClassName='nav-active' to='/faqs'>
                                         FAQs
                                     </NavLink>
-                                </NavItem>
+                                </NavItem> */}
                             </Nav>
                         </Col>
                     </Col>

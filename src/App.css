@@ -2,11 +2,12 @@
 :root {
     --font-offside: 'Offside', sans-serif;
     --font-ptSans: 'Pt-sans', sans-serif;
-    --background: #04203F;
+    --background: #04203f;
     --primary: #96c0ee;
     --danger: #CD0200;
     --success: #3CB521;
     --hover: #D47500;
+    --cardHover: rgba(83, 138, 206, 0.5);
     --table-bg: #C9DEF5;
     --table-bg-alt: #AECBEB;
     --input-bg: #E4EEfA;
@@ -155,8 +156,13 @@ a, a:hover {
 /* End Landing Page */
 
 /* About Table*/
-.about-card-holder {
+.about-table-holder {
+    height: auto;
     background: transparent; 
+    border-radius: 6px;
+    box-shadow:  6px 6px 8px #031931,
+        -6px -6px 8px #05274d;
+    
 }
 .about-table-header{
     font-size: 1.375em;
@@ -182,21 +188,36 @@ a, a:hover {
 /* End About Table */
 
 /* Accordions */
+.accordion-card {
+    box-shadow:  6px 6px 8px #031931,
+        -6px -6px 8px #05274d;
+}
 .accordion-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     color: white;
-    border-radius: 3px 3px 0 0;
-    border-bottom: 3px double var(--success);
-    font-size: clamp(1.25em, 2vw, 1.375em);
     font-weight: 500;
+}
+.hero-title {
+    border-radius: 3px;
+    font-size: clamp(1.15em, 2vw, 1.275em);
+}
+.accordion-icon {
+    transition: 0.2s ease-in-out;
+    transform-origin: center;
 }
 .faq-accordion-title {
     border: 2px double var(--primary);
     font-size: clamp(1.25em, 2vw, 1.5em);
-    font-weight: 500;
+}
+.accordion-title:hover {
+    opacity: 70%;
+}
+.faq-accordion-title:hover {
+    background-color: var(--cardHover);
 }
 .description {
     padding: 1rem;
@@ -204,7 +225,9 @@ a, a:hover {
     border-radius: 0 0 3px 3px;
     background: #c9def5;
     border: 2px double var(--primary);
+    overflow: hidden;
 }
+
 .faq-accordion-description {
     border: 2px double var(--primary);
     border-top: none;
@@ -238,8 +261,9 @@ a, a:hover {
 /* Contact & Volunteer Forms*/
 .form {
     background: var(--background);
-    border: 3px double var(--table-bg-alt);
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow:  6px 6px 8px #020f1d,
+        -3px -3px 8px #063161;
 }
 .form-input {
     border: 3px double var(--primary);
@@ -340,6 +364,11 @@ a, a:hover {
 /* End Footer */
 
 /* Volunteer Cards */
+.vol-card-holder {
+    border-radius: 8px;
+    box-shadow:  6px 6px 8px #031931,
+        -6px -6px 8px #05274d;
+}
 .vol-cards,
 .meet-img {
     border: 3px double rgb(110, 163, 199);

@@ -10,7 +10,6 @@ const VolunteerSignUp = () => {
             <PageHeader siteLocation={'Volunteer'} pageTitle={'Volunteer'} />
             <VolunteerInfo />
             <VolunteerForm />
-            
         </div>
     );
 }
