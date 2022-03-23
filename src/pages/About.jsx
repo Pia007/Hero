@@ -153,9 +153,9 @@ const About = (props) => {
                         healthcare heroes.
                     </Col>
                 </Col> 
-                <Row className='flex-lg-row-reverse mb-lg-4'>
+                <Row className='flex-lg-row-reverse '>
                     <Col>
-                        <Col className='mission-text mb-4 mb-md-0 px-sm-0 pr-lg-0'>
+                        <Col className='mission-text mb-4 mb-md-0 my-xl-3 px-sm-0 pr-lg-0'>
                             In 2019, Sofia was given the opportunity to speak at a healthcare symposium. She invited her fellow
                             heroes to join her. It was at that event, that they decided to make it official. <strong>Host a Healthcare Hero </strong>
                             was born. Six months later, the Covid-19 pandemic hit northern New Jersey. As the healthcare system
