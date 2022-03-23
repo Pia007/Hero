@@ -21,6 +21,7 @@ function LinkTitle ({ className, navClass, to, title, onClick }) {
 export const Header = () => {
 
     const [navigation, setNavigation] = useState(false);
+    const openNav = () => setNavigation(!navigation);
     const toggleNav = () => {
         (navigation ? setNavigation(!navigation): setNavigation(navigation));
     };
@@ -41,7 +42,7 @@ export const Header = () => {
                         </NavLink>
                         <RenderHostHeader />
                     </div>
-                    <NavbarToggler onClick={toggleNav} className='justify-content-end'>
+                    <NavbarToggler onClick={openNav} className='justify-content-end'>
                         <i className='fa fa-bars fa-lg text-success nv-icon '/> 
                     </NavbarToggler>
                     <Collapse isOpen={navigation} navbar className='justify-content-end'>

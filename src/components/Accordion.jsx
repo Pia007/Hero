@@ -20,7 +20,7 @@ export const Accordion = ({ name, description, titleHolder }) => {
 
     return (
         <div className="container p-2">
-            <Card className='mission-text mb-1 p-2 accordion-card' style={{backgroundColor: 'transparent', border: 'none'}}>
+            <Card className='mission-text mb-sm-1 p-2 accordion-card' style={{backgroundColor: 'transparent', border: 'none'}}>
                 <CardHeader className={titleHolder} onClick={() => setIsOpen(!isOpen)}>
                     <CardTitle className='text-light mt-1 mb-0 p-0 '>{name}</CardTitle>
                     <animated.span style={iconAnimation} className='accordion-icon'>
@@ -28,7 +28,7 @@ export const Accordion = ({ name, description, titleHolder }) => {
                     </animated.span>
                 </CardHeader>
                 <Fade when={isOpen} duration={500}>
-                    <Collapse isOpen={isOpen} className='text-primary p-0 shadow-lg description '>
+                    <Collapse isOpen={isOpen} className='text-primary p-0 shadow-lg description '>  
                         <CardBody style={{backgroundColor: 'transparent', border: 'none', padding: '.625rem'}}>
                             {description}
                         </CardBody>
