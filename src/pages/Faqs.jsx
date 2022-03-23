@@ -47,7 +47,7 @@ const FaqHeader = () => {
 }
 
 const Faqs = ({ faqs }) => {
-    const [ selected, setSelected ] = useState('generalFaqs');
+    const [ category, setCategory ] = useState('generalFaqs');
     
     const generalFaqs = faqs.filter(faq => faq.category === 'General').map(filteredFaq => { 
         return (
@@ -126,10 +126,10 @@ const Faqs = ({ faqs }) => {
                 }}
             >
                 <div className='container text-center p-0'>
-                    <button onClick={() => { setSelected('generalFaqs') }} className='btn btn-outline-success mr-sm-2 faqBtn'>General</button>
-                    <button onClick={() => { setSelected('volunteerFaqs') }} className='btn btn-outline-success mr-sm-2 faqBtn'>Volunteer</button>
-                    <button onClick={() => { setSelected('sponsorFaqs') }} className='btn btn-outline-success mr-sm-2 faqBtn'>Sponsor</button>
-                    <button onClick={() => { setSelected('donateFaqs') }}className='btn btn-outline-success faqBtn'>Donate</button>
+                    <button onClick={() => { setCategory('generalFaqs') }} className='btn btn-outline-success mr-sm-2 faqBtn'>General</button>
+                    <button onClick={() => { setCategory('volunteerFaqs') }} className='btn btn-outline-success mr-sm-2 faqBtn'>Volunteer</button>
+                    <button onClick={() => { setCategory('sponsorFaqs') }} className='btn btn-outline-success mr-sm-2 faqBtn'>Sponsor</button>
+                    <button onClick={() => { setCategory('donateFaqs') }}className='btn btn-outline-success faqBtn'>Donate</button>
                 </div>
             </FadeTransform>
 
@@ -137,16 +137,16 @@ const Faqs = ({ faqs }) => {
             <div className='container mt-3 '>
                 
                 { 
-                    (selected === 'generalFaqs') ? <RenderFaqSection faqTitle={'General'} factType={generalFaqs} /> : null 
+                    (category === 'generalFaqs') ? <RenderFaqSection faqTitle={'General'} factType={generalFaqs} /> : null 
                 }
                 {
-                    (selected === 'volunteerFaqs') ? <RenderFaqSection faqTitle={'Volunteer'} factType={volunteerFaqs} /> : null 
+                    (category === 'volunteerFaqs') ? <RenderFaqSection faqTitle={'Volunteer'} factType={volunteerFaqs} /> : null 
                 }
                 {
-                    (selected === 'sponsorFaqs') ? <RenderFaqSection faqTitle={'Sponsor'} factType={sponsorFaqs} /> : null 
+                    (category === 'sponsorFaqs') ? <RenderFaqSection faqTitle={'Sponsor'} factType={sponsorFaqs} /> : null 
                 }
                 {
-                    (selected === 'donateFaqs') ? <RenderFaqSection faqTitle={'Donate'} factType={donateFaqs} /> : null 
+                    (category === 'donateFaqs') ? <RenderFaqSection faqTitle={'Donate'} factType={donateFaqs} /> : null 
                 }
                 
             </div>
