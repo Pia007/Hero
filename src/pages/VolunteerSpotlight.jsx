@@ -8,17 +8,18 @@ import Zoom from 'react-reveal/Fade';
 
 const RenderBioCard = ({ volunteer }) =>  {
     return (
-        <Zoom duration={500}>
-        
-            <Card className='mb-5 bg-primary vol-cards'>
-                <Link to={`/volunteers/${volunteer.id}`}>
-                    <CardImg className='cd-img p-2' src={volunteer.image} alt={volunteer.first} />
-                    <CardBody className='p-1 vol-card-body text-center text-light'>
-                        <CardTitle className='my-1 vol-title '>{volunteer.first}</CardTitle>
-                    </CardBody>
-                </Link>
-            </Card>
-        </Zoom> 
+        <div className="container mb-4 p-3 vol-card-holder">
+            <Zoom duration={500}>
+                <Card className='mb-0 bg-primary vol-cards'>
+                    <Link to={`/volunteers/${volunteer.id}`}>
+                        <CardImg className='cd-img p-2' src={volunteer.image} alt={volunteer.first} />
+                        <CardBody className='p-1 vol-card-body text-center text-light'>
+                            <CardTitle className='my-1 vol-title '>{volunteer.first}</CardTitle>
+                        </CardBody>
+                    </Link>
+                </Card>
+            </Zoom> 
+        </div>
     );
 }
 
