@@ -13,7 +13,7 @@ const RenderFaq = ({ faq }) => {
         <Accordion
             name={faq.question} 
             description={faq.answer}
-            titleHolder={'accordion-title faq-accordion-title py-3 px-3 '}
+            titleHolder={'accordion-title faq-accordion-title py-2 px-3 '}
             className='faq-accordion-description'
         />
     );

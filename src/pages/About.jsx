@@ -8,8 +8,7 @@ import { SectionTitle }from '../components/PageElements';
 import SectionBreak from '../components/SectionBreak';
 import AboutTable from '../components/AboutTable';
 import Fade from 'react-reveal/Fade';
-import aboutImg from '../images/about.jpg'
-
+import aboutImg from '../images/about.jpg';
 
 // accordion for each sponsor
 const RenderAccordionItem = ({ sponsor, isLoading, errMess }) => {
@@ -34,7 +33,7 @@ const RenderAccordionItem = ({ sponsor, isLoading, errMess }) => {
         <Accordion
             name={sponsor.name} 
             description={sponsor.description} 
-            titleHolder={'bg-primary accordion-title px-3 py-2'}
+            titleHolder={'bg-primary px-3 py-2 accordion-title hero-title'}
         />
     );
 };
