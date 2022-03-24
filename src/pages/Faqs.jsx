@@ -114,9 +114,9 @@ const Faqs = ({ faqs }) => {
     return (
         
         <div className='container'>
-            <SEO title={'FAQs | Host a Healthcare Hero'} description={'description'} content={'Faqs page of the website'} />
+            <SEO title='FAQs | Host a Healthcare Hero' description='description' content='Faqs page of the website' />
             <div className='container-fluid home-bg ' id='faq'>
-                <PageHeader siteLocation={'FAQs'}  />
+                <PageHeader siteLocation='FAQs' />
                 <FaqHeader />
             </div>
             <FadeTransform 
@@ -129,7 +129,7 @@ const Faqs = ({ faqs }) => {
                     <button onClick={() => { setCategory('generalFaqs') }} className='btn btn-outline-success mr-sm-2 faqBtn'>General</button>
                     <button onClick={() => { setCategory('volunteerFaqs') }} className='btn btn-outline-success mr-sm-2 faqBtn'>Volunteer</button>
                     <button onClick={() => { setCategory('sponsorFaqs') }} className='btn btn-outline-success mr-sm-2 faqBtn'>Sponsor</button>
-                    <button onClick={() => { setCategory('donateFaqs') }}className='btn btn-outline-success faqBtn'>Donate</button>
+                    <button onClick={() => { setCategory('donateFaqs') }} className='btn btn-outline-success faqBtn'>Donate</button>
                 </div>
             </FadeTransform>
 
@@ -137,16 +137,16 @@ const Faqs = ({ faqs }) => {
             <div className='container mt-3 '>
                 
                 { 
-                    (category === 'generalFaqs') ? <RenderFaqSection faqTitle={'General'} factType={generalFaqs} /> : null 
+                    (category === 'generalFaqs') ? <RenderFaqSection faqTitle='General' factType={generalFaqs} /> : null 
                 }
                 {
-                    (category === 'volunteerFaqs') ? <RenderFaqSection faqTitle={'Volunteer'} factType={volunteerFaqs} /> : null 
+                    (category === 'volunteerFaqs') ? <RenderFaqSection faqTitle='Volunteer' factType={volunteerFaqs} /> : null 
                 }
                 {
-                    (category === 'sponsorFaqs') ? <RenderFaqSection faqTitle={'Sponsor'} factType={sponsorFaqs} /> : null 
+                    (category === 'sponsorFaqs') ? <RenderFaqSection faqTitle='Sponsor' factType={sponsorFaqs} /> : null 
                 }
                 {
-                    (category === 'donateFaqs') ? <RenderFaqSection faqTitle={'Donate'} factType={donateFaqs} /> : null 
+                    (category === 'donateFaqs') ? <RenderFaqSection faqTitle='Donate' factType={donateFaqs} /> : null 
                 }
                 
             </div>

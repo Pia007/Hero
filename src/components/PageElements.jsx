@@ -1,3 +1,4 @@
+import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';

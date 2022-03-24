@@ -1,6 +1,8 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import newLogo from '../images/new-logo.svg';
 
+// Header Title in Navbar
 const HostHeader = () => {
     return (
         <NavLink to='/home' >

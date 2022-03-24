@@ -9,7 +9,7 @@ const InvolvedModal = ({modalHeaderText, modalBodyText, modalBodyTextTwo, modalB
     
     return (
         <React.Fragment>
-            <Buttons color={'primary'} clickHandler={toggleModal} btntext={'Learn More'} className='col-6 col-sm-6 col-md-4 mx-auto shadow-lg btn-learn'/>
+            <Buttons color='primary' clickHandler={toggleModal} btntext='Learn More' className='col-6 col-sm-6 col-md-4 mx-auto shadow-lg btn-learn'/>
             <Modal centered scrollable isOpen={modal} toggle={toggleModal} className='' >
                 <ModalHeader toggle={toggleModal} className='bg-success text-primary'>{modalHeaderText}</ModalHeader>
                 <ModalBody>

@@ -4,6 +4,7 @@ import { ToastContainer, toast, Zoom } from 'react-toastify';
 import { Row, Col, FormGroup, Form, Input, Label, FormFeedback } from 'reactstrap';
 import Buttons from './Buttons';
 
+// Toast Id for the toast message
 const volunteerToastId = 'contact-toast-id';
 class VolunteerForm extends Component {
     
@@ -128,6 +129,8 @@ class VolunteerForm extends Component {
             [name]: value
         });
     }
+
+    // Toasts the message to the user
     showToast = () => {
         toast.success(`${this.state.fName}, thanks for your interests in volunteering! We will get back to you shortly.`, {
             position: toast.POSITION.TOP_RIGHT,
@@ -428,7 +431,7 @@ class VolunteerForm extends Component {
                                     type='submit' 
                                     color='primary'
                                     className='shadow-lg btn-feedback'
-                                    btntext={'Volunteer'}
+                                    btntext='Volunteer'
                                     onClick={() => {
                                         this.resetForm();
                                         this.handleSubmit();

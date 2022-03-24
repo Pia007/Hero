@@ -14,8 +14,7 @@ export const Accordion = ({ name, description, titleHolder }) => {
         to: {
             transform: isOpen ? "rotate(225deg)" : "rotate(0deg)",
             color: isOpen ? "#CD0200" : "#3CB521"
-        },
-            config: { duration: "1" }
+        }
     });
 
     return (

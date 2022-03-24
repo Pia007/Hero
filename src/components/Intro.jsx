@@ -1,7 +1,9 @@
+import React from 'react';
 import Fade from 'react-reveal/Fade';
 import logo from '../images/new-logo-lp.svg';
 import { Link } from 'react-router-dom';
 
+// Landing Page Text
 export const Intro= () => {
     return (
         <div className='intro-container' style={{maxWidth: '95%',  height: '90vh', margin: 'auto'}}>

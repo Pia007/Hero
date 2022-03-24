@@ -4,7 +4,7 @@ import { MEMBERS } from '../shared/membersData';
 import { FAQS } from '../shared/faqsData'; 
 import { VOLUNTEERS } from '../shared/volunteersData'; 
 
-
+// action creators
 export const fetchSponsors = () => dispatch => {
     dispatch(sponsorsLoading());
 

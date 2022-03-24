@@ -33,7 +33,7 @@ const RenderAccordionItem = ({ sponsor, isLoading, errMess }) => {
         <Accordion
             name={sponsor.name} 
             description={sponsor.description} 
-            titleHolder={'bg-primary px-3 py-2 accordion-title hero-title'}
+            titleHolder='bg-primary px-3 py-2 accordion-title hero-title'
         />
     );
 };
@@ -99,9 +99,9 @@ const About = (props) => {
 
     return (
         <div className='container' style={{overflowX: 'hidden'}}>
-            <SEO title={'About Us | Host A Healthcare Hero'}  description={'description'} content={'About page of website'} />
-            <SiteCrumbs siteLocation={'About'} />
-            <PageTitle pageTitle={'Our Mission'} />
+            <SEO title='About Us | Host A Healthcare Hero'  description='description' content='About page of website' />
+            <SiteCrumbs siteLocation='About' />
+            <PageTitle pageTitle='Our Mission' />
             <Row className='row-content pt-0'>
                 <Col className='px-sm-0'>
                     <p className='text-center mission-text'>
@@ -126,7 +126,7 @@ const About = (props) => {
             <Row className='pt-4'> 
                 <Col className='px-0'>
                     <Col className='px-3 px-sm-0'>
-                        <SectionTitle sectionTitle={'Our History'} color={'#96c0ee'} />
+                        <SectionTitle sectionTitle='Our History' color='#96c0ee' />
                     </Col>
                     
                     <Col className='mission-text mb-3 px-sm-0'>
@@ -173,7 +173,7 @@ const About = (props) => {
         
             <Row className='row-content'>
                 <Col xs={12} className='px-sm-0'>
-                    <SectionTitle sectionTitle={'Hero Sponsors'} color={'primary'}/>
+                    <SectionTitle sectionTitle='Hero Sponsors' color='primary' />
                 </Col>
                 <Col xs={12} className='p-0'>
                     {sponsor}
@@ -187,7 +187,7 @@ const About = (props) => {
             {/* Member list is rendered in this row */}
             <Row className='row-content'>
                 <Col className='px-sm-0'>
-                    <SectionTitle sectionTitle={'Host a Healthcare Hero'} color={'96c0ee'}/>
+                    <SectionTitle sectionTitle='Host a Healthcare Hero' color='96c0ee' />
                     
                 </Col>
                 <Col xs={12} className='px-sm-0'>

@@ -60,8 +60,8 @@ const VolunteerSpotlight = (props) => {
 
     return (
         <div className='container'>
-            <SEO title={'Volunteer Spotlight | Host a Healthcare Hero'} description={'description'} content={'Spotlight on a few of the volunteers'} />
-            <PageHeader siteLocation={'Spotlight'} pageTitle={'Volunteer Spotlight'} />
+            <SEO title='Volunteer Spotlight | Host a Healthcare Hero' description='description' content='Spotlight on a few of the volunteers' />
+            <PageHeader siteLocation='Spotlight' pageTitle='Volunteer Spotlight' />
             <FadeTransform 
                 in
                 transformProps={{

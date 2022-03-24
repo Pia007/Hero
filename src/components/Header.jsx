@@ -4,6 +4,7 @@ import { NavLink, useLocation  } from 'react-router-dom';
 import HostHeader from './HostHeader';
 import newLogo from '../images/new-logo.svg';
 
+// Component for Navbar NavItems
 function LinkTitle ({ className, navClass, to, title, onClick }) {
     return (
         <NavItem className={className}>
@@ -38,7 +39,7 @@ export const Header = () => {
                     <div className='d-flex'>
                         <NavLink tag='link' to='/home'
                                 onClick={toggleNav}>
-                                <img src={newLogo}  alt='logo' className=' text-lg nav-logo mt-1' />
+                                <img src={newLogo}  alt='logo' className='text-lg nav-logo mt-1' />
                         </NavLink>
                         <RenderHostHeader />
                     </div>
@@ -46,13 +47,13 @@ export const Header = () => {
                         <i className='fa fa-bars fa-lg text-success nv-icon '/> 
                     </NavbarToggler>
                     <Collapse isOpen={navigation} navbar className='justify-content-end'>
-                        <Nav navbar className='ml-auto text-center text-light '>
-                            <LinkTitle to='/about' title='About' navClass={'nav-link'} onClick={toggleNav} />
-                            <LinkTitle to='/involved' title='Get Involved' navClass={'nav-link'} onClick={toggleNav} />
-                            <LinkTitle to='/contact' title='Contact' navClass={'nav-link'} onClick={toggleNav} />
-                            <LinkTitle to='/volunteersignup' title='Volunteer' navClass={'nav-link'} onClick={toggleNav} />
-                            <LinkTitle to='/volunteerspotlight' title='Spotlight' navClass={'nav-link'} onClick={toggleNav} />
-                            <LinkTitle to='/faqs' title='FAQs' navClass={'nav-link'} onClick={toggleNav} />
+                        <Nav navbar className='ml-auto text-center text-light'>
+                            <LinkTitle to='/about' title='About' navClass='nav-link' onClick={toggleNav} />
+                            <LinkTitle to='/involved' title='Get Involved' navClass='nav-link' onClick={toggleNav} />
+                            <LinkTitle to='/contact' title='Contact' navClass='nav-link' onClick={toggleNav} />
+                            <LinkTitle to='/volunteersignup' title='Volunteer' navClass='nav-link' onClick={toggleNav} />
+                            <LinkTitle to='/volunteerspotlight' title='Spotlight' navClass='nav-link' onClick={toggleNav} />
+                            <LinkTitle to='/faqs' title='FAQs' navClass='nav-link' onClick={toggleNav} />
                         </Nav>
                     </Collapse>
                 </div>

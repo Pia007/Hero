@@ -4,7 +4,7 @@ import { Row, Col, FormGroup, Form, Input, FormFeedback } from 'reactstrap';
 import { ToastContainer, toast, Zoom } from 'react-toastify';
 import Buttons from './Buttons';
 
-
+// Toast id for toast message
 const contactToastId = 'contact-toast-id';
 class ContactForm extends Component {
     constructor(props) {
@@ -83,6 +83,7 @@ class ContactForm extends Component {
         });
     }
 
+    // Toast message for contact form
     showToast = () => {
         toast.success(`${this.state.firstName}, your message has been sent! We will get back to you shortly.`, {
             position: toast.POSITION.TOP_RIGHT,
@@ -244,7 +245,7 @@ class ContactForm extends Component {
                                         type='submit' 
                                         color='primary' 
                                         className='btn-feedback shadow-lg'
-                                        btntext={'Contact Us'}
+                                        btntext='Contact Us'
                                     />
                                     <ToastContainer 
                                         theme='dark' 

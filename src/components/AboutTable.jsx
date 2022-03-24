@@ -1,3 +1,4 @@
+import React from 'react';
 import { Row, Col, Card, CardBody, CardHeader } from 'reactstrap';
 import newLogo from '../images/new-logo.svg';
 

@@ -1,7 +1,7 @@
+import React from 'react';
 import { Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
-
 
 const ContactInfo = () =>{
     return (
@@ -26,7 +26,7 @@ const ContactInfo = () =>{
                 </Row>
 
                 <Row className='p-0'>
-                    <Col sm={6} >
+                    <Col sm={6}>
                         <p className='mb-0 mission-text'><u >Address:</u></p>
                         <address className='address-info'>
                             2124 W Heroes LN, Suite 99<br />
