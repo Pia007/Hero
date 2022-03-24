@@ -9,7 +9,7 @@ export const Accordion = ({ name, description, titleHolder }) => {
     const iconAnimation = useSpring({
         from: {
             transform: "rotate(0deg)",
-            color: "#CD0200"
+            color: "#3CB521"
         },
         to: {
             transform: isOpen ? "rotate(225deg)" : "rotate(0deg)",
