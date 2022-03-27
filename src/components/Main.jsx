@@ -73,30 +73,20 @@ class Main extends Component {
                         <Route path='/home' component={Home} />
                         <Route exact path='/about' render={() => 
                             <About 
-                                sponsors={this.props.sponsors.sponsors} 
-                                errMess={this.props.sponsors.errMess}
-                                isLoading={this.props.sponsors.isLoading}
-                                members={this.props.members.members} 
-                                membersLoading={this.props.members.isLoading}
-                                membersErrMess={this.props.members.errMess} 
+                                sponsors={this.props.sponsors.sponsors}
+                                members={this.props.members.members}
                             /> } 
                         />
                         <Route exact path='/contact' component={Contact} />
                         <Route exact path='/involved' component={Involved} />
                         <Route exact path='/volunteersignup' component={Volunteer} />
                         <Route exact path='/faqs' render={() => 
-                            <Faqs faqs={this.props.faqs.faqs} 
-                                faqErrMess={this.props.faqs.errMess}
-                                faqIsLoading={this.props.faqs.isLoading} 
-                            /> } 
+                            <Faqs faqs={this.props.faqs.faqs} /> } 
                         />
                         <Route exact path='/volunteerspotlight' render={() => 
-                            <VolunteerSpotlight volunteers={this.props.volunteers} 
-                                volunteersErr={this.props.volunteers.errMess}
-                                volunteersLoading={this.props.volunteers.isLoading}
-                            />}
+                            <VolunteerSpotlight volunteers={this.props.volunteers} />}
                         />
-                        <Route exact path='/volunteers/:volunteerId' component={VolunteerBioId}/>
+                        <Route exact path='/volunteers/:volunteerId' component={VolunteerBioId} />
                         <Redirect to='/home' />
                     </Switch>
                 </ScrollToTop> 

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
 import { PageHeader }from '../components/PageElements';
 import { Accordion} from '../components/Accordion';
-import { Loading } from '../components/Loading';
 import { Row, Col} from 'reactstrap';
 import { FadeTransform } from 'react-animation-components';
 import Fade from 'react-reveal/Fade';
@@ -89,27 +88,6 @@ const Faqs = ({ faqs }) => {
         );
     });
 
-    if (faqs.faqIsLoading) {
-        return (
-            <div className='container'>
-                <Row>
-                    <Loading />
-                </Row>
-            </div>
-        );
-    }
-
-    if (faqs.faqErrMess) {
-        return (
-            <div className='container'>
-                <Row>
-                    <Col>
-                        <h4>{faqs.errMess}</h4>
-                    </Col>
-                </Row>
-            </div>
-        )
-    }
     
     return (
         

@@ -28,15 +28,12 @@ const VolunteerSpotlight = (props) => {
     const volunteers = props.volunteers.volunteers.map(volunteer => {
         return (
             <Col md={4} key={volunteer.id} className='m-0'>
-                <RenderBioCard volunteer={volunteer} 
-                    isLoading={props.volunteers.isLoading}
-                    errMess={props.volunteers.errMess}
-                />
+                <RenderBioCard volunteer={volunteer} />
             </Col>
         );
     });
 
-    if (props.volunteersLoading) {
+    if (props.volunteers.isLoading) {
         return (
             <div className='container'>
                 <Row>
@@ -46,12 +43,12 @@ const VolunteerSpotlight = (props) => {
         );
     }
 
-    if (props.volunteersErr) {
+    if (props.volunteers.errMess) {
         return (
             <div className='container'>
                 <Row>
                     <Col>
-                        <h4>{props.errMess}</h4>
+                        <h4>{props.volunteers.ErrMess}</h4>
                     </Col>
                 </Row>
             </div>

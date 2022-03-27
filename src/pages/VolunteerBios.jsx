@@ -50,7 +50,7 @@ const VolunteerBio = (props) => {
             <div className='container'>
                 <Row>
                     <Col>
-                        <h4>{props.errMess}</h4>
+                        <h4>{props.infoErrMess}</h4>
                     </Col>
                 </Row>
             </div>

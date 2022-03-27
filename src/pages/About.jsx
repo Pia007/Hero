@@ -1,7 +1,6 @@
 import { SEO } from '../components/SEO';
 import { SiteCrumbs } from '../components/PageElements';
 import { PageTitle } from '../components/PageElements';
-import { Loading } from '../components/Loading';
 import { Accordion } from '../components/Accordion';
 import { Row, Col } from 'reactstrap';
 import { SectionTitle }from '../components/PageElements';
@@ -11,24 +10,7 @@ import Fade from 'react-reveal/Fade';
 import aboutImg from '../images/about.jpg';
 
 // accordion for each sponsor
-const RenderAccordionItem = ({ sponsor, isLoading, errMess }) => {
-    if(isLoading) {
-        return (
-            <Loading />
-        );
-    }
-
-    if(errMess) {
-        return (
-            <div className='container'>
-                <Row>
-                    <Col>
-                        <h4>{errMess}</h4>
-                    </Col>
-                </Row>
-            </div>
-        )
-    }
+const RenderAccordionItem = ({ sponsor }) => {
     return (
         <Accordion
             name={sponsor.name} 
@@ -42,11 +24,12 @@ const RenderAccordionItem = ({ sponsor, isLoading, errMess }) => {
 const RenderTeamMember = ({ member}) => {
     return (
         <Col className='mission-text px-0'>
-            <p>{member.name}, {member.title}</p>
+            <Fade bottom >
+                <p>{member.name}, {member.title}</p>
+            </Fade>
         </Col> 
     );
 };
-
 
 
 const About = (props) => {
@@ -57,34 +40,10 @@ const About = (props) => {
             <Col key={sponsor.id} className='p-0'>
                 <RenderAccordionItem
                     sponsor={sponsor}
-                    isLoading={props.isLoading}
-                    errMess={props.errMess}
                 />
             </Col>
         )
     });
-
-    if (props.isLoading) {
-        return (
-            <div className='container'>
-                <Row>
-                    <Loading />
-                </Row>
-            </div>
-        );
-    }
-
-    if (props.errMess) {
-        return (
-            <div className='container'>
-                <Row>
-                    <Col>
-                        <h4>{props.errMess}</h4>
-                    </Col>
-                </Row>
-            </div>
-        )
-    }
 
     // map through & return each staff member
     const memberList = props.members.map(member => {
@@ -191,9 +150,7 @@ const About = (props) => {
                     
                 </Col>
                 <Col xs={12} className='px-sm-0'>
-                    <Fade bottom >
-                        {memberList}
-                    </Fade>
+                    {memberList}
                 </Col>
             </Row> 
             {/* END FOUNDATION */}
