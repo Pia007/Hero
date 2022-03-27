@@ -5,7 +5,7 @@ export const VOLUNTEERS = [
         last: "Key",
         email: "demo2@demo.com",
         password: "fullstack123",
-        image:"../assets/images/female1.png",
+        image:"/assets/images/female1.png",
         role: "Wellness Coach",
         description: "Hello! I'm Jina. When thinking of healthcare workers, doctors and nurses immediately come to mind. I was drawn to Host a Healthcare Hero because the services are available to all healthcare workers. You don't have to be a doctor or nurse to qualify for assistance. Every member of the healthcare team, from maintenance to hospitality, has access to the same services. Everyone is appreciated! I enjoy helping all healthcare workers find his or her wellness."
 
@@ -16,7 +16,7 @@ export const VOLUNTEERS = [
         last: "Williams",
         email: "demo1@demo.com",
         password: "1a2b3c4d",
-        image:"../assets/images/male1.png",
+        image:"/assets/images/male1.png",
         role: "Logistics",
         description: "Hey, I'm Richard. I became a volunteer in March of 2020. My grandfather was part of the inaugural group of volunteers back in 2019. He always spoke of how much he enjoyed the comraderie amongst the volunteers. His tenure was cut short by the virus when he passed away in February of 2020. Host a Healthcare Hero was very kind to my family during that difficult time. It was easy for me to decide to pick up where my grandfather left off. I started donating my Operations Management skills to help with logistics and transportation. I even get out there and drive from time to time just like my grandfather did. "
     },
