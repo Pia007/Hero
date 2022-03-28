@@ -12,7 +12,7 @@ const RenderBioCard = ({ volunteer }) =>  {
             <Zoom duration={500}>
                 <Card className='mb-0 bg-primary vol-cards'>
                     <Link to={`/volunteers/${volunteer.id}`}>
-                        <CardImg className='cd-img p-2' src={volunteer.image} alt={volunteer.first} />
+                        <CardImg className='cd-img p-2' src={process.env.PUBLIC_URL + volunteer.image} alt={volunteer.first} />
                         <CardBody className='p-1 vol-card-body text-center text-light'>
                             <CardTitle className='my-1 vol-title '>{volunteer.first}</CardTitle>
                         </CardBody>

@@ -17,7 +17,7 @@ const RenderVolunteer = ({ volunteer }) => {
                 <Card className='d-flex flex-direction-column meet-card '>
                     <Row className='row-content justify-content-around mb-6 px-3'>
                         <Col xs={12} md={10} lg={5} className=' m-1 mt-lg-5 mt-xl-3 px-4 py-lg-3 pl-lg-0 pr-lg-0' >
-                            <CardImg src={volunteer.image} alt={volunteer.first} className='col d-flex img-fluid img-thumbnail mx-auto mr-3 mt-lg-3 bg-primary meet-img '/>
+                            <CardImg src={process.env.PUBLIC_URL + volunteer.image} alt={volunteer.first} className='col d-flex img-fluid img-thumbnail mx-auto mr-3 mt-lg-3 bg-primary meet-img '/>
                         </Col>
                         <Col xs={12} lg={6} className='m-1 mx-auto mx-lg-0'>
                             <CardBody className='my-xl-3 text-success px-0 px-lg-0 px-xl-3'>
