@@ -23,17 +23,24 @@ export const fetchMembers = () => dispatch => {
 export const addMembers = members => ({
     type: ActionTypes.ADD_MEMBERS,
     payload: members
+
 });
 
 export const fetchFaqs = () => dispatch => {
+    dispatch(faqsLoading());
     dispatch(addFaqs(FAQS));
 }
+
+export const faqsLoading = () => ({
+    type: ActionTypes.FAQS_LOADING
+});
 
 export const addFaqs = faqs => ({
     type: ActionTypes.ADD_FAQS,
     payload: faqs
 
 });
+
 
 export const fetchVolunteers = () => dispatch => {
     dispatch(volunteersLoading());
@@ -45,11 +52,6 @@ export const fetchVolunteers = () => dispatch => {
 
 export const volunteersLoading = () => ({
     type: ActionTypes.VOLUNTEERS_LOADING
-});
-
-export const volunteersFailed = errMess => ({
-    type: ActionTypes.VOLUNTEERS_FAILED,
-    payload: errMess
 });
 
 export const addVolunteers = volunteers => ({

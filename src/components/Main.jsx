@@ -59,7 +59,6 @@ class Main extends Component {
                 <VolunteerBio
                     volunteer={this.props.volunteers.volunteers.filter(volunteer => volunteer.id === +match.params.volunteerId)[0]}
                     infoIsLoading={this.props.volunteers.isLoading}
-                    infoErrMess={this.props.volunteers.errMess}
                 />
             );
         };
@@ -69,7 +68,7 @@ class Main extends Component {
                 <SEO title={'Host a Healthcare Hero'} content={ 'Volunteer to give back to an healtcare hero'}/>
                 <RenderHeader />
                 <ScrollToTop>
-                    <Switch>
+                <Switch>
                         <Route path='/home' component={Home} />
                         <Route exact path='/about' render={() => 
                             <About 
@@ -81,12 +80,14 @@ class Main extends Component {
                         <Route exact path='/involved' component={Involved} />
                         <Route exact path='/volunteersignup' component={Volunteer} />
                         <Route exact path='/faqs' render={() => 
-                            <Faqs faqs={this.props.faqs.faqs} /> } 
+                            <Faqs faqs={this.props.faqs.faqs}
+                                faqIsLoading={this.props.faqs.isLoading} 
+                            /> } 
                         />
                         <Route exact path='/volunteerspotlight' render={() => 
                             <VolunteerSpotlight volunteers={this.props.volunteers} />}
                         />
-                        <Route exact path='/volunteers/:volunteerId' component={VolunteerBioId} />
+                        <Route exact path='/volunteerspotlight/:volunteerId' component={VolunteerBioId}/>
                         <Redirect to='/home' />
                     </Switch>
                 </ScrollToTop> 

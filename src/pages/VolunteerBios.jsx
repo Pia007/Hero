@@ -45,18 +45,6 @@ const VolunteerBio = (props) => {
         );
     }
 
-    if (props.infoErrMess) {
-        return (
-            <div className='container'>
-                <Row>
-                    <Col>
-                        <h4>{props.infoErrMess}</h4>
-                    </Col>
-                </Row>
-            </div>
-        )
-    }
-
     if(props.volunteer) {
         return (
             <div className='container'>
