@@ -14,7 +14,7 @@ function App() {
             <BrowserRouter >
                 <HelmetProvider>
                     <div className='App'>
-                        <SEO title={'Host A Healthcare Hero '} description={'description'} content={'Volunteer to give back to a healthcare hero.'} />
+                        <SEO title='Host A Healthcare Hero' description='description' content='Volunteer to give back to a healthcare hero.' />
                         <Main style={{maxWidth: '100vw', paddingX: '10'}} />
                     </div>
                 </HelmetProvider>
