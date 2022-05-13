@@ -68,7 +68,7 @@ class Main extends Component {
                 <SEO title={'Host a Healthcare Hero'} content={ 'Volunteer to give back to an healtcare hero'}/>
                 <RenderHeader />
                 <ScrollToTop>
-                <Switch>
+                    <Switch>
                         <Route path='/home' component={Home} />
                         <Route exact path='/about' render={() => 
                             <About 
