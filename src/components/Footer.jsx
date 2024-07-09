@@ -17,6 +17,9 @@ function FooterLinkTitle ({ className, navClass, to, title, onClick }) {
     );
 }
 
+// get the current year
+const year = new Date().getFullYear();
+
 const Footer = () => {
     return (
         <footer className='site-footer text-light' >
@@ -99,7 +102,7 @@ const Footer = () => {
                     </Col>
                     <Col md={12} className='p-0 mt-3'>
                         <p className='copyright text-center text-light mb-0 pb-2'>
-                            &copy; 2022 HOST A HEALTHCARE HERO <br />
+                            &copy; {year} HOST A HEALTHCARE HERO <br />
                         </p> 
                     </Col>
                 </Row>
